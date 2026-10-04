@@ -1,0 +1,137 @@
+{
+  "exportedAtUtc": "2026-10-04T12:28:57.4153225Z",
+  "milestone": "foundation",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "5674b49d67817a20aef33a5878412f52163c1e3f",
+      "attempts": [
+        {
+          "label": "foundation-desktop",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T11:59:18.697567Z",
+          "finishedAtUtc": "2026-10-04T12:04:27.5309773Z",
+          "durationSeconds": 308.81,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "com.nuvio.app.core.diagnostics.*",
+            "--tests",
+            "com.nuvio.app.core.storage.*",
+            "--tests",
+            "com.nuvio.app.features.addons.AddonModelsTest",
+            "--tests",
+            "com.nuvio.app.features.addons.AddonTransportUrlsTest",
+            "--tests",
+            "com.nuvio.app.core.sync.SyncManagerTest",
+            "--tests",
+            "com.nuvio.app.features.updater.ForkUpdateSourceTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        },
+        {
+          "label": "foundation-desktop-native",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T12:05:02.6382592Z",
+          "finishedAtUtc": "2026-10-04T12:06:15.7488712Z",
+          "durationSeconds": 73.09,
+          "tasks": [
+            ":composeApp:buildWindowsPlayerBridge",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 31,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 9,
+        "attempt": "foundation-desktop"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "023edae7aeb403e6bf1dd5cb1bef4e6546fa2430",
+      "attempts": [
+        {
+          "label": "foundation-tv",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T12:06:53.7295001Z",
+          "finishedAtUtc": "2026-10-04T12:21:44.4985924Z",
+          "durationSeconds": 890.75,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "com.nuvio.tv.core.diagnostics.*",
+            "--tests",
+            "com.nuvio.tv.core.auth.*",
+            "--tests",
+            "com.nuvio.tv.core.sync.*",
+            "--tests",
+            "com.nuvio.tv.data.repository.AddonManifestPlaceholderTest",
+            "--tests",
+            "com.nuvio.tv.updater.UpdateBannerPolicyTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        },
+        {
+          "label": "foundation-tv-final",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T12:22:07.7200879Z",
+          "finishedAtUtc": "2026-10-04T12:26:21.3601294Z",
+          "durationSeconds": 253.62,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "com.nuvio.tv.core.diagnostics.*",
+            "--tests",
+            "com.nuvio.tv.core.auth.*",
+            "--tests",
+            "com.nuvio.tv.core.sync.*",
+            "--tests",
+            "com.nuvio.tv.data.repository.AddonManifestPlaceholderTest",
+            "--tests",
+            "com.nuvio.tv.updater.UpdateBannerPolicyTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        },
+        {
+          "label": "foundation-tv-package",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T12:27:02.3730453Z",
+          "finishedAtUtc": "2026-10-04T12:27:23.3299641Z",
+          "durationSeconds": 20.95,
+          "tasks": [
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 84,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 21,
+        "attempt": "foundation-tv-final"
+      }
+    }
+  ]
+}

@@ -4,6 +4,11 @@ Independent native Desktop and Android TV forks. This workspace coordinates
 the architecture audit, pinned upstream references, validation and milestones.
 It is not an official Nuvio client.
 
+Source repositories: [Desktop](https://github.com/Pepeu2010/nuvio-enhanced-desktop)
+and [Android TV](https://github.com/Pepeu2010/nuvio-enhanced-tv). Each preserves
+its upstream history and GPL notices. This central repository contains the
+specification, five audit documents, pinned source references and tooling.
+
 Application source checkouts live in `repos/desktop` and `repos/tv`; upstream
 research checkouts live in `references`. Each preserves its own Git history.
 Build outputs, local configuration and credentials must not be committed here.
@@ -15,6 +20,8 @@ are tracked in `docs/ROADMAP.md`.
 
 `Initialize-Workspace.ps1` restores the pinned checkouts on a new machine and
 preserves existing Git checkouts and local work.
+When `docs/fork-lock.json` is present, new client checkouts use the validated fork
+commits; `docs/upstream-lock.json` remains the original baseline reference.
 
 Run scripts in the same PowerShell session so local development signing settings
 remain available to Gradle:
@@ -35,3 +42,8 @@ builds sequentially on memory-constrained hosts.
 `Export-ContractInventory.ps1` records literal RPC call sites. Full logs and
 signing material remain local and ignored. No baseline app is installed over
 the user's official Nuvio installation.
+
+Phase 0 produced both MSI/APKs from unmodified sources, with 26 Desktop and 20
+TV inherited test failures documented in `docs/BASELINE.md`. Foundation scope,
+targeted verification and remaining runtime/device QA are in `docs/FOUNDATION.md`.
+No release is claimed from compilation alone.

@@ -16,6 +16,17 @@ foreach ($repo in $lock.repositories) {
     if (-not (Test-Path (Join-Path $checkout 'LICENSE'))) { throw "Missing upstream LICENSE: $($repo.repository)" }
     Write-Output "$($repo.repository): pinned history and license verified"
 }
+$forkLock = Join-Path $workspace 'docs/fork-lock.json'
+if (Test-Path $forkLock) {
+    $forks = (Get-Content $forkLock -Raw | ConvertFrom-Json).repositories
+    if ($forks.Count -ne 2) { throw 'Expected two independent client forks.' }
+    foreach ($fork in $forks) {
+        if ($fork.commit -notmatch '^[0-9a-f]{40}$') { throw 'Invalid fork commit.' }
+        if ($fork.checkout -notin @('repos/desktop','repos/tv')) { throw 'Invalid fork checkout.' }
+        git -C (Join-Path $workspace $fork.checkout) merge-base --is-ancestor $fork.commit HEAD
+        if ($LASTEXITCODE -ne 0) { throw "Fork checkpoint missing from checkout: $($fork.repository)" }
+    }
+}
 git -C $workspace diff --check
 if ($LASTEXITCODE -ne 0) { throw 'Workspace diff check failed.' }
 Write-Output 'Workspace documents and upstream provenance verified.'

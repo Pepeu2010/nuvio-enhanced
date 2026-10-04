@@ -1,0 +1,74 @@
+{
+  "exportedAtUtc": "2026-10-04T12:29:02.5993460Z",
+  "scope": "Package and binary inspection; no installation or playback QA",
+  "results": [
+    {
+      "target": "desktop",
+      "sourceCommit": "5674b49d67817a20aef33a5878412f52163c1e3f",
+      "installed": false,
+      "inspection": {
+        "msiProperties": {
+          "ProductName": "NuvioEnhanced",
+          "Manufacturer": "Nuvio Enhanced contributors",
+          "UpgradeCode": "{1C69D968-D0E0-4B0F-B5C0-615B8EA92F90}"
+        },
+        "compiledBridgeSha256": "a380979fbcf7039cfcfd3dc210bd8566d9979d1978be41c4c3b0edc3c445a528",
+        "isolatedWebViewPath": true,
+        "packagedBridgeMatchesBuild": true
+      },
+      "artifacts": [
+        {
+          "file": "NuvioEnhanced-Windows-x64-0.1.27-alpha.msi",
+          "bytes": 209683172,
+          "sha256": "e610aa8c74b613dcb3a0d5cbac2911cb869eb16594ab187067e6b3bbc8674b3b"
+        }
+      ]
+    },
+    {
+      "target": "tv",
+      "sourceCommit": "023edae7aeb403e6bf1dd5cb1bef4e6546fa2430",
+      "installed": false,
+      "inspection": {
+        "label": "Nuvio Enhanced Debug",
+        "distribution": "development debug only"
+      },
+      "artifacts": [
+        {
+          "file": "app-full-arm64-v8a-debug.apk",
+          "bytes": 91116705,
+          "sha256": "29d806f5fc2c40ba9186e6b9453ee382492de5c77ab789e3717dc1beebc7fc3d",
+          "applicationId": "io.github.pepeu2010.nuvioenhanced.tv.debug",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-armeabi-v7a-debug.apk",
+          "bytes": 89015119,
+          "sha256": "a9a4c35228503a2ded49548554f8b4768f66ca6bbb78ff41fadab3d9b407f159",
+          "applicationId": "io.github.pepeu2010.nuvioenhanced.tv.debug",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-universal-debug.apk",
+          "bytes": 178087947,
+          "sha256": "b71ec29ddaa75e5cef0288edb65cdc6c104dec4b4d812ce83c31fa08b4df8247",
+          "applicationId": "io.github.pepeu2010.nuvioenhanced.tv.debug",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-x86_64-debug.apk",
+          "bytes": 93537224,
+          "sha256": "4cdad595f70b49589da176de0d57922afb4424ec6b5aa83c0a0514d5bb9ee943",
+          "applicationId": "io.github.pepeu2010.nuvioenhanced.tv.debug",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-x86-debug.apk",
+          "bytes": 92697359,
+          "sha256": "1143c35607d6120c28d1b331be803a2187b8fd0977f30a936ccd1b98a0b59fcb",
+          "applicationId": "io.github.pepeu2010.nuvioenhanced.tv.debug",
+          "signatureVerified": true
+        }
+      ]
+    }
+  ]
+}

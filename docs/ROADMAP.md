@@ -9,7 +9,10 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
 - Auditoria estática e matriz de lacunas/contratos produzidas.
 - Builds baseline Desktop e TV executados em fontes sem alterações. MSI e APKs
   gerados; suítes com 26/20 falhas herdadas, preservadas em BASELINE.md e JSONs.
-- 0-A e 0-B concluídos com ressalvas; 0-C autorizado e iniciado.
+- 0-A e 0-B concluídos com ressalvas; 0-C implementado, testado e compilado.
+- Fundação: 31 testes direcionados Desktop e 84 TV aprovados; MSI/APKs do fork
+  gerados. Código e commits independentes publicados no GitHub; detalhes e limites
+  em FOUNDATION.md. Próximo milestone de produto: 1-A.
 - Nenhuma fase de produto é declarada concluída apenas pela auditoria.
 
 ## Gates e entregas
