@@ -1,49 +1,79 @@
-# Nuvio Enhanced workspace
+# Nuvio Enhanced
 
-Independent native Desktop and Android TV forks. This workspace coordinates
-the architecture audit, pinned upstream references, validation and milestones.
-It is not an official Nuvio client.
+**Uma evolução open source do Nuvio para PC e Android TV, com mais recursos e uma experiência cinematográfica em desenvolvimento.**
 
-Source repositories: [Desktop](https://github.com/Pepeu2010/nuvio-enhanced-desktop)
-and [Android TV](https://github.com/Pepeu2010/nuvio-enhanced-tv). Each preserves
-its upstream history and GPL notices. This central repository contains the
-specification, five audit documents, pinned source references and tooling.
+O Nuvio Enhanced amplia os clientes existentes do [Nuvio](https://github.com/NuvioMedia). Os forks preservam a arquitetura nativa, o histórico do código e os sistemas de conta, perfis, biblioteca, addons e reprodução. As melhorias são integradas a essa base, mantendo os contratos existentes de login e sincronização. É um projeto independente, sem vínculo oficial com o Nuvio.
 
-Application source checkouts live in `repos/desktop` and `repos/tv`; upstream
-research checkouts live in `references`. Each preserves its own Git history.
-Build outputs, local configuration and credentials must not be committed here.
+## Baixar e experimentar
 
-The approved product specification is in `docs/APPROVED_SPEC.md` and milestones
-are tracked in `docs/ROADMAP.md`.
+A primeira entrega é a **pré-release `v0.1.0-alpha.1` — fundação 0-C**. Ela contém a base do Nuvio com a identidade e o armazenamento do fork isolados. O novo visual e os demais recursos abaixo serão entregues progressivamente.
 
-## Validation
+| Plataforma | Download |
+|---|---|
+| PC — Windows 64 bits | [Instalador MSI](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.1/NuvioEnhanced-Windows-x64-foundation.msi) |
+| Android TV — recomendado quando não sabe a arquitetura | [APK universal de desenvolvimento](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.1/NuvioEnhanced-TV-universal-debug.apk) |
+| Android TV — ARM 64 bits | [APK arm64-v8a](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.1/NuvioEnhanced-TV-arm64-v8a-debug.apk) |
+| Android TV — ARM 32 bits | [APK armeabi-v7a](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.1/NuvioEnhanced-TV-armeabi-v7a-debug.apk) |
+| Android — x86_64 / x86 | [Todos os arquivos da release](https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.1) |
 
-`Initialize-Workspace.ps1` restores the pinned checkouts on a new machine and
-preserves existing Git checkouts and local work.
-When `docs/fork-lock.json` is present, new client checkouts use the validated fork
-commits; `docs/upstream-lock.json` remains the original baseline reference.
+Os APKs são builds **Full Debug**, assinados para desenvolvimento, destinados à experiência Android TV. O APK universal inclui as quatro arquiteturas. Ainda não há pacote Linux/macOS nem uma interface específica para celulares. Checksums SHA-256 e arquivos de código-fonte estão na [release](https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.1).
 
-Run scripts in the same PowerShell session so local development signing settings
-remain available to Gradle:
+Esta versão é experimental: instalação, login, sync, reprodução e navegação por controle remoto ainda precisam de validação em aparelhos reais. A tag identifica a entrega do projeto; as versões internas herdadas são `0.1.27-alpha` no Desktop e `1.1.0-beta.3` na TV.
+
+## O que já foi entregue
+
+- Instalador, identificadores, diretórios de dados/cache e configuração de atualização próprios, para permitir a coexistência com o Nuvio oficial.
+- Relatórios externos de falhas desligados por padrão, com a opção existente de consentimento preservada.
+- Proteção de URLs com informações sensíveis nos diagnósticos de addons e sanitização dos campos Sentry revisados.
+- Correção da recompilação da ponte nativa Windows quando seu código muda.
+- Checkouts e commits de referência, auditoria de arquitetura/compatibilidade/segurança e builds baseline documentados.
+
+Foram aprovados **31 testes direcionados Desktop e 84 TV**, além da compilação e inspeção dos pacotes. As **46 falhas herdadas** encontradas nas suítes completas do baseline continuam registradas. Esses resultados não substituem testes de reprodução e de uso em dispositivos. Veja [a entrega 0-C](docs/FOUNDATION.md) e [o baseline](docs/BASELINE.md).
+
+## O que queremos acrescentar ao Nuvio
+
+As próximas entregas ampliam os componentes existentes; os itens desta seção **ainda estão previstos**, não fazem parte da fundação publicada:
+
+- **Experiência cinematográfica:** Home, hero e detalhes aprimorados, linguagem visual própria, feedback de foco e opções de animação reduzida ou desligada.
+- **Cinematic Preview e Ambient UI:** evolução dos previews existentes, um preview silencioso por vez e cores discretas derivadas do backdrop.
+- **Profile Studio:** arquivos locais, colar/arrastar imagens, biblioteca de avatares permitidos e editor de recorte, ampliando perfis/avatar/PIN existentes.
+- **Player e timeline:** thumbnails reais, filmstrip, capítulos, bookmarks e painel técnico sobre libmpv no PC e Media3 na TV. Uma base genérica de timed metadata prepara o futuro Scene Info.
+- **Source Intelligence:** escolha explicável de fontes, preferências de qualidade/idioma e compatibilidade do aparelho, preservando a escolha manual.
+- **Cache adaptativo:** modo Auto e limites configuráveis; 1 GiB no Desktop e 256 MiB na TV são defaults iniciais. Downloads ficam separados.
+- **Android TV:** foco/D-pad aprimorados e modos adequados a aparelhos modestos, com referência de 2 GB de RAM e 1080p.
+- **Live TV e EPG:** canais e guia de fontes legítimas configuradas pelo usuário. Os componentes visuais serão preparados antes da integração, sem botões falsos.
+- **Scene Info, Phone Remote e coleções:** informações de cena com origem confiável, controle local pelo celular e filtros/coleções sem dependência de IA cloud ou API paga.
+
+A ordem de entrega e os critérios de aceitação estão no [roadmap](docs/ROADMAP.md). O app não inclui canais, listas ou conteúdo protegido; as fontes são configuradas pelo usuário.
+
+## Código e arquitetura
+
+| Repositório | Papel |
+|---|---|
+| [Nuvio Enhanced Desktop](https://github.com/Pepeu2010/nuvio-enhanced-desktop) | Cliente PC: Kotlin Multiplatform, Compose, libmpv/JNI e WebView2 |
+| [Nuvio Enhanced TV](https://github.com/Pepeu2010/nuvio-enhanced-tv) | Cliente Android TV: Kotlin, Jetpack Compose, TV Material 3 e Media3 |
+| Este repositório | Especificação aprovada, auditorias, referências e ferramentas de validação |
+
+Desktop e TV permanecem forks separados, com seus históricos e licenças. Neste workspace, `repos/desktop` e `repos/tv` são checkouts independentes e ignorados pelo Git central. Não há uma terceira implementação do aplicativo.
+
+## Desenvolver e validar
+
+Os commits oficiais de referência estão em [upstream-lock.json](docs/upstream-lock.json); os commits da fundação estão em [fork-lock.json](docs/fork-lock.json). Os requisitos são mantidos em [APPROVED_SPEC.md](docs/APPROVED_SPEC.md) e [PRODUCT_REQUIREMENTS.md](docs/PRODUCT_REQUIREMENTS.md).
 
 ```powershell
+# Restaura os checkouts sem descartar trabalho existente
+.\scripts\Initialize-Workspace.ps1
 .\scripts\Test-Workspace.ps1
+
+# Execute na mesma sessão para manter a configuração local de build
 .\scripts\Initialize-Development.ps1 -Target tv
-.\scripts\Invoke-Baseline.ps1 -Target tv -Label baseline-configured
+.\scripts\Invoke-Baseline.ps1 -Target tv -Label development
 ```
 
-Desktop additionally requires the WebView2 SDK version recorded in
-`docs/BASELINE.md`, passed with `-GradleArgs` as `-Pnuvio.webview2.dir=<SDK path>`.
-Use `--no-configuration-cache`, as the upstream release CI does. Sources remain
-unchanged; ignored local properties and tools configure the build. Execute large
-builds sequentially on memory-constrained hosts.
+Use JDK 17 e as versões de SDK/NDK registradas em [BASELINE.md](docs/BASELINE.md). O Desktop também exige o SDK WebView2 registrado nesse documento, passado com `-GradleArgs` como `-Pnuvio.webview2.dir=<caminho do SDK>`, e `--no-configuration-cache`. Execute builds grandes em sequência em máquinas com pouca memória. Consulte os scripts e READMEs de cada fork para os passos específicos.
 
-`Export-Baseline.ps1` records attempt outcomes and XML test counts, while
-`Export-ContractInventory.ps1` records literal RPC call sites. Full logs and
-signing material remain local and ignored. No baseline app is installed over
-the user's official Nuvio installation.
+Logs completos, outputs, configurações locais e chaves de assinatura ficam fora do Git. Antes de uma melhoria, localize a implementação existente, identifique seu ponto de extensão e preserve os fluxos de conta, sync, addons e reprodução.
 
-Phase 0 produced both MSI/APKs from unmodified sources, with 26 Desktop and 20
-TV inherited test failures documented in `docs/BASELINE.md`. Foundation scope,
-targeted verification and remaining runtime/device QA are in `docs/FOUNDATION.md`.
-No release is claimed from compilation alone.
+## Licença e créditos
+
+Os clientes derivados preservam a **GPL-3.0** e os avisos dos upstreams. Veja [LICENSE](LICENSE), [NOTICE.md](NOTICE.md) e os avisos de cada fork. Obrigado aos contribuidores do [NuvioMedia](https://github.com/NuvioMedia) pela base que este projeto evolui. Nuvio Enhanced é um nome provisório de um fork não oficial.

@@ -33,6 +33,26 @@ records the approved architecture, delivery decisions and subsequent amendments.
    channels, now/next, program progress, EPG cells/grid and D-pad focus. No Live TV
    route or actionable control is exposed until Phase 6 has real source support.
 
+## Execution amendment — 2026-10-04
+
+The user's subsequent instruction is binding: **evolve the existing Nuvio,
+do not rebuild it**. Before introducing a file or abstraction, inspect existing
+components, ViewModels, models, repositories, settings, profiles/avatar/PIN,
+navigation/focus, addon resolver, preview pool, cache/download and player code.
+Extend the best existing integration point; refactor only where necessary.
+Desktop KMP/commonMain/Compose/libmpv/JNI/WebView2 and TV Compose/TV Material 3/
+Media3, focus restoration, progressive seek and trailer pool remain the base.
+The separate clients retain their histories. A shared library is optional and
+limited to genuinely platform-independent new rules, with demonstrated need.
+
+Per feature, document existing behavior, gaps, changed files and extension point;
+implement, test, compile and validate visually before declaring completion.
+Never replace working login/sync/addon/player contracts, create a parallel app,
+fake controls or advertise planned features as installed features. The complete
+follow-up requirement is preserved in PRODUCT_REQUIREMENTS.md. This amendment
+reinforces the approved phase order, including timed metadata in Phase 2,
+Scene Info in Phase 7 and Live TV components in Phase 1 before real Phase 6 routes.
+
 ## Delivery boundaries
 
 - MVP 1: all mandatory original requirements, both Windows and Android TV.

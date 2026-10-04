@@ -2261,3 +2261,1142 @@ Advanced Player
 A sensação final precisa ser de um media center open source de alto nível para PC e televisão.
 
 Comece agora pela auditoria dos repositórios oficiais listados no início, identifique exatamente o que já existe e o que precisa ser alterado e, em seguida, execute as fases de implementação sem reconstruir recursos que o Nuvio já resolve corretamente.
+
+## Instruções adicionais aprovadas — 2026-10-04
+
+
+A partir daqui, não crie uma implementação paralela, um protótipo separado ou uma recriação do Nuvio.
+
+Use diretamente os arquivos, módulos, componentes, players, repositories, models, navegação, sistema de perfis, addons, sync, cache e infraestrutura já existentes nos forks oficiais do Nuvio Desktop e Nuvio TV.
+
+A regra principal deste projeto é:
+
+EVOLUIR O NUVIO EXISTENTE, NÃO RECONSTRUIR O NUVIO.
+
+Antes de criar qualquer arquivo novo, procure no código atual se já existe algo que possa ser estendido, refatorado ou reutilizado.
+
+Se já existir:
+
+- componente;
+- tela;
+- ViewModel;
+- repository;
+- model;
+- player;
+- sistema de preview;
+- sistema de avatar;
+- sistema de perfil;
+- navegação;
+- focus manager;
+- addon manager;
+- stream resolver;
+- cache;
+- download manager;
+- settings;
+- integração com backend;
+
+trabalhe em cima disso.
+
+Não duplique funcionalidades existentes só para implementar uma versão nossa.
+
+Desktop e Android TV continuam sendo forks separados, preservando o histórico e a arquitetura de cada upstream.
+
+Não transforme tudo em um monorepo.
+
+Compartilhe somente regras novas realmente independentes de plataforma através de uma biblioteca pequena quando isso for tecnicamente útil.
+
+==================================================
+BASE EXISTENTE QUE DEVE SER PRESERVADA
+==================================================
+
+No Desktop, preserve a arquitetura atual em:
+
+- Kotlin Multiplatform;
+- Compose Multiplatform;
+- commonMain;
+- implementação Desktop atual;
+- libmpv;
+- bridge JNI;
+- infraestrutura atual do player;
+- integração WebView2 onde já existir.
+
+No Android TV, preserve:
+
+- Kotlin;
+- Jetpack Compose;
+- TV Material 3;
+- Android Media3;
+- arquitetura de navegação atual;
+- focus restoration existente;
+- seek progressivo existente;
+- trailer pool existente.
+
+Não troque libmpv ou Media3 sem existir um problema técnico comprovado que realmente exija isso.
+
+==================================================
+COMPATIBILIDADE
+==================================================
+
+O Nuvio Enhanced deve continuar utilizando o ecossistema Nuvio.
+
+Preserve:
+
+- login;
+- sessão;
+- perfis;
+- biblioteca;
+- progresso;
+- histórico;
+- sync;
+- addons;
+- metadata;
+- streams;
+- legendas;
+- downloads;
+- configurações existentes.
+
+Não crie outro login.
+
+Não invente endpoints.
+
+Não modifique contratos do backend sem necessidade.
+
+O Nuvio oficial e o Nuvio Enhanced precisam poder ficar instalados juntos.
+
+Use:
+
+- package ID próprio;
+- application ID próprio;
+- diretórios próprios;
+- cache próprio;
+- banco/configurações locais próprias;
+- updater próprio.
+
+Mesmo assim, mantenha o mesmo login e sync Nuvio sempre que o backend atual suportar.
+
+==================================================
+ADDONS STREMIO
+==================================================
+
+A compatibilidade com addons Stremio é obrigatória.
+
+Não substitua o sistema atual.
+
+Preserve e amplie o suporte existente para:
+
+- manifest;
+- catalog;
+- meta;
+- stream;
+- subtitles;
+- configuration;
+- authentication;
+- addon URLs;
+- parâmetros;
+- tratamento de erros.
+
+Crie uma área de Addons melhor:
+
+Addons
+├── Descobrir
+├── Instalados
+├── Atualizações
+├── Configurar
+└── Desenvolvedor
+
+Cada addon pode mostrar:
+
+- nome;
+- ícone;
+- versão;
+- descrição;
+- origem;
+- status;
+- capabilities;
+- latência;
+- último erro;
+- habilitado/desabilitado.
+
+Um addon quebrado nunca pode derrubar a Home inteira.
+
+==================================================
+INTERFACE
+==================================================
+
+Use as telas e componentes existentes como ponto de partida e transforme a experiência visual.
+
+Não simplesmente aplique novas cores.
+
+A interface precisa ter uma linguagem cinematográfica própria inspirada na qualidade de:
+
+- Apple TV;
+- Netflix;
+- Plex;
+
+sem copiar identidade, assets ou layouts 1:1.
+
+Criar um design system consistente para:
+
+- cores;
+- tipografia;
+- spacing;
+- radius;
+- elevation;
+- blur;
+- focus;
+- motion;
+- duration;
+- easing.
+
+Visual:
+
+- dark;
+- OLED opcional;
+- backdrops grandes;
+- boa profundidade;
+- gradientes contextuais;
+- blur controlado;
+- tipografia forte;
+- cards bem definidos;
+- sem aparência genérica;
+- sem neon excessivo.
+
+==================================================
+ANIMAÇÕES
+==================================================
+
+Todas as interações importantes precisam ter feedback fluido.
+
+Use aproximadamente:
+
+micro:
+120–180 ms
+
+standard:
+180–280 ms
+
+large:
+280–450 ms
+
+ambient:
+500–900 ms
+
+Use springs quando fizer sentido.
+
+Criar:
+
+- Reduced Motion;
+- animações reduzidas;
+- animações desativadas.
+
+Target de navegação:
+
+60 FPS.
+
+==================================================
+HOME
+==================================================
+
+Evolua a Home atual.
+
+Criar suporte para seções como:
+
+- Continue assistindo;
+- Minha lista;
+- Filmes;
+- Séries;
+- Anime;
+- Em alta;
+- Lançamentos;
+- 4K;
+- HDR;
+- Adicionados recentemente;
+- Assistir novamente;
+- Recomendações;
+- TV ao vivo.
+
+Permitir reorganização das seções.
+
+Não carregar tudo simultaneamente.
+
+Usar lazy rendering, cache e preload controlado.
+
+==================================================
+HERO
+==================================================
+
+Criar hero cinematográfico contendo:
+
+- backdrop;
+- logo/título;
+- descrição;
+- ano;
+- duração;
+- classificação;
+- rating;
+- qualidade;
+- assistir;
+- continuar;
+- minha lista;
+- trailer.
+
+O hero deve reagir ao conteúdo atualmente selecionado.
+
+==================================================
+CINEMATIC PREVIEW
+==================================================
+
+O Nuvio já possui base de preview.
+
+Não recrie do zero.
+
+Centralize e evolua o sistema existente.
+
+Desktop:
+
+ao deixar o mouse aproximadamente 750 ms sobre filme, série ou episódio:
+
+- card expande;
+- aparecem informações;
+- preview começa a carregar;
+- trailer ou preview começa silencioso;
+- aparecem ações rápidas.
+
+Android TV:
+
+mesmo conceito após aproximadamente 1200 ms de foco estável.
+
+Nunca permitir vários previews ativos ao mesmo tempo.
+
+Criar ou consolidar uma abstração como:
+
+PreviewCoordinator
+
+Responsável por:
+
+- debounce;
+- cancelamento;
+- preload;
+- lifecycle;
+- ownership;
+- cache;
+- release dos recursos.
+
+Prioridade:
+
+trailer
+→ teaser
+→ preview do provider
+→ backdrop estático.
+
+Som desligado por padrão.
+
+==================================================
+AMBIENT UI
+==================================================
+
+Usar o backdrop atual para extrair uma pequena paleta.
+
+Aplicar discretamente em:
+
+- gradientes;
+- background;
+- ambient light;
+- highlights.
+
+Não transformar a tela inteira na cor dominante.
+
+Fazer transições suaves quando o conteúdo selecionado mudar.
+
+==================================================
+PROFILE STUDIO
+==================================================
+
+Aproveite o sistema de perfil, avatar, PIN e sync já existente.
+
+Amplie.
+
+Não obrigue o usuário a acessar um site para encontrar avatar e copiar uma URL.
+
+Permitir:
+
+- escolher arquivo;
+- drag-and-drop;
+- Ctrl+V;
+- biblioteca interna;
+- URL como opção avançada;
+- webcam futuramente;
+- avatar animado futuramente.
+
+Criar editor de avatar com:
+
+- crop;
+- zoom;
+- reposition;
+- preview;
+- compressão;
+- geração de tamanhos derivados.
+
+Validar o conteúdo real do arquivo.
+
+Criar biblioteca de avatares integrada com assets permitidos.
+
+Categorias:
+
+- Abstract;
+- Animals;
+- Pixel;
+- Fantasy;
+- Sci-Fi;
+- Minimal;
+- Nature;
+- Original Characters.
+
+==================================================
+PERFIS
+==================================================
+
+Permitir configurações específicas por perfil:
+
+- avatar;
+- capa;
+- accent;
+- tema;
+- idioma;
+- áudio preferido;
+- legenda;
+- tamanho da legenda;
+- qualidade;
+- player;
+- layout.
+
+Preparar:
+
+- perfil normal;
+- Guest;
+- Kids;
+- PIN.
+
+Adicionar:
+
+Clonar perfil.
+
+O usuário escolhe o que copiar.
+
+Por padrão:
+
+copiar:
+- addons;
+- idioma;
+- legendas;
+- player;
+- aparência;
+- preferências.
+
+não copiar automaticamente:
+- histórico;
+- biblioteca;
+- progresso.
+
+==================================================
+PLAYER
+==================================================
+
+Melhore o player existente.
+
+Não substitua os motores atuais sem justificativa.
+
+Criar nova interface para:
+
+- play/pause;
+- seek;
+- áudio;
+- legendas;
+- qualidade;
+- velocidade;
+- capítulos;
+- PiP;
+- fullscreen;
+- próximo episódio;
+- skip intro;
+- skip recap;
+- skip credits;
+- autoplay.
+
+Adicionar painel técnico opcional:
+
+Resolution
+Codec
+HDR
+FPS
+Bitrate
+Decoder
+Buffer
+Dropped Frames
+
+==================================================
+TIMELINE
+==================================================
+
+A timeline precisa ser um dos principais diferenciais.
+
+Mostrar:
+
+- progresso;
+- duração;
+- intro;
+- recap;
+- capítulos;
+- bookmarks;
+- créditos.
+
+==================================================
+THUMBNAILS DAS CENAS
+==================================================
+
+Ao passar o mouse pela timeline, mostrar uma thumbnail real correspondente ao timestamp.
+
+Ao avançar ou retroceder, mostrar a cena correspondente.
+
+Prioridade:
+
+thumbnail fornecida pela fonte
+→ sprite sheet
+→ metadata existente
+→ geração local
+→ cache.
+
+Não reposicione o player principal para gerar thumbnails.
+
+No Desktop, use a infraestrutura libmpv de maneira isolada.
+
+No TV, utilize mecanismos compatíveis com Media3/Android sem interferir no playback atual.
+
+Cancelar solicitações antigas se o usuário mover rapidamente o seek.
+
+==================================================
+FILMSTRIP
+==================================================
+
+Hover simples:
+
+uma thumbnail.
+
+Ao arrastar a timeline:
+
+mostrar sequência de frames próximos.
+
+Exemplo:
+
+[01:21:20]
+[01:21:30]
+[01:21:40]
+[01:21:50]
+[01:22:00]
+
+Na TV:
+
+seek curto:
+thumbnail grande.
+
+seek contínuo:
+filmstrip.
+
+==================================================
+SEEK NA TV
+==================================================
+
+Evolua o seek progressivo já existente.
+
+Exemplo:
+
+tap:
++10s
+
+continuar pressionando:
++30s
++1m
++5m
+
+Mostrar sempre:
+
+- thumbnail;
+- timestamp;
+- posição na timeline.
+
+==================================================
+SCENE BOOKMARKS
+==================================================
+
+Permitir salvar momentos.
+
+Persistir:
+
+- media ID;
+- episode ID;
+- timestamp;
+- label;
+- createdAt.
+
+Exemplo:
+
+00:32:18 — Cena favorita
+01:12:43 — Rever depois.
+
+==================================================
+TIMED METADATA
+==================================================
+
+Mesmo que Scene Info completo seja implementado depois, prepare desde já na camada do player uma abstração genérica de timed metadata.
+
+Ela deve poder representar informações relacionadas a intervalos de tempo do conteúdo.
+
+Isso evita refatorar toda a timeline futuramente.
+
+==================================================
+SCENE INFO
+==================================================
+
+Criar depois uma experiência contextual semelhante ao conceito de X-Ray do Prime Video, mas não usar o nome X-Ray.
+
+Nome temporário:
+
+Scene Info.
+
+Ao pausar ou abrir o painel:
+
+mostrar quando houver dados confiáveis:
+
+- atores;
+- personagens;
+- música;
+- capítulo;
+- curiosidades;
+- metadata daquela cena.
+
+Arquitetura:
+
+SceneMetadataProvider
+├── metadata provider
+├── timed metadata
+├── community metadata
+└── análise local experimental.
+
+Não usar IMDb através de scraping.
+
+Não afirmar que determinada pessoa está na cena sem metadata ou análise confiável.
+
+==================================================
+SOURCE INTELLIGENCE
+==================================================
+
+Evolua a resolução atual de streams.
+
+Criar score explicável.
+
+Avaliar:
+
+- disponibilidade;
+- resolução;
+- HDR;
+- codec;
+- bitrate;
+- idioma;
+- áudio;
+- latência;
+- compatibilidade do hardware;
+- estabilidade.
+
+Score inicial:
+
+qualidade: 30
+idioma/áudio: 20
+hardware: 20
+disponibilidade/latência: 20
+estabilidade: 10
+
+Mostrar a decomposição do score quando o usuário quiser.
+
+Modos:
+
+- Best Quality;
+- Balanced;
+- Data Saver;
+- Manual.
+
+==================================================
+PRE-FLIGHT
+==================================================
+
+Antes da reprodução, verificar quando necessário:
+
+- fonte disponível;
+- codec;
+- hardware decoder;
+- HDR;
+- áudio preferido;
+- legenda.
+
+Não adicionar atraso perceptível sem necessidade.
+
+==================================================
+FAILOVER
+==================================================
+
+Preparar troca automática de fonte.
+
+Se a fonte atual falhar:
+
+- salvar timestamp;
+- encontrar alternativas;
+- testar rapidamente;
+- trocar;
+- continuar aproximadamente do mesmo ponto.
+
+Modos:
+
+- Quality First;
+- Balanced;
+- Never Downgrade.
+
+Evitar loops infinitos.
+
+==================================================
+DEVICE CAPABILITIES
+==================================================
+
+Centralizar capacidades do dispositivo:
+
+- GPU;
+- codecs;
+- HDR;
+- resolução;
+- refresh rate;
+- memória;
+- decoder.
+
+Criar uma abstração central como:
+
+DeviceCapabilities.
+
+Não espalhar verificações específicas pelo projeto.
+
+==================================================
+ANDROID TV
+==================================================
+
+Não reutilize simplesmente a UI Desktop.
+
+A experiência Android TV deve continuar sendo própria.
+
+Tudo deve funcionar através de:
+
+↑
+↓
+←
+→
+OK
+Back
+Play/Pause
+
+Mouse não pode ser obrigatório.
+
+==================================================
+FOCUS ENGINE
+==================================================
+
+Aproveite e melhore os mecanismos de restauração de foco já existentes.
+
+Testar:
+
+- foco inicial;
+- voltar de detalhes;
+- voltar do player;
+- rail horizontal;
+- troca entre rails;
+- dialogs;
+- modais;
+- lazy lists;
+- carregamento;
+- recomposição;
+- EPG.
+
+Não aceite uma tela visualmente boa com navegação ruim por D-pad.
+
+==================================================
+TV BOX FRACO
+==================================================
+
+Referência mínima principal:
+
+2 GB RAM
+1080p.
+
+Criar modos:
+
+- Auto;
+- Performance;
+- Balanced;
+- Cinematic.
+
+Auto decide de acordo com DeviceCapabilities.
+
+Performance reduz:
+
+- blur;
+- previews;
+- preload;
+- imagens;
+- efeitos.
+
+Cinematic libera mais efeitos em hardware capaz.
+
+==================================================
+ÁREA TV
+==================================================
+
+Preparar uma área dedicada:
+
+TV
+├── Agora
+├── Guia
+├── Canais
+├── Favoritos
+└── Recentes.
+
+Não distribuir canais ou listas dentro do aplicativo.
+
+Utilizar somente fontes configuradas pelo usuário ou providers compatíveis.
+
+==================================================
+LIVE TV E EPG
+==================================================
+
+Preparar suporte para:
+
+- XMLTV;
+- provider de EPG;
+- logos;
+- timezone;
+- cache;
+- atualização;
+- programa atual;
+- próximo programa;
+- progresso.
+
+Criar componentes visuais já durante a fundação, mas não mostrar funcionalidades falsas antes de estarem prontas:
+
+- ChannelCard;
+- ProgramCard;
+- EPGCell;
+- LiveBadge;
+- ChannelLogo;
+- ProgramProgress.
+
+==================================================
+PHONE REMOTE
+==================================================
+
+Posteriormente adicionar controle pelo celular.
+
+Fluxo:
+
+PC/TV
+→ QR Code
+→ celular abre página local
+→ pareamento
+→ WebSocket
+→ controle.
+
+Sem cloud obrigatória.
+
+Exigir:
+
+- token aleatório;
+- expiração;
+- confirmação;
+- revogação;
+- rate limiting;
+- remembered devices opcional.
+
+==================================================
+CACHE
+==================================================
+
+Centralizar:
+
+- posters;
+- backdrops;
+- avatars;
+- previews;
+- timeline thumbnails;
+- filmstrip;
+- metadata;
+- addons;
+- EPG;
+- Scene Info.
+
+Defaults iniciais:
+
+Desktop:
+1 GiB.
+
+TV:
+256 MiB.
+
+Mas não trate isso como limite rígido.
+
+Adicionar:
+
+Auto
+512 MB
+1 GB
+2 GB
+Personalizado
+
+conforme plataforma.
+
+Auto considera:
+
+- armazenamento livre;
+- memória;
+- capacidade do dispositivo.
+
+Downloads ficam fora desse cache.
+
+==================================================
+SMART COLLECTIONS
+==================================================
+
+Criar depois filtros combináveis.
+
+Exemplo:
+
+type = movie
+genre = horror
+watched = false
+rating >= 7
+runtime <= 120
+
+Resultado:
+
+"Terror bom com menos de duas horas".
+
+==================================================
+BUSCA UNIVERSAL
+==================================================
+
+No Desktop, Ctrl+K.
+
+Pesquisar:
+
+- filmes;
+- séries;
+- episódios;
+- pessoas;
+- biblioteca;
+- comandos.
+
+Exemplos:
+
+Duna
+filmes HDR
+continuar Duna
+abrir downloads
+mudar perfil
+configurar legenda.
+
+==================================================
+CONTINUE ASSISTINDO
+==================================================
+
+Melhorar a área existente.
+
+Mostrar:
+
+- título;
+- episódio;
+- progresso;
+- tempo restante.
+
+Ações:
+
+- continuar;
+- recomeçar;
+- próximo episódio;
+- marcar assistido;
+- remover.
+
+==================================================
+HISTÓRICO
+==================================================
+
+Criar histórico visual.
+
+Preparar estatísticas locais:
+
+- horas assistidas;
+- filmes;
+- episódios;
+- gêneros;
+- reassistidos.
+
+Não depender de IA ou API paga.
+
+==================================================
+ESCOLHA PARA MIM
+==================================================
+
+Criar seletor local por:
+
+- tipo;
+- gênero;
+- duração;
+- rating;
+- assistido/não assistido;
+- ano.
+
+Nada de depender de LLM.
+
+==================================================
+SEGURANÇA
+==================================================
+
+Revisar:
+
+- addon injection;
+- metadata maliciosa;
+- path traversal;
+- SSRF;
+- URLs;
+- downloads;
+- avatares;
+- arquivos locais;
+- logs;
+- tokens;
+- remote pairing;
+- deep links;
+- command execution.
+
+Nunca execute comandos do sistema baseados diretamente em dados vindos de addons.
+
+Redigir nos logs:
+
+- tokens;
+- authorization;
+- cookies;
+- passwords;
+- URLs contendo secrets.
+
+==================================================
+NÃO FAZER
+==================================================
+
+Não criar outro app paralelo dentro do fork.
+
+Não duplicar componentes existentes sem necessidade.
+
+Não substituir arquitetura funcional apenas porque uma biblioteca diferente parece mais moderna.
+
+Não criar outro login.
+
+Não quebrar sync.
+
+Não quebrar addons Stremio.
+
+Não remover recursos atuais.
+
+Não colocar botão falso.
+
+Não declarar feature pronta sem funcionar.
+
+Não usar API paga como requisito.
+
+Não depender de IA cloud.
+
+Não adicionar telemetria externa por padrão.
+
+Não distribuir conteúdo protegido.
+
+==================================================
+FLUXO DE TRABALHO
+==================================================
+
+Para cada funcionalidade:
+
+1. encontre a implementação atual relacionada;
+2. leia os arquivos existentes;
+3. identifique o melhor ponto de extensão;
+4. reutilize o que já funciona;
+5. refatore apenas quando necessário;
+6. implemente;
+7. teste;
+8. compile;
+9. valide visualmente;
+10. documente;
+11. só então avance.
+
+Se perceber que um recurso solicitado já existe parcialmente no Nuvio, não recrie.
+
+Liste:
+
+- o que já existe;
+- o que falta;
+- quais arquivos serão modificados;
+- como será evoluído.
+
+==================================================
+REGRA FINAL
+==================================================
+
+O resultado não deve ser:
+
+"um app novo inspirado no Nuvio".
+
+Também não deve ser:
+
+"Nuvio com outro tema".
+
+Tem que ser literalmente a evolução dos clientes existentes:
+
+Nuvio atual
++
+nova experiência visual
++
+novas interações
++
+player melhorado
++
+timeline com thumbnails
++
+filmstrip
++
+Cinematic Preview
++
+Profile Studio
++
+avatares livres
++
+Ambient UI
++
+Source Intelligence
++
+Scene Info
++
+Android TV melhor
++
+Live TV
++
+EPG
++
+Phone Remote
++
+novas funcionalidades.
+
+Comece trabalhando nos arquivos existentes dos forks.
+
+Não recrie a base.
+
+Preserve tudo que já funciona e faça as novas funcionalidades nascerem integradas à arquitetura real do Nuvio.
+
+https://github.com/NuvioMedia
