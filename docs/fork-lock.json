@@ -1,21 +1,23 @@
 {
-  "recordedAtUtc": "2026-10-04T13:29:17.5453414Z",
+  "recordedAtUtc": "2026-10-04T13:58:14.1411072Z",
   "repositories": [
     {
       "repository": "Pepeu2010/nuvio-enhanced-desktop",
       "url": "https://github.com/Pepeu2010/nuvio-enhanced-desktop.git",
       "branch": "main",
-      "commit": "a704c6d7b1761484d163f809e27e6af6a72f4757",
+      "commit": "324c506cd0974545eccf16e4dd54a2d3329039f0",
       "checkout": "repos/desktop",
-      "milestone": "1-A.1 implementation and build; full 1-A QA pending"
+      "milestone": "1-A.1 implemented, built, selected UI QA and alpha.2 published; full 1-A pending",
+      "packageSourceCommit": "a704c6d7b1761484d163f809e27e6af6a72f4757"
     },
     {
       "repository": "Pepeu2010/nuvio-enhanced-tv",
       "url": "https://github.com/Pepeu2010/nuvio-enhanced-tv.git",
       "branch": "main",
-      "commit": "024e60aca0d6edf190c6eab465c4e335e16a8da4",
+      "commit": "3dc50fefbbfb674b1c655046ca391f3c54f4abb8",
       "checkout": "repos/tv",
-      "milestone": "1-A.1 implementation and build; full 1-A QA pending"
+      "milestone": "1-A.1 implemented, built, selected UI QA and alpha.2 published; full 1-A pending",
+      "packageSourceCommit": "024e60aca0d6edf190c6eab465c4e335e16a8da4"
     }
   ]
 }

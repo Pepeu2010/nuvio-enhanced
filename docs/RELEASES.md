@@ -2,7 +2,9 @@
 
 ## v0.1.0-alpha.2 — incremento nativo 1-A.1
 
-[Pré-release](https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.2).
+[Pré-release publicada](https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.2).
+Os dez assets foram conferidos no GitHub por tamanho e digest SHA-256 antes de
+publicar; registro em [motion-release-publication.json](motion-release-publication.json).
 Acrescenta à fundação 0-C o movimento completo/reduzido/desligado nas configurações
 de Aparência dos clientes existentes, salvo por perfil e fora do payload oficial
 de sync. Não representa o redesign completo de 1-A.
@@ -32,7 +34,13 @@ Para reconstruir, siga os passos dos forks e faça checkout dos commits acima
 com Git LFS; os ZIPs podem conter ponteiros LFS. Esta release central exige
 download manual, pois os updaters consultam os repositórios dos clientes.
 
-Publicação em rascunho até verificação de todos os uploads por tamanho e SHA-256.
+Os MSIs alpha.1 e alpha.2 mantêm ProductVersion `1.1.27` e ProductCode
+`{06995AB3-8E6B-3211-9441-084EA9B585D5}`. Para trocar entre eles, remova a instalação
+anterior do **Nuvio Enhanced** antes de instalar alpha.2. Os APKs mantêm versionCode
+1066 e assinatura própria de desenvolvimento: instale com substituição da versão
+anterior. A tag central ainda não substitui um versionamento interno por entrega.
+
+O rascunho só foi publicado após verificação dos uploads por tamanho e SHA-256.
 
 ## v0.1.0-alpha.1 — fundação 0-C
 

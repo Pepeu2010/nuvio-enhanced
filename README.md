@@ -20,6 +20,8 @@ Os APKs são builds **Full Debug**, assinados para desenvolvimento, destinados �
 
 Esta versão é experimental: instalação, login, sync, reprodução e navegação por controle remoto ainda precisam de validação em aparelhos reais. A tag identifica a entrega do projeto; as versões internas herdadas são `0.1.27-alpha` no Desktop e `1.1.0-beta.3` na TV.
 
+Ao trocar a alpha.1 pela alpha.2 no Windows, remova a instalação anterior do **Nuvio Enhanced** antes de instalar o novo MSI, pois a versão interna/identidade do MSI ainda é a mesma. No Android, instale o APK substituindo o build de desenvolvimento anterior. [Detalhes dos pacotes](docs/RELEASES.md).
+
 No emulador, o APK universal instalou e o seletor funcionou por D-pad, incluindo persistência após reinício. A imagem Android x86_64 de 16 KB exigiu modo de compatibilidade para bibliotecas nativas; o login por QR falhou nesta sessão. Suporte nativo a 16 KB e conta/sync/playback permanecem pendentes. [Evidências e limitações](docs/NATIVE_FOUNDATION.md).
 
 ## O que já foi entregue

@@ -1,0 +1,70 @@
+{
+  "tag": "v0.1.0-alpha.2",
+  "url": "https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.2",
+  "publishedAt": "2026-10-04T13:56:05Z",
+  "prerelease": true,
+  "draft": false,
+  "verification": "All ten remote asset sizes and SHA-256 digests match staged local files; sources pinned in RELEASES.md",
+  "assets": [
+    {
+      "name": "CHECKSUMS-SHA256.txt",
+      "bytes": 892,
+      "digest": "sha256:1046341a50ee55ffcc31d27b4e63ea6bcc1451f27c3e8d69e242c3d14eb73209",
+      "downloadUrl": "https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/CHECKSUMS-SHA256.txt"
+    },
+    {
+      "name": "NuvioEnhanced-Desktop-source.zip",
+      "bytes": 242498021,
+      "digest": "sha256:8f01e3297c1b4c44ec6394998919640740c39bf8c545bc2f470d2029683b69de",
+      "downloadUrl": "https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-Desktop-source.zip"
+    },
+    {
+      "name": "NuvioEnhanced-TV-arm64-v8a-debug.apk",
+      "bytes": 96973729,
+      "digest": "sha256:cf56beab09848f8aee47e53dfe7faed01611443e25818d451529ec2d01ffe977",
+      "downloadUrl": "https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-TV-arm64-v8a-debug.apk"
+    },
+    {
+      "name": "NuvioEnhanced-TV-armeabi-v7a-debug.apk",
+      "bytes": 94872143,
+      "digest": "sha256:6829f2a964da56bfad6e572023be8291060f91ff19ab1ec623996725a89eae0a",
+      "downloadUrl": "https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-TV-armeabi-v7a-debug.apk"
+    },
+    {
+      "name": "NuvioEnhanced-TV-source.zip",
+      "bytes": 79933610,
+      "digest": "sha256:d1c23361ed0b601231131c3f74327e5ae4daf9e3326a89d9d8efeb2a4b622457",
+      "downloadUrl": "https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-TV-source.zip"
+    },
+    {
+      "name": "NuvioEnhanced-TV-universal-debug.apk",
+      "bytes": 183944971,
+      "digest": "sha256:4ccbb76eae9db9a83023d5bed06b4e23e655e20f4ce796acb75c282c16f7bf44",
+      "downloadUrl": "https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-TV-universal-debug.apk"
+    },
+    {
+      "name": "NuvioEnhanced-TV-x86-debug.apk",
+      "bytes": 98554383,
+      "digest": "sha256:4991b8db4194713ff8a1eb37a26b9dedae44765d2317c85512cb1962b88db651",
+      "downloadUrl": "https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-TV-x86-debug.apk"
+    },
+    {
+      "name": "NuvioEnhanced-TV-x86_64-debug.apk",
+      "bytes": 99394248,
+      "digest": "sha256:0d7a292e8495203ba95802d3eb24e2c8d49f5a15cfcdabf9bc7d09e452ce762c",
+      "downloadUrl": "https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-TV-x86_64-debug.apk"
+    },
+    {
+      "name": "NuvioEnhanced-Windows-x64.msi",
+      "bytes": 209695460,
+      "digest": "sha256:29213915ff2081024d04523888846dca27186cd2d840f03bc2ed595ee1c286bf",
+      "downloadUrl": "https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-Windows-x64.msi"
+    },
+    {
+      "name": "release-assets.json",
+      "bytes": 1694,
+      "digest": "sha256:863574b8bba6ea82658b3f333d2d42c01719cba327fdc65d8ffbef55d76bf2c1",
+      "downloadUrl": "https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/release-assets.json"
+    }
+  ]
+}
