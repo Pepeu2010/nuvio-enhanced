@@ -12,7 +12,15 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
 - 0-A e 0-B concluídos com ressalvas; 0-C implementado, testado e compilado.
 - Fundação: 31 testes direcionados Desktop e 84 TV aprovados; MSI/APKs do fork
   gerados. Código e commits independentes publicados no GitHub; detalhes e limites
-  em FOUNDATION.md. Próximo milestone de produto: 1-A.
+  em FOUNDATION.md. Pré-release 0-C publicada com MSI, APK universal/quatro ABIs,
+  fontes e hashes; registro em RELEASES.md.
+- 1-A em execução: incremento 1-A.1 de movimento por perfil integrado a Aparência,
+  tokens e navegação existentes; 22 testes Desktop e 19 TV aprovados, MSI/APKs
+  compilados. QA do seletor Desktop e do APK instalado em emulador concluído,
+  com seleção por D-pad, retorno de foco e persistência após reinício.
+  Incremento distribuído na alpha.2; detalhes/limites em NATIVE_FOUNDATION.md.
+  A identidade/shell completa e o QA global continuam pendentes; não se avançou
+  para 1-B nem se declarou o redesign concluído.
 - Nenhuma fase de produto é declarada concluída apenas pela auditoria.
 
 ## Gates e entregas

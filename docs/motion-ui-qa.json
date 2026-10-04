@@ -1,0 +1,60 @@
+{
+  "recordedAtUtc": "2026-10-04T13:47:39.6206904Z",
+  "milestone": "1-A.1",
+  "sourceCommit": "024e60aca0d6edf190c6eab465c4e335e16a8da4",
+  "apkSha256": "4ccbb76eae9db9a83023d5bed06b4e23e655e20f4ce796acb75c282c16f7bf44",
+  "environment": {
+    "avd": "NuvioEnhanced_QA_01a10441",
+    "image": "system-images;android-37.1;google_apis_playstore_ps16k;x86_64",
+    "devicePreset": "tv_1080p",
+    "resolution": "1920x1080",
+    "configuredRamMiB": 2048,
+    "renderer": "swiftshader",
+    "pageSize": 16384,
+    "tvSystemImage": false,
+    "physicalDevice": false
+  },
+  "checks": [
+    "Universal APK install succeeded",
+    "Leanback activity resolved and launched",
+    "Guest onboarding used existing Advanced and Modern choices",
+    "Settings -> Appearance -> Navigation motion reached by D-pad",
+    "Full -> Reduced -> Off selected by D-pad",
+    "Dialog closed with focus on original setting row",
+    "Force-stop and relaunch preserved Off",
+    "Reopened dialog focused Off with Selected semantics",
+    "Inspected actual screenshots for legibility and choice indication",
+    "Crash buffer empty at end of session"
+  ],
+  "limitations": [
+    "Phone system image using TV device preset; not Android TV OS or physical 2 GB performance proof",
+    "OS warned that native x86_64 libraries are not 16 KB aligned and used page size compatible mode",
+    "System compatibility warning dismissed with UI-tree-derived tap; app flows used D-pad",
+    "QR login showed QR unavailable and unexpected error; no account or sync validation",
+    "No player/source playback, FPS or focus latency measurement",
+    "APK is Full Debug; internal versions inherited",
+    "Package inspection was recorded before emulator install; installed=false there is the inspection scope"
+  ],
+  "artifacts": [
+    {
+      "file": "evidence/1-a-1/desktop-picker-off.png",
+      "bytes": 17044,
+      "sha256": "e624ef0d466ece890b4c35b947c6d0341e2021c42d08baaf19ac2a146d6ae5cd"
+    },
+    {
+      "file": "evidence/1-a-1/motion-dialog-full.png",
+      "bytes": 115877,
+      "sha256": "5228acefda9b6aae5504f70dd096fb42ea1eee96d10df30645e593460329bdf5"
+    },
+    {
+      "file": "evidence/1-a-1/motion-dialog-off-persisted.png",
+      "bytes": 117016,
+      "sha256": "366dafe1cb42f5b47cbdf55c6a51d03cd10d5bd6652b5481c55235a230974d36"
+    },
+    {
+      "file": "evidence/1-a-1/motion-dialog-reduced.png",
+      "bytes": 116013,
+      "sha256": "4f924ad6dbd30cfdb3ff6da4ff6c67b2963cb3f4096ffa176398c822b6953516"
+    }
+  ]
+}

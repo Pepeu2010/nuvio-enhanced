@@ -1,5 +1,8 @@
 [CmdletBinding()]
-param([ValidateSet('desktop','tv')][string[]]$Targets = @('desktop','tv'))
+param(
+    [ValidateSet('desktop','tv')][string[]]$Targets = @('desktop','tv'),
+    [ValidatePattern('^[a-z0-9-]+\.json$')][string]$OutputName = 'package-inspection.json'
+)
 $ErrorActionPreference = 'Stop'
 $workspace = Split-Path $PSScriptRoot -Parent
 $results = foreach ($target in $Targets) {
@@ -56,5 +59,5 @@ $results = foreach ($target in $Targets) {
     [ordered]@{target=$target;sourceCommit=(git -C $checkout rev-parse HEAD).Trim();installed=$false;inspection=$inspection;artifacts=$artifacts}
 }
 [ordered]@{exportedAtUtc=[DateTime]::UtcNow.ToString('o');scope='Package and binary inspection; no installation or playback QA';results=@($results)} |
-    ConvertTo-Json -Depth 8 | Set-Content (Join-Path $workspace 'docs/package-inspection.json') -Encoding utf8
+    ConvertTo-Json -Depth 8 | Set-Content (Join-Path $workspace "docs/$OutputName") -Encoding utf8
 Write-Output 'Package identities, native contents and hashes exported; no apps installed.'

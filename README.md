@@ -6,19 +6,21 @@ O Nuvio Enhanced amplia os clientes existentes do [Nuvio](https://github.com/Nuv
 
 ## Baixar e experimentar
 
-A primeira entrega é a **pré-release `v0.1.0-alpha.1` — fundação 0-C**. Ela contém a base do Nuvio com a identidade e o armazenamento do fork isolados. O novo visual e os demais recursos abaixo serão entregues progressivamente.
+A entrega atual é a **pré-release `v0.1.0-alpha.2` — incremento nativo 1-A.1**. Ela contém a fundação do fork e acrescenta a escolha de movimento de navegação nas configurações de Aparência dos clientes existentes. O visual completo e os demais recursos abaixo serão entregues progressivamente.
 
 | Plataforma | Download |
 |---|---|
-| PC — Windows 64 bits | [Instalador MSI](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.1/NuvioEnhanced-Windows-x64-foundation.msi) |
-| Android TV — recomendado quando não sabe a arquitetura | [APK universal de desenvolvimento](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.1/NuvioEnhanced-TV-universal-debug.apk) |
-| Android TV — ARM 64 bits | [APK arm64-v8a](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.1/NuvioEnhanced-TV-arm64-v8a-debug.apk) |
-| Android TV — ARM 32 bits | [APK armeabi-v7a](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.1/NuvioEnhanced-TV-armeabi-v7a-debug.apk) |
-| Android — x86_64 / x86 | [Todos os arquivos da release](https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.1) |
+| PC — Windows 64 bits | [Instalador MSI](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-Windows-x64.msi) |
+| Android TV — recomendado quando não sabe a arquitetura | [APK universal de desenvolvimento](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-TV-universal-debug.apk) |
+| Android TV — ARM 64 bits | [APK arm64-v8a](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-TV-arm64-v8a-debug.apk) |
+| Android TV — ARM 32 bits | [APK armeabi-v7a](https://github.com/Pepeu2010/nuvio-enhanced/releases/download/v0.1.0-alpha.2/NuvioEnhanced-TV-armeabi-v7a-debug.apk) |
+| Android — x86_64 / x86 | [Todos os arquivos da release](https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.2) |
 
-Os APKs são builds **Full Debug**, assinados para desenvolvimento, destinados à experiência Android TV. O APK universal inclui as quatro arquiteturas. Ainda não há pacote Linux/macOS nem uma interface específica para celulares. Checksums SHA-256 e arquivos de código-fonte estão na [release](https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.1).
+Os APKs são builds **Full Debug**, assinados para desenvolvimento, destinados à experiência Android TV. O APK universal inclui as quatro arquiteturas. Ainda não há pacote Linux/macOS nem uma interface específica para celulares. Checksums SHA-256 e arquivos de código-fonte estão na [release](https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.2).
 
 Esta versão é experimental: instalação, login, sync, reprodução e navegação por controle remoto ainda precisam de validação em aparelhos reais. A tag identifica a entrega do projeto; as versões internas herdadas são `0.1.27-alpha` no Desktop e `1.1.0-beta.3` na TV.
+
+No emulador, o APK universal instalou e o seletor funcionou por D-pad, incluindo persistência após reinício. A imagem Android x86_64 de 16 KB exigiu modo de compatibilidade para bibliotecas nativas; o login por QR falhou nesta sessão. Suporte nativo a 16 KB e conta/sync/playback permanecem pendentes. [Evidências e limitações](docs/NATIVE_FOUNDATION.md).
 
 ## O que já foi entregue
 
@@ -29,6 +31,8 @@ Esta versão é experimental: instalação, login, sync, reprodução e navegaç
 - Checkouts e commits de referência, auditoria de arquitetura/compatibilidade/segurança e builds baseline documentados.
 
 Foram aprovados **31 testes direcionados Desktop e 84 TV**, além da compilação e inspeção dos pacotes. As **46 falhas herdadas** encontradas nas suítes completas do baseline continuam registradas. Esses resultados não substituem testes de reprodução e de uso em dispositivos. Veja [a entrega 0-C](docs/FOUNDATION.md) e [o baseline](docs/BASELINE.md).
+
+O primeiro incremento **1-A.1** amplia Aparência e navegação existentes com movimento completo/reduzido/desligado salvo localmente por perfil. Foram aprovados **22 testes Desktop e 19 TV**, com novo MSI e APKs compilados e QA do seletor TV instalado em emulador. O incremento integra a alpha.2; o milestone visual completo continua em execução. [Implementação e alcance da validação](docs/NATIVE_FOUNDATION.md).
 
 ## O que queremos acrescentar ao Nuvio
 

@@ -18,7 +18,8 @@ falhas herdadas preservadas. Esta entrega mantém Compose/KMP e Compose/Media3.
 - Debug TV usa assinatura de desenvolvimento Android. Release exige configuração
   explícita própria, sem senha padrão nem fallback para keystore oficial.
 - Updaters apontam aos forks `Pepeu2010/nuvio-enhanced-desktop` e
-  `Pepeu2010/nuvio-enhanced-tv`. Não há releases do fork anunciadas nesta entrega.
+  `Pepeu2010/nuvio-enhanced-tv`. A pré-release 0-C foi posteriormente publicada
+  na aba Releases central; a configuração dos updaters segue nos forks específicos.
 - Crash reports desligados por padrão em novos dados, preservando opt-in explícito.
   Sentry não inicializa se desligado ou se DSN não configurado.
 - Diagnósticos de addons removem URLs completas (path/query/userinfo podem conter
@@ -55,6 +56,7 @@ substituídos na Fase 1; nenhum controle Live TV/EPG falso foi acrescentado.
 Próximo milestone: 1-A, tokens/motion e shell nativo próprio, seguido pelos gates
 do roadmap. Cache adaptativo e preparação EPG entram em 1-D; timed metadata em 2-A.
 
-Milestone 0-C implementado, testado e compilado. Commits do código estão em
-`fork-lock.json`, resultados em `foundation-results.json`, inspeção dos pacotes
+Milestone 0-C implementado, testado e compilado. Commits exatos de 0-C estão em
+`RELEASES.md` (alpha.1); `fork-lock.json` acompanha o incremento atual.
+Resultados em `foundation-results.json`, inspeção dos pacotes
 em `package-inspection.json`. Os dois forks foram publicados com `main` própria.

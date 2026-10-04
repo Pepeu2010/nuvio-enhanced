@@ -1,6 +1,44 @@
 # Releases do Nuvio Enhanced
 
+## v0.1.0-alpha.2 — incremento nativo 1-A.1
+
+[Pré-release](https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.2).
+Acrescenta à fundação 0-C o movimento completo/reduzido/desligado nas configurações
+de Aparência dos clientes existentes, salvo por perfil e fora do payload oficial
+de sync. Não representa o redesign completo de 1-A.
+
+MSI Windows x64, APK TV universal e variantes ARM32/ARM64/x86/x86_64, fontes
+correspondentes, manifest e checksums acompanham a entrega. Os APKs continuam
+Full Debug de desenvolvimento e as versões internas continuam herdadas.
+
+| Cliente | Commit distribuído |
+|---|---|
+| Desktop | `a704c6d7b1761484d163f809e27e6af6a72f4757` |
+| TV | `024e60aca0d6edf190c6eab465c4e335e16a8da4` |
+
+**22 testes Desktop e 19 TV aprovados** e pacotes recompilados. O APK universal
+foi instalado em emulador 1080p: seleção por D-pad, retorno de foco e persistência
+após reinício foram observados. A imagem disponível é phone Android API 37.1
+x86_64/16 KB com preset TV; não valida Android TV OS, TV Box física ou performance.
+O sistema avisou sobre alinhamento nativo e executou em page size compatible
+mode. Não se declara compatibilidade nativa com 16 KB. O login original por QR
+falhou nessa sessão; conta/sync/playback e MSI instalado permanecem pendentes.
+As 46 falhas completas herdadas do baseline continuam registradas.
+
+Detalhes/capturas: [NATIVE_FOUNDATION.md](NATIVE_FOUNDATION.md),
+[motion-results.json](motion-results.json), [motion-ui-qa.json](motion-ui-qa.json)
+e [motion-package-inspection.json](motion-package-inspection.json).
+Para reconstruir, siga os passos dos forks e faça checkout dos commits acima
+com Git LFS; os ZIPs podem conter ponteiros LFS. Esta release central exige
+download manual, pois os updaters consultam os repositórios dos clientes.
+
+Publicação em rascunho até verificação de todos os uploads por tamanho e SHA-256.
+
 ## v0.1.0-alpha.1 — fundação 0-C
+
+[Pré-release publicada](https://github.com/Pepeu2010/nuvio-enhanced/releases/tag/v0.1.0-alpha.1).
+Os dez assets foram conferidos no GitHub por tamanho, estado de upload e digest
+SHA-256 antes da publicação; registro em [release-publication.json](release-publication.json).
 
 Entrega experimental dos clientes existentes do Nuvio com a fundação do fork.
 Não contém ainda o redesign, Profile Studio, nova timeline, Source Intelligence,

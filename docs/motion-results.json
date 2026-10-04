@@ -1,0 +1,163 @@
+{
+  "exportedAtUtc": "2026-10-04T13:29:18.4425787Z",
+  "milestone": "motion",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "a704c6d7b1761484d163f809e27e6af6a72f4757",
+      "attempts": [
+        {
+          "label": "motion-desktop",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-04T12:56:23.870926Z",
+          "finishedAtUtc": "2026-10-04T12:57:08.8671973Z",
+          "durationSeconds": 44.98,
+          "tasks": [
+            ":composeApp:desktopTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44",
+            "--tests",
+            "*ThemeSettingsStorageDesktopTest",
+            "--tests",
+            "*CustomThemeColorsTest"
+          ]
+        },
+        {
+          "label": "motion-desktop-build",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T12:57:38.2680791Z",
+          "finishedAtUtc": "2026-10-04T13:03:36.1722975Z",
+          "durationSeconds": 357.88,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*ThemeSettingsStorageDesktopTest",
+            "--tests",
+            "*CustomThemeColorsTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        },
+        {
+          "label": "motion-desktop-final",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T13:24:37.1129027Z",
+          "finishedAtUtc": "2026-10-04T13:26:06.8182075Z",
+          "durationSeconds": 89.67,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*NavigationMotionPickerTest",
+            "--tests",
+            "*ThemeSettingsStorageDesktopTest",
+            "--tests",
+            "*CustomThemeColorsTest",
+            "--tests",
+            "*PlayerBackReleaseGuardTest"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        },
+        {
+          "label": "motion-desktop-ui",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T13:04:44.6482204Z",
+          "finishedAtUtc": "2026-10-04T13:05:18.1091248Z",
+          "durationSeconds": 33.44,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*NavigationMotionPickerTest",
+            "--tests",
+            "*ThemeSettingsStorageDesktopTest",
+            "--tests",
+            "*CustomThemeColorsTest",
+            "--tests",
+            "*PlayerBackReleaseGuardTest"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 22,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 4,
+        "attempt": "motion-desktop-final"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "024e60aca0d6edf190c6eab465c4e335e16a8da4",
+      "attempts": [
+        {
+          "label": "motion-tv-build",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-04T13:05:54.419865Z",
+          "finishedAtUtc": "2026-10-04T13:09:28.9762822Z",
+          "durationSeconds": 214.54,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*UpdateBannerPolicyTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        },
+        {
+          "label": "motion-tv-final",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T13:11:16.0172401Z",
+          "finishedAtUtc": "2026-10-04T13:23:26.3447897Z",
+          "durationSeconds": 730.31,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*UpdateBannerPolicyTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 19,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 4,
+        "attempt": "motion-tv-final"
+      }
+    }
+  ]
+}
