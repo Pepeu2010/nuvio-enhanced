@@ -1,0 +1,56 @@
+[
+  {
+    "target": "tv",
+    "baselineCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "file": "app-full-arm64-v8a-debug.apk",
+    "bytes": 73726242,
+    "sha256": "86517206c8ab67a1840a0eb56ceb1a80e475fa5200760be8924211078ed2ea62",
+    "installed": false,
+    "distribution": "local development signing only"
+  },
+  {
+    "target": "tv",
+    "baselineCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "file": "app-full-armeabi-v7a-debug.apk",
+    "bytes": 71737336,
+    "sha256": "ea30db3f8da816f353dd64b0d1f713d89229d454dbcdaea68534667f0b1d1f9d",
+    "installed": false,
+    "distribution": "local development signing only"
+  },
+  {
+    "target": "tv",
+    "baselineCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "file": "app-full-universal-debug.apk",
+    "bytes": 154228788,
+    "sha256": "5b9c6935dbb17578b8b2b591a5d888c2f8d9f6253429a0c18b8c4aadf18b801d",
+    "installed": false,
+    "distribution": "local development signing only"
+  },
+  {
+    "target": "tv",
+    "baselineCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "file": "app-full-x86_64-debug.apk",
+    "bytes": 75339745,
+    "sha256": "b744e62fbad29a98962feaf1d457de5e87e7ae289507a2e6b4ab4b3772e24d87",
+    "installed": false,
+    "distribution": "local development signing only"
+  },
+  {
+    "target": "tv",
+    "baselineCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "file": "app-full-x86-debug.apk",
+    "bytes": 74393064,
+    "sha256": "71fa8029ceaf43e3152a3b72d75632fb4da180ac4524b66422e390bbf34e4d63",
+    "installed": false,
+    "distribution": "local development signing only"
+  },
+  {
+    "target": "desktop",
+    "baselineCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "file": "Nuvio-Windows-x64-0.1.27-alpha.msi",
+    "bytes": 209674964,
+    "sha256": "528924a2eeb6e0b810fa7f2c1466907edfbfd7fcc7da30a9075c9aaa7c260252",
+    "installed": false,
+    "distribution": "upstream baseline; local only"
+  }
+]

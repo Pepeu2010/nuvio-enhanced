@@ -3,3 +3,11 @@
 /artifacts/
 /.tooling/
 *.log
+*.jks
+*.keystore
+*.p12
+*.pfx
+local.properties
+.env
+.env.*
+!.env.example

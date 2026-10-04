@@ -1,0 +1,132 @@
+[
+  {
+    "class": "com.nuvio.app.features.details.SeriesPlaybackResolverTest",
+    "name": "seriesPrimaryAction_uses_latest_watched_episode_when_manual_mark_exists[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Next Up • S]1 E3> but was:<[A Seguir • T]1 E3>"
+  },
+  {
+    "class": "com.nuvio.app.features.details.SeriesPlaybackResolverTest",
+    "name": "seriesPrimaryAction_uses_explicit_content_when_meta_id_is_alias[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Next Up • S]4 E15> but was:<[A Seguir • T]4 E15>"
+  },
+  {
+    "class": "com.nuvio.app.features.details.SeriesPlaybackResolverTest",
+    "name": "seriesPrimaryAction_restarts_at_first_episode_when_series_is_marked_watched[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Play S]1 E1> but was:<[Reproduzir T]1 E1>"
+  },
+  {
+    "class": "com.nuvio.app.features.details.SeriesPlaybackResolverTest",
+    "name": "seriesPrimaryAction_prefers_next_up_when_manual_watch_is_newer_than_resume[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Next Up • S]1 E3> but was:<[A Seguir • T]1 E3>"
+  },
+  {
+    "class": "com.nuvio.app.features.details.SeriesPlaybackResolverTest",
+    "name": "seriesPrimaryAction_ignores_default_video_id_when_progress_exists[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<Re[sume S]1 E1> but was:<Re[tomar T]1 E1>"
+  },
+  {
+    "class": "com.nuvio.app.features.details.SeriesPlaybackResolverTest",
+    "name": "seriesPrimaryAction_prefers_default_video_id_when_nothing_watched[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Play S]1 E2> but was:<[Reproduzir T]1 E2>"
+  },
+  {
+    "class": "com.nuvio.app.features.home.components.CollectionCardRemoteImageTest",
+    "name": "animatedImageDoesNotRequireAFileExtension[desktop]",
+    "message": "java.lang.AssertionError: The focus asset should not load before hover expected:<0> but was:<1>"
+  },
+  {
+    "class": "com.nuvio.app.features.home.components.CollectionCardRemoteImageTest",
+    "name": "animatedGifStillPlaysOnHover[desktop]",
+    "message": "java.lang.AssertionError: The focus asset should not load before hover expected:<0> but was:<1>"
+  },
+  {
+    "class": "com.nuvio.app.features.home.components.CollectionCardRemoteImageTest",
+    "name": "animatedWebpPlaysOnHoverAndRestoresCoverOnExit[desktop]",
+    "message": "java.lang.AssertionError: The focus asset should not load before hover expected:<0> but was:<1>"
+  },
+  {
+    "class": "com.nuvio.app.features.home.components.HomeHeroSectionTest",
+    "name": "desktop hero keeps the existing full bleed layout at sixteen by nine[desktop]",
+    "message": "java.lang.AssertionError: Expected <660.0> with absolute tolerance <0.001>, actual <640.0>."
+  },
+  {
+    "class": "com.nuvio.app.features.home.HomeScreenTest",
+    "name": "build home continue watching items removes duplicate video ids[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[S]1 E4 • Cripples, Bas...> but was:<[T]1 E4 • Cripples, Bas...>"
+  },
+  {
+    "class": "com.nuvio.app.features.home.HomeScreenTest",
+    "name": "build home continue watching items prefers progress entry on timestamp tie[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[S]1 E5 • The Wolf and ...> but was:<[T]1 E5 • The Wolf and ...>"
+  },
+  {
+    "class": "com.nuvio.app.features.home.HomeScreenTest",
+    "name": "build home continue watching items suppresses next up when series has in progress resume[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[S]1 E4 • Current> but was:<[T]1 E4 • Current>"
+  },
+  {
+    "class": "com.nuvio.app.features.library.LibraryRepositoryTest",
+    "name": "library tabs include local Nuvio library before Trakt tabs[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Nuvio Library]> but was:<[Biblioteca Nuvio]>"
+  },
+  {
+    "class": "com.nuvio.app.features.library.LibraryRepositoryTest",
+    "name": "display title uses exact type formatting[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<O[ther]> but was:<O[utro]>"
+  },
+  {
+    "class": "com.nuvio.app.features.plugins.PluginRuntimeDesktopTest",
+    "name": "desktop runtime handles concurrent scraper executions[desktop]",
+    "message": "kotlinx.coroutines.TimeoutCancellationException: Timed out waiting for 60000 ms"
+  },
+  {
+    "class": "com.nuvio.app.features.updater.LinuxUpdateInstallTest",
+    "name": "a package install is handed to the desktop package handler[desktop]",
+    "message": "java.lang.AssertionError: expected:<[xdg-open, /tmp/updates/Nuvio.rpm]> but was:<[xdg-open, C:\\tmp\\updates\\Nuvio.rpm]>"
+  },
+  {
+    "class": "com.nuvio.app.features.updater.LinuxUpdateInstallTest",
+    "name": "an app image with no known path falls back to the desktop handler[desktop]",
+    "message": "java.lang.AssertionError: expected:<[xdg-open, /tmp/updates/Nuvio.AppImage]> but was:<[xdg-open, C:\\tmp\\updates\\Nuvio.AppImage]>"
+  },
+  {
+    "class": "com.nuvio.app.features.updater.LinuxUpdateInstallTest",
+    "name": "an app image replaces itself once this process is gone[desktop]",
+    "message": "java.lang.AssertionError: Expected value to be true."
+  },
+  {
+    "class": "com.nuvio.app.features.watching.domain.SeriesContinuityTest",
+    "name": "decideSeriesPrimaryAction_skips_watched_episodes_after_rewatch[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Next Up • S]2 E2> but was:<[A Seguir • T]2 E2>"
+  },
+  {
+    "class": "com.nuvio.app.features.watching.domain.SeriesContinuityTest",
+    "name": "decideSeriesPrimaryAction_skips_specials_for_initial_play[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Play S]1 E1> but was:<[Reproduzir T]1 E1>"
+  },
+  {
+    "class": "com.nuvio.app.features.watching.domain.SeriesContinuityTest",
+    "name": "decideSeriesPrimaryAction_prefers_up_next_when_completed_is_newer_than_resume[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Next Up • S]1 E3> but was:<[A Seguir • T]1 E3>"
+  },
+  {
+    "class": "com.nuvio.app.features.watching.domain.SeriesContinuityTest",
+    "name": "decideSeriesPrimaryAction_prefers_resume_when_resume_is_newer_than_completed[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<Re[sume S]1 E2> but was:<Re[tomar T]1 E2>"
+  },
+  {
+    "class": "com.nuvio.app.features.watching.domain.SeriesContinuityTest",
+    "name": "decideSeriesPrimaryAction_falls_back_to_specials_when_no_main_season[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Play S]0 E1> but was:<[Reproduzir T]0 E1>"
+  },
+  {
+    "class": "com.nuvio.app.features.watching.domain.SeriesContinuityTest",
+    "name": "decideSeriesPrimaryAction_restarts_completed_series_from_first_episode[desktop]",
+    "message": "org.junit.ComparisonFailure: expected:<[Play S]1 E1> but was:<[Reproduzir T]1 E1>"
+  },
+  {
+    "class": "com.nuvio.app.features.watchprogress.WatchProgressIdentityTest",
+    "name": "legacy payload derives episode progress key and preserves completed position[desktop]",
+    "message": "java.lang.AssertionError: Expected value to be true."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "class": "androidx.media3.datasource.LocalhostZeroCopyDataSourceTest",
+    "name": "testHttpError404",
+    "message": "java.lang.AssertionError: unexpected exception type thrown; expected:<androidx.media3.datasource.HttpDataSource.InvalidResponseCodeException> but was:<androidx.media3.datasource.HttpDataSource.HttpDataSourceException>"
+  },
+  {
+    "class": "androidx.media3.exoplayer.upstream.DefaultAllocatorTest",
+    "name": "testLateReleasedAllocationsMemoryLeak",
+    "message": "java.lang.AssertionError: expected:<0> but was:<196608>"
+  },
+  {
+    "class": "com.nuvio.tv.core.player.DolbyVisionBaseLayerPolicyTest",
+    "name": "non-Amazon device on DV display with DV81 decoder falls through to NATIVE_DV7",
+    "message": "java.lang.AssertionError: expected:<NATIVE_DV7> but was:<CONVERT_TO_DV81>"
+  },
+  {
+    "class": "com.nuvio.tv.core.player.DolbyVisionBaseLayerPolicyTest",
+    "name": "Samsung device on DV display still falls through to NATIVE_DV7",
+    "message": "java.lang.AssertionError: expected:<NATIVE_DV7> but was:<CONVERT_TO_DV81>"
+  },
+  {
+    "class": "com.nuvio.tv.core.player.FrameRateUtilsMkvSparseTracksTest",
+    "name": "sparse Tracks fetch terminates the probe file with a stub Cluster",
+    "message": "Probe file must end with a stub Cluster after the sparse Tracks fetch: arrays first differed at element [0]; expected:<31> but was:<0>"
+  },
+  {
+    "class": "com.nuvio.tv.core.player.MatroskaAfrProbeTest",
+    "name": "stub Cluster terminates Cluster-less head and resizes Segment",
+    "message": "arrays first differed at element [0]; expected:<31> but was:<0>"
+  },
+  {
+    "class": "com.nuvio.tv.core.plugin.PluginBinaryFetchTest",
+    "name": "text request remains UTF8 encoded",
+    "message": "java.lang.NoSuchMethodException: com.nuvio.tv.core.plugin.PluginRuntime.performNativeFetch(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Set)"
+  },
+  {
+    "class": "com.nuvio.tv.core.plugin.PluginBinaryFetchTest",
+    "name": "binary request and response preserve exact bytes",
+    "message": "java.lang.NoSuchMethodException: com.nuvio.tv.core.plugin.PluginRuntime.performNativeFetch(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Set)"
+  },
+  {
+    "class": "com.nuvio.tv.core.poster.CustomPosterUrlResolverTest",
+    "name": "resolve BetterPosters returns null when IMDb id is missing",
+    "message": "java.lang.AssertionError: expected null, but was:<https://btttr.cc/poster/tmdb/poster-default/series-1396.jpg>"
+  },
+  {
+    "class": "com.nuvio.tv.core.poster.CustomPosterUrlResolverTest",
+    "name": "resolve pattern without any placeholders returns as-is",
+    "message": "java.lang.AssertionError: expected:<https://example.com/static-poster.jpg> but was:<null>"
+  },
+  {
+    "class": "com.nuvio.tv.data.local.CollectionsDataStoreSourceMigrationTest",
+    "name": "validation rejects trakt sources without list id",
+    "message": "java.lang.AssertionError"
+  },
+  {
+    "class": "com.nuvio.tv.data.repository.CatalogRepositoryTypeTest",
+    "name": "initial and paginated requests retain advertised Series type",
+    "message": "io.mockk.MockKException: no answer found for LayoutPreferenceDataStore(#1066).getCustomPosterEnabledScreens() among the configured answers: (LayoutPreferenceDataStore(#1066).getCustomPosterUrlPattern()))"
+  },
+  {
+    "class": "com.nuvio.tv.data.repository.TraktAuthServiceTest",
+    "name": "refresh token 400 clears credentials and prevents another refresh",
+    "message": "java.lang.AssertionError: Verification failed: call 1 of 1: TraktApi(#1467).refreshToken(any(), any())) was not called"
+  },
+  {
+    "class": "com.nuvio.tv.ui.screens.home.ContinueWatchingAiringRulesTest",
+    "name": "watchableEpisodes excludes future mid-season episodes so checkmark can apply",
+    "message": "java.lang.AssertionError: expected:<[(1, 1), (1, 2)]> but was:<[(1, 1), (1, 2), (1, 3)]>"
+  },
+  {
+    "class": "com.nuvio.tv.ui.screens.player.NuvioExoPlayerPerformanceHelperTest",
+    "name": "test default fallback values when RAM is zero or unknown",
+    "message": "java.lang.AssertionError: expected:<250> but was:<200>"
+  },
+  {
+    "class": "com.nuvio.tv.ui.screens.player.NuvioExoPlayerPerformanceHelperTest",
+    "name": "test 2 GB RAM tier classification",
+    "message": "java.lang.AssertionError: expected:<250> but was:<200>"
+  },
+  {
+    "class": "com.nuvio.tv.ui.screens.player.NuvioExoPlayerPerformanceHelperTest",
+    "name": "test 1 GB RAM tier classification",
+    "message": "java.lang.AssertionError: expected:<150> but was:<100>"
+  },
+  {
+    "class": "com.nuvio.tv.ui.screens.player.PostPlayRecommendationStateTest",
+    "name": "loaded recommendation holds natural completion until overlay evaluation",
+    "message": "java.lang.AssertionError"
+  },
+  {
+    "class": "com.nuvio.tv.ui.screens.player.PostPlayRecommendationStateTest",
+    "name": "post play returns to player only while its window is available",
+    "message": "java.lang.AssertionError"
+  },
+  {
+    "class": "com.nuvio.tv.ui.screens.player.TrackSelectionInvestigationTest",
+    "name": "testBuildStreamInfoDataWithActiveVideoFormat",
+    "message": "java.lang.ClassCastException: class java.lang.Object cannot be cast to class com.nuvio.tv.ui.screens.player.PlaybackTimelineState (java.lang.Object is in module java.base of loader 'bootstrap'; com.nuvio.tv.ui.screens.player.PlaybackTimelineState is in unnamed module of loader 'app')"
+  }
+]

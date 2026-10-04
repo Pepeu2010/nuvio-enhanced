@@ -7,8 +7,9 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
 
 - Checkouts oficiais dos seis projetos concluídos e commits registrados.
 - Auditoria estática e matriz de lacunas/contratos produzidas.
-- Builds baseline Desktop e TV iniciados em fontes sem alterações; resultados
-  finais e bloqueios ficam em BASELINE.md.
+- Builds baseline Desktop e TV executados em fontes sem alterações. MSI e APKs
+  gerados; suítes com 26/20 falhas herdadas, preservadas em BASELINE.md e JSONs.
+- 0-A e 0-B concluídos com ressalvas; 0-C autorizado e iniciado.
 - Nenhuma fase de produto é declarada concluída apenas pela auditoria.
 
 ## Gates e entregas
@@ -40,7 +41,8 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
 Cada milestone: inspecionar call sites → registrar impacto → implementar →
 testar → compilar → corrigir regressões → QA → documentar → commit.
 PRs serão feitos no fork quando houver remoto próprio; não enviar redesign ao
-upstream. Branches locais seguem `codex/`. Nenhum publish externo é presumido.
+upstream. Branches locais seguem `codex/`. O usuário autorizou criar e publicar
+os repositórios GitHub em 2026-10-04; releases instaláveis terão gates próprios.
 
 A Fase 2 fornece `TimedMetadata` genérica com media/episode identity, intervalo
 ou instante, tipo, origem e dados do item; providers Scene Info entram depois.
