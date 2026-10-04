@@ -1,0 +1,59 @@
+{
+  "recordedAtUtc": "2026-10-04T00:31:52.0441182Z",
+  "repositories": [
+    {
+      "repository": "NuvioMedia/NuvioDesktop",
+      "url": "https://github.com/NuvioMedia/NuvioDesktop.git",
+      "checkout": "repos/desktop",
+      "branch": "Dev",
+      "commit": "25390defed025a871f6a3239427b4507f2fafb35",
+      "commitDate": "2026-10-03T15:32:25+03:00",
+      "baselineTrackedClean": true
+    },
+    {
+      "repository": "NuvioMedia/NuvioTV",
+      "url": "https://github.com/NuvioMedia/NuvioTV.git",
+      "checkout": "repos/tv",
+      "branch": "dev",
+      "commit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+      "commitDate": "2026-10-04T01:44:11+02:00",
+      "baselineTrackedClean": true
+    },
+    {
+      "repository": "NuvioMedia/NuvioMobile",
+      "url": "https://github.com/NuvioMedia/NuvioMobile.git",
+      "checkout": "references/mobile",
+      "branch": "cmp-rewrite",
+      "commit": "966a52b9ecca82b247f0c07e414deb5f081e5892",
+      "commitDate": "2026-10-04T04:14:04+05:30",
+      "baselineTrackedClean": true
+    },
+    {
+      "repository": "NuvioMedia/self-host",
+      "url": "https://github.com/NuvioMedia/self-host.git",
+      "checkout": "references/self-host",
+      "branch": "main",
+      "commit": "39ea2bd1bc71636127f9d797599c23b4236960c4",
+      "commitDate": "2026-08-26T17:50:56+02:00",
+      "baselineTrackedClean": true
+    },
+    {
+      "repository": "NuvioMedia/nuvio-engine",
+      "url": "https://github.com/NuvioMedia/nuvio-engine.git",
+      "checkout": "references/engine",
+      "branch": "main",
+      "commit": "02938d75cbc5823dbf47c9006ca6d51a4a08aaf2",
+      "commitDate": "2026-09-27T23:42:17+05:30",
+      "baselineTrackedClean": true
+    },
+    {
+      "repository": "NuvioMedia/NuvioTVSmart",
+      "url": "https://github.com/NuvioMedia/NuvioTVSmart.git",
+      "checkout": "references/tv-smart",
+      "branch": "main",
+      "commit": "358d08cf7496b4ba04fd62a4aaaa19cab78d7aa8",
+      "commitDate": "2026-10-02T07:52:49+02:00",
+      "baselineTrackedClean": true
+    }
+  ]
+}

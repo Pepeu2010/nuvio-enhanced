@@ -1,0 +1,698 @@
+[
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "start_device_login_session",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/core/auth/DeviceLinkAuthRepository.kt",
+    "line": 113,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "poll_tv_login_session",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/core/auth/DeviceLinkAuthRepository.kt",
+    "line": 138,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "register_current_device",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/core/auth/DeviceSessionRegistration.kt",
+    "line": 51,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_profile_settings_blob",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/core/sync/ProfileSettingsSync.kt",
+    "line": 127,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_push_profile_settings_blob",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/core/sync/ProfileSettingsSync.kt",
+    "line": 237,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_provider_credentials",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/core/sync/ProviderCredentialSync.kt",
+    "line": 136,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_push_addons",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/addons/AddonRepository.kt",
+    "line": 365,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_collections",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/collection/CollectionSyncService.kt",
+    "line": 53,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_push_collections",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/collection/CollectionSyncService.kt",
+    "line": 123,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_push_home_catalog_settings",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/home/HomeCatalogSettingsSyncService.kt",
+    "line": 160,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_home_catalog_settings",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/home/HomeCatalogSettingsSyncService.kt",
+    "line": 202,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_library",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/library/sync/SupabaseLibrarySyncAdapter.kt",
+    "line": 33,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_get_library_delta_cursor",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/library/sync/SupabaseLibrarySyncAdapter.kt",
+    "line": 43,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_library_delta",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/library/sync/SupabaseLibrarySyncAdapter.kt",
+    "line": 58,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_push_library_items",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/library/sync/SupabaseLibrarySyncAdapter.kt",
+    "line": 79,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_delete_library_items",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/library/sync/SupabaseLibrarySyncAdapter.kt",
+    "line": 93,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "get_my_member_access",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/membership/MemberAccessRemoteDataSource.kt",
+    "line": 10,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "get_my_membership_overview",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/membership/MembershipOverviewRemoteDataSource.kt",
+    "line": 11,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "get_member_profile_background_catalog",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/membership/ProfileBackgroundRepository.kt",
+    "line": 53,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "get_avatar_catalog",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/profiles/AvatarRepository.kt",
+    "line": 150,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "get_member_profile_avatar_catalog",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/profiles/AvatarRepository.kt",
+    "line": 173,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_profiles",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/profiles/ProfileRepository.kt",
+    "line": 135,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_push_profiles",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/profiles/ProfileRepository.kt",
+    "line": 218,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_delete_profile_data",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/profiles/ProfileRepository.kt",
+    "line": 319,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "verify_profile_pin",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/profiles/ProfileRepository.kt",
+    "line": 337,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "set_profile_pin",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/profiles/ProfileRepository.kt",
+    "line": 361,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "clear_profile_pin",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/profiles/ProfileRepository.kt",
+    "line": 382,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "clear_profile_pin_with_account_password",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/profiles/ProfileRepository.kt",
+    "line": 399,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_profile_locks",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/profiles/ProfileRepository.kt",
+    "line": 409,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_get_watch_progress_delta_cursor",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/watching/sync/SupabaseProgressSyncAdapter.kt",
+    "line": 27,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_watch_progress_delta",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/watching/sync/SupabaseProgressSyncAdapter.kt",
+    "line": 41,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_watch_progress",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/watching/sync/SupabaseProgressSyncAdapter.kt",
+    "line": 73,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_push_watch_progress",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/watching/sync/SupabaseProgressSyncAdapter.kt",
+    "line": 112,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_delete_watch_progress",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/watching/sync/SupabaseProgressSyncAdapter.kt",
+    "line": 125,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_get_watched_items_delta_cursor",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/watching/sync/SupabaseWatchedSyncAdapter.kt",
+    "line": 27,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_watched_items_delta",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/watching/sync/SupabaseWatchedSyncAdapter.kt",
+    "line": 41,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_pull_watched_items",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/watching/sync/SupabaseWatchedSyncAdapter.kt",
+    "line": 69,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_push_watched_items",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/watching/sync/SupabaseWatchedSyncAdapter.kt",
+    "line": 108,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "desktop",
+    "upstreamCommit": "25390defed025a871f6a3239427b4507f2fafb35",
+    "operation": "sync_delete_watched_items",
+    "source": "composeApp/src/commonMain/kotlin/com/nuvio/app/features/watching/sync/SupabaseWatchedSyncAdapter.kt",
+    "line": 127,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "get_sync_owner",
+    "source": "app/src/main/java/com/nuvio/tv/core/auth/AuthManager.kt",
+    "line": 282,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "register_current_device",
+    "source": "app/src/main/java/com/nuvio/tv/core/auth/DeviceSessionRegistration.kt",
+    "line": 101,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "register_current_device",
+    "source": "app/src/main/java/com/nuvio/tv/core/auth/DeviceSessionRegistration.kt",
+    "line": 106,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_addons",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/AddonSyncService.kt",
+    "line": 78,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_collections",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/CollectionSyncService.kt",
+    "line": 71,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_collections",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/CollectionSyncService.kt",
+    "line": 95,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_home_catalog_settings",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/HomeCatalogSettingsSyncService.kt",
+    "line": 211,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_home_catalog_settings",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/HomeCatalogSettingsSyncService.kt",
+    "line": 222,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_plugins",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/PluginSyncService.kt",
+    "line": 74,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_copy_profile_setup",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProfileSettingsSyncService.kt",
+    "line": 308,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_profile_settings_blob",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProfileSettingsSyncService.kt",
+    "line": 391,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_profile_settings_blob",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProfileSettingsSyncService.kt",
+    "line": 401,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_profiles",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+    "line": 91,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_profiles",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+    "line": 111,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_delete_profile_data",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+    "line": 159,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_profile_locks",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+    "line": 173,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "set_profile_pin",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+    "line": 194,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "clear_profile_pin",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+    "line": 219,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "verify_profile_pin",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+    "line": 235,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_seed_provider_credentials",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProviderCredentialSyncService.kt",
+    "line": 153,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_provider_credentials",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProviderCredentialSyncService.kt",
+    "line": 160,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_provider_credentials",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/ProviderCredentialSyncService.kt",
+    "line": 173,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_get_watched_items_delta_cursor",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchedItemsSyncService.kt",
+    "line": 85,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_watched_items_delta",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchedItemsSyncService.kt",
+    "line": 99,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_watched_items",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchedItemsSyncService.kt",
+    "line": 168,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_watched_items",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchedItemsSyncService.kt",
+    "line": 202,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_delete_watched_items",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchedItemsSyncService.kt",
+    "line": 453,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_get_watch_progress_delta_cursor",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchProgressSyncService.kt",
+    "line": 84,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_watch_progress_delta",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchProgressSyncService.kt",
+    "line": 98,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_delete_watch_progress",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchProgressSyncService.kt",
+    "line": 138,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_watch_progress",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchProgressSyncService.kt",
+    "line": 193,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_watch_progress",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchProgressSyncService.kt",
+    "line": 250,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_watch_progress",
+    "source": "app/src/main/java/com/nuvio/tv/core/sync/WatchProgressSyncService.kt",
+    "line": 296,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "get_avatar_catalog",
+    "source": "app/src/main/java/com/nuvio/tv/data/remote/supabase/AvatarRepository.kt",
+    "line": 104,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "get_member_profile_avatar_catalog",
+    "source": "app/src/main/java/com/nuvio/tv/data/remote/supabase/AvatarRepository.kt",
+    "line": 122,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "get_my_member_access",
+    "source": "app/src/main/java/com/nuvio/tv/data/remote/supabase/MemberAccessRemoteDataSource.kt",
+    "line": 17,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "get_my_membership_overview",
+    "source": "app/src/main/java/com/nuvio/tv/data/remote/supabase/MembershipOverviewRemoteDataSource.kt",
+    "line": 16,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "get_member_profile_background_catalog",
+    "source": "app/src/main/java/com/nuvio/tv/data/remote/supabase/ProfileBackgroundRepository.kt",
+    "line": 67,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_library",
+    "source": "app/src/main/java/com/nuvio/tv/data/remote/supabase/SupabaseLibrarySyncRemoteDataSource.kt",
+    "line": 47,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_get_library_delta_cursor",
+    "source": "app/src/main/java/com/nuvio/tv/data/remote/supabase/SupabaseLibrarySyncRemoteDataSource.kt",
+    "line": 57,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_pull_library_delta",
+    "source": "app/src/main/java/com/nuvio/tv/data/remote/supabase/SupabaseLibrarySyncRemoteDataSource.kt",
+    "line": 72,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_push_library_items",
+    "source": "app/src/main/java/com/nuvio/tv/data/remote/supabase/SupabaseLibrarySyncRemoteDataSource.kt",
+    "line": 97,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "sync_delete_library_items",
+    "source": "app/src/main/java/com/nuvio/tv/data/remote/supabase/SupabaseLibrarySyncRemoteDataSource.kt",
+    "line": 116,
+    "declaredInSelfHostMigrations": true
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "generate_sync_code",
+    "source": "app/src/main/java/com/nuvio/tv/data/repository/SyncRepositoryImpl.kt",
+    "line": 26,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "get_sync_code",
+    "source": "app/src/main/java/com/nuvio/tv/data/repository/SyncRepositoryImpl.kt",
+    "line": 40,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "claim_sync_code",
+    "source": "app/src/main/java/com/nuvio/tv/data/repository/SyncRepositoryImpl.kt",
+    "line": 62,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "unlink_device",
+    "source": "app/src/main/java/com/nuvio/tv/data/repository/SyncRepositoryImpl.kt",
+    "line": 79,
+    "declaredInSelfHostMigrations": false
+  },
+  {
+    "client": "tv",
+    "upstreamCommit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+    "operation": "get_sync_overview",
+    "source": "app/src/main/java/com/nuvio/tv/ui/screens/account/AccountViewModel.kt",
+    "line": 526,
+    "declaredInSelfHostMigrations": true
+  }
+]
