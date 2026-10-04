@@ -36,6 +36,21 @@ Esta auditoria não usou uma conta real nem escreveu no servidor.
 Provider credentials já são parte do código de sync. Sua presença não autoriza
 logá-las, duplicá-las para o Phone Remote ou transmitir para addons arbitrários.
 
+## Diferenças concretas da referência self-host
+
+O inventário automático encontrou 87 call sites literais de RPC. Dez nomes
+usados pelos clientes não foram encontrados como declarações nas migrations
+self-host fixadas: start_device_login_session, get_my_member_access,
+get_my_membership_overview, get_member_profile_background_catalog,
+get_member_profile_avatar_catalog, sync_copy_profile_setup, generate_sync_code,
+get_sync_code, claim_sync_code e unlink_device.
+
+Isso não prova ausência no backend oficial, mas impede afirmar paridade total
+do self-host antigo com os clientes atuais. Linking, membership e clone de setup
+precisam tratar disponibilidade de forma independente. Não criar esses endpoints
+no servidor oficial nem anunciar a função como suportada a partir de sua presença
+em um cliente. O inventário literal não inclui todas as chamadas multiline/dinâmicas.
+
 ## Addons Stremio
 
 Preservar manifest/catalog/meta/stream/subtitles, resources string/object,

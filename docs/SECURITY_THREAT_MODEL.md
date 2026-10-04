@@ -60,6 +60,8 @@ Imports/câmera/clipboard sempre partem de ação do usuário e capability real.
    deve ser separada antes de executar/distribuir o fork lado a lado.
 4. **P2 — Quotas unificadas inexistentes na superfície auditada:** cache/memória
    têm limites pontuais; falta uma política abrangente que considere storage.
+5. **P1 — Crash reports ligados por default:** confirmado no fallback de settings
+   Desktop e TV; no fork, nova instalação precisa iniciar com consentimento off.
 
 Não foram executados pentest, fuzzing de native decoders nem testes de rede
 hostil. As mitigações acima não serão marcadas prontas por existir documentação.

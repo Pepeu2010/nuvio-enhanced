@@ -1,0 +1,89 @@
+{
+  "exportedAtUtc": "2026-10-04T00:58:57.3118699Z",
+  "attempts": [
+    {
+      "target": "desktop",
+      "label": "baseline",
+      "commit": "25390defed025a871f6a3239427b4507f2fafb35",
+      "startedAtUtc": "2026-10-04T00:31:47.7389746Z",
+      "finishedAtUtc": "2026-10-04T00:37:33.4845228Z",
+      "status": "failed",
+      "exitCode": 1,
+      "durationSeconds": 345.71,
+      "tasks": [
+        ":composeApp:desktopTest",
+        ":composeApp:packageReleaseMsi"
+      ],
+      "trackedSourcesUnmodified": true,
+      "localRecord": "artifacts/baseline/desktop/result.json"
+    },
+    {
+      "target": "tv",
+      "label": "baseline",
+      "commit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+      "startedAtUtc": "2026-10-04T00:31:14.2036743Z",
+      "finishedAtUtc": "2026-10-04T00:51:29.6588324Z",
+      "status": "failed",
+      "exitCode": 1,
+      "durationSeconds": 1215.42,
+      "tasks": [
+        ":app:testFullDebugUnitTest",
+        ":app:assembleFullDebug"
+      ],
+      "trackedSourcesUnmodified": true,
+      "localRecord": "artifacts/baseline/tv/result.json"
+    },
+    {
+      "target": "desktop",
+      "label": "baseline-configured",
+      "commit": "25390defed025a871f6a3239427b4507f2fafb35",
+      "startedAtUtc": "2026-10-04T00:39:45.8562736Z",
+      "finishedAtUtc": "2026-10-04T00:50:01.9390703Z",
+      "status": "failed",
+      "exitCode": 1,
+      "durationSeconds": 616.04,
+      "tasks": [
+        ":composeApp:desktopTest",
+        ":composeApp:packageReleaseMsi"
+      ],
+      "trackedSourcesUnmodified": true,
+      "localRecord": "artifacts/baseline-configured/desktop/result.json"
+    },
+    {
+      "target": "tv",
+      "label": "baseline-configured",
+      "commit": "a4c3094509bd9c4bd8a147ccf3c9f3614ba6a2fe",
+      "startedAtUtc": "2026-10-04T00:53:54.0049886Z",
+      "finishedAtUtc": null,
+      "status": "running",
+      "exitCode": null,
+      "durationSeconds": null,
+      "tasks": [
+        ":app:testFullDebugUnitTest",
+        ":app:assembleFullDebug"
+      ],
+      "trackedSourcesUnmodified": true,
+      "localRecord": "artifacts/baseline-configured/tv/result.json"
+    }
+  ],
+  "latestTestResults": [
+    {
+      "target": "desktop",
+      "testResultFiles": 0,
+      "tests": 0,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "note": "Latest local XML results; inspect attempt status before treating as complete."
+    },
+    {
+      "target": "tv",
+      "testResultFiles": 0,
+      "tests": 0,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "note": "Latest local XML results; inspect attempt status before treating as complete."
+    }
+  ]
+}

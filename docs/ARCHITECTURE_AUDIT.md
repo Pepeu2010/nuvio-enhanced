@@ -59,6 +59,9 @@ Startup, Profile, Library, WatchProgress, WatchedItems, Addon, Plugin,
 ProfileSettings, Collection, HomeCatalog e ProviderCredential.
 Os adaptadores de library/progress/watched já suportam deltas e reconciliação.
 Não substituir por push total ingênuo nem apagar dados offline após timeout.
+Há dez RPCs literais dos clientes sem declaração encontrada nas migrations
+self-host fixadas; ver Nuvio_COMPATIBILITY.md e contract-inventory.json. A referência
+de backend tem commit anterior aos clientes; não presumir paridade completa.
 
 ## Player e streaming
 
@@ -142,13 +145,15 @@ composições Desktop/TV próprias. Não extrair auth/sync inteiro na primeira f
 | Updater oficial | ambos os repositories de atualização | Separar feed e assinatura antes de distribuir o fork |
 | Credenciais de build e assinatura | configurações geradas, local.example.properties, TV signingConfigs | Baseline local não comprova login; usar configuração local ignorada e assinatura própria |
 | Novas preferências no sync | ProfileSettings blob e lista de features | Não enviar campos Enhanced ao servidor sem contrato confirmado |
+| Telemetria default | `SentrySettingsRepository` Desktop e `SentrySettingsDataStore` TV usam fallback true | O fork deve iniciar desativado; sanitizer atual não comprova redaction de exception/breadcrumb |
 | Decoder disputado por previews | pool de trailers TV e superfícies Desktop | Ownership global, cancelamento e yield durante playback |
 | Source of truth de timeline | JNI/WebView2, Compose e Media3 | Timed metadata genérica na Fase 2; testar cada superfície real |
 | Globalização/TV modesta | textos, dimensões, lazy lists e efeitos | QA de idiomas, foco, overscan e 2 GB físicos; não afirmar a partir de emulador |
 
 ## Testes, CI e release
 
-Desktop possui commonTest, desktopTest e Android host tests; TV possui unit tests
+Desktop possui 189 arquivos commonTest, 15 desktopTest e Android host tests;
+TV possui 263 arquivos de unit tests
 de foco, scrub, sync, trailers e updater, além do módulo baselineprofile.
 Workflows de release compilam pacotes nativos e APKs com configuração própria.
 Preservar testes existentes; acrescentar fixtures locais de contrato e isolamento.

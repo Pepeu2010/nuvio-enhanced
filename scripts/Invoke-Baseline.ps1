@@ -4,6 +4,8 @@ param(
     [string[]]$Tasks,
     [string[]]$GradleArgs = @(),
     [string]$JavaHome,
+    [int]$HeapMiB = 4096,
+    [int]$KotlinHeapMiB = 6144,
     [string]$Label = 'baseline'
 )
 $ErrorActionPreference = 'Stop'
@@ -37,6 +39,8 @@ $record = [ordered]@{
     upstreamCommit = (git -C $checkout rev-parse HEAD).Trim()
     startedAtUtc = [DateTime]::UtcNow.ToString('o')
     javaHome = $JavaHome
+    heapMiB = $HeapMiB
+    kotlinHeapMiB = $KotlinHeapMiB
     tasks = $Tasks
     gradleArgs = $GradleArgs
     trackedChangesBefore = $before
@@ -47,7 +51,7 @@ $record | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $recordPath -Encodi
 $timer = [Diagnostics.Stopwatch]::StartNew()
 Push-Location $checkout
 try {
-    & .\gradlew.bat @Tasks @GradleArgs --continue --no-daemon --max-workers=2 '-Dorg.gradle.jvmargs=-Xmx2048m -XX:MaxMetaspaceSize=768m -Dfile.encoding=UTF-8' 2>&1 |
+    & .\gradlew.bat @Tasks @GradleArgs --continue --no-daemon --max-workers=1 "-Dorg.gradle.jvmargs=-Xmx${HeapMiB}m -XX:MaxMetaspaceSize=768m -Dfile.encoding=UTF-8" "-Pkotlin.daemon.jvmargs=-Xmx${KotlinHeapMiB}m" 2>&1 |
         Tee-Object -FilePath (Join-Path $outputDir 'build.log')
     $buildExit = $LASTEXITCODE
 } finally {

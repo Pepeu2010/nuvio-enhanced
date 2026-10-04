@@ -22,11 +22,18 @@ o resumo final será registrado aqui e em baseline-results.json.
 | Tentativa | Comando | Estado |
 |---|---|---|
 | Desktop inicial | desktopTest + packageReleaseMsi | Falhou: local.properties inexistente, WebView2 SDK ausente; problemas de configuration cache reportados |
-| Desktop configurado | mesmas tarefas, --no-configuration-cache e caminho WebView2 SDK | Em execução; local.properties ignorado, sem conta provisionada |
-| TV inicial | testFullDebugUnitTest + assembleFullDebug | Em execução; SDK/NDK provisionados pelo build |
+| Desktop configurado | mesmas tarefas, --no-configuration-cache e caminho WebView2 SDK | Interrompido deliberadamente por pressão de memória; main Kotlin e ponte nativa chegaram a compilar; MSI/testes ainda não concluídos |
+| TV inicial | testFullDebugUnitTest + assembleFullDebug | Falhou em assinatura (keystore ausente) e compileFullDebugKotlin (GC overhead / heap de 2 GiB insuficiente) |
+| TV configurado | mesmas tarefas, worker único, compiler heap 6 GiB | Em execução isolada; chave de desenvolvimento própria e configuração pública oficial |
 
 Desativar configuration cache replica a opção do CI; não é alteração de código.
 Criar arquivo local ignorado é preparação de ambiente, não modificação do upstream.
+
+A primeira execução simultânea pressionou memória física/virtual da máquina de
+16 GB. A tentativa Desktop configurada foi encerrada por decisão do agente para
+liberar recursos; a mensagem daemon disappeared não é atribuída a bug do upstream.
+As novas tentativas são sequenciais, com limites separados para Gradle/Kotlin.
+Nenhum teste foi considerado passado pela simples existência de classes compiladas.
 
 ## Configuração de conta e validação real
 
