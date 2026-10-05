@@ -1,1 +1,33 @@
-null
+{
+  "recordedAtUtc": "2026-10-05T22:46:52.4269670Z",
+  "product": "Telumia",
+  "desktop": {
+    "installedMsi": false,
+    "proof": "Compose Desktop sidebar component keyboard tests and reviewed screenshot",
+    "source": "fdeaddfe3d0dc026ecd3d632210ce4dd212783ad"
+  },
+  "tv": {
+    "screenshotReviewed": true,
+    "apk": "app-full-universal-debug.apk",
+    "screenshot": "evidence/telumia/tv-sidebar.png",
+    "fatalCrashCount": 0,
+    "environment": "Owned Android TV API 36 emulator, x86_64, 1920x1080, RAM 2048 MiB",
+    "steps": [
+      "Guest onboarding with Telumia name",
+      "Advanced experience selected",
+      "Home layout onboarding completed",
+      "Home sidebar opened with Left",
+      "Settings opened with Down x3 and Enter",
+      "Back and force-stop/reopen preserved completed onboarding",
+      "Animator scale zero: Home remained visible after navigation input; original absent setting restored"
+    ],
+    "installed": true,
+    "source": "0355dfe4366ebce3067718eaf9dfb3139dd8f243"
+  },
+  "limits": [
+    "No real playback or availability proof for 78 chapters",
+    "No physical TV performance measurement",
+    "No full account/sync QA",
+    "No exhaustive motion audit"
+  ]
+}
