@@ -91,3 +91,7 @@ Compilation is not runtime, visual, codec, HDR or modest-device proof. Accounts,
 real sources and physical devices require explicit evidence, never invented
 results. Preserve copyright, licenses, notices and corresponding source for
 distributed modifications.
+
+## Atualização de prioridade — 2026-10-05
+
+O objetivo integral foi reforçado pelo usuário: interface sofisticada nos filmes e experiência contextual semelhante ao conceito do Prime Video, superior ao cliente de origem em funcionalidades. A marca definitiva é Telumia. Os critérios existentes continuam válidos: informação contextual confiável, sem scraping IMDb nem alegações de atores presentes em cena inferidas a partir do elenco geral. A entrega continua incremental com compilação, testes e evidências; releases parciais não encerram a meta integral.

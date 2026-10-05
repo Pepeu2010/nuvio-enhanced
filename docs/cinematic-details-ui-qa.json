@@ -1,0 +1,82 @@
+{
+  "recordedAtUtc": "2026-10-05T23:39:06.5294552Z",
+  "scope": "Native emulator component/D-pad QA; real Guest detail/library/trailer observed separately; no full playback or physical-device performance claim",
+  "attemptsBeforeFix": {
+    "compact720": "Read more clipped; D-pad callback alone passed; strengthened visibility assertion added",
+    "invalid4kOverride": "One test failed; requested 3840x2160 but actual screenshot 1920x1080; excluded from final gates"
+  },
+  "finalViewportGates": [
+    {
+      "startedAtUtc": "2026-10-05T23:34:56.3680431Z",
+      "sourceCommit": "44152c541607e3ebc93bc49c7363f88f4ba7693b",
+      "trackedChanges": [
+        " M app/src/androidTest/java/com/nuvio/tv/ui/screens/detail/CinematicMovieHeroTvTest.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/detail/HeroSection.kt"
+      ],
+      "apkSha256": "f40af66cce347cfaffbdd9f188a06a5792346b1412467d5bc1c5d517b0d212bd",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "scope": "Owned emulator, native hero component fixtures and D-pad; no playback or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1280x720"
+      ],
+      "capturedPixels": "1280x720",
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-05T23:35:10.9290882Z",
+      "committedTestedSource": "9df177abe8d827690e3227539905050d0b61173e"
+    },
+    {
+      "startedAtUtc": "2026-10-05T23:35:27.9091692Z",
+      "sourceCommit": "44152c541607e3ebc93bc49c7363f88f4ba7693b",
+      "trackedChanges": [
+        " M app/src/androidTest/java/com/nuvio/tv/ui/screens/detail/CinematicMovieHeroTvTest.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/detail/HeroSection.kt"
+      ],
+      "apkSha256": "f40af66cce347cfaffbdd9f188a06a5792346b1412467d5bc1c5d517b0d212bd",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "1920x1080",
+      "density": 320,
+      "scope": "Owned emulator, native hero component fixtures and D-pad; no playback or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1920x1080"
+      ],
+      "capturedPixels": "1920x1080",
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-05T23:35:45.8582505Z",
+      "committedTestedSource": "9df177abe8d827690e3227539905050d0b61173e"
+    },
+    {
+      "startedAtUtc": "2026-10-05T23:34:25.3097701Z",
+      "sourceCommit": "44152c541607e3ebc93bc49c7363f88f4ba7693b",
+      "trackedChanges": [
+        " M app/src/androidTest/java/com/nuvio/tv/ui/screens/detail/CinematicMovieHeroTvTest.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/detail/HeroSection.kt"
+      ],
+      "apkSha256": "f40af66cce347cfaffbdd9f188a06a5792346b1412467d5bc1c5d517b0d212bd",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "3840x2160",
+      "density": 640,
+      "scope": "Owned emulator, native hero component fixtures and D-pad; no playback or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160"
+      ],
+      "capturedPixels": "3840x2160",
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-05T23:34:44.1880709Z",
+      "committedTestedSource": "9df177abe8d827690e3227539905050d0b61173e"
+    }
+  ],
+  "nativeGuestFlow": {
+    "publicTrailer": "Played; Back returned to details",
+    "movie": "Unabomber",
+    "metadataAndArtwork": "Observed",
+    "fullMoviePlayback": "Not available: no configured source",
+    "library": "Added then removed in owned Guest profile"
+  }
+}

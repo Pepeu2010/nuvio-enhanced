@@ -26,6 +26,8 @@ As edições têm durações e divisões diferentes. Para assistir aos 78 capít
 
 Os clientes nativos preservam contas, perfis, biblioteca, addons, busca e seus players. A fundação acrescenta movimento completo/reduzido/desligado e intensidade por perfil, proteção de diagnósticos e melhorias de foco/menu lateral. A escolha de menu clássico/moderno na TV preserva configurações abertas, foco e a ação Voltar.
 
+O código atual também melhora os detalhes de filmes: ações diretas de reprodução, biblioteca, trailer e assistido; sinopse integral no PC; apresentação adaptativa e foco por D-pad na TV. Este incremento foi compilado e validado em múltiplas resoluções, mas ainda não integra os downloads da `0.2.0-alpha.1`. [Evidências da interface](docs/CINEMATIC_DETAILS.md).
+
 A implementação integral continua em execução. O redesign completo de Home/detalhes, Profile Studio, cache Auto, thumbnails/timeline, Source Intelligence, Live TV/EPG, Scene Info e controle local pelo celular **ainda não estão concluídos**. Não apresentamos controles de funcionalidades inexistentes. Os critérios completos permanecem no [roadmap aprovado](docs/ROADMAP.md) e na [especificação](docs/APPROVED_SPEC.md).
 
 ## Código e desenvolvimento

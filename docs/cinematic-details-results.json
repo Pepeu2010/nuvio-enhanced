@@ -1,0 +1,155 @@
+{
+  "exportedAtUtc": "2026-10-05T23:38:55.0077969Z",
+  "milestone": "cinematic-details",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "7ee9c38ddf34531074a7b2a0d6042f0c74d3cb48",
+      "attempts": [
+        {
+          "label": "cinematic-details-desktop",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-05T23:00:00.8486498Z",
+          "finishedAtUtc": "2026-10-05T23:04:42.9290394Z",
+          "durationSeconds": 282.06,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*CinematicMovieDetailsTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        },
+        {
+          "label": "cinematic-details-desktop-retry",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T23:06:48.4763164Z",
+          "finishedAtUtc": "2026-10-05T23:07:15.7520574Z",
+          "durationSeconds": 27.25,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*CinematicMovieDetailsTest",
+            "--tests",
+            "*CinematicMovieHeroViewportTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 18,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 4,
+        "attempt": "cinematic-details-desktop-retry"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "9df177abe8d827690e3227539905050d0b61173e",
+      "attempts": [
+        {
+          "label": "cinematic-details-tv",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T23:07:51.4945136Z",
+          "finishedAtUtc": "2026-10-05T23:16:01.197207Z",
+          "durationSeconds": 489.68,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*MetaRepositoryPreferredAddonTypeTest",
+            "--tests",
+            "*MetaRepositoryAddonCacheTest",
+            "--tests",
+            "*SearchViewModelConcurrencyTest",
+            "--tests",
+            "*SearchViewModelPaginationTest",
+            "--tests",
+            "*SearchViewModelSuggestionsTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*ThemeSettingsDataStoreTest",
+            "--tests",
+            "*ForkIdentityTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            ":app:assembleFullDebug",
+            ":app:assembleFullDebugAndroidTest"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process"
+          ]
+        },
+        {
+          "label": "cinematic-details-tv-compact",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T23:25:49.8086308Z",
+          "finishedAtUtc": "2026-10-05T23:32:48.4796835Z",
+          "durationSeconds": 418.65,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*MetaRepositoryPreferredAddonTypeTest",
+            "--tests",
+            "*MetaRepositoryAddonCacheTest",
+            "--tests",
+            "*SearchViewModelConcurrencyTest",
+            "--tests",
+            "*SearchViewModelPaginationTest",
+            "--tests",
+            "*SearchViewModelSuggestionsTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*ForkIdentityTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            ":app:assembleFullDebug",
+            ":app:assembleFullDebugAndroidTest"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 52,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 9,
+        "attempt": "cinematic-details-tv-compact"
+      }
+    }
+  ]
+}

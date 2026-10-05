@@ -7,6 +7,8 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
 
 ## Estado desta execução
 
+Estado mais recente: Telumia possui marca própria e busca/seleção de edição de Iludida na release `v0.2.0-alpha.1`. O incremento 1-B.1 de detalhes de filmes está implementado nos dois clientes, com 18 testes Desktop, 52 TV, MSI/cinco APKs e D-pad em 720p/1080p/4K verificados; ainda fora dessa release. [Evidências e limites](CINEMATIC_DETAILS.md). Os registros abaixo preservam a sequência de entregas; não representam encerramento da Fase 1 ou do produto completo.
+
 - Checkouts oficiais dos seis projetos concluídos e commits registrados.
 - Auditoria estática e matriz de lacunas/contratos produzidas.
 - Builds baseline Desktop e TV executados em fontes sem alterações. MSI e APKs

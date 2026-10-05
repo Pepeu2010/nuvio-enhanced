@@ -1,0 +1,69 @@
+[CmdletBinding()]
+param(
+    [ValidateSet('720','1080','2160')][string]$Resolution = '1080',
+    [switch]$Install
+)
+$ErrorActionPreference = 'Stop'
+$workspace = Split-Path $PSScriptRoot -Parent
+$adb = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'
+$serial = 'emulator-5568'
+$appId = 'io.github.pepeu2010.telumia.tv.debug'
+$checkout = Join-Path $workspace 'repos/tv'
+$output = Join-Path $workspace "artifacts/cinematic-tv-ui-$Resolution"
+New-Item -ItemType Directory -Force -Path $output | Out-Null
+$state = & $adb -s $serial get-state 2>&1
+if ($LASTEXITCODE -ne 0 -or $state -ne 'device') { throw 'The owned TV emulator on port 5568 must be running.' }
+$avd = & $adb -s $serial emu avd name
+if ($avd[0] -ne 'NuvioEnhanced_ATV_01a10441') { throw 'Refusing to change another emulator.' }
+$apk = Join-Path $checkout 'app/build/outputs/apk/full/debug/app-full-universal-debug.apk'
+$testApk = Join-Path $checkout 'app/build/outputs/apk/androidTest/full/debug/app-full-debug-androidTest.apk'
+if ($Install) {
+    foreach ($file in @($apk, $testApk)) {
+        if (-not (Test-Path -LiteralPath $file)) { throw "Missing compiled package: $file" }
+        & $adb -s $serial install -r $file
+        if ($LASTEXITCODE -ne 0) { throw 'Package installation failed.' }
+    }
+}
+$dimensions = switch ($Resolution) { '720' { '1280x720' }; '1080' { '1920x1080' }; '2160' { '3840x2160' } }
+$density = if ($Resolution -eq '2160') { 640 } else { 320 }
+$record = [ordered]@{
+    startedAtUtc = [DateTime]::UtcNow.ToString('o')
+    sourceCommit = (git -C $checkout rev-parse HEAD).Trim()
+    trackedChanges = @(git -C $checkout status --porcelain --untracked-files=no)
+    apkSha256 = (Get-FileHash -LiteralPath $apk).Hash.ToLowerInvariant()
+    emulator = $avd[0]
+    requestedPixels = $dimensions
+    density = $density
+    scope = 'Owned emulator, native hero component fixtures and D-pad; no playback or physical TV performance claim'
+    status = 'running'
+}
+try {
+    & $adb -s $serial shell wm size $dimensions
+    & $adb -s $serial shell wm density $density
+    $record['displayReported'] = @(& $adb -s $serial shell wm size)
+    $log = & $adb -s $serial shell am instrument -w -r -e class com.nuvio.tv.ui.screens.detail.CinematicMovieHeroTvTest "$appId.test/androidx.test.runner.AndroidJUnitRunner" 2>&1
+    $log | Set-Content -LiteralPath (Join-Path $output 'instrumentation.log') -Encoding utf8
+    $text = $log -join "`n"
+    if ($text -notmatch 'OK \(3 tests\)' -or $text -match 'INSTRUMENTATION_STATUS_CODE: -2|FAILURES!!!') { throw 'Native movie UI instrumentation did not pass all three tests. See the local instrumentation log.' }
+    $capture = Join-Path $output 'movie-hero.png'
+    & $adb -s $serial pull "/sdcard/Android/data/$appId/files/cinematic-movie-hero-tv.png" $capture
+    if ($LASTEXITCODE -ne 0) { throw 'Fixture screenshot could not be exported.' }
+    $bytes = [IO.File]::ReadAllBytes($capture)
+    if ($bytes.Length -lt 24 -or $bytes[0] -ne 137 -or $bytes[1] -ne 80) { throw 'Fixture screenshot is not a PNG.' }
+    $width = [int64]$bytes[16] * 16777216 + [int64]$bytes[17] * 65536 + [int64]$bytes[18] * 256 + $bytes[19]
+    $height = [int64]$bytes[20] * 16777216 + [int64]$bytes[21] * 65536 + [int64]$bytes[22] * 256 + $bytes[23]
+    $record['capturedPixels'] = "${width}x${height}"
+    if ($record.capturedPixels -ne $dimensions) { throw 'Actual framebuffer differs from the requested viewport; this is not a valid resolution gate.' }
+    $record['testsPassed'] = 3
+    $record['status'] = 'passed'
+} catch {
+    $record['status'] = 'failed'
+    $record['failure'] = $_.Exception.Message
+    throw
+} finally {
+    & $adb -s $serial shell wm size reset
+    & $adb -s $serial shell wm density reset
+    $record['finishedAtUtc'] = [DateTime]::UtcNow.ToString('o')
+    $record | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $output 'qa.json') -Encoding utf8
+}
+Write-Output "Native movie hero: 3 tests passed at $dimensions; actual capture dimensions verified."
