@@ -1,5 +1,5 @@
 {
-  "exportedAtUtc": "2026-10-05T20:22:45.0578975Z",
+  "exportedAtUtc": "2026-10-05T21:26:53.5041408Z",
   "milestone": "brand",
   "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
   "results": [
@@ -45,9 +45,162 @@
     },
     {
       "target": "tv",
-      "currentSourceCommit": "46ce4d17f9bca80650bb8986012b5905cb860864",
-      "attempts": [],
-      "targetedTestResults": null
+      "currentSourceCommit": "6a5057accec8137014a2188c852c29a6cc414926",
+      "attempts": [
+        {
+          "label": "brand-tv",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-05T20:31:59.6985138Z",
+          "finishedAtUtc": "2026-10-05T20:34:13.4417634Z",
+          "durationSeconds": 133.73,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*ThemeBrandingTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*DrawerFocusRequesterStateTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*DiagnosticRedactionTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        },
+        {
+          "label": "brand-tv-back",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T21:11:47.5705879Z",
+          "finishedAtUtc": "2026-10-05T21:19:31.5631767Z",
+          "durationSeconds": 463.99,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*ThemeBrandingTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*DrawerFocusRequesterStateTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*DiagnosticRedactionTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        },
+        {
+          "label": "brand-tv-focus",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T20:53:03.2011416Z",
+          "finishedAtUtc": "2026-10-05T20:58:24.0438284Z",
+          "durationSeconds": 320.83,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*ThemeBrandingTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*DrawerFocusRequesterStateTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*DiagnosticRedactionTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        },
+        {
+          "label": "brand-tv-focus-retry",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T21:02:39.8413244Z",
+          "finishedAtUtc": "2026-10-05T21:07:22.4288887Z",
+          "durationSeconds": 282.57,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*ThemeBrandingTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*DrawerFocusRequesterStateTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*DiagnosticRedactionTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        },
+        {
+          "label": "brand-tv-retry",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T20:35:01.7467064Z",
+          "finishedAtUtc": "2026-10-05T20:39:55.9349715Z",
+          "durationSeconds": 294.18,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*ThemeBrandingTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*DrawerFocusRequesterStateTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*DiagnosticRedactionTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 38,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 8,
+        "attempt": "brand-tv-back"
+      }
     }
   ]
 }

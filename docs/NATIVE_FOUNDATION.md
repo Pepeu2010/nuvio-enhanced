@@ -311,5 +311,43 @@ todos os temas, instalação MSI ou playback. Resultados e hashes em
 
 ![Componente nativo do menu Desktop](evidence/1-a-3/desktop-brand-sidebar.png)
 
-Este incremento está fora da alpha.2. Identidade TV, Home/detalhes, demais
+Este incremento está fora da alpha.2. Home/detalhes, demais
 superfícies e validações globais continuam pendentes. 1-A permanece aberto.
+
+## Continuação 1-A.3: marca TV e troca de menu sem perder o destino
+
+Foram estendidos `BrandWordmark`, `MemberBrandWordmark`, `ModernSidebarBlurPanel`
+e o shell existente em `MainActivity`. A marca padrão desenha o símbolo original
+e NUVIO/ENHANCED com Canvas/Text; variantes de tema existentes mantêm a seleção
+de recursos e recebem a assinatura Enhanced. O selo usa a política de movimento,
+sem transição infinita nos modos não completos. O painel moderno usa a superfície
+do tema. A assinatura de rodapé depende do seletor de perfis e de altura suficiente;
+com um único perfil a marca continua no cabeçalho, sem duplicação.
+
+O teste por D-pad encontrou que a troca clássico/moderno recriava o `NuvioNavHost`
+e voltava as configurações para Conta. A navegação agora conserva a mesma composição
+ao trocar de shell. `LayoutSidebarSection` restaura o foco no botão que iniciou a
+troca. O handler de Voltar do shell também conserva sua composição/registro, para
+os handlers das telas manterem prioridade. Controllers, rotas, eventos de settings
+e a seleção de perfil continuam sendo os existentes; não foi criado outro grafo.
+
+**38 testes direcionados passaram**, sem falhas/erros/skips, e os cinco APKs foram
+compilados. O QA final do universal instalado em Android TV API 36 comprovou troca
+nos dois sentidos com categoria/seção/foco preservados, acesso à opção seguinte,
+Voltar das opções para Layout e depois Home em ambos os estilos, persistência do
+menu moderno após force-stop/reabertura e navegação da Home por D-pad. As capturas
+foram inspecionadas e o buffer de crashes final estava vazio.
+
+As tentativas intermediárias passaram nos testes/builds, mas falharam nos gates
+de foco e de prioridade de Voltar. Elas ficam registradas em `brand-ui-qa.json`;
+`brand-results.json` também conserva a falha inicial de compilação e os retries.
+Os hashes dos pacotes estão em `brand-package-inspection.json`.
+
+![Menu clássico da TV](evidence/1-a-3/tv-brand-legacy-off.png)
+![Menu moderno da TV](evidence/1-a-3/tv-brand-modern-off.png)
+![Foco preservado depois de trocar o menu](evidence/1-a-3/tv-sidebar-focus-restored.png)
+
+O QA usa um perfil local no emulador, sem conta/sync/playback, medição de FPS,
+TV Box física, todos os temas ou a condição de rodapé com múltiplos perfis.
+Não é prova de motion global, redesign completo ou de todas as rotas do app.
+Este incremento permanece fora da alpha.2 e 1-A continua aberto.

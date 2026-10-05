@@ -42,6 +42,8 @@ O incremento **1-A.3, também fora da alpha.2**, acrescenta intensidade Sutil, P
 
 As continuações atuais integram o menu lateral padrão Desktop à política de movimento (27 testes e MSI) e protegem diagnósticos de login novos na TV (36 testes e cinco APKs). O QR foi verificado após a correção. A fila de relatórios antigos também recebe sanitização no acesso ao arquivo e antes de reenviar: 37 testes direcionados passaram e os cinco APKs foram recompilados. A marca nativa Desktop foi integrada ao wordmark/menu existentes, com 30 testes e MSI, preservando ações por mouse/Enter. Tudo isso permanece **fora da alpha.2**. [Menu e alcance do QA](docs/NATIVE_FOUNDATION.md), [diagnósticos e limites](docs/SECURITY_THREAT_MODEL.md).
 
+A marca nativa também chegou aos wordmarks/menus existentes da TV. A troca entre menu clássico/moderno preserva a categoria das configurações, a seção aberta, o foco e a prioridade de Voltar das telas. Passaram **38 testes direcionados** e os cinco APKs compilaram; D-pad nos dois estilos, retorno às categorias/Home e persistência após reabrir passaram no APK universal instalado em Android TV API 36. Isso também está **fora da alpha.2** e não conclui a Fase 1 nem valida conta/sync/playback ou performance física. [Evidências e limites](docs/brand-ui-qa.json).
+
 ## O que queremos acrescentar ao Nuvio
 
 As próximas entregas ampliam os componentes existentes; os itens desta seção **ainda estão previstos**, não fazem parte da fundação publicada:

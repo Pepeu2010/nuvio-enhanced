@@ -1,0 +1,103 @@
+{
+  "recordedAtUtc": "2026-10-05T21:27:45.9289854Z",
+  "milestone": "1-A.3 native brand and TV sidebar switch continuation",
+  "status": "passed within the scope below; full 1-A remains open",
+  "desktopSourceCommit": "0eebb96023507f08f32bb114d787d0bf1d2109b4",
+  "tvSourceCommit": "6a5057accec8137014a2188c852c29a6cc414926",
+  "apkSha256": "575798eaaf70f3dcf6dc085e067f783e598ab95387c48d62357db58a49752f0e",
+  "publicRelease": "v0.1.0-alpha.2 remains unchanged; this increment is not included",
+  "environment": {
+    "avd": "NuvioEnhanced_ATV_01a10441",
+    "image": "system-images;android-36;android-tv;x86_64",
+    "resolution": "1920x1080",
+    "configuredRamMiB": 2048,
+    "renderer": "swiftshader",
+    "pageSize": 4096,
+    "physicalDevice": false,
+    "profileScope": "one existing local guest profile"
+  },
+  "desktopScope": "Existing native sidebar component mouse/Enter and screenshot QA recorded in NATIVE_FOUNDATION.md; unchanged Desktop source in this continuation",
+  "checks": [
+    "38 targeted TV tests passed with no failures/errors/skips; five APKs compiled and inspected",
+    "Universal APK installed and own Leanback activity launched",
+    "Fresh D-pad UI dumps reached Home, Settings, Layout and Sidebar & Navigation",
+    "Legacy -> modern -> legacy toggles retained Layout category, open section and focused Modern Sidebar row",
+    "Down after the switch reached the next Collapse Sidebar row",
+    "Legacy Back returned from detail to focused Layout category and then Home",
+    "A further legacy -> modern switch retained focused toggle and section",
+    "Modern Back returned from detail to focused Layout category and then Home",
+    "Native wordmark legible in both existing Home sidebars; three final TV captures inspected",
+    "Force-stop and relaunch retained modern sidebar style and restored Home navigation",
+    "Right from Home moved to the next movie metadata; no playback claimed",
+    "Final crash buffer contained zero lines"
+  ],
+  "restartPersistence": {
+    "operation": "am force-stop then own activity launch",
+    "modernSidebarRetained": true,
+    "homeDpadWorked": true,
+    "motionPickerReopened": false
+  },
+  "intermediateUiFailures": [
+    {
+      "recordedAtUtc": "2026-10-05T21:03:18.9531421Z",
+      "build": "brand-tv-focus",
+      "environment": "Android TV API 36 x86_64 emulator, D-pad",
+      "checks": {
+        "installed": true,
+        "homeReached": true,
+        "settingsLayoutReached": true,
+        "categoryRetainedAfterToggle": true,
+        "sidebarSectionRemainedOpen": true,
+        "focusedToggleRetained": false
+      },
+      "result": "failed UI focus gate; follow-up restores focus at the existing toggle after scaffold relocation",
+      "scope": "Synthetic guest session; no account login, sync, playback or physical performance proof"
+    },
+    {
+      "recordedAtUtc": "2026-10-05T21:11:46.7558471Z",
+      "build": "brand-tv-focus-retry",
+      "environment": "Android TV API 36 x86_64 emulator, D-pad",
+      "checks": {
+        "installed": true,
+        "categoryRetainedBothDirections": true,
+        "sidebarSectionRemainedOpenBothDirections": true,
+        "focusedToggleRetainedBothDirections": true,
+        "nextRowReachable": true,
+        "backFromSettingsDetailReturnedToRail": false
+      },
+      "result": "failed Back gate; relocated destination handlers lost priority to recreated shell handlers",
+      "scope": "Synthetic guest session; no account login, sync, playback or physical performance proof"
+    }
+  ],
+  "limitations": [
+    "No account sign-in, remote sync, player playback, FPS, latency or physical TV Box proof",
+    "Single profile: profile-selector footer, profile switching and PIN not validated in this run",
+    "No complete route/theme/settings/dialog matrix or global motion validation",
+    "Off/Cinematic preferences carried from prior intensity QA; this run did not reopen the picker",
+    "Desktop proof is existing component QA; no full app installation or playback QA",
+    "Internal versions inherited; new packages not published in alpha.2",
+    "Raw UI dumps and logs remain ignored; no QR codes, private credentials or URLs exported"
+  ],
+  "artifacts": [
+    {
+      "file": "evidence/1-a-3/desktop-brand-sidebar.png",
+      "bytes": 12743,
+      "sha256": "7c045eb255aa55e306cc568c9e3f51f0cd062cdfc0850482d2a713ac70998186"
+    },
+    {
+      "file": "evidence/1-a-3/tv-brand-legacy-off.png",
+      "bytes": 1203815,
+      "sha256": "aac47004158edf929c4bb25b01299f88f4fef6a979a1b03d63291f40059ff33d"
+    },
+    {
+      "file": "evidence/1-a-3/tv-brand-modern-off.png",
+      "bytes": 1522780,
+      "sha256": "42d63dbb7f29672fd80bd69977dc068b911a2302b06acf2e7ebf12540fd4fa8b"
+    },
+    {
+      "file": "evidence/1-a-3/tv-sidebar-focus-restored.png",
+      "bytes": 147011,
+      "sha256": "52f6ce50ba66ed80383d7c46453e6d7364b1360b85600046a6c5479ca2ec89e7"
+    }
+  ]
+}

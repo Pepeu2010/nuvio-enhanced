@@ -1,5 +1,5 @@
 {
-  "exportedAtUtc": "2026-10-05T20:22:45.5902463Z",
+  "exportedAtUtc": "2026-10-05T21:26:58.8183520Z",
   "scope": "Package and binary inspection; no installation or playback QA",
   "results": [
     {
@@ -21,6 +21,52 @@
           "file": "NuvioEnhanced-Windows-x64-0.1.27-alpha.msi",
           "bytes": 209724132,
           "sha256": "0643ec422cd937857138aac50c8f50e4099a5cfd3b89b1a28ddd9ab4c5ab403c"
+        }
+      ]
+    },
+    {
+      "target": "tv",
+      "sourceCommit": "6a5057accec8137014a2188c852c29a6cc414926",
+      "installed": false,
+      "inspection": {
+        "label": "Nuvio Enhanced Debug",
+        "distribution": "development debug only"
+      },
+      "artifacts": [
+        {
+          "file": "app-full-arm64-v8a-debug.apk",
+          "bytes": 96976157,
+          "sha256": "0b05ccce734402762b0c5de785233fd634ed1a830e94b5a6fdf7bc23e2b45b76",
+          "applicationId": "io.github.pepeu2010.nuvioenhanced.tv.debug",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-armeabi-v7a-debug.apk",
+          "bytes": 94874571,
+          "sha256": "715435493243b28fdd1392228ca84452c5cec809b029fd46ddb28ae30abdcecf",
+          "applicationId": "io.github.pepeu2010.nuvioenhanced.tv.debug",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-universal-debug.apk",
+          "bytes": 183947399,
+          "sha256": "575798eaaf70f3dcf6dc085e067f783e598ab95387c48d62357db58a49752f0e",
+          "applicationId": "io.github.pepeu2010.nuvioenhanced.tv.debug",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-x86_64-debug.apk",
+          "bytes": 99396676,
+          "sha256": "b1388183711d87afe6bca90bacb09ae0fd5f820c3543bb0b7f0cf3716b894174",
+          "applicationId": "io.github.pepeu2010.nuvioenhanced.tv.debug",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-x86-debug.apk",
+          "bytes": 98556811,
+          "sha256": "ace067b8962b4e6710da4b2ba37e4f67e7c842e13dda8efd63741a88df831335",
+          "applicationId": "io.github.pepeu2010.nuvioenhanced.tv.debug",
+          "signatureVerified": true
         }
       ]
     }

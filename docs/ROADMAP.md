@@ -38,8 +38,12 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
   pendente; estes incrementos estão fora da alpha.2.
 - Marca nativa Desktop integrada ao wordmark e rodapé do menu existentes;
   selo de membro respeita a política de movimento. Passaram 30 testes e o MSI
-  compilou; captura/interação do menu real verificadas. Identidade TV e QA
-  global continuam pendentes; 1-A permanece aberto, fora da alpha.2.
+  compilou; captura/interação do menu real verificadas. A continuação TV integra
+  a mesma marca aos wordmarks/menus existentes e preserva estado, foco e ordem
+  de Voltar ao trocar o estilo do menu. Passaram 38 testes e cinco APKs; D-pad,
+  retorno às categorias/Home e persistência do estilo passaram no APK instalado
+  em Android TV API 36. Demais superfícies e QA global continuam pendentes;
+  1-A permanece aberto, fora da alpha.2.
 
 ## Gates e entregas
 

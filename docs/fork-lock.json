@@ -1,5 +1,5 @@
 {
-  "recordedAtUtc": "2026-10-05T20:22:58.9771238Z",
+  "recordedAtUtc": "2026-10-05T21:26:58.8939606Z",
   "repositories": [
     {
       "repository": "Pepeu2010/nuvio-enhanced-desktop",
@@ -14,10 +14,10 @@
       "repository": "Pepeu2010/nuvio-enhanced-tv",
       "url": "https://github.com/Pepeu2010/nuvio-enhanced-tv.git",
       "branch": "main",
-      "commit": "46ce4d17f9bca80650bb8986012b5905cb860864",
+      "commit": "6a5057accec8137014a2188c852c29a6cc414926",
       "checkout": "repos/tv",
-      "milestone": "1-A.3 plus auth diagnostic redaction and legacy queue sanitization; 37 targeted tests and five APKs; synthetic migration QA; unreleased; full 1-A pending",
-      "packageSourceCommit": "46ce4d17f9bca80650bb8986012b5905cb860864"
+      "milestone": "1-A.3 plus native Enhanced TV wordmark/sidebar signature and state/focus/Back preservation; 38 targeted tests, five APKs and installed Android TV D-pad QA; unreleased; full 1-A pending",
+      "packageSourceCommit": "6a5057accec8137014a2188c852c29a6cc414926"
     }
   ]
 }
