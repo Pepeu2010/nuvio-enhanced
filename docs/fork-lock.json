@@ -1,23 +1,23 @@
 {
-  "recordedAtUtc": "2026-10-05T21:26:58.8939606Z",
+  "recordedAtUtc": "2026-10-05T22:45:04.5678500Z",
   "repositories": [
     {
-      "repository": "Pepeu2010/nuvio-enhanced-desktop",
-      "url": "https://github.com/Pepeu2010/nuvio-enhanced-desktop.git",
+      "repository": "Pepeu2010/telumia-desktop",
+      "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "0eebb96023507f08f32bb114d787d0bf1d2109b4",
+      "commit": "fdeaddfe3d0dc026ecd3d632210ce4dd212783ad",
       "checkout": "repos/desktop",
-      "milestone": "1-A.3 plus native Enhanced wordmark/sidebar signature and member motion; 30 targeted tests, MSI and sidebar component QA; unreleased; full 1-A pending",
-      "packageSourceCommit": "0eebb96023507f08f32bb114d787d0bf1d2109b4"
+      "milestone": "Telumia 0.2.0-alpha.1; Brazilian aliases and real episode IDs; native motion; 44 targeted tests and Windows MSI passed; full approved product pending",
+      "packageSourceCommit": "fdeaddfe3d0dc026ecd3d632210ce4dd212783ad"
     },
     {
-      "repository": "Pepeu2010/nuvio-enhanced-tv",
-      "url": "https://github.com/Pepeu2010/nuvio-enhanced-tv.git",
+      "repository": "Pepeu2010/telumia-tv",
+      "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "6a5057accec8137014a2188c852c29a6cc414926",
+      "commit": "0355dfe4366ebce3067718eaf9dfb3139dd8f243",
       "checkout": "repos/tv",
-      "milestone": "1-A.3 plus native Enhanced TV wordmark/sidebar signature and state/focus/Back preservation; 38 targeted tests, five APKs and installed Android TV D-pad QA; unreleased; full 1-A pending",
-      "packageSourceCommit": "6a5057accec8137014a2188c852c29a6cc414926"
+      "milestone": "Telumia 0.2.0-alpha.1; Brazilian aliases and metadata edition selection; native motion; 53 targeted tests and five Full Debug APKs passed; full approved product pending",
+      "packageSourceCommit": "0355dfe4366ebce3067718eaf9dfb3139dd8f243"
     }
   ]
 }

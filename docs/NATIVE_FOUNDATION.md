@@ -1,5 +1,7 @@
 # Fundação visual nativa — milestone 1-A em execução
 
+**Atualização de identidade:** os clientes passam a usar Telumia, com símbolo e banner originais. A versão 0.2.0-alpha.1 também integra aliases brasileiros de Iludida, defaults TMDB pt-BR e resolução da edição brasileira entre fontes instaladas. O milestone completo permanece em execução. [Detalhes e limites](TELUMIA.md).
+
 Este documento registra implementação nos clientes existentes, conforme a regra
 aprovada de evoluir o Nuvio. O milestone 1-A completo ainda exige identidade
 visual/shell, cobertura de outros efeitos e QA global de navegação TV. A Fase 1

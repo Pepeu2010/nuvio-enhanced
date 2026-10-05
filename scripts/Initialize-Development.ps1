@@ -47,7 +47,7 @@ if ($Target -eq 'tv') {
         & (Join-Path $jdk.FullName 'bin/keytool.exe') -genkeypair -noprompt -keystore $env:NUVIO_RELEASE_STORE_FILE `
             -storepass:env NUVIO_RELEASE_STORE_PASSWORD -keypass:env NUVIO_RELEASE_KEY_PASSWORD `
             -alias $env:NUVIO_RELEASE_KEY_ALIAS -keyalg RSA -keysize 3072 -validity 3650 `
-            -dname 'CN=Nuvio Enhanced Local Development,OU=Development,O=Independent Fork,C=BR'
+            -dname 'CN=Telumia Local Development,OU=Development,O=Independent Fork,C=BR'
         if ($LASTEXITCODE -ne 0) { throw 'Development key generation failed.' }
     }
 }

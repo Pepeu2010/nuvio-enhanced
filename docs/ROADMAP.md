@@ -1,5 +1,7 @@
 # Roadmap e milestones verificáveis
 
+**Identidade vigente: Telumia.** A solicitação de 05/10/2026 acrescenta marca/logo próprios, renomeação dos repositórios e foco no Brasil. [Implementação e limites](TELUMIA.md). Os registros anteriores preservam sua identidade histórica; o escopo completo aprovado continua válido.
+
 Source of truth: APPROVED_SPEC.md + PRODUCT_REQUIREMENTS.md. Não há autorização
 para trocar stack, login/backend, remover recursos ou publicar como oficial.
 

@@ -1,0 +1,207 @@
+{
+  "exportedAtUtc": "2026-10-05T22:42:19.7029691Z",
+  "milestone": "telumia",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "fdeaddfe3d0dc026ecd3d632210ce4dd212783ad",
+      "attempts": [
+        {
+          "label": "telumia-desktop",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T22:02:28.022717Z",
+          "finishedAtUtc": "2026-10-05T22:07:26.0526943Z",
+          "durationSeconds": 298.01,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            "--tests",
+            "*JellyMotionTest",
+            "--tests",
+            "*CustomThemeColorsTest",
+            "--tests",
+            "*ThemeSettingsStorageDesktopTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*DesktopStoragePathsTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        },
+        {
+          "label": "telumia-desktop-final",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T22:36:11.5929548Z",
+          "finishedAtUtc": "2026-10-05T22:41:10.6005155Z",
+          "durationSeconds": 298.99,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            "--tests",
+            "*JellyMotionTest",
+            "--tests",
+            "*CustomThemeColorsTest",
+            "--tests",
+            "*ThemeSettingsStorageDesktopTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*DesktopStoragePathsTest",
+            "--tests",
+            "*ForkUpdateSourceTest",
+            "--tests",
+            "*DesktopSentryMetadataTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 44,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 9,
+        "attempt": "telumia-desktop-final"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "0355dfe4366ebce3067718eaf9dfb3139dd8f243",
+      "attempts": [
+        {
+          "label": "telumia-tv",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-05T22:08:32.3624453Z",
+          "finishedAtUtc": "2026-10-05T22:18:04.8512259Z",
+          "durationSeconds": 572.47,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*MetaRepositoryPreferredAddonTypeTest",
+            "--tests",
+            "*MetaRepositoryAddonCacheTest",
+            "--tests",
+            "*SearchViewModelConcurrencyTest",
+            "--tests",
+            "*SearchViewModelPaginationTest",
+            "--tests",
+            "*SearchViewModelSuggestionsTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*ThemeSettingsDataStoreTest",
+            "--tests",
+            "*ForkIdentityTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache"
+          ]
+        },
+        {
+          "label": "telumia-tv-final",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T22:28:50.7972466Z",
+          "finishedAtUtc": "2026-10-05T22:35:23.9255628Z",
+          "durationSeconds": 393.11,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*MetaRepositoryPreferredAddonTypeTest",
+            "--tests",
+            "*MetaRepositoryAddonCacheTest",
+            "--tests",
+            "*SearchViewModelConcurrencyTest",
+            "--tests",
+            "*SearchViewModelPaginationTest",
+            "--tests",
+            "*SearchViewModelSuggestionsTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*ForkIdentityTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process"
+          ]
+        },
+        {
+          "label": "telumia-tv-retry",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-05T22:18:25.2912119Z",
+          "finishedAtUtc": "2026-10-05T22:27:05.5723791Z",
+          "durationSeconds": 520.27,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*MetaRepositoryPreferredAddonTypeTest",
+            "--tests",
+            "*MetaRepositoryAddonCacheTest",
+            "--tests",
+            "*SearchViewModelConcurrencyTest",
+            "--tests",
+            "*SearchViewModelPaginationTest",
+            "--tests",
+            "*SearchViewModelSuggestionsTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*ThemeSettingsDataStoreTest",
+            "--tests",
+            "*ForkIdentityTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 53,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 10,
+        "attempt": "telumia-tv-final"
+      }
+    }
+  ]
+}
