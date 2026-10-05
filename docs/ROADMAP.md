@@ -33,7 +33,13 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
 - Continuação Desktop do menu lateral padrão: 27 testes e MSI passaram, com
   captura/interação do componente real. Diagnósticos de login novos da TV foram
   protegidos: 36 testes e cinco APKs passaram; QR/markers no log verificados.
-  Migração da fila de relatórios antigos e o restante de 1-A permanecem pendentes.
+  A continuação da fila antiga passou em 37 testes e recompilou cinco APKs:
+  sanitização no acesso ao arquivo e antes do upload. O restante de 1-A permanece
+  pendente; estes incrementos estão fora da alpha.2.
+- Marca nativa Desktop integrada ao wordmark e rodapé do menu existentes;
+  selo de membro respeita a política de movimento. Passaram 30 testes e o MSI
+  compilou; captura/interação do menu real verificadas. Identidade TV e QA
+  global continuam pendentes; 1-A permanece aberto, fora da alpha.2.
 
 ## Gates e entregas
 

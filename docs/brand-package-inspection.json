@@ -1,0 +1,28 @@
+{
+  "exportedAtUtc": "2026-10-05T20:22:45.5902463Z",
+  "scope": "Package and binary inspection; no installation or playback QA",
+  "results": [
+    {
+      "target": "desktop",
+      "sourceCommit": "0eebb96023507f08f32bb114d787d0bf1d2109b4",
+      "installed": false,
+      "inspection": {
+        "msiProperties": {
+          "ProductName": "NuvioEnhanced",
+          "Manufacturer": "Nuvio Enhanced contributors",
+          "UpgradeCode": "{1C69D968-D0E0-4B0F-B5C0-615B8EA92F90}"
+        },
+        "compiledBridgeSha256": "a380979fbcf7039cfcfd3dc210bd8566d9979d1978be41c4c3b0edc3c445a528",
+        "isolatedWebViewPath": true,
+        "packagedBridgeMatchesBuild": true
+      },
+      "artifacts": [
+        {
+          "file": "NuvioEnhanced-Windows-x64-0.1.27-alpha.msi",
+          "bytes": 209724132,
+          "sha256": "0643ec422cd937857138aac50c8f50e4099a5cfd3b89b1a28ddd9ab4c5ab403c"
+        }
+      ]
+    }
+  ]
+}

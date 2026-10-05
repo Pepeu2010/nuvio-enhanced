@@ -14,7 +14,7 @@ $paths = @{
 }
 $reviewedDiagnosticSources = @(
     @{target='tv';path='app/src/main/java/com/nuvio/tv/core/auth/AuthManager.kt';baselineBlob='98695da674da0c93e9ab8a644ffe69649f15ada5';reviewedBlob='44e343b60c2af99541904890540daa419ebd0b50'},
-    @{target='tv';path='app/src/main/java/com/nuvio/tv/core/auth/diagnostics/AuthDiagnostics.kt';baselineBlob='60fbda03f5977ab1a45b2bc77462f0a354fa50d0';reviewedBlob='1b2e216b2b8ca9b38b8a5977270d452e30c65029'}
+    @{target='tv';path='app/src/main/java/com/nuvio/tv/core/auth/diagnostics/AuthDiagnostics.kt';baselineBlob='60fbda03f5977ab1a45b2bc77462f0a354fa50d0';reviewedBlob='4c08658dc756ff2922f5aa7dc34192e47b04784c'}
 )
 foreach ($target in @('desktop', 'tv')) {
     $checkout = Join-Path $workspace "repos/$target"

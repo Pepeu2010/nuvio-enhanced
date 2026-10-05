@@ -103,5 +103,13 @@ e o restante de auth/sync/APIs/DTOs continua comparado ao upstream. Esta exceç�
 não libera alterações arbitrárias no diretório nem valida conta/sync remoto.
 Passaram 36 testes direcionados e os cinco APKs foram compilados. QR gerou
 no APK instalado, com marcadores no log e sem o código exibido nele. Conta/sync
-e migração de relatórios antigos permanecem pendentes. Evidências em
+permanecem pendentes. Evidências em
 `auth-redaction-results.json` e `auth-redaction-ui-qa.json`.
+
+A continuação aplica a projeção segura na fila existente antes de reenviar,
+em novas gravações e no upload. O blob revisado de `AuthDiagnostics` foi
+atualizado especificamente; APIs/DTOs/sync continuam protegidos. Passaram 37
+testes direcionados e cinco APKs compilaram. Migração e idempotência foram
+testadas em arquivos temporários sintéticos, sem upload ou conta reais:
+`auth-queue-results.json`. Não é uma migração automática de todos os arquivos
+no startup: atua ao acessar a fila para retry/gravação.

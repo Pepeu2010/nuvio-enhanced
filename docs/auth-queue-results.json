@@ -1,0 +1,81 @@
+{
+  "exportedAtUtc": "2026-10-05T20:15:04.9342552Z",
+  "milestone": "auth-queue",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "0a252ce658955d82767f705120d363e946b5be8c",
+      "attempts": [],
+      "targetedTestResults": null
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "46ce4d17f9bca80650bb8986012b5905cb860864",
+      "attempts": [
+        {
+          "label": "auth-queue-tv",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-05T19:55:47.010221Z",
+          "finishedAtUtc": "2026-10-05T20:00:24.6232526Z",
+          "durationSeconds": 277.6,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*DiagnosticRedactionTest",
+            "--tests",
+            "*SupabaseAuthSessionTest",
+            "--tests",
+            "*AuthSessionValidationPolicyTest",
+            "--tests",
+            "*AuthRefreshResponsePolicyTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        },
+        {
+          "label": "auth-queue-tv-retry",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T20:06:21.872397Z",
+          "finishedAtUtc": "2026-10-05T20:13:55.4569151Z",
+          "durationSeconds": 453.55,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*DiagnosticRedactionTest",
+            "--tests",
+            "*SupabaseAuthSessionTest",
+            "--tests",
+            "*AuthSessionValidationPolicyTest",
+            "--tests",
+            "*AuthRefreshResponsePolicyTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 37,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 7,
+        "attempt": "auth-queue-tv-retry"
+      }
+    }
+  ]
+}

@@ -67,8 +67,9 @@ Imports/câmera/clipboard sempre partem de ação do usuário e capability real.
    retornam o valor original. Call sites em `AuthManager` e `AccountViewModel`
    passam nonce, device/user code e URL de verificação. A correção de redaction
    de addons da fundação não cobre esses helpers. Também precisam ser revisados
-   corpos, mensagens e exceções dos diagnósticos de auth. Está pendente; não se
-   declara ausência global de credenciais nos logs. As evidências publicadas
+   corpos, mensagens e exceções dos diagnósticos de auth. A mitigação dos logs
+   novos e da fila antiga está descrita abaixo; não se declara ausência global
+   de credenciais nos logs. As evidências publicadas
    de QR excluem esses valores e não incluem logcat de auth.
 
 Não foram executados pentest, fuzzing de native decoders nem testes de rede
@@ -101,7 +102,23 @@ apareceu no log e o crash buffer ficou vazio. Não houve login de conta/sync;
 logs brutos e árvores com QR permanecem ignorados. `auth-redaction-ui-qa.json`
 contém somente os resultados e o hash do APK.
 
-A fila de relatórios gerados por versões anteriores precisa de revisão/migração;
-esta mudança não apaga logs antigos nem demonstra ausência global de dados
-sensíveis. O achado 6 continua parcialmente aberto por essa pendência. Os
-pacotes da alpha.2 não foram substituídos pela correção.
+A continuação sanitiza a fila existente em `AuthDiagnosticReportRepository`
+antes de reenviar. A leitura regrava relatórios antigos com a projeção segura,
+remove linhas inválidas conforme o comportamento anterior, e gravação/upload
+aplicam novamente a proteção. URLs, mensagens, raw logs e stacks antigos recebem
+marcadores; status HTTP, tipo de exceção e classificação de rede continuam úteis.
+Não houve alteração em DTOs, endpoints ou valores operacionais do login.
+
+Passaram **37 testes direcionados**, incluindo arquivo legado sintético com
+códigos/tokens, migração no disco, leitura idempotente, limite da fila e remoção
+quando vazia; cinco APKs recompilados e inspecionados. A primeira tentativa
+identificou que o parser leniente reinterpretava o marcador como array na segunda
+sanitização. A correção preserva o marcador e o teste de leitura repetida passou.
+Tentativas e hashes: `auth-queue-results.json` e
+`auth-queue-package-inspection.json`. Não houve upload real nem QA de migração
+de dados de uma conta em aparelho. A proteção ocorre ao acessar a fila para
+reenvio/gravação; não se afirma que arquivos nunca acessados já foram migrados.
+
+O achado 6 foi mitigado nos logs novos e na fila revisada. Esta mudança não apaga
+logs antigos nem demonstra ausência global de dados sensíveis. Os pacotes da
+alpha.2 não foram substituídos pela correção.

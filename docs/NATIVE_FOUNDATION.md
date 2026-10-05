@@ -285,3 +285,31 @@ inspecionada; Biblioteca permaneceu selecionada após Enter e o alvo Busca não
 mudou de posição ao entrar o mouse. É QA do componente existente, sem ampliar
 essa evidência para o app completo, login ou playback. Resultado e pacote são
 registrados em `sidebar-results.json` e `sidebar-package-inspection.json`.
+
+## Continuação de 1-A: marca nativa Desktop
+
+Foram reutilizados `AppBrandWordmark`, `MemberBrandWordmark` e
+`DesktopHoverSidebar`, sem componente paralelo. O wordmark padrão passa a
+desenhar um símbolo original de projeção e a assinatura NUVIO/ENHANCED com
+Canvas/Text nativos. As variantes existentes de ícone/tema continuam renderizadas
+pela seleção atual. O nome acessível da marca foi atualizado nos recursos dos
+idiomas disponíveis; não foram alterados perfis, permissões de membro ou sync.
+
+O menu recebe assinatura não interativa no rodapé, compacta quando recolhido e
+oculta no switcher de perfis/janelas baixas. A seleção ganha superfície discreta.
+Entrada/saída e gradiente do selo de membro usam a política de movimento:
+Reduzido/Desligado não iniciam sua transição infinita. Isso amplia os call sites
+revisados, sem afirmar que motion global já está concluído.
+
+**30 testes direcionados Desktop passaram**, sem falhas/erros/skips, e o MSI
+foi compilado. Incluem interação com o menu real, semântica da marca, geometria
+do alvo sob hover, seleção por clique/Enter, persistência isolada e regressões
+dos estilos do selo. A captura abaixo foi inspecionada: assinatura legível,
+Biblioteca selecionada e ações preservadas. Não representa QA integral do app,
+todos os temas, instalação MSI ou playback. Resultados e hashes em
+`brand-results.json` e `brand-package-inspection.json`.
+
+![Componente nativo do menu Desktop](evidence/1-a-3/desktop-brand-sidebar.png)
+
+Este incremento está fora da alpha.2. Identidade TV, Home/detalhes, demais
+superfícies e validações globais continuam pendentes. 1-A permanece aberto.
