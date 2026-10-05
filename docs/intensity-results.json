@@ -1,0 +1,82 @@
+{
+  "exportedAtUtc": "2026-10-05T19:23:59.3159923Z",
+  "milestone": "intensity",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "64cb6ebe2c19b5211ad8ee420112370f3ff2229d",
+      "attempts": [
+        {
+          "label": "intensity-desktop",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T01:37:15.8467879Z",
+          "finishedAtUtc": "2026-10-05T01:45:56.4546255Z",
+          "durationSeconds": 520.59,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*JellyMotionTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            "--tests",
+            "*CustomThemeColorsTest",
+            "--tests",
+            "*NavigationMotionPickerTest",
+            "--tests",
+            "*PosterCardClickTest",
+            "--tests",
+            "*ThemeSettingsStorageDesktopTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 32,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 6,
+        "attempt": "intensity-desktop"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "2e279340cae386f2fec8bb9f2160bff437fd13c4",
+      "attempts": [
+        {
+          "label": "intensity-tv",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T01:46:55.2548912Z",
+          "finishedAtUtc": "2026-10-05T02:03:02.0563399Z",
+          "durationSeconds": 966.78,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 3,
+        "attempt": "intensity-tv"
+      }
+    }
+  ]
+}

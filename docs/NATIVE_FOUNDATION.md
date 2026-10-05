@@ -213,3 +213,54 @@ Não foi feito login em conta ou sync. Códigos, URLs temporárias e capturas do
 não foram exportados. As alphas já publicadas continuam com os pacotes originais;
 a correção não foi inserida retroativamente. O Desktop também foi provisionado
 com URL/chave pública separadas e recompilado; seu login não foi testado.
+
+## Incremento 1-A.3: intensidade por perfil
+
+Inspeção encontrou os pontos existentes `ThemeSettingsRepository/Storage`,
+`ThemeDataStore`, `ThemeSettingsViewModel`, Aparência, pickers, temas e tokens.
+Intensidade não tinha uma preferência própria. A extensão acrescenta Sutil,
+Padrão e Cinemática nesses mesmos fluxos, com chave local excluída do sync.
+Reduzido/Desligado prevalecem sobre intensidade: sem escala espacial e com
+fade limitado/instantâneo. A política combinada alimenta navegação, shell,
+posters, Jelly e tokens já revisados, sem navigator ou app adicional.
+
+Padrão preserva os valores anteriores; Sutil usa fração 0,65 e Cinemática 1,25
+para duração/amplitude. São preferências, não medições de performance. Outros
+call sites ainda precisam integrar a política. A identidade própria do shell
+e motion global continuam pendentes.
+
+Passaram **32 testes Desktop e 17 TV, zero falhas/erros/skips**. A seleção inclui
+tokens/política, navegação Jelly e cards, picker Compose com mouse/teclado,
+ViewModel e armazenamento por perfil. No Desktop, a persistência foi testada
+com APPDATA isolado, incluindo substituição por sync sem perder a preferência
+local e sem exportá-la no payload oficial. A escolha Cinemática foi inspecionada
+na captura real do picker. Esses testes não resolvem as 46 falhas herdadas.
+
+MSI foi compilado em 520,59 segundos; TV em 966,78 segundos, com universal e
+quatro APKs por ABI. [Resultados](intensity-results.json) e
+[inspeção/hashes dos pacotes](intensity-package-inspection.json). Estes builds
+continuam **fora da alpha.2** e conservam as versões internas herdadas.
+
+O QA instalado agora usa uma imagem **Android TV API 36 x86_64**, preset 1080p,
+2048 MiB configurados, SwiftShader e páginas de 4096 bytes. As features
+television/leanback/leanback_only foram confirmadas. O APK universal instalou,
+abriu a atividade Leanback e exibiu QR/código/prazo no onboarding Guest; dados
+temporários e capturas de QR permanecem fora da evidência publicada. Isto não
+valida login em conta ou sync.
+
+D-pad levou Home → sidebar → Settings → Appearance → intensidade. Selecionar
+Sutil e depois Cinemática retornou o foco à mesma linha. Movimento Desligado
+preservou a escolha Cinemática. Após force-stop e abertura do app, os dois
+valores persistiram. Back retornou às categorias e Home com card focado;
+direita passou de Unabomber a The Love Hypothesis. O crash buffer final estava
+vazio. [QA e capturas](intensity-ui-qa.json).
+
+| Desktop: Cinemática | TV: Cinemática em Desligado |
+|---|---|
+| ![Picker Desktop](evidence/1-a-3/desktop-intensity-cinematic.png) | ![Picker TV](evidence/1-a-3/tv-intensity-cinematic.png) |
+
+Não houve reprodução, conta/sync, medição de FPS/latência, hardware decoder ou
+validação em TV Box física. A imagem Android TV melhora o alcance do QA de
+interação, mas 2048 MiB configurados no emulador não provam performance física.
+1-A continua aberto; as próximas entregas ainda devem tratar o shell padrão,
+identidade própria, outros efeitos e os demais componentes da Fase 1.

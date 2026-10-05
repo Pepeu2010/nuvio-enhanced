@@ -62,6 +62,14 @@ Imports/câmera/clipboard sempre partem de ação do usuário e capability real.
    têm limites pontuais; falta uma política abrangente que considere storage.
 5. **P1 — Crash reports ligados por default:** confirmado no fallback de settings
    Desktop e TV; no fork, nova instalação precisa iniciar com consentimento off.
+6. **P1 — Diagnósticos de login TV preservam códigos temporários:** inspeção de
+   `core/logging/LogDiagnostics.kt` confirmou que `rawForLog` e `urlForLog`
+   retornam o valor original. Call sites em `AuthManager` e `AccountViewModel`
+   passam nonce, device/user code e URL de verificação. A correção de redaction
+   de addons da fundação não cobre esses helpers. Também precisam ser revisados
+   corpos, mensagens e exceções dos diagnósticos de auth. Está pendente; não se
+   declara ausência global de credenciais nos logs. As evidências publicadas
+   de QR excluem esses valores e não incluem logcat de auth.
 
 Não foram executados pentest, fuzzing de native decoders nem testes de rede
 hostil. As mitigações acima não serão marcadas prontas por existir documentação.

@@ -1,0 +1,66 @@
+{
+  "recordedAtUtc": "2026-10-05T19:24:39.1947599Z",
+  "milestone": "1-A.3",
+  "desktopSourceCommit": "64cb6ebe2c19b5211ad8ee420112370f3ff2229d",
+  "tvSourceCommit": "2e279340cae386f2fec8bb9f2160bff437fd13c4",
+  "apkSha256": "648f66b079d420a56906844f30c76591bf10a98cd268bd340e0015dcfae47e47",
+  "environment": {
+    "avd": "NuvioEnhanced_ATV_01a10441",
+    "image": "system-images;android-36;android-tv;x86_64",
+    "devicePreset": "tv_1080p",
+    "resolution": "1920x1080",
+    "configuredRamMiB": 2048,
+    "renderer": "swiftshader",
+    "pageSize": 4096,
+    "tvSystemImage": true,
+    "physicalDevice": false
+  },
+  "checks": [
+    "Desktop native Compose picker selected Cinematic with mouse and keyboard; screenshot inspected",
+    "Desktop profile preference stored on isolated disk and retained across sync replacement without entering official payload",
+    "Universal APK installed and Leanback activity launched on Android TV API 36",
+    "Guest Home -> sidebar -> Settings -> Appearance -> Animation intensity reached by D-pad",
+    "Standard -> Subtle -> Cinematic selected by D-pad; focus returned to the setting row",
+    "Off mode preserved Cinematic selection; policy unit tests verify no spatial scaling and zero transition duration",
+    "Force-stop then activity relaunch retained Off and Cinematic; reopened Appearance and verified both labels",
+    "Back returned through settings categories to Home with focused Unabomber card",
+    "Right moved focus to The Love Hypothesis card",
+    "Inspected native picker, preference row and Home focus screenshots",
+    "Final crash buffer empty"
+  ],
+  "restartPersistence": {
+    "operation": "am force-stop then activity launch",
+    "offPersisted": true,
+    "cinematicPersisted": true,
+    "focusRestoredToRow": true
+  },
+  "limitations": [
+    "No account sign-in, sync against backend, player/source playback, FPS or latency measurement",
+    "2048 MiB configured emulator is not physical TV Box performance evidence",
+    "Other motion call sites and complete own shell remain pending",
+    "Builds are not published in alpha.2; internal versions remain inherited",
+    "Raw QR UI trees remain ignored; no temporary codes or URLs exported"
+  ],
+  "artifacts": [
+    {
+      "file": "evidence/1-a-3/desktop-intensity-cinematic.png",
+      "bytes": 14534,
+      "sha256": "a7d5787f27f1ecc118e7fda3a744b8e15e066ffbbdf1dc0fddf3aba88f21eaa7"
+    },
+    {
+      "file": "evidence/1-a-3/tv-intensity-off-cinematic.png",
+      "bytes": 147921,
+      "sha256": "71c5ccde3ea7c323465a0444b029c33793d445021d9119925407d595dfb49a68"
+    },
+    {
+      "file": "evidence/1-a-3/tv-intensity-cinematic.png",
+      "bytes": 109829,
+      "sha256": "3dfdc5c97552dd2891fda29d60a93033647b5fa4a64f56402f870e74c11d5c12"
+    },
+    {
+      "file": "evidence/1-a-3/tv-home-off.png",
+      "bytes": 1993407,
+      "sha256": "494cbed2a8b31111f8990d518fb4efc4d35294b4e4f21c94f0210b12f5663944"
+    }
+  ]
+}

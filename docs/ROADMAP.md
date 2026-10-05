@@ -26,6 +26,10 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
   no APK novo em emulador. O provisionamento público foi corrigido. Código/evidência
   registrados, fora da alpha.2; motion global e identidade própria ainda pendentes.
 - Nenhuma fase de produto é declarada concluída apenas pela auditoria.
+- 1-A.3 acrescenta intensidade por perfil, com prioridade de Reduzido/Desligado:
+  32 testes Desktop e 17 TV aprovados; MSI e cinco APKs compilados. Picker Desktop
+  passou por mouse/teclado e o APK universal por D-pad/persistência após reiniciar
+  o app em Android TV API 36. Incremento ainda fora da alpha.2; 1-A permanece aberto.
 
 ## Gates e entregas
 

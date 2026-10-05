@@ -38,6 +38,8 @@ O primeiro incremento **1-A.1** amplia Aparência e navegação existentes com m
 
 O código atual dos forks também contém **1-A.2, ainda fora da alpha.2**: motion no shell, foco dos cards e skeletons, com 25 testes Desktop e 15 TV aprovados e novos pacotes compilados. No APK novo, D-pad e geração do QR foram verificados em emulador após corrigir o provisionamento público. Conta/sync/playback e o restante do milestone visual continuam pendentes. [Evidências deste incremento](docs/motion-shell-ui-qa.json).
 
+O incremento **1-A.3, também fora da alpha.2**, acrescenta intensidade Sutil, Padrão e Cinemática por perfil, com prioridade dos modos Reduzido/Desligado. Passaram 32 testes Desktop e 17 TV; MSI e cinco APKs foram compilados. O seletor Desktop passou por mouse/teclado; na imagem Android TV API 36, o APK universal passou por D-pad e persistência após reiniciar o app. O projeto continua na Fase 1: Home/redesign completo, Profile Studio, cache Auto, timeline, Live TV/EPG, Scene Info e Phone Remote permanecem pendentes. [Evidências e limites](docs/intensity-ui-qa.json).
+
 ## O que queremos acrescentar ao Nuvio
 
 As próximas entregas ampliam os componentes existentes; os itens desta seção **ainda estão previstos**, não fazem parte da fundação publicada:
