@@ -69,6 +69,11 @@ Scene Info in Phase 7 and Live TV components in Phase 1 before real Phase 6 rout
 
 ## Acceptance
 
+The user explicitly requested completion of the entire approved scope on
+2026-10-04. Partial development releases are checkpoints, not completion of that
+objective. Continue all milestones and retain outstanding implementation and
+verification gates until their actual evidence exists.
+
 Implementation defaults from the approved plan: PreviewCoordinator has a
 750 ms Desktop and 1200 ms TV delay, silent autoplay and one active preview;
 primary playback takes ownership of decoder resources. Source score starts with

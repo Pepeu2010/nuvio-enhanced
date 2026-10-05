@@ -36,6 +36,8 @@ Foram aprovados **31 testes direcionados Desktop e 84 TV**, além da compilaçã
 
 O primeiro incremento **1-A.1** amplia Aparência e navegação existentes com movimento completo/reduzido/desligado salvo localmente por perfil. Foram aprovados **22 testes Desktop e 19 TV**, com novo MSI e APKs compilados e QA do seletor TV instalado em emulador. O incremento integra a alpha.2; o milestone visual completo continua em execução. [Implementação e alcance da validação](docs/NATIVE_FOUNDATION.md).
 
+O código atual dos forks também contém **1-A.2, ainda fora da alpha.2**: motion no shell, foco dos cards e skeletons, com 25 testes Desktop e 15 TV aprovados e novos pacotes compilados. No APK novo, D-pad e geração do QR foram verificados em emulador após corrigir o provisionamento público. Conta/sync/playback e o restante do milestone visual continuam pendentes. [Evidências deste incremento](docs/motion-shell-ui-qa.json).
+
 ## O que queremos acrescentar ao Nuvio
 
 As próximas entregas ampliam os componentes existentes; os itens desta seção **ainda estão previstos**, não fazem parte da fundação publicada:

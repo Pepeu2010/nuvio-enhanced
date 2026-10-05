@@ -1,0 +1,128 @@
+{
+  "exportedAtUtc": "2026-10-05T01:23:21.5192214Z",
+  "milestone": "motion-shell",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "d0b2a0829d9034ec45d69239709f920c27acdf70",
+      "attempts": [
+        {
+          "label": "motion-shell-desktop",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-04T14:13:42.9712063Z",
+          "finishedAtUtc": "2026-10-04T14:19:54.64343Z",
+          "durationSeconds": 371.64,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*JellyMotionTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            "--tests",
+            "*CustomThemeColorsTest",
+            "--tests",
+            "*NavigationMotionPickerTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        },
+        {
+          "label": "motion-shell-desktop-configured",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T14:34:49.8100333Z",
+          "finishedAtUtc": "2026-10-04T14:40:34.1374554Z",
+          "durationSeconds": 344.31,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*JellyMotionTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            "--tests",
+            "*CustomThemeColorsTest",
+            "--tests",
+            "*NavigationMotionPickerTest",
+            "--tests",
+            "*PosterCardClickTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        },
+        {
+          "label": "motion-shell-desktop-fixed",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T14:21:12.8538684Z",
+          "finishedAtUtc": "2026-10-04T14:25:44.2962527Z",
+          "durationSeconds": 271.42,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*JellyMotionTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            "--tests",
+            "*CustomThemeColorsTest",
+            "--tests",
+            "*NavigationMotionPickerTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 25,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 5,
+        "attempt": "motion-shell-desktop-configured"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "a705e8f947039a8dcb8f6e6d55a08cdf502269d1",
+      "attempts": [
+        {
+          "label": "motion-shell-tv",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-04T14:26:14.235573Z",
+          "finishedAtUtc": "2026-10-04T14:33:47.2284672Z",
+          "durationSeconds": 452.98,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 15,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 3,
+        "attempt": "motion-shell-tv"
+      }
+    }
+  ]
+}

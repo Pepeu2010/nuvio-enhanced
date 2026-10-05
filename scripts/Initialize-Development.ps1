@@ -9,7 +9,13 @@ if (-not $discovery.backend_url -or -not $discovery.publishable_key -or
     throw 'Official discovery did not return usable public client configuration.'
 }
 $propertyFile = Join-Path $checkout 'local.properties'
-$propertyLines = if (Test-Path $propertyFile) { @(Get-Content $propertyFile) } else { @() }
+[string[]]$propertyLines = @(if (Test-Path $propertyFile) { Get-Content $propertyFile })
+# Repair the exact public configuration previously concatenated by scalar +=.
+# Other developer values remain untouched.
+$oldConcatenated = "NUVIO_SUPABASE_URL=$($discovery.backend_url)NUVIO_SUPABASE_ANON_KEY=$($discovery.publishable_key)"
+if ($propertyLines -contains $oldConcatenated) {
+    $propertyLines = @($propertyLines | Where-Object { $_ -ne $oldConcatenated })
+}
 foreach ($setting in @(@('NUVIO_SUPABASE_URL', $discovery.backend_url),
     @('NUVIO_SUPABASE_ANON_KEY', $discovery.publishable_key))) {
     if ($setting[1] -match '[\r\n]') { throw 'Invalid discovery property.' }

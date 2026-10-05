@@ -138,3 +138,78 @@ Evoluir a identidade/shell e ampliar a cobertura de motion/foco a partir desses
 tokens e superfícies atuais, com renderização/navegação testadas. Os componentes
 Live TV/EPG entram na preparação da Fase 1 sem rotas públicas; timed metadata
 integra o player na Fase 2, mantendo Scene Info na Fase 7.
+
+## Incremento 1-A.2: shell, foco e skeletons
+
+A preferência existente passa a alcançar também os tokens de duração usados
+pelos componentes Desktop, expansão dos rótulos de navegação e o motor Jelly.
+Em Reduzido/Desligado, Jelly mantém clique, drag, cancel e destinos limitados,
+mas não inicia seu loop de frames nem distorce a superfície. No modo adaptativo,
+os rótulos ficam visíveis e estáveis; a escolha explícita Compacto permanece.
+Skeletons continuam representando carregamento, com superfície estática nesses
+modos. A política é estendida no tema existente, sem outro navigator/store.
+
+Na TV, `MotionFocusTokens` fornece tokens derivados da política e o shell
+clássico/moderno os usa para feedback e transições. `ContentCard` e
+`GridContentCard` mantêm borda/foco/ações; zoom elástico é retirado nos modos
+reduzidos, e expansão de backdrop continua disponível sem animação espacial.
+`Shimmer`/`Skeletons` param loops decorativos. Outros call sites ainda precisam
+adotar a política; não se anuncia desativação global concluída.
+
+Arquivos Desktop: `Tokens`, `Theme`, `DesktopNavigationBar`, `Shimmer`,
+`jelly/JellyMotion`, `jelly/JellyNavigationBar`, `ShelfComponents`,
+`ProfileMeshBackground` e seus testes existentes. Hover continua emitindo
+interações para os previews, mesmo sem zoom.
+TV: `MainActivity`, `ModernSidebarBlurPanel`, `MotionFocusTokens`, `Theme`,
+`ContentCard`, `GridContentCard`, `SidebarNavigation`, `Shimmer`, `Skeletons`
+e `ThemeAccessTest`. Não houve substituição de players, auth ou sync.
+
+O primeiro teste Desktop encontrou deslocamento do alvo sob o mouse ao expandir
+rótulos instantaneamente. O layout adaptativo estável corrigiu a falha sem
+remover a navegação. A execução final com a configuração pública correta passou
+**25 testes Desktop e 15 TV, zero falhas/erros/skips**, e gerou MSI e os cinco
+APKs. A seleção dos testes inclui motor Jelly, interação Compose de navegação,
+picker, clique dos posters, tokens, ViewModel e persistência de Aparência.
+Não substitui a suíte completa nem resolve as 46 falhas herdadas.
+
+[Resultados das tentativas](motion-shell-results.json),
+[inspeção/hashes dos pacotes](motion-shell-package-inspection.json) e
+[QA instalado e capturas](motion-shell-ui-qa.json). Os commits registrados
+contêm o código compilado; o build ocorreu antes do commit e o README foi
+atualizado depois. Configuração pública local é provisionada pelo script e
+continua fora do Git. Estes pacotes **não integram a alpha.2 publicada**.
+
+No APK novo, a preferência Off sobreviveu à substituição do pacote. D-pad levou
+Home → sidebar → Settings → Appearance, selecionou Reduced e restaurou o foco
+na linha. Back retornou por categorias até Home; direita/esquerda moveram o
+foco entre cards e sidebar. Borda de foco e rótulos foram inspecionados nas
+capturas reais. O crash buffer estava vazio antes da tentativa de reinício.
+Na continuação seguinte o processo do emulador estava ausente: não se declara
+persistência após reinício verificada neste incremento. A persistência de 1-A.1
+continua sendo sua evidência própria, sem ampliar o alcance deste QA.
+
+| Desktop: menu estável em Off | TV: card em Reduced |
+|---|---|
+| ![Menu Desktop Off](evidence/1-a-2/desktop-menu-off.png) | ![Home TV Reduced](evidence/1-a-2/tv-reduced-home.png) |
+
+O ambiente continua sendo imagem phone API 37.1, preset TV 1080p, 2048 MiB
+configurados e SwiftShader. A advertência nativa de 16 KB apareceu novamente.
+Não representa Android TV OS, hardware decoder ou performance de TV Box.
+
+### Correção de provisionamento público e QR
+
+A investigação encontrou `local.properties` com URL e chave pública concatenadas
+na mesma linha. A causa era `+=` em uma variável inferida como string quando
+continha uma única linha. `Initialize-Development.ps1` agora força array de
+strings, repara somente a concatenação exata produzida pelo script e preserva
+outras configurações. Duas execuções mantiveram o arquivo idêntico e produziram
+duas propriedades separadas. A correção altera o provisionamento local, sem
+modificar `AuthManager` ou inventar endpoint.
+
+Com o redirect atual do app, o RPC oficial `start_device_login_session` respondeu
+HTTP 200 e os campos esperados. No APK recompilado, o QR, código manual e prazo
+de expiração foram observados na árvore de UI; não apareceram os erros antigos.
+Não foi feito login em conta ou sync. Códigos, URLs temporárias e capturas do QR
+não foram exportados. As alphas já publicadas continuam com os pacotes originais;
+a correção não foi inserida retroativamente. O Desktop também foi provisionado
+com URL/chave pública separadas e recompilado; seu login não foi testado.

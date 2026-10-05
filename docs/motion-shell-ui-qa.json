@@ -1,0 +1,72 @@
+{
+  "recordedAtUtc": "2026-10-05T01:24:07.7363314Z",
+  "milestone": "1-A.2",
+  "desktopSourceCommit": "d0b2a0829d9034ec45d69239709f920c27acdf70",
+  "tvSourceCommit": "a705e8f947039a8dcb8f6e6d55a08cdf502269d1",
+  "apkSha256": "c886bcb173cc9706a6d7f48ddc270e1eee1b4c2db49e685c953923bf5645358d",
+  "environment": {
+    "avd": "NuvioEnhanced_QA_01a10441",
+    "image": "system-images;android-37.1;google_apis_playstore_ps16k;x86_64",
+    "devicePreset": "tv_1080p",
+    "resolution": "1920x1080",
+    "configuredRamMiB": 2048,
+    "renderer": "swiftshader",
+    "pageSize": 16384,
+    "tvSystemImage": false,
+    "physicalDevice": false
+  },
+  "checks": [
+    "Universal APK replaced previous debug build successfully",
+    "Leanback activity resolved and launched",
+    "Previous Off preference remained selected after installation",
+    "Guest Home -> sidebar -> Settings -> Appearance reached by D-pad",
+    "Off -> Reduced selected by D-pad; focus returned to setting row",
+    "Back returned through settings categories to Home with focused card",
+    "Right moved focus to the next card; left restored the previous card and sidebar",
+    "Inspected native Home focus border and expanded sidebar captures",
+    "QR bitmap, manual code and expiry appeared; no QR unavailable or unexpected error",
+    "Crash buffer empty before restart attempt"
+  ],
+  "qr": {
+    "recordedAtUtc": "2026-10-04T14:45:50.9748853Z",
+    "qrImagePresent": true,
+    "manualCodePresent": true,
+    "expiryLabelPresent": true,
+    "qrUnavailable": false,
+    "unexpectedError": false,
+    "accountLogin": false,
+    "sync": false,
+    "temporarySecretsExported": false
+  },
+  "limitations": [
+    "Phone image with TV preset; not Android TV OS or physical 2 GB performance evidence",
+    "16 KB compatibility warning dismissed by UI-tree-derived tap; app navigation used D-pad",
+    "No account sign-in, sync, player/source playback, FPS or latency measurement",
+    "Emulator process was absent at the next continuation; restart persistence was not verified in this increment",
+    "Other motion call sites and complete own shell remain pending",
+    "Builds are not published in alpha.2; internal versions remain inherited",
+    "Raw QR UI trees remain ignored; no temporary codes or URLs are exported"
+  ],
+  "artifacts": [
+    {
+      "file": "evidence/1-a-2/desktop-menu-off.png",
+      "bytes": 5874,
+      "sha256": "6c9678e671c28c5b04c99a4547ba61355a646ea1eee111826e93162d6105ef7e"
+    },
+    {
+      "file": "evidence/1-a-2/tv-motion-off.png",
+      "bytes": 117224,
+      "sha256": "bed8bb86b3466789e4b8411bec90ec98da400ee37adee08c70a8531c2a86a2a0"
+    },
+    {
+      "file": "evidence/1-a-2/tv-reduced-home.png",
+      "bytes": 1606532,
+      "sha256": "2e24be15a5c6cc501d5ecc8a9732514b12c9645562695e6c7dc5780eb9980d72"
+    },
+    {
+      "file": "evidence/1-a-2/tv-reduced-sidebar.png",
+      "bytes": 1198832,
+      "sha256": "2ce46b9ff06338c3f52b41cf2ce230ffe5ac07898bbcdab42a9e61ffc4dd8edc"
+    }
+  ]
+}

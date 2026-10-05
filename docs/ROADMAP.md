@@ -21,6 +21,10 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
   Incremento distribuído na alpha.2; detalhes/limites em NATIVE_FOUNDATION.md.
   A identidade/shell completa e o QA global continuam pendentes; não se avançou
   para 1-B nem se declarou o redesign concluído.
+- 1-A.2 estende motion ao shell, foco e skeletons existentes: 25 testes Desktop
+  e 15 TV aprovados; MSI e cinco APKs compilados. D-pad e geração do QR passaram
+  no APK novo em emulador. O provisionamento público foi corrigido. Código/evidência
+  registrados, fora da alpha.2; motion global e identidade própria ainda pendentes.
 - Nenhuma fase de produto é declarada concluída apenas pela auditoria.
 
 ## Gates e entregas
