@@ -37,3 +37,9 @@ A implementação integral continua sendo a meta. Fase 1 completa, Profile Studi
 Builds finais: 44 testes direcionados Desktop e 53 TV, sem falhas, erros ou skips; MSI Windows e cinco APKs Full Debug compilados. A inspeção confirma Produto Telumia, ponte Windows empacotada idêntica à compilada, cache WebView2 isolado e assinaturas dos APKs. O guard de compatibilidade passou. Tentativas anteriores e limites de suíte completa permanecem registrados em `telumia-results.json` e nos documentos baseline.
 
 A captura de sidebar Desktop vem do teste Compose nativo com navegação por teclado. Não equivale a uma instalação Windows ou teste de reprodução real. O ambiente TV é um emulador Android TV API 36; não comprova desempenho em aparelho físico de 2 GB. A escala de movimento Windows ainda não acompanha automaticamente a preferência do sistema operacional.
+
+## Publicação e pasta local
+
+As três pré-releases `v0.2.0-alpha.1` estão publicadas. Os 22 assets remotos tiveram tamanho e digest SHA-256 comparados com os arquivos locais, conforme `telumia-release-verification.json`.
+
+A renomeação física solicitada está pendente de liberação do Windows: o aplicativo Codex e seus processos MCP mantêm handles na pasta atual. A inspeção read-only com Microsoft Sysinternals Handle confirmou os bloqueios; nenhum handle foi fechado à força. `scripts/Rename-TelumiaWorkspace.ps1` foi iniciado como helper oculto, com destinos absolutos validados, sem copiar checkouts nem substituir diretórios. Ele efetua a renomeação quando a pasta for liberada e registra `telumia-workspace-rename.json` no diretório pai. Até esse registro existir, a pasta permanece com o nome anterior.
