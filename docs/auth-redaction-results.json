@@ -1,0 +1,81 @@
+{
+  "exportedAtUtc": "2026-10-05T19:50:17.3368997Z",
+  "milestone": "auth-redaction",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "0a252ce658955d82767f705120d363e946b5be8c",
+      "attempts": [],
+      "targetedTestResults": null
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "34f493f87d1f402e9af0881cdff8ca307199c10b",
+      "attempts": [
+        {
+          "label": "auth-redaction-tv",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-05T19:37:00.2609061Z",
+          "finishedAtUtc": "2026-10-05T19:42:29.414605Z",
+          "durationSeconds": 329.14,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*DiagnosticRedactionTest",
+            "--tests",
+            "*SupabaseAuthSessionTest",
+            "--tests",
+            "*AuthSessionValidationPolicyTest",
+            "--tests",
+            "*AuthRefreshResponsePolicyTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        },
+        {
+          "label": "auth-redaction-tv-retry",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T19:44:29.7572082Z",
+          "finishedAtUtc": "2026-10-05T19:45:56.3225531Z",
+          "durationSeconds": 86.55,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*DiagnosticRedactionTest",
+            "--tests",
+            "*SupabaseAuthSessionTest",
+            "--tests",
+            "*AuthSessionValidationPolicyTest",
+            "--tests",
+            "*AuthRefreshResponsePolicyTest",
+            "--tests",
+            "*ThemeAccessTest",
+            "--tests",
+            "*ThemeSettingsViewModelTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            ":app:assembleFullDebug"
+          ],
+          "gradleArgs": []
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 36,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 7,
+        "attempt": "auth-redaction-tv-retry"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "recordedAtUtc": "2026-10-05T19:48:42.4349593Z",
+  "scope": "QR generation and current-session log redaction only; no account login or sync",
+  "qrImagePresent": true,
+  "manualCodePresent": true,
+  "manualCodeInLog": false,
+  "nonceMarkerPresent": true,
+  "deviceCodeMarkerPresent": true,
+  "userCodeMarkerPresent": true,
+  "urlMarkerPresent": true,
+  "crashBufferLines": 0,
+  "temporarySecretsExported": false,
+  "legacyReportQueueAudited": false,
+  "sourceCommit": "34f493f87d1f402e9af0881cdff8ca307199c10b",
+  "apkSha256": "710a4122791cec2410cce99b073c60aaab5a1a3b5d8321016a61f29d280b8ae2"
+}

@@ -30,6 +30,10 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
   32 testes Desktop e 17 TV aprovados; MSI e cinco APKs compilados. Picker Desktop
   passou por mouse/teclado e o APK universal por D-pad/persistência após reiniciar
   o app em Android TV API 36. Incremento ainda fora da alpha.2; 1-A permanece aberto.
+- Continuação Desktop do menu lateral padrão: 27 testes e MSI passaram, com
+  captura/interação do componente real. Diagnósticos de login novos da TV foram
+  protegidos: 36 testes e cinco APKs passaram; QR/markers no log verificados.
+  Migração da fila de relatórios antigos e o restante de 1-A permanecem pendentes.
 
 ## Gates e entregas
 

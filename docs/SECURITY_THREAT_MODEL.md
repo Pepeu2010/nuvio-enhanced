@@ -73,3 +73,35 @@ Imports/câmera/clipboard sempre partem de ação do usuário e capability real.
 
 Não foram executados pentest, fuzzing de native decoders nem testes de rede
 hostil. As mitigações acima não serão marcadas prontas por existir documentação.
+
+### Correção de diagnósticos de login TV novos
+
+Foram estendidos os helpers existentes de log e a projeção de `AuthDiagnostics`.
+Escalares, URLs e corpos recebem marcadores; exceções mantêm tipos e frames,
+sem mensagem/causas brutas. Cabeçalhos não reconhecidos e valores de string
+dos corpos/detalhes são excluídos, inclusive JSON inválido. Status HTTP,
+timing, booleanos e contadores permanecem em campos próprios. Foram retirados
+26 overloads de logger que passavam Throwable bruto em AuthManager/AccountViewModel.
+Não foram alterados os valores operacionais dos requests, DTOs ou endpoints.
+
+A comparação de AuthManager com o upstream é idêntica ao retirar apenas as
+linhas Log.e/Log.w. O verificador protege os dois blobs revisados de auth com
+hash exato, mantendo a comparação do restante do diretório e de sync/APIs/DTOs.
+Passaram **36 testes direcionados**; os cinco APKs foram compilados. O primeiro
+teste do relatório serializado encontrou um corpo com código puro: o parser
+aceitava um literal fora do schema esperado. A correção passou a excluir corpos
+escalares e literais não numéricos/booleanos, com regressão preservada. O teste
+captura o payload passado ao repository usando dados sintéticos; nenhum upload
+real de teste é feito. Tipos de exceção, status HTTP e classificação de timeout
+continuam disponíveis sem suas mensagens. Tentativas em `auth-redaction-results.json`.
+
+No APK instalado em Android TV API 36, QR e código foram gerados e os marcadores
+nonce/deviceCode/userCode/URL apareceram nos logs novos. O código da tela não
+apareceu no log e o crash buffer ficou vazio. Não houve login de conta/sync;
+logs brutos e árvores com QR permanecem ignorados. `auth-redaction-ui-qa.json`
+contém somente os resultados e o hash do APK.
+
+A fila de relatórios gerados por versões anteriores precisa de revisão/migração;
+esta mudança não apaga logs antigos nem demonstra ausência global de dados
+sensíveis. O achado 6 continua parcialmente aberto por essa pendência. Os
+pacotes da alpha.2 não foram substituídos pela correção.

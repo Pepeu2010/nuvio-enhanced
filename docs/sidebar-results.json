@@ -1,0 +1,51 @@
+{
+  "exportedAtUtc": "2026-10-05T19:39:07.1816045Z",
+  "milestone": "sidebar",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "0a252ce658955d82767f705120d363e946b5be8c",
+      "attempts": [
+        {
+          "label": "sidebar-desktop",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T19:28:33.3953301Z",
+          "finishedAtUtc": "2026-10-05T19:33:25.8208756Z",
+          "durationSeconds": 292.41,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            "--tests",
+            "*JellyMotionTest",
+            "--tests",
+            "*CustomThemeColorsTest",
+            "--tests",
+            "*ThemeSettingsStorageDesktopTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 27,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 4,
+        "attempt": "sidebar-desktop"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "2e279340cae386f2fec8bb9f2160bff437fd13c4",
+      "attempts": [],
+      "targetedTestResults": null
+    }
+  ]
+}

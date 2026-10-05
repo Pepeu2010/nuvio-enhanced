@@ -16,7 +16,7 @@ Desktop: prefixo `composeApp/src/commonMain/kotlin/com/nuvio/app`; TV: prefixo
 | Plugins executáveis | QuickJS no Full | QuickJS no Full | Preservar com auditoria separada de host APIs/quotas |
 | Addon Manager | Instalação, enable, refresh, ordem | Repository e telas existentes | Evoluir descoberta/atualizações/diagnóstico, sem instalar providers embutidos |
 | Tokens visuais | core/ui/Tokens e Theme | ui/theme com famílias de tokens | Evoluir; não criar segundo sistema conflitante |
-| Home e detalhes | Existentes | Existentes, múltiplos layouts | Reconstruir experiência preservando ações/repos e lazy loading |
+| Home e detalhes | Existentes | Existentes, múltiplos layouts | Evoluir experiência preservando ações/repos e lazy loading |
 | Home reorganizável | HomeCatalogSettingsRepository | HomeCatalogSettingsSyncService | Ampliar controles e manter regras do sync atual |
 | Hover/focus previews | HomePosterHoverPreview/Trailer | TrailerPlayerPool, focused poster target | Coordenar globalmente, silêncio default e debounce configurável |
 | Hero/trailers | HeroTrailerSelector e superfícies | TrailerService/SharedTrailerOverlay | Evoluir lifecycle/ambient, não criar resolução duplicada |

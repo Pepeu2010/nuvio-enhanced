@@ -264,3 +264,24 @@ validação em TV Box física. A imagem Android TV melhora o alcance do QA de
 interação, mas 2048 MiB configurados no emulador não provam performance física.
 1-A continua aberto; as próximas entregas ainda devem tratar o shell padrão,
 identidade própria, outros efeitos e os demais componentes da Fase 1.
+
+## Continuação de 1-A: menu lateral padrão Desktop
+
+A inspeção de `MainTabsDestination` confirmou que Sidebar é o layout Desktop
+padrão e que sua expansão ainda usava tween fixo de 200 ms. `AppShellComponents`
+também tinha rótulos/offsets e o top bar alternativo fora da política. A extensão
+atua nesses dois arquivos existentes: modo adaptativo fica expandido e reserva
+padding estável quando efeitos espaciais estão reduzidos/desligados; a escolha
+Compacto continua disponível. Durações, delays e expansão agora usam a política
+com intensidade. As ações de navegação e o switcher de perfis são preservados.
+
+Os itens laterais passam a expor seleção na semântica e o gatilho do perfil tem
+descrição acessível. O teste Compose existente de navegação foi estendido para
+o menu lateral real, verificando estabilidade do alvo sob hover, seleção por
+mouse e ativação por Enter. A continuação foi compilada:
+**27 testes direcionados Desktop passaram, zero falhas/erros/skips**,
+com MSI em 292,41 segundos. A captura real do componente lateral em Off foi
+inspecionada; Biblioteca permaneceu selecionada após Enter e o alvo Busca não
+mudou de posição ao entrar o mouse. É QA do componente existente, sem ampliar
+essa evidência para o app completo, login ou playback. Resultado e pacote são
+registrados em `sidebar-results.json` e `sidebar-package-inspection.json`.

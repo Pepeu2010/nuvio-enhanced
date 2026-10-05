@@ -40,6 +40,8 @@ O código atual dos forks também contém **1-A.2, ainda fora da alpha.2**: moti
 
 O incremento **1-A.3, também fora da alpha.2**, acrescenta intensidade Sutil, Padrão e Cinemática por perfil, com prioridade dos modos Reduzido/Desligado. Passaram 32 testes Desktop e 17 TV; MSI e cinco APKs foram compilados. O seletor Desktop passou por mouse/teclado; na imagem Android TV API 36, o APK universal passou por D-pad e persistência após reiniciar o app. O projeto continua na Fase 1: Home/redesign completo, Profile Studio, cache Auto, timeline, Live TV/EPG, Scene Info e Phone Remote permanecem pendentes. [Evidências e limites](docs/intensity-ui-qa.json).
 
+As continuações atuais integram o menu lateral padrão Desktop à política de movimento (27 testes e MSI) e protegem diagnósticos de login novos na TV (36 testes e cinco APKs). O QR foi verificado após a correção; a migração da fila de relatórios antigos ainda está pendente. Tudo isso permanece **fora da alpha.2**. [Menu e alcance do QA](docs/NATIVE_FOUNDATION.md), [diagnósticos e pendências](docs/SECURITY_THREAT_MODEL.md).
+
 ## O que queremos acrescentar ao Nuvio
 
 As próximas entregas ampliam os componentes existentes; os itens desta seção **ainda estão previstos**, não fazem parte da fundação publicada:

@@ -1,23 +1,23 @@
 {
-  "recordedAtUtc": "2026-10-05T19:24:39.2117979Z",
+  "recordedAtUtc": "2026-10-05T19:50:22.1774779Z",
   "repositories": [
     {
       "repository": "Pepeu2010/nuvio-enhanced-desktop",
       "url": "https://github.com/Pepeu2010/nuvio-enhanced-desktop.git",
       "branch": "main",
-      "commit": "64cb6ebe2c19b5211ad8ee420112370f3ff2229d",
+      "commit": "0a252ce658955d82767f705120d363e946b5be8c",
       "checkout": "repos/desktop",
-      "milestone": "1-A.3 implemented, targeted tests/build and selected native UI QA; unreleased; full 1-A pending",
-      "packageSourceCommit": "64cb6ebe2c19b5211ad8ee420112370f3ff2229d"
+      "milestone": "1-A.3 plus default sidebar motion; targeted tests/build and component QA; unreleased; full 1-A pending",
+      "packageSourceCommit": "0a252ce658955d82767f705120d363e946b5be8c"
     },
     {
       "repository": "Pepeu2010/nuvio-enhanced-tv",
       "url": "https://github.com/Pepeu2010/nuvio-enhanced-tv.git",
       "branch": "main",
-      "commit": "2e279340cae386f2fec8bb9f2160bff437fd13c4",
+      "commit": "34f493f87d1f402e9af0881cdff8ca307199c10b",
       "checkout": "repos/tv",
-      "milestone": "1-A.3 implemented, targeted tests/build and selected native UI QA; unreleased; full 1-A pending",
-      "packageSourceCommit": "2e279340cae386f2fec8bb9f2160bff437fd13c4"
+      "milestone": "1-A.3 plus new auth diagnostic redaction; targeted tests/build and QR log QA; legacy report queue migration pending; unreleased",
+      "packageSourceCommit": "34f493f87d1f402e9af0881cdff8ca307199c10b"
     }
   ]
 }

@@ -86,3 +86,22 @@ Não considerar testes com servidor local como validação do serviço oficial.
 Configurações públicas de cliente podem ser provisionadas por mecanismo oficial
 documentado; senhas de usuário, cookies, service-role e chaves de release não
 serão coletados nem colocados no repositório.
+
+## Exceção delimitada: diagnósticos de autenticação TV
+
+O achado de códigos temporários nos logs exigiu mudanças no diretório protegido
+`core/auth`. `AuthManager` teve somente chamadas de Log.e/Log.w alteradas: a
+comparação com o baseline, removendo apenas essas linhas, permaneceu idêntica.
+`AuthDiagnostics` altera a projeção de request/response, detalhes, mensagens,
+URLs e exceções nos relatórios; os DTOs e endpoints permanecem intactos.
+O valor usado pelo login/QR continua original; a redaction atua nas cópias de
+diagnóstico. `AccountViewModel` também deixa de passar Throwable bruto ao logger.
+
+`Test-CompatibilityFoundation.ps1` registra o blob baseline e o blob revisado
+exato de somente esses dois arquivos. Qualquer outra alteração neles falha,
+e o restante de auth/sync/APIs/DTOs continua comparado ao upstream. Esta exceção
+não libera alterações arbitrárias no diretório nem valida conta/sync remoto.
+Passaram 36 testes direcionados e os cinco APKs foram compilados. QR gerou
+no APK instalado, com marcadores no log e sem o código exibido nele. Conta/sync
+e migração de relatórios antigos permanecem pendentes. Evidências em
+`auth-redaction-results.json` e `auth-redaction-ui-qa.json`.

@@ -62,5 +62,18 @@
       "bytes": 1993407,
       "sha256": "494cbed2a8b31111f8990d518fb4efc4d35294b4e4f21c94f0210b12f5663944"
     }
-  ]
+  ],
+  "sidebarContinuation": {
+    "sourceCommit": "0a252ce658955d82767f705120d363e946b5be8c",
+    "scope": "Real existing sidebar component, not whole application QA",
+    "tests": 27,
+    "failures": 0,
+    "keyboard": "RequestFocus then Enter activated Library",
+    "mouse": "Hover preserved Search bounds; click navigated once",
+    "capture": {
+      "file": "evidence/1-a-3/desktop-sidebar-off.png",
+      "bytes": 10525,
+      "sha256": "663582874e294382ab25e43db48fe0a74ab9398e78b6c3f88a210d0454debed9"
+    }
+  }
 }
