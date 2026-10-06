@@ -1,6 +1,6 @@
 # Telumia — cache configurável por aparelho
 
-Incremento em execução em 6 de outubro de 2026. Desktop compilado e testado; integração TV em compilação. A política central completa para todos os tipos de dados ainda não está concluída.
+Incremento nativo de 6 de outubro de 2026. Os dois clientes foram compilados e testados. A política central completa para todos os tipos de dados ainda não está concluída.
 
 ## Comportamento implementado no Desktop
 
@@ -25,7 +25,12 @@ A captura usa um orçamento controlado para verificar os controles e a informaç
 
 ## Continuidade obrigatória
 
-A TV prepara default de 256 MiB, Auto baseado em RAM/armazenamento, escolha Manual por D-pad e reserva de 256 MiB. A validação do APK e de sua persistência ainda está em andamento.
+A TV integra default de 256 MiB, Auto baseado em RAM/armazenamento, escolha Manual por D-pad e reserva de 256 MiB. Seus carregadores existentes de imagens/badges recebem quotas e política somente leitura quando a reserva impede escrita; backgrounds e revalidação respeitam a mesma política. A configuração é local ao aparelho, possui estado de gravação/erro e aplica mudanças na próxima abertura.
+
+Passaram 96 testes unitários selecionados, sem falhas/erros/skips, e foram gerados os cinco APKs e o APK de instrumentação. Nove testes nativos em 720p/1080p/4K verificaram D-pad, seleção Manual/Auto, persistência real em SharedPreferences e fallback de schema futuro. Capturas e hashes estão na [instrumentação TV](telumia-cache-tv-ui-qa.json); a [inspeção dos APKs](telumia-cache-tv-package-inspection.json) registra sua identidade própria.
+
+![Cache TV 720p](evidence/telumia-cache/tv-cache-settings-720.png)
+![Cache TV 4K](evidence/telumia-cache/tv-cache-settings-2160.png)
 
 Ainda faltam contabilização global de legado, integração das caches de metadata/addons/EPG/previews/thumbnails/filmstrip/Scene Info e avatar remoto, adaptação dinâmica durante a sessão e QA de fluxos offline reais. O limite de armazenamento antes de baixar imagens e a validação de arquivos/URLs também exigem revisão própria. O índice de metadata temporal não substitui um cache de Scene Info.
 
