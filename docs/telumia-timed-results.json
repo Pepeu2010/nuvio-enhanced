@@ -1,0 +1,175 @@
+{
+  "exportedAtUtc": "2026-10-06T20:20:33.8004920Z",
+  "milestone": "telumia-timed",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "21eb2a279a5bf1dc46525a882e787d62538dc75d",
+      "attempts": [
+        {
+          "label": "telumia-timed-desktop",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-06T19:53:44.4716628Z",
+          "finishedAtUtc": "2026-10-06T19:58:44.3621581Z",
+          "durationSeconds": 299.87,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*TelumiaHomeExperienceTest",
+            "--tests",
+            "*TelumiaPosterInteractionTest",
+            "--tests",
+            "*HomeHeroPagerTest",
+            "--tests",
+            "*HomeHeroSectionTest",
+            "--tests",
+            "*PosterCardClickTest",
+            "--tests",
+            "*LiveTvVisualComponentsTest",
+            "--tests",
+            "*CinematicMovieDetailsTest",
+            "--tests",
+            "*CinematicMovieHeroViewportTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            "--tests",
+            "*TimedMetadata*",
+            "--tests",
+            "*NativePlayerControllerTeardownTest",
+            "--tests",
+            "*DesktopPlayerVolumeTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "-Pkotlin.compiler.execution.strategy=in-process",
+            "--no-configuration-cache"
+          ]
+        },
+        {
+          "label": "telumia-timed-desktop-retry",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-06T20:00:57.9559744Z",
+          "finishedAtUtc": "2026-10-06T20:03:25.5079709Z",
+          "durationSeconds": 147.53,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*TelumiaHomeExperienceTest",
+            "--tests",
+            "*TelumiaPosterInteractionTest",
+            "--tests",
+            "*HomeHeroPagerTest",
+            "--tests",
+            "*HomeHeroSectionTest",
+            "--tests",
+            "*PosterCardClickTest",
+            "--tests",
+            "*LiveTvVisualComponentsTest",
+            "--tests",
+            "*CinematicMovieDetailsTest",
+            "--tests",
+            "*CinematicMovieHeroViewportTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            "--tests",
+            "*TimedMetadata*",
+            "--tests",
+            "*NativePlayerControllerTeardownTest",
+            "--tests",
+            "*DesktopPlayerVolumeTest",
+            "--tests",
+            "*SkipIntervalLookupTest",
+            "--tests",
+            "*AutoSkipSegmentTypeTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 93,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 18,
+        "attempt": "telumia-timed-desktop-retry"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "1a6aba92395ac0e6798a143c58da61fe6cd92c4a",
+      "attempts": [
+        {
+          "label": "telumia-timed-tv",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-06T20:04:00.0919157Z",
+          "finishedAtUtc": "2026-10-06T20:18:41.4501866Z",
+          "durationSeconds": 881.35,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*MetaRepositoryPreferredAddonTypeTest",
+            "--tests",
+            "*MetaRepositoryAddonCacheTest",
+            "--tests",
+            "*SearchViewModelConcurrencyTest",
+            "--tests",
+            "*SearchViewModelPaginationTest",
+            "--tests",
+            "*SearchViewModelSuggestionsTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*ForkIdentityTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*ModernHomeIdentityRelocationTest",
+            "--tests",
+            "*ModernHomePlaceholderShimmerTest",
+            "--tests",
+            "*HomeEnrichmentRetryTest",
+            "--tests",
+            "*TimedMetadata*",
+            "--tests",
+            "*PlayerScrubRatesTest",
+            "--tests",
+            "*PlayerSkip*Test",
+            "--tests",
+            "*SkipInterval*Test",
+            ":app:assembleFullDebug",
+            ":app:assembleFullDebugAndroidTest"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 83,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 16,
+        "attempt": "telumia-timed-tv"
+      }
+    }
+  ]
+}

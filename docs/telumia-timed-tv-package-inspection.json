@@ -1,0 +1,62 @@
+{
+  "exportedAtUtc": "2026-10-06T20:20:38.9175689Z",
+  "scope": "Package and binary inspection; no installation or playback QA",
+  "results": [
+    {
+      "target": "tv",
+      "sourceCommit": "1a6aba92395ac0e6798a143c58da61fe6cd92c4a",
+      "installed": false,
+      "inspection": {
+        "label": "Telumia Debug",
+        "distribution": "development debug only"
+      },
+      "artifacts": [
+        {
+          "file": "app-full-arm64-v8a-debug.apk",
+          "bytes": 98522618,
+          "sha256": "b52aa7f271fc34ad1df2bbfcd5e7e2bf70c1642fb381f09c849cbdb0e657b9bf",
+          "applicationId": "io.github.pepeu2010.telumia.tv.debug",
+          "versionName": "0.2.1-alpha.1",
+          "versionCode": "2010",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-armeabi-v7a-debug.apk",
+          "bytes": 96421032,
+          "sha256": "321702123646ef2ed37d0ae4c9e765100561955b89c8fec5f797a2b441f89250",
+          "applicationId": "io.github.pepeu2010.telumia.tv.debug",
+          "versionName": "0.2.1-alpha.1",
+          "versionCode": "2010",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-universal-debug.apk",
+          "bytes": 185493860,
+          "sha256": "623e0b719e47938bed7d4df760945cedf9f33d5610a85a5d26e4d8825e7e8062",
+          "applicationId": "io.github.pepeu2010.telumia.tv.debug",
+          "versionName": "0.2.1-alpha.1",
+          "versionCode": "2010",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-x86_64-debug.apk",
+          "bytes": 100943137,
+          "sha256": "acd5997c22fee3cfcecacc282d238f737c30f74c2bee3472c97d73c163cd5227",
+          "applicationId": "io.github.pepeu2010.telumia.tv.debug",
+          "versionName": "0.2.1-alpha.1",
+          "versionCode": "2010",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-x86-debug.apk",
+          "bytes": 100103272,
+          "sha256": "7b7ca9a148786d216c6750848e3f1848422de8e2ed96a5d2a6a7208f49633dc4",
+          "applicationId": "io.github.pepeu2010.telumia.tv.debug",
+          "versionName": "0.2.1-alpha.1",
+          "versionCode": "2010",
+          "signatureVerified": true
+        }
+      ]
+    }
+  ]
+}

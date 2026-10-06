@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [ValidateSet('720','1080','2160')][string]$Resolution = '1080',
-    [ValidateSet('movie','live-design','home')][string]$Suite = 'movie',
+    [ValidateSet('movie','live-design','home','timed-metadata')][string]$Suite = 'movie',
     [switch]$Install
 )
 $ErrorActionPreference = 'Stop'
@@ -10,7 +10,7 @@ $adb = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'
 $serial = 'emulator-5568'
 $appId = 'io.github.pepeu2010.telumia.tv.debug'
 $checkout = Join-Path $workspace 'repos/tv'
-$label = switch ($Suite) { 'movie' { 'cinematic-tv-ui' }; 'live-design' { 'live-design-tv-ui' }; 'home' { 'telumia-home-tv-ui' } }
+$label = switch ($Suite) { 'movie' { 'cinematic-tv-ui' }; 'live-design' { 'live-design-tv-ui' }; 'home' { 'telumia-home-tv-ui' }; 'timed-metadata' { 'telumia-timed-tv-ui' } }
 $output = Join-Path $workspace "artifacts/$label-$Resolution"
 New-Item -ItemType Directory -Force -Path $output | Out-Null
 $state = & $adb -s $serial get-state 2>&1
@@ -48,6 +48,7 @@ try {
         'movie' { 'com.nuvio.tv.ui.screens.detail.CinematicMovieHeroTvTest' }
         'live-design' { 'com.nuvio.tv.ui.components.LiveTvVisualComponentsTest' }
         'home' { 'com.nuvio.tv.ui.screens.home.TelumiaHomeHeroTvTest' }
+        'timed-metadata' { 'com.nuvio.tv.ui.screens.player.TimedMetadataTimelineTvTest' }
     }
     $log = & $adb -s $serial shell am instrument -w -r -e class $testClass "$appId.test/androidx.test.runner.AndroidJUnitRunner" 2>&1
     $log | Set-Content -LiteralPath (Join-Path $output 'instrumentation.log') -Encoding utf8
@@ -58,6 +59,7 @@ try {
         'movie' { 'cinematic-movie-hero-tv.png' }
         'live-design' { 'live-guide-components.png' }
         'home' { 'telumia-home-hero-tv.png' }
+        'timed-metadata' { 'telumia-timed-timeline-tv.png' }
     }
     & $adb -s $serial pull "/sdcard/Android/data/$appId/files/$screenshot" $capture
     if ($LASTEXITCODE -ne 0) { throw 'Fixture screenshot could not be exported.' }

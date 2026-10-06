@@ -1,0 +1,10 @@
+{
+  "recordedAtUtc": "2026-10-06T20:15:51.621236+00:00",
+  "sourceCommit": "21eb2a279a5bf1dc46525a882e787d62538dc75d",
+  "composeTests": 2,
+  "nativePayloadTests": 2,
+  "javascriptTests": 2,
+  "javascriptCommand": "node --test scripts/test-timed-metadata.cjs",
+  "scope": "Actual Compose slider and native-controls JSON/renderer projection; no JNI/WebView2 playback or thumbnails/filmstrip claim",
+  "markers": "Existing skip intervals; chapter/bookmark data contract prepared, persistence/adapters not delivered"
+}

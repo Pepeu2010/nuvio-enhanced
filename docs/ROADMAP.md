@@ -49,6 +49,9 @@ Estado mais recente: Telumia possui marca própria e busca/seleção de edição
   em Android TV API 36. Demais superfícies e QA global continuam pendentes;
   1-A permanece aberto, fora da alpha.2.
 
+- Home: incremento nativo validado com 44 testes Desktop, 72 TV e 27 testes de componentes no emulador. [Entrega parcial](TELUMIA_HOME.md).
+- 2-A: timeline temporal, providers limitados e adapter dos skips integrados aos players; 93 testes Desktop, 83 TV e nove testes nativos TV aprovados. Capítulos, bookmarks persistentes e Scene Info continuam pendentes. [Evidências](TIMED_METADATA.md).
+
 ## Gates e entregas
 
 | Milestone | Entrega concreta | Gate |
@@ -104,3 +107,4 @@ Funções secundárias do documento original — busca Ctrl+K, histórico visual
 Escolha para mim, Guest/Kids, webcam/animated avatars, Cinema/Living Room/Ambient
 Mode — recebem incrementos próprios, preservando seu comportamento/capability.
 Nunca anunciá-las como prontas antes de implementação/QA.
+

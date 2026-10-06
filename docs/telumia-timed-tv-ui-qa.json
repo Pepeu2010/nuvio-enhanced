@@ -1,0 +1,64 @@
+{
+  "exportedAtUtc": "2026-10-06T20:25:41.993399+00:00",
+  "tests": 9,
+  "failures": 0,
+  "scope": "Existing TV progress/seek component, actual D-pad preview and commit, unknown duration and scoped labels. Native framebuffer verified. No full playback/scene availability/hardware performance claim.",
+  "runs": [
+    {
+      "startedAtUtc": "2026-10-06T20:23:17.5157535Z",
+      "sourceCommit": "1a6aba92395ac0e6798a143c58da61fe6cd92c4a",
+      "trackedChanges": [],
+      "apkSha256": "623e0b719e47938bed7d4df760945cedf9f33d5610a85a5d26e4d8825e7e8062",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "suite": "timed-metadata",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1280x720"
+      ],
+      "capturedPixels": "1280x720",
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-06T20:23:43.9943541Z"
+    },
+    {
+      "startedAtUtc": "2026-10-06T20:23:44.1180377Z",
+      "sourceCommit": "1a6aba92395ac0e6798a143c58da61fe6cd92c4a",
+      "trackedChanges": [],
+      "apkSha256": "623e0b719e47938bed7d4df760945cedf9f33d5610a85a5d26e4d8825e7e8062",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "1920x1080",
+      "density": 320,
+      "suite": "timed-metadata",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1920x1080"
+      ],
+      "capturedPixels": "1920x1080",
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-06T20:24:03.5501403Z"
+    },
+    {
+      "startedAtUtc": "2026-10-06T20:24:03.6922925Z",
+      "sourceCommit": "1a6aba92395ac0e6798a143c58da61fe6cd92c4a",
+      "trackedChanges": [],
+      "apkSha256": "623e0b719e47938bed7d4df760945cedf9f33d5610a85a5d26e4d8825e7e8062",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "3840x2160",
+      "density": 640,
+      "suite": "timed-metadata",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160"
+      ],
+      "capturedPixels": "3840x2160",
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-06T20:24:21.8974654Z"
+    }
+  ]
+}
