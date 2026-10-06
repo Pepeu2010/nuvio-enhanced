@@ -1,0 +1,18 @@
+{
+  "recordedAtUtc": "2026-10-06T20:53:22.2459289Z",
+  "sourceCommit": "9baa2ff228f3884e2e1d02d5b670793b1fa4e37d",
+  "primaryTestAttempt": "telumia-cache-desktop-retry",
+  "primaryTests": 106,
+  "primaryFailures": 0,
+  "primarySkipped": 0,
+  "isolatedStorageAttempt": "storage-isolated-desktop",
+  "isolatedStorageTests": 13,
+  "isolatedStorageFailures": 0,
+  "isolatedStorageSkipped": 0,
+  "isolatedStorageScope": "Temporary APPDATA, guarded existing store/paths/theme regression and cache preference persistence; no user data writes",
+  "runtimeModules": [
+    "java.management",
+    "jdk.management"
+  ],
+  "uiScope": "Real Compose cache settings component, manual choice, Auto, saving/error states and reviewed contrast; no full offline app or disk-usage claim"
+}

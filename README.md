@@ -32,6 +32,8 @@ A Home recebeu um novo destaque com metadata real, seleção direta por teclado,
 
 A timeline dos dois players já recebe os segmentos temporais disponíveis de intro, recap e créditos, com validação, procedência e limpeza ao trocar de conteúdo. A fundação de providers prepara Scene Info, capítulos e bookmarks; esses recursos completos ainda precisam ser entregues. Passaram 93 testes Desktop, 83 TV, os builds nativos e nove testes de D-pad em múltiplas resoluções. [Integração e limites](docs/TIMED_METADATA.md).
 
+O Desktop agora oferece orçamento de cache Auto/Manual por aparelho, com quotas para os carregadores existentes de imagens, badges e GIFs. A configuração tem persistência e tratamento de falha; a integração TV está em compilação. Passaram 106 testes selecionados, 13 de armazenamento isolado e o MSI. A integração de todos os tipos de cache e o funcionamento offline completo continuam pendentes. [Comportamento e evidências](docs/MEDIA_CACHE.md).
+
 A implementação integral continua em execução. O redesign completo de Home/detalhes, Profile Studio, cache Auto, thumbnails/timeline, Source Intelligence, Live TV/EPG, Scene Info e controle local pelo celular **ainda não estão concluídos**. Não apresentamos controles de funcionalidades inexistentes. Os critérios completos permanecem no [roadmap aprovado](docs/ROADMAP.md) e na [especificação](docs/APPROVED_SPEC.md).
 
 A [meta integral vigente](docs/GOAL_OBJECTIVE_2026-10-05.md) exige transformar profundamente todas as superfícies e a experiência de uso, preservando a infraestrutura funcional. Troca de marca, temas ou releases intermediárias não representam a conclusão desse objetivo.
@@ -49,4 +51,3 @@ Cada cliente mantém seu build e histórico. Não há um aplicativo paralelo. Os
 ## Conteúdo e licenças
 
 O aplicativo não inclui canais, listas ou conteúdo protegido. Configure fontes que você tenha autorização para usar. Código GPL-3.0, com avisos e [créditos de origem preservados](docs/UPSTREAM_CREDITS.md). A identidade visual Telumia é própria.
-

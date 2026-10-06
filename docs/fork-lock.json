@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-06T20:30:56.2177587Z",
+  "recordedAtUtc": "2026-10-06T20:53:22.4711516Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "21eb2a279a5bf1dc46525a882e787d62538dc75d",
+      "commit": "9baa2ff228f3884e2e1d02d5b670793b1fa4e37d",
       "checkout": "repos/desktop",
-      "milestone": "Timed metadata increment: Desktop 93 selected tests and MSI; TV 83 selected unit tests, five APKs and nine native seek tests. Scene Info, persistent bookmarks and full product scope remain in progress. Not included in published 0.2.0-alpha.1.",
-      "packageSourceCommit": "21eb2a279a5bf1dc46525a882e787d62538dc75d",
+      "milestone": "Desktop configurable cache increment: 106 selected tests, 13 isolated storage tests, MSI and reviewed settings capture. Other cache consumers and full offline scope remain pending. Not in public 0.2.0-alpha.1.",
+      "packageSourceCommit": "9baa2ff228f3884e2e1d02d5b670793b1fa4e37d",
       "publishedRelease": "v0.2.0-alpha.1",
       "publishedSourceCommit": "fdeaddfe3d0dc026ecd3d632210ce4dd212783ad"
     },

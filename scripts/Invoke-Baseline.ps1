@@ -74,6 +74,20 @@ try {
     $record['exitCode'] = if ($null -eq $buildExit) { -1 } else { $buildExit }
     $record['trackedChangesAfter'] = @(git -C $checkout status --porcelain --untracked-files=no)
     $record['status'] = if ($buildExit -eq 0) { 'passed' } else { 'failed' }
+    $testTask = if ($Target -eq 'desktop') { ':composeApp:desktopTest' } else { ':app:testFullDebugUnitTest' }
+    if ($buildExit -eq 0 -and $Tasks -contains $testTask) {
+        $relativeTests = if ($Target -eq 'desktop') { 'composeApp/build/test-results/desktopTest' } else { 'app/build/test-results/testFullDebugUnitTest' }
+        $snapshot = Join-Path $outputDir 'junit-snapshot'
+        New-Item -ItemType Directory -Force $snapshot | Out-Null
+        $totals = [ordered]@{ tests = 0; failures = 0; errors = 0; skipped = 0; files = 0; attempt = $Label }
+        foreach ($report in Get-ChildItem (Join-Path $checkout $relativeTests) -Filter 'TEST-*.xml') {
+            $suite = ([xml](Get-Content $report.FullName -Raw)).testsuite
+            foreach ($key in @('tests', 'failures', 'errors', 'skipped')) { $totals[$key] += [int]$suite.$key }
+            $totals['files']++
+            Copy-Item -LiteralPath $report.FullName -Destination (Join-Path $snapshot $report.Name)
+        }
+        $record['junitSummary'] = $totals
+    }
     $record | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $recordPath -Encoding utf8
 }
 exit $buildExit

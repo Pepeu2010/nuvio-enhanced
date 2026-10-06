@@ -1,0 +1,51 @@
+{
+  "exportedAtUtc": "2026-10-06T20:52:18.7570674Z",
+  "milestone": "storage-isolated",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "9baa2ff228f3884e2e1d02d5b670793b1fa4e37d",
+      "attempts": [
+        {
+          "label": "storage-isolated-desktop",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-06T20:51:06.6095126Z",
+          "finishedAtUtc": "2026-10-06T20:51:37.3290873Z",
+          "durationSeconds": 30.7,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*DesktopStorageTest",
+            "--tests",
+            "*DesktopStoragePathsTest",
+            "--tests",
+            "*ThemeSettingsStorageDesktopTest",
+            "--tests",
+            "*DesktopMediaCachePreferencesTest"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 13,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 4,
+        "attempt": "storage-isolated-desktop"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "1a6aba92395ac0e6798a143c58da61fe6cd92c4a",
+      "attempts": [],
+      "targetedTestResults": null
+    }
+  ]
+}

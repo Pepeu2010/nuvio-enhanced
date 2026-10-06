@@ -11,14 +11,20 @@ $results = foreach ($target in @('desktop','tv')) {
     $testRun = $runs | Where-Object { $_.tasks -contains $testTask } | Sort-Object startedAtUtc | Select-Object -Last 1
     $tests = $null
     if ($testRun.status -eq 'passed') {
+        if ($testRun.junitSummary) {
+            $tests = $testRun.junitSummary
+        } else {
         $relative = if ($target -eq 'desktop') { 'composeApp/build/test-results/desktopTest' } else { 'app/build/test-results/testFullDebugUnitTest' }
+        $snapshot = Join-Path $workspace "artifacts/$($testRun.label)/$target/junit-snapshot"
+        $reports = if (Test-Path $snapshot) { $snapshot } else { Join-Path $workspace "repos/$target/$relative" }
         $totals = [ordered]@{tests=0;failures=0;errors=0;skipped=0;files=0;attempt=$testRun.label}
-        Get-ChildItem (Join-Path $workspace "repos/$target/$relative") -Filter 'TEST-*.xml' | ForEach-Object {
+        Get-ChildItem $reports -Filter 'TEST-*.xml' | ForEach-Object {
             $suite = ([xml](Get-Content $_.FullName -Raw)).testsuite
             foreach ($key in @('tests','failures','errors','skipped')) { $totals[$key] += [int]$suite.$key }
             $totals['files']++
         }
         $tests = $totals
+        }
     }
     [ordered]@{target=$target;currentSourceCommit=(git -C (Join-Path $workspace "repos/$target") rev-parse HEAD).Trim();
         attempts=@($runs | ForEach-Object { [ordered]@{label=$_.label;status=$_.status;exitCode=$_.exitCode;startedAtUtc=$_.startedAtUtc;finishedAtUtc=$_.finishedAtUtc;durationSeconds=$_.durationSeconds;tasks=$_.tasks;gradleArgs=$_.gradleArgs} });

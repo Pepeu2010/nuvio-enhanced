@@ -107,4 +107,3 @@ Funções secundárias do documento original — busca Ctrl+K, histórico visual
 Escolha para mim, Guest/Kids, webcam/animated avatars, Cinema/Living Room/Ambient
 Mode — recebem incrementos próprios, preservando seu comportamento/capability.
 Nunca anunciá-las como prontas antes de implementação/QA.
-
