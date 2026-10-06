@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-06T18:58:23.1466936Z",
+  "recordedAtUtc": "2026-10-06T19:54:39.602109+00:00",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "20c53d1b337a88bc59c960cd1d5717f7345a5728",
+      "commit": "cc5063bb16b090e7651f0dfc8662b9b8a316a0a8",
       "checkout": "repos/desktop",
-      "milestone": "Live TV/EPG visual preparation compiled and tested; routes/providers remain pending; not in published 0.2.0-alpha.1; full redesign remains active",
-      "packageSourceCommit": "20c53d1b337a88bc59c960cd1d5717f7345a5728",
+      "milestone": "Telumia Home increment: Desktop 44 selected tests and MSI; TV 72 selected unit tests, five APKs and 27 native component tests. Full redesign and advanced features remain in progress. Not included in published 0.2.0-alpha.1.",
+      "packageSourceCommit": "cc5063bb16b090e7651f0dfc8662b9b8a316a0a8",
       "publishedRelease": "v0.2.0-alpha.1",
       "publishedSourceCommit": "fdeaddfe3d0dc026ecd3d632210ce4dd212783ad"
     },
@@ -16,10 +16,10 @@
       "repository": "Pepeu2010/telumia-tv",
       "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "0bf4495efcd35225e5b22851e4831d32b518d58c",
+      "commit": "63dff42787ca2d9852a56c1a193abe5b763b8bc5",
       "checkout": "repos/tv",
-      "milestone": "Live TV/EPG visual preparation compiled and tested; routes/providers remain pending; not in published 0.2.0-alpha.1; full redesign remains active",
-      "packageSourceCommit": "0bf4495efcd35225e5b22851e4831d32b518d58c",
+      "milestone": "Telumia Home increment: Desktop 44 selected tests and MSI; TV 72 selected unit tests, five APKs and 27 native component tests. Full redesign and advanced features remain in progress. Not included in published 0.2.0-alpha.1.",
+      "packageSourceCommit": "63dff42787ca2d9852a56c1a193abe5b763b8bc5",
       "publishedRelease": "v0.2.0-alpha.1",
       "publishedSourceCommit": "0355dfe4366ebce3067718eaf9dfb3139dd8f243"
     }

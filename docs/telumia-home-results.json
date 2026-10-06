@@ -1,0 +1,152 @@
+{
+  "exportedAtUtc": "2026-10-06T19:52:51.1873269Z",
+  "milestone": "telumia-home",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "cc5063bb16b090e7651f0dfc8662b9b8a316a0a8",
+      "attempts": [
+        {
+          "label": "telumia-home-desktop",
+          "status": "failed",
+          "exitCode": 1,
+          "startedAtUtc": "2026-10-06T19:06:15.2305479Z",
+          "finishedAtUtc": "2026-10-06T19:12:27.3462513Z",
+          "durationSeconds": 372.1,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*TelumiaHomeExperienceTest",
+            "--tests",
+            "*TelumiaPosterInteractionTest",
+            "--tests",
+            "*HomeHeroPagerTest",
+            "--tests",
+            "*HomeHeroSectionTest",
+            "--tests",
+            "*PosterCardClickTest",
+            "--tests",
+            "*LiveTvVisualComponentsTest",
+            "--tests",
+            "*CinematicMovieDetailsTest",
+            "--tests",
+            "*CinematicMovieHeroViewportTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        },
+        {
+          "label": "telumia-home-desktop-retry",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-06T19:14:54.5041603Z",
+          "finishedAtUtc": "2026-10-06T19:20:05.8909325Z",
+          "durationSeconds": 311.37,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*TelumiaHomeExperienceTest",
+            "--tests",
+            "*TelumiaPosterInteractionTest",
+            "--tests",
+            "*HomeHeroPagerTest",
+            "--tests",
+            "*HomeHeroSectionTest",
+            "--tests",
+            "*PosterCardClickTest",
+            "--tests",
+            "*LiveTvVisualComponentsTest",
+            "--tests",
+            "*CinematicMovieDetailsTest",
+            "--tests",
+            "*CinematicMovieHeroViewportTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 44,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 10,
+        "attempt": "telumia-home-desktop-retry"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "63dff42787ca2d9852a56c1a193abe5b763b8bc5",
+      "attempts": [
+        {
+          "label": "telumia-home-tv",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-06T19:21:18.3995462Z",
+          "finishedAtUtc": "2026-10-06T19:34:33.4268994Z",
+          "durationSeconds": 795.01,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*MetaRepositoryPreferredAddonTypeTest",
+            "--tests",
+            "*MetaRepositoryAddonCacheTest",
+            "--tests",
+            "*SearchViewModelConcurrencyTest",
+            "--tests",
+            "*SearchViewModelPaginationTest",
+            "--tests",
+            "*SearchViewModelSuggestionsTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*ForkIdentityTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*ModernHomeIdentityRelocationTest",
+            "--tests",
+            "*ModernHomePlaceholderShimmerTest",
+            "--tests",
+            "*HomeEnrichmentRetryTest",
+            ":app:assembleFullDebug",
+            ":app:assembleFullDebugAndroidTest"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 72,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 13,
+        "attempt": "telumia-home-tv"
+      }
+    }
+  ]
+}
