@@ -1,8 +1,12 @@
 [CmdletBinding()]
-param([string]$Tag = 'v0.2.0-alpha.1')
+param(
+    [ValidatePattern('^v[0-9]+\.[0-9]+\.[0-9]+-alpha\.[0-9]+$')][string]$Tag = 'v0.2.0-alpha.1',
+    [ValidatePattern('^[a-z0-9-]+\.json$')][string]$OutputName = 'telumia-release-verification.json'
+)
 $ErrorActionPreference = 'Stop'
 $workspace = Split-Path $PSScriptRoot -Parent
 $directory = Join-Path $workspace "artifacts/releases/$Tag"
+$manifest = Get-Content -LiteralPath (Join-Path $directory 'release-manifest.json') -Raw | ConvertFrom-Json
 $definitions = @(
     @{repository='Pepeu2010/telumia';count=10},
     @{repository='Pepeu2010/telumia-desktop';count=4},
@@ -27,8 +31,20 @@ $records = foreach ($definition in $definitions) {
     }
     $ref = gh api "repos/$($definition.repository)/git/ref/tags/$Tag" | ConvertFrom-Json
     if ($LASTEXITCODE -ne 0) { throw 'Tag verification failed' }
-    [ordered]@{repository=$definition.repository;url=$release.html_url;tag=$Tag;tagObject=$ref.object.sha;prerelease=$release.prerelease;assets=@($assets)}
+    $tagCommit = $ref.object.sha
+    if ($ref.object.type -eq 'tag') {
+        $tag = gh api "repos/$($definition.repository)/git/tags/$tagCommit" | ConvertFrom-Json
+        if ($LASTEXITCODE -ne 0 -or $tag.object.type -ne 'commit') { throw 'Tag does not resolve to a source commit.' }
+        $tagCommit = $tag.object.sha
+    }
+    $expectedCommit = switch ($definition.repository) {
+        'Pepeu2010/telumia-desktop' { $manifest.sourceCommits.desktop }
+        'Pepeu2010/telumia-tv' { $manifest.sourceCommits.tv }
+        default { $null }
+    }
+    if ($expectedCommit -and $tagCommit -ne $expectedCommit) { throw 'Published client tag differs from the packaged source commit.' }
+    [ordered]@{repository=$definition.repository;url=$release.html_url;tag=$Tag;tagObject=$ref.object.sha;tagCommit=$tagCommit;sourceCommitVerified=[bool]$expectedCommit;prerelease=$release.prerelease;assets=@($assets)}
 }
 [ordered]@{verifiedAtUtc=[DateTime]::UtcNow.ToString('o');scope='Published release assets compared with local SHA-256; not runtime or device QA';releases=@($records)} |
-    ConvertTo-Json -Depth 9 | Set-Content (Join-Path $workspace 'docs/telumia-release-verification.json') -Encoding utf8
+    ConvertTo-Json -Depth 9 | Set-Content (Join-Path $workspace "docs/$OutputName") -Encoding utf8
 Write-Output 'Three published prereleases and 22 remote asset digests verified.'

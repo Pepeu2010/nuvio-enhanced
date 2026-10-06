@@ -51,9 +51,21 @@ $record | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $recordPath -Encodi
 $timer = [Diagnostics.Stopwatch]::StartNew()
 Push-Location $checkout
 try {
-    & .\gradlew.bat @Tasks @GradleArgs --continue --no-daemon --max-workers=1 "-Dorg.gradle.jvmargs=-Xmx${HeapMiB}m -XX:MaxMetaspaceSize=768m -Dfile.encoding=UTF-8" "-Pkotlin.daemon.jvmargs=-Xmx${KotlinHeapMiB}m" 2>&1 |
-        Tee-Object -FilePath (Join-Path $outputDir 'build.log')
-    $buildExit = $LASTEXITCODE
+    $logStream = [IO.StreamWriter]::new((Join-Path $outputDir 'build.log'), $false, [Text.UTF8Encoding]::new($false))
+    try {
+        & .\gradlew.bat @Tasks @GradleArgs --continue --no-daemon --max-workers=1 "-Dorg.gradle.jvmargs=-Xmx${HeapMiB}m -XX:MaxMetaspaceSize=768m -Dfile.encoding=UTF-8" "-Pkotlin.daemon.jvmargs=-Xmx${KotlinHeapMiB}m" 2>&1 |
+            ForEach-Object {
+                $line = $_.ToString()
+                $logStream.WriteLine($line)
+                if ($line -match '^> Task|^BUILD (SUCCESSFUL|FAILED)|^FAILURE:|^\d+ actionable tasks') {
+                    $logStream.Flush()
+                    Write-Output $line
+                }
+            }
+        $buildExit = $LASTEXITCODE
+    } finally {
+        $logStream.Dispose()
+    }
 } finally {
     Pop-Location
     $timer.Stop()

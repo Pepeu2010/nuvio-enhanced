@@ -95,3 +95,11 @@ distributed modifications.
 ## Atualização de prioridade — 2026-10-05
 
 O objetivo integral foi reforçado pelo usuário: interface sofisticada nos filmes e experiência contextual semelhante ao conceito do Prime Video, superior ao cliente de origem em funcionalidades. A marca definitiva é Telumia. Os critérios existentes continuam válidos: informação contextual confiável, sem scraping IMDb nem alegações de atores presentes em cena inferidas a partir do elenco geral. A entrega continua incremental com compilação, testes e evidências; releases parciais não encerram a meta integral.
+
+## Meta integral atualizada — 2026-10-05
+
+A [meta integral fornecida pelo usuário](GOAL_OBJECTIVE_2026-10-05.md) é requisito vigente e foi preservada integralmente. A preservação exigida diz respeito à infraestrutura, contratos e comportamentos úteis. **A camada visual deve ser profundamente redesenhada em todas as superfícies; componentes e layouts antigos podem ser refatorados ou substituídos quando limitarem a nova experiência.** Reposicionar componentes, trocar logo ou acrescentar um tema não satisfaz o resultado pedido.
+
+Home, navegação, perfis, cards/previews, detalhes, player/timeline, Scene Info, busca, biblioteca, addons, configurações, downloads, TV e EPG precisam formar uma experiência própria e consistente. Os clientes nativos reais continuam a base; não há autorização para app paralelo, troca gratuita dos motores ou regressões nos contratos. Toda função exige comportamento real, estados, persistência aplicável, teclado/D-pad, acessibilidade, testes e validação visual. A meta também exige regressões de infraestrutura, portabilidade existente e auditoria de segurança.
+
+Entrega de um incremento, compilação de uma fase ou publicação de alpha não encerra a meta. Bloqueios externos devem ser registrados e as partes executáveis devem continuar. Os incrementos documentados anteriormente são evidências intermediárias, não aceitação do redesign completo.

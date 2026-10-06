@@ -14,7 +14,7 @@ $results = foreach ($target in $Targets) {
         $installer = New-Object -ComObject WindowsInstaller.Installer
         $database = $installer.OpenDatabase($file.FullName, 0)
         $properties = [ordered]@{}
-        foreach ($name in @('ProductName','Manufacturer','UpgradeCode')) {
+        foreach ($name in @('ProductName','Manufacturer','UpgradeCode','ProductVersion')) {
             $view = $database.OpenView("SELECT Value FROM Property WHERE Property = '$name'")
             $null = $view.Execute(); $row = $view.Fetch(); $properties[$name] = $row.StringData(1); $null = $view.Close()
         }
@@ -52,7 +52,9 @@ $results = foreach ($target in $Targets) {
             if ($labelLine -notlike '*Telumia Debug*') { throw 'APK label mismatch.' }
             $null = & (Join-Path $buildTools 'apksigner.bat') verify $file.FullName
             if ($LASTEXITCODE -ne 0) { throw 'APK signature verification failed.' }
-            $artifacts += [ordered]@{file=$file.Name;bytes=$file.Length;sha256=(Get-FileHash $file.FullName).Hash.ToLowerInvariant();applicationId=$package;signatureVerified=$true}
+            $versionName = [regex]::Match($packageLine, "versionName='([^']+)'").Groups[1].Value
+            $versionCode = [regex]::Match($packageLine, "versionCode='([^']+)'").Groups[1].Value
+            $artifacts += [ordered]@{file=$file.Name;bytes=$file.Length;sha256=(Get-FileHash $file.FullName).Hash.ToLowerInvariant();applicationId=$package;versionName=$versionName;versionCode=$versionCode;signatureVerified=$true}
         }
         $inspection = [ordered]@{label='Telumia Debug';distribution='development debug only'}
     }

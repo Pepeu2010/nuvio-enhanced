@@ -30,6 +30,8 @@ O código atual também melhora os detalhes de filmes: ações diretas de reprod
 
 A implementação integral continua em execução. O redesign completo de Home/detalhes, Profile Studio, cache Auto, thumbnails/timeline, Source Intelligence, Live TV/EPG, Scene Info e controle local pelo celular **ainda não estão concluídos**. Não apresentamos controles de funcionalidades inexistentes. Os critérios completos permanecem no [roadmap aprovado](docs/ROADMAP.md) e na [especificação](docs/APPROVED_SPEC.md).
 
+A [meta integral vigente](docs/GOAL_OBJECTIVE_2026-10-05.md) exige transformar profundamente todas as superfícies e a experiência de uso, preservando a infraestrutura funcional. Troca de marca, temas ou releases intermediárias não representam a conclusão desse objetivo.
+
 ## Código e desenvolvimento
 
 | Repositório | Plataforma |

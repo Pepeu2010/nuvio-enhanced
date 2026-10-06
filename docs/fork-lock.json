@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-05T23:39:06.7239150Z",
+  "recordedAtUtc": "2026-10-06T18:58:23.1466936Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "7ee9c38ddf34531074a7b2a0d6042f0c74d3cb48",
+      "commit": "20c53d1b337a88bc59c960cd1d5717f7345a5728",
       "checkout": "repos/desktop",
-      "milestone": "Cinematic movie detail increment compiled and tested; not included in published v0.2.0-alpha.1; full approved scope remains active",
-      "packageSourceCommit": "7ee9c38ddf34531074a7b2a0d6042f0c74d3cb48",
+      "milestone": "Live TV/EPG visual preparation compiled and tested; routes/providers remain pending; not in published 0.2.0-alpha.1; full redesign remains active",
+      "packageSourceCommit": "20c53d1b337a88bc59c960cd1d5717f7345a5728",
       "publishedRelease": "v0.2.0-alpha.1",
       "publishedSourceCommit": "fdeaddfe3d0dc026ecd3d632210ce4dd212783ad"
     },
@@ -16,10 +16,10 @@
       "repository": "Pepeu2010/telumia-tv",
       "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "9df177abe8d827690e3227539905050d0b61173e",
+      "commit": "0bf4495efcd35225e5b22851e4831d32b518d58c",
       "checkout": "repos/tv",
-      "milestone": "Cinematic movie detail increment compiled and tested; not included in published v0.2.0-alpha.1; full approved scope remains active",
-      "packageSourceCommit": "9df177abe8d827690e3227539905050d0b61173e",
+      "milestone": "Live TV/EPG visual preparation compiled and tested; routes/providers remain pending; not in published 0.2.0-alpha.1; full redesign remains active",
+      "packageSourceCommit": "0bf4495efcd35225e5b22851e4831d32b518d58c",
       "publishedRelease": "v0.2.0-alpha.1",
       "publishedSourceCommit": "0355dfe4366ebce3067718eaf9dfb3139dd8f243"
     }

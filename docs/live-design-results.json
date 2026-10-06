@@ -1,0 +1,126 @@
+{
+  "exportedAtUtc": "2026-10-06T18:58:17.8581900Z",
+  "milestone": "live-design",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "20c53d1b337a88bc59c960cd1d5717f7345a5728",
+      "attempts": [
+        {
+          "label": "live-design-desktop",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T23:45:10.2482112Z",
+          "finishedAtUtc": "2026-10-05T23:53:44.1778611Z",
+          "durationSeconds": 513.87,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*LiveTvVisualComponentsTest",
+            "--tests",
+            "*CinematicMovieDetailsTest",
+            "--tests",
+            "*CinematicMovieHeroViewportTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        },
+        {
+          "label": "live-design-desktop-typography",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-06T00:26:42.9935877Z",
+          "finishedAtUtc": "2026-10-06T00:35:02.7799585Z",
+          "durationSeconds": 499.78,
+          "tasks": [
+            ":composeApp:desktopTest",
+            "--tests",
+            "*LiveTvVisualComponentsTest",
+            "--tests",
+            "*CinematicMovieDetailsTest",
+            "--tests",
+            "*CinematicMovieHeroViewportTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*DesktopJellyNavigationTest",
+            ":composeApp:packageReleaseMsi"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process",
+            "-Pnuvio.webview2.dir=C:\\Users\\Usuario\\Documents\\ChatGPT\\Nuvio - Open source\\.tooling\\webview2\\1.0.4078.44"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 21,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 5,
+        "attempt": "live-design-desktop-typography"
+      }
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "0bf4495efcd35225e5b22851e4831d32b518d58c",
+      "attempts": [
+        {
+          "label": "live-design-tv",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-05T23:54:45.9254746Z",
+          "finishedAtUtc": "2026-10-06T00:15:57.7821507Z",
+          "durationSeconds": 1271.82,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*MetaRepositoryPreferredAddonTypeTest",
+            "--tests",
+            "*MetaRepositoryAddonCacheTest",
+            "--tests",
+            "*SearchViewModelConcurrencyTest",
+            "--tests",
+            "*SearchViewModelPaginationTest",
+            "--tests",
+            "*SearchViewModelSuggestionsTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*ForkIdentityTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            ":app:assembleFullDebug",
+            ":app:assembleFullDebugAndroidTest"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 53,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 10,
+        "attempt": "live-design-tv"
+      }
+    }
+  ]
+}

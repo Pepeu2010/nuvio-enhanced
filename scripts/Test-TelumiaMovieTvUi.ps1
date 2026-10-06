@@ -1,6 +1,7 @@
 [CmdletBinding()]
 param(
     [ValidateSet('720','1080','2160')][string]$Resolution = '1080',
+    [ValidateSet('movie','live-design')][string]$Suite = 'movie',
     [switch]$Install
 )
 $ErrorActionPreference = 'Stop'
@@ -9,7 +10,8 @@ $adb = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'
 $serial = 'emulator-5568'
 $appId = 'io.github.pepeu2010.telumia.tv.debug'
 $checkout = Join-Path $workspace 'repos/tv'
-$output = Join-Path $workspace "artifacts/cinematic-tv-ui-$Resolution"
+$label = if ($Suite -eq 'movie') { 'cinematic-tv-ui' } else { 'live-design-tv-ui' }
+$output = Join-Path $workspace "artifacts/$label-$Resolution"
 New-Item -ItemType Directory -Force -Path $output | Out-Null
 $state = & $adb -s $serial get-state 2>&1
 if ($LASTEXITCODE -ne 0 -or $state -ne 'device') { throw 'The owned TV emulator on port 5568 must be running.' }
@@ -34,19 +36,22 @@ $record = [ordered]@{
     emulator = $avd[0]
     requestedPixels = $dimensions
     density = $density
-    scope = 'Owned emulator, native hero component fixtures and D-pad; no playback or physical TV performance claim'
+    suite = $Suite
+    scope = 'Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim'
     status = 'running'
 }
 try {
     & $adb -s $serial shell wm size $dimensions
     & $adb -s $serial shell wm density $density
     $record['displayReported'] = @(& $adb -s $serial shell wm size)
-    $log = & $adb -s $serial shell am instrument -w -r -e class com.nuvio.tv.ui.screens.detail.CinematicMovieHeroTvTest "$appId.test/androidx.test.runner.AndroidJUnitRunner" 2>&1
+    $testClass = if ($Suite -eq 'movie') { 'com.nuvio.tv.ui.screens.detail.CinematicMovieHeroTvTest' } else { 'com.nuvio.tv.ui.components.LiveTvVisualComponentsTest' }
+    $log = & $adb -s $serial shell am instrument -w -r -e class $testClass "$appId.test/androidx.test.runner.AndroidJUnitRunner" 2>&1
     $log | Set-Content -LiteralPath (Join-Path $output 'instrumentation.log') -Encoding utf8
     $text = $log -join "`n"
-    if ($text -notmatch 'OK \(3 tests\)' -or $text -match 'INSTRUMENTATION_STATUS_CODE: -2|FAILURES!!!') { throw 'Native movie UI instrumentation did not pass all three tests. See the local instrumentation log.' }
+    if ($text -notmatch 'OK \(3 tests\)' -or $text -match 'INSTRUMENTATION_STATUS_CODE: -2|FAILURES!!!') { throw 'Native UI instrumentation did not pass all three tests. See the local instrumentation log.' }
     $capture = Join-Path $output 'movie-hero.png'
-    & $adb -s $serial pull "/sdcard/Android/data/$appId/files/cinematic-movie-hero-tv.png" $capture
+    $screenshot = if ($Suite -eq 'movie') { 'cinematic-movie-hero-tv.png' } else { 'live-guide-components.png' }
+    & $adb -s $serial pull "/sdcard/Android/data/$appId/files/$screenshot" $capture
     if ($LASTEXITCODE -ne 0) { throw 'Fixture screenshot could not be exported.' }
     $bytes = [IO.File]::ReadAllBytes($capture)
     if ($bytes.Length -lt 24 -or $bytes[0] -ne 137 -or $bytes[1] -ne 80) { throw 'Fixture screenshot is not a PNG.' }
@@ -66,4 +71,4 @@ try {
     $record['finishedAtUtc'] = [DateTime]::UtcNow.ToString('o')
     $record | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $output 'qa.json') -Encoding utf8
 }
-Write-Output "Native movie hero: 3 tests passed at $dimensions; actual capture dimensions verified."
+Write-Output "Native $Suite components: 3 tests passed at $dimensions; actual capture dimensions verified."

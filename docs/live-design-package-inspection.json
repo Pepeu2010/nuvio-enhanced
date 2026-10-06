@@ -1,0 +1,85 @@
+{
+  "exportedAtUtc": "2026-10-06T18:58:23.1303472Z",
+  "scope": "Package and binary inspection; no installation or playback QA",
+  "results": [
+    {
+      "target": "desktop",
+      "sourceCommit": "20c53d1b337a88bc59c960cd1d5717f7345a5728",
+      "installed": false,
+      "inspection": {
+        "msiProperties": {
+          "ProductName": "Telumia",
+          "Manufacturer": "Telumia contributors",
+          "UpgradeCode": "{1C69D968-D0E0-4B0F-B5C0-615B8EA92F90}",
+          "ProductVersion": "1.2.1"
+        },
+        "compiledBridgeSha256": "cc157e5d208e23bf8100ce4b950a8c8596b3105a141d6cb5fead8a8c5c688fa0",
+        "isolatedWebViewPath": true,
+        "packagedBridgeMatchesBuild": true
+      },
+      "artifacts": [
+        {
+          "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+          "bytes": 214782676,
+          "sha256": "c22825856c5385ef1e83ab214a1db90dbe6a18de7a6d603098db049bc5b9a5a8"
+        }
+      ]
+    },
+    {
+      "target": "tv",
+      "sourceCommit": "0bf4495efcd35225e5b22851e4831d32b518d58c",
+      "installed": false,
+      "inspection": {
+        "label": "Telumia Debug",
+        "distribution": "development debug only"
+      },
+      "artifacts": [
+        {
+          "file": "app-full-arm64-v8a-debug.apk",
+          "bytes": 90728292,
+          "sha256": "35d008cfb53431bd659e1c5e8211c3ac8d3e0227ec6617a37b11beca46743bd5",
+          "applicationId": "io.github.pepeu2010.telumia.tv.debug",
+          "versionName": "0.2.1-alpha.1",
+          "versionCode": "2010",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-armeabi-v7a-debug.apk",
+          "bytes": 88626706,
+          "sha256": "2b47f942847abc6b8bde130871343d571cfd893fd3855c0d42554d64b419c917",
+          "applicationId": "io.github.pepeu2010.telumia.tv.debug",
+          "versionName": "0.2.1-alpha.1",
+          "versionCode": "2010",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-universal-debug.apk",
+          "bytes": 177699534,
+          "sha256": "c8d7c16e80065a640cc88435f7592140cc2d1477b03fdeef877dbd247e973cf9",
+          "applicationId": "io.github.pepeu2010.telumia.tv.debug",
+          "versionName": "0.2.1-alpha.1",
+          "versionCode": "2010",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-x86_64-debug.apk",
+          "bytes": 93148811,
+          "sha256": "8ba1f284c4a80e342b6fe8c3d8878d9abec774fba70ddfdcce65727e8e35b2a4",
+          "applicationId": "io.github.pepeu2010.telumia.tv.debug",
+          "versionName": "0.2.1-alpha.1",
+          "versionCode": "2010",
+          "signatureVerified": true
+        },
+        {
+          "file": "app-full-x86-debug.apk",
+          "bytes": 92308946,
+          "sha256": "3e75479177bb763d08c867c2602190c0868bde7e638a67967e3e22ad4cb2d6eb",
+          "applicationId": "io.github.pepeu2010.telumia.tv.debug",
+          "versionName": "0.2.1-alpha.1",
+          "versionCode": "2010",
+          "signatureVerified": true
+        }
+      ]
+    }
+  ]
+}
