@@ -1,5 +1,5 @@
 {
-  "recordedAtUtc": "2026-10-07T00:19:24.9863965Z",
+  "recordedAtUtc": "2026-10-07T00:41:25.5089331Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
@@ -16,10 +16,10 @@
       "repository": "Pepeu2010/telumia-tv",
       "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "4e10c298a87a19b91e0b964a4a9897bb6c07e184",
+      "commit": "9ed0dc8b06de1db1305d066077e169d37ca8aeed",
       "checkout": "repos/tv",
-      "milestone": "TV device cache Auto/Manual increment: 96 selected unit tests, five APKs, nine native settings/persistence tests at 720p/1080p/4K. Other cache consumers and full offline scope remain pending. Not in public 0.2.0-alpha.1.",
-      "packageSourceCommit": "4e10c298a87a19b91e0b964a4a9897bb6c07e184",
+      "milestone": "TV avatar raster foundation: 100 selected unit tests, five APKs and three native Android decoder/crop/EXIF/bounds tests. Profile Studio UI, persistence and library integration remain pending. Not in public 0.2.0-alpha.1.",
+      "packageSourceCommit": "9ed0dc8b06de1db1305d066077e169d37ca8aeed",
       "publishedRelease": "v0.2.0-alpha.1",
       "publishedSourceCommit": "0355dfe4366ebce3067718eaf9dfb3139dd8f243"
     }

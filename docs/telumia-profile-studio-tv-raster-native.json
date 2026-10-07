@@ -1,0 +1,14 @@
+{
+  "startedAtUtc": "2026-10-07T00:38:01.8993460Z",
+  "status": "passed",
+  "sourceCommit": "9ed0dc8b06de1db1305d066077e169d37ca8aeed",
+  "sourceChanges": [],
+  "apkSha256": "315a7b65b2f6aabe135721b06bbd7a188498fb86a80b561f88b25a28addcbeca",
+  "testApkSha256": "acf71f89a53df59b4926503a93a1a404ea3d66572c62af4a46eae2f77a899685",
+  "emulator": "NuvioEnhanced_ATV_01a10441",
+  "androidApi": "36",
+  "class": "com.nuvio.tv.core.profile.studio.AvatarRasterPipelineTvTest",
+  "scope": "Production Android Bitmap decoder/crop/EXIF/bounds on the owned emulator with synthetic rasters; no UI, import gesture, profile persistence or physical device performance claim",
+  "testsPassed": 3,
+  "finishedAtUtc": "2026-10-07T00:38:07.6737241Z"
+}

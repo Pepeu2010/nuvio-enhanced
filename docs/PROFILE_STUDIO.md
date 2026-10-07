@@ -24,4 +24,12 @@ Evidências: [testes/builds](telumia-profile-studio-results.json), [pacote Windo
 
 Continuam pendentes o suporte equivalente na TV, importação antes da criação de um perfil, categorias adicionais da biblioteca, configurações de aparência/capa/player, tipos de perfil, clonagem seletiva, redesenho completo da seleção de perfis e validação de todos os fluxos reais de autenticação e sincronização. PIN e outras funções existentes continuam disponíveis e não são creditados como novas implementações.
 
-O escopo integral do projeto permanece em [objetivo aprovado](GOAL_OBJECTIVE_2026-10-05.md). Este incremento não encerra a fase ou o projeto.
+## Base de imagens na Android TV
+
+Fonte TV: `9ed0dc8b06de1db1305d066077e169d37ca8aeed`, publicada no branch `main`. A base usa o decoder Android existente da plataforma, aceita somente raster e lê entradas com limite de 10 MiB. Verifica dimensões antes de alocar pixels, aplica orientação JPEG e exporta recortes PNG em quatro tamanhos. O importador aceita somente um URI `content:` escolhido explicitamente; não baixa URLs.
+
+Passaram **100 testes unitários selecionados**, o build dos cinco APKs e **três testes nativos Android** de pixels/recorte, cabeçalho excessivo/SVG e orientação JPEG. Os testes nativos foram repetidos após o commit, com árvore limpa. Evidências: [builds e testes](telumia-profile-studio-tv-raster-results.json), [pacotes](telumia-profile-studio-tv-raster-package-inspection.json) e [decoder nativo](telumia-profile-studio-tv-raster-native.json).
+
+Esta base ainda não possui editor visível, biblioteca integrada ou persistência de avatar na TV. A adaptação de memória antes de integrar o editor também permanece pendente. Testes com imagens sintéticas no emulador não comprovam importação pelo seletor do sistema nem desempenho em aparelho físico. Nenhuma release pública contém este incremento.
+
+O escopo integral do projeto permanece em [objetivo aprovado](GOAL_OBJECTIVE_2026-10-05.md). Estes incrementos não encerram a fase ou o projeto.

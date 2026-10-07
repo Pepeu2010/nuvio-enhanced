@@ -1,0 +1,88 @@
+{
+  "exportedAtUtc": "2026-10-07T00:38:08.5931186Z",
+  "milestone": "telumia-profile-studio-tv-raster",
+  "scope": "Targeted verification; full-suite inherited failures remain in phase-0-results.json",
+  "results": [
+    {
+      "target": "desktop",
+      "currentSourceCommit": "f2775da4f3722db19e0d1e2c619ff8154b87c548",
+      "attempts": [],
+      "targetedTestResults": null
+    },
+    {
+      "target": "tv",
+      "currentSourceCommit": "9ed0dc8b06de1db1305d066077e169d37ca8aeed",
+      "attempts": [
+        {
+          "label": "telumia-profile-studio-tv-raster",
+          "status": "passed",
+          "exitCode": 0,
+          "startedAtUtc": "2026-10-07T00:22:52.5644481Z",
+          "finishedAtUtc": "2026-10-07T00:34:13.1589326Z",
+          "durationSeconds": 680.58,
+          "tasks": [
+            ":app:testFullDebugUnitTest",
+            "--tests",
+            "*BrazilianCatalogTest",
+            "--tests",
+            "*MetaRepositoryPreferredAddonTypeTest",
+            "--tests",
+            "*MetaRepositoryAddonCacheTest",
+            "--tests",
+            "*SearchViewModelConcurrencyTest",
+            "--tests",
+            "*SearchViewModelPaginationTest",
+            "--tests",
+            "*SearchViewModelSuggestionsTest",
+            "--tests",
+            "*FocusRingStyleTest",
+            "--tests",
+            "*ForkIdentityTest",
+            "--tests",
+            "*MemberBrandWordmarkTest",
+            "--tests",
+            "*ThemeDataStoreTest",
+            "--tests",
+            "*ModernHomeIdentityRelocationTest",
+            "--tests",
+            "*ModernHomePlaceholderShimmerTest",
+            "--tests",
+            "*HomeEnrichmentRetryTest",
+            "--tests",
+            "*TimedMetadata*",
+            "--tests",
+            "*PlayerScrubRatesTest",
+            "--tests",
+            "*PlayerSkip*Test",
+            "--tests",
+            "*SkipInterval*Test",
+            "--tests",
+            "*MediaCachePolicyTest",
+            "--tests",
+            "*AdvancedSettingsConsentTest",
+            "--tests",
+            "*AdvancedCachePreferenceTest",
+            "--tests",
+            "*StreamBadgeRulesTest",
+            "--tests",
+            "*AvatarImagePolicyTest",
+            ":app:assembleFullDebug",
+            ":app:assembleFullDebugAndroidTest"
+          ],
+          "gradleArgs": [
+            "--no-configuration-cache",
+            "-Pkotlin.compiler.execution.strategy=in-process"
+          ]
+        }
+      ],
+      "targetedTestResults": {
+        "tests": 100,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "files": 21,
+        "attempt": "telumia-profile-studio-tv-raster"
+      }
+    }
+  ]
+}
