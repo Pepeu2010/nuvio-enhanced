@@ -1,0 +1,97 @@
+{
+  "recordedAtUtc": "2026-10-07T21:04:46.2037837Z",
+  "stage": "First native navigation gate before contrast and backdrop refinement",
+  "runs": [
+    {
+      "startedAtUtc": "2026-10-07T21:00:57.3528145Z",
+      "sourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0",
+      "trackedChanges": [
+        " M README.md",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileAvatarCircle.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt"
+      ],
+      "sourceChanges": [
+        " M README.md",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileAvatarCircle.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt",
+        "?? app/src/androidTest/java/com/nuvio/tv/ui/screens/profile/TelumiaProfileSelectionTvTest.kt"
+      ],
+      "apkSha256": "a53872872d9070fb17d26bea0c739682dece6368aadb93cd59603ccee5388bd9",
+      "testApkSha256": "c08eba4376a34c5c52842d0861b709ccf97fd58398e642d49f158e5d46d41907",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "suite": "profile-selection",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1280x720"
+      ],
+      "capturedPixels": "1280x720",
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-07T21:01:19.7123021Z"
+    },
+    {
+      "startedAtUtc": "2026-10-07T21:02:39.4103699Z",
+      "sourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0",
+      "trackedChanges": [
+        " M README.md",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileAvatarCircle.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt"
+      ],
+      "sourceChanges": [
+        " M README.md",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileAvatarCircle.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt",
+        "?? app/src/androidTest/java/com/nuvio/tv/ui/screens/profile/TelumiaProfileSelectionTvTest.kt"
+      ],
+      "apkSha256": "a53872872d9070fb17d26bea0c739682dece6368aadb93cd59603ccee5388bd9",
+      "testApkSha256": "c08eba4376a34c5c52842d0861b709ccf97fd58398e642d49f158e5d46d41907",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "1920x1080",
+      "density": 320,
+      "suite": "profile-selection",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1920x1080"
+      ],
+      "capturedPixels": "1920x1080",
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-07T21:03:01.9471682Z"
+    },
+    {
+      "startedAtUtc": "2026-10-07T21:03:02.0839049Z",
+      "sourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0",
+      "trackedChanges": [
+        " M README.md",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileAvatarCircle.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt"
+      ],
+      "sourceChanges": [
+        " M README.md",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileAvatarCircle.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt",
+        "?? app/src/androidTest/java/com/nuvio/tv/ui/screens/profile/TelumiaProfileSelectionTvTest.kt"
+      ],
+      "apkSha256": "a53872872d9070fb17d26bea0c739682dece6368aadb93cd59603ccee5388bd9",
+      "testApkSha256": "c08eba4376a34c5c52842d0861b709ccf97fd58398e642d49f158e5d46d41907",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "3840x2160",
+      "density": 640,
+      "suite": "profile-selection",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160"
+      ],
+      "capturedPixels": "3840x2160",
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-07T21:03:26.0239978Z"
+    }
+  ],
+  "capturesReviewed": true,
+  "scope": "Controlled production main selector content, letters and callbacks. No complete screen/account/PIN/backend/playback/device performance proof."
+}

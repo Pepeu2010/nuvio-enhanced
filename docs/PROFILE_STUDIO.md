@@ -22,7 +22,7 @@ O decoder de produção foi executado por reflexão sobre uma cópia inalterada 
 
 Evidências: [testes/builds](telumia-profile-studio-results.json), [pacote Windows](telumia-profile-studio-desktop-package-inspection.json), [assets e licença dentro do JAR](telumia-profile-studio-assets.json), [runtime](telumia-profile-studio-runtime.json) e [capturas/alcance da QA](telumia-profile-studio-ui-qa.json).
 
-Continuam pendentes importação antes da criação de um perfil, categorias adicionais da biblioteca, configurações de aparência/capa/player, tipos de perfil, clonagem seletiva, redesenho completo da seleção de perfis e validação de todos os fluxos reais de autenticação e sincronização. PIN e outras funções existentes continuam disponíveis e não são creditados como novas implementações.
+Na primeira entrega permaneciam pendentes importação antes da criação de um perfil, categorias adicionais da biblioteca, configurações de aparência/capa/player, tipos de perfil, clonagem seletiva, seleção cinematográfica e validação de todos os fluxos reais de autenticação e sincronização. Os incrementos posteriores na seleção estão registrados abaixo. PIN e outras funções existentes continuam disponíveis e não são creditados como novas implementações.
 
 ## Correções posteriores no Desktop
 
@@ -57,5 +57,23 @@ Passaram **111 testes unitários selecionados**, a compilação dos cinco APKs e
 O conjunto nativo foi executado antes do commit. O build final sobre a árvore limpa passou e produziu APKs de aplicativo e testes byte a byte idênticos aos testados; os SHA-256 vinculam a QA ao commit publicado sem repetir os mesmos testes. [Vinculação das evidências](telumia-profile-studio-tv-build-binding.json). As capturas ainda mostram detalhes a refinar, como o nome da foto dentro do tile circular e o fallback do avatar local. Conteúdo sem foco pode ficar parcialmente visível em áreas roláveis. Isso não encerra o redesenho de perfis nem comprova desempenho físico, sincronização com conta real ou interação com todos os seletores do sistema. O incremento está na release `0.2.1-alpha.1`; a `0.2.0-alpha.1` preserva seus binários anteriores.
 
 Evidências: [builds e tentativas](telumia-profile-studio-tv-results.json), [identidade e conteúdo dos APKs](telumia-profile-studio-tv-package-inspection.json), [assets licenciados](telumia-profile-studio-tv-assets.json), [decoder Android](telumia-profile-studio-tv-native.json) e [capturas, testes e limites visuais](telumia-profile-studio-tv-ui-qa.json).
+
+## Seleção de perfis no Desktop
+
+Fonte `7a476cee03d1800001c8a9cabb01a0fbdb778ee5`, posterior à release 0.2.1-alpha.1. A tela real agora usa cartões grandes com moldura própria, nome em duas linhas, destaque de foco marfim/âmbar e organização adaptativa para até seis perfis. O background acompanha o perfil focado. O conteúdo permite rolagem em janelas estreitas; carregamento, lista vazia e criação mantêm ações reais. PIN, edição e troca de perfil continuam nas rotas existentes. As transições obedecem à preferência de movimento e intensidade.
+
+Passaram **155 testes selecionados**, sem falhas/erros/skips, e o build real do MSI Windows. Foram revisadas quatro capturas de 1366×768 até 3840×2160. O conjunto novo verifica mouse, teclado, nomes longos, foco, carregamento, criação com lista vazia e acesso a todos os itens em 360×640. As capturas usam o conteúdo do seletor de produção com nomes e avatares de letras controlados; não comprovam uma conta autenticada, download de capas ou ida e volta do PIN no aplicativo instalado. A largura máxima do conteúdo evita cartões esticados; adaptação para uso à distância continua pendente.
+
+Evidências: [builds/testes](telumia-profile-selection-results.json), [capturas e limites](telumia-profile-selection-desktop-ui-qa.json), [MSI inspecionado](telumia-profile-selection-desktop-package-inspection.json) e [vinculação ao commit limpo](telumia-profile-selection-desktop-build-binding.json). O gate limpo reutilizou os resultados Gradle dos mesmos 155 testes; não representa uma segunda execução visual. Este incremento ainda não está nos binários publicados da 0.2.1-alpha.1.
+
+## Seleção de perfis na TV
+
+Fonte `633dcdae7eedcfc26e840d5c27fc4751991b0275`, publicada em `main`, posterior à release 0.2.1-alpha.1. A seleção real usa cartões com moldura própria, avatares arredondados, selo de PIN e disposição adaptativa: duas linhas em 720p e uma linha nos viewports maiores testados. O foco anterior é usado ao reconstruir o seletor após um overlay. Menu/seleção mantêm seus callbacks existentes. O título usa Manrope; o backdrop reage ao perfil focado e recebe escurecimento para leitura sobre capas. Animações da seleção respeitam movimento completo, reduzido ou desligado. Uma foto indisponível mantém a inicial visível, com contraste calculado a partir da cor do avatar.
+
+Passaram **111 testes unitários selecionados**, os cinco APKs e o APK de testes sobre a árvore limpa. Passaram também **cinco testes nativos por resolução**, totalizando 15 em 720p, 1080p e 4K. Foram revisadas seis capturas finais. Os testes incluem acesso aos seis perfis por D-pad, Menu, criação, retorno do foco, margem de 5% para os cartões, legenda com contraste renderizado de pelo menos 4,5:1 sobre uma imagem branca realmente carregada e fallback após erro do carregador de imagens. A primeira rodada de nove testes/capturas e os builds intermediários permanecem registrados.
+
+A QA usa os componentes de produção com dados locais controlados. A imagem local é uma fixture de capa, não uma nova UI de importação de capas. Não comprova ida e volta do PIN com uma conta real, sync remoto, reprodução, overscan superior a 5% ou desempenho em TV física. Os hashes dos APKs nativos correspondem ao build limpo. Este incremento ainda não integra os binários publicados da 0.2.1-alpha.1.
+
+Evidências: [builds e tentativas](telumia-profile-selection-results.json), [APKs inspecionados](telumia-profile-selection-tv-package-inspection.json), [QA e seis capturas](telumia-profile-selection-tv-ui-qa.json), [vinculação ao commit](telumia-profile-selection-tv-build-binding.json) e [primeira rodada](telumia-profile-selection-tv-first-ui-qa.json).
 
 O escopo integral do projeto permanece em [objetivo aprovado](GOAL_OBJECTIVE_2026-10-05.md). Estes incrementos não encerram a fase ou o projeto.

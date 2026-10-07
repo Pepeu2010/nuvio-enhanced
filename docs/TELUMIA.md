@@ -8,7 +8,7 @@ Solicitação aprovada em 05/10/2026: substituir a marca do produto por **Telumi
 - Cliente PC: `Pepeu2010/telumia-desktop`.
 - Cliente TV: `Pepeu2010/telumia-tv`.
 - Pasta solicitada: `Telumia - Open source`.
-- Nova versão interna: `0.2.0-alpha.1` nos dois clientes; código 200 no PC e 2000 na TV.
+- Versão inicial da nova identidade: `0.2.0-alpha.1`, código 200 no PC e 2000 na TV. A versão publicada posterior é `0.2.1-alpha.1`, código 201 no PC e 2010 na TV.
 - Identificador TV: `io.github.pepeu2010.telumia.tv`, com sufixo `.debug` nos APKs Full Debug.
 - Dados/cache/atalhos/instalador Desktop usam Telumia. A nova identidade TV tem dados locais separados da antiga alpha; não desinstale a instalação anterior antes de recuperar suas preferências.
 - Os recursos de launcher, ícones de tema e wordmarks são substituídos pelo novo símbolo. A escolha de tema mantém suas ações e semântica.
@@ -41,5 +41,7 @@ A captura de sidebar Desktop vem do teste Compose nativo com navegação por tec
 ## Publicação e pasta local
 
 As três pré-releases `v0.2.0-alpha.1` estão publicadas. Os 22 assets remotos tiveram tamanho e digest SHA-256 comparados com os arquivos locais, conforme `telumia-release-verification.json`.
+
+A pré-release posterior `v0.2.1-alpha.1` também está publicada nos três repositórios, com MSI Windows, APK universal e quatro APKs por arquitetura. Seus 22 assets tiveram digest, tamanho e commits dos clientes conferidos em [verificação da publicação](telumia-profile-studio-release-verification.json). Ela inclui os editores de avatar e as correções de persistência/GIF descritas em [Profile Studio](PROFILE_STUDIO.md). Alterações posteriores na seleção de perfis permanecem em `main` e não substituem os binários daquela release.
 
 A renomeação física solicitada está pendente de liberação do Windows: o aplicativo Codex e seus processos MCP mantêm handles na pasta atual. A inspeção read-only com Microsoft Sysinternals Handle confirmou os bloqueios; nenhum handle foi fechado à força. `scripts/Rename-TelumiaWorkspace.ps1` foi iniciado como helper oculto, com destinos absolutos validados, sem copiar checkouts nem substituir diretórios. Ele efetua a renomeação quando a pasta for liberada e registra `telumia-workspace-rename.json` no diretório pai. Até esse registro existir, a pasta permanece com o nome anterior.

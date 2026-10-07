@@ -1,0 +1,118 @@
+{
+  "recordedAtUtc": "2026-10-07T21:54:50.5034327Z",
+  "sourceCommit": "633dcdae7eedcfc26e840d5c27fc4751991b0275",
+  "scope": "Production main selector, backdrop and avatar components with controlled local data; real D-pad, five-percent card overscan margin, rendered caption contrast on a white cover, missing-file fallback and reduced/off/full motion. No real account/PIN roundtrip, cover-import UI, backend sync, movie playback or physical TV performance claim.",
+  "runs": [
+    {
+      "startedAtUtc": "2026-10-07T21:41:14.2291052Z",
+      "sourceCommit": "633dcdae7eedcfc26e840d5c27fc4751991b0275",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "d10fcb60e05a4e854d4712d074f032d8a52da3c8b46ad8712efa5f6da5b75b59",
+      "testApkSha256": "66e68e6e3663a927d59b0d71e888cb15664228a94687c21e5b4f8cbb2b3b2eff",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "suite": "profile-selection",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1280x720"
+      ],
+      "capturedPixels": "1280x720",
+      "coverCapturedPixels": "1280x720",
+      "testsPassed": 5,
+      "finishedAtUtc": "2026-10-07T21:41:42.990328Z"
+    },
+    {
+      "startedAtUtc": "2026-10-07T21:41:43.1511924Z",
+      "sourceCommit": "633dcdae7eedcfc26e840d5c27fc4751991b0275",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "d10fcb60e05a4e854d4712d074f032d8a52da3c8b46ad8712efa5f6da5b75b59",
+      "testApkSha256": "66e68e6e3663a927d59b0d71e888cb15664228a94687c21e5b4f8cbb2b3b2eff",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "1920x1080",
+      "density": 320,
+      "suite": "profile-selection",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1920x1080"
+      ],
+      "capturedPixels": "1920x1080",
+      "coverCapturedPixels": "1920x1080",
+      "testsPassed": 5,
+      "finishedAtUtc": "2026-10-07T21:42:12.1246673Z"
+    },
+    {
+      "startedAtUtc": "2026-10-07T21:42:12.2428612Z",
+      "sourceCommit": "633dcdae7eedcfc26e840d5c27fc4751991b0275",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "d10fcb60e05a4e854d4712d074f032d8a52da3c8b46ad8712efa5f6da5b75b59",
+      "testApkSha256": "66e68e6e3663a927d59b0d71e888cb15664228a94687c21e5b4f8cbb2b3b2eff",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "3840x2160",
+      "density": 640,
+      "suite": "profile-selection",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160"
+      ],
+      "capturedPixels": "3840x2160",
+      "coverCapturedPixels": "3840x2160",
+      "testsPassed": 5,
+      "finishedAtUtc": "2026-10-07T21:42:46.5102531Z"
+    }
+  ],
+  "captures": [
+    {
+      "resolution": "720",
+      "kind": "selection",
+      "path": "docs/evidence/telumia-profile-selection-tv/selection-720.png",
+      "sha256": "dc915447ac0ba8b5a8effe2022c5baaf1b610bed6cebd7ccfd80458e0d34cb9f",
+      "reviewed": true
+    },
+    {
+      "resolution": "720",
+      "kind": "cover",
+      "path": "docs/evidence/telumia-profile-selection-tv/cover-720.png",
+      "sha256": "eb476d02ca39be3027b2cc81234a62b36dc4ba105c555e2d0863eb5700e25877",
+      "reviewed": true
+    },
+    {
+      "resolution": "1080",
+      "kind": "selection",
+      "path": "docs/evidence/telumia-profile-selection-tv/selection-1080.png",
+      "sha256": "afcbbec177566c4cbf81dcb8ae89d693e8987f723454e57a77da5385b21f4a55",
+      "reviewed": true
+    },
+    {
+      "resolution": "1080",
+      "kind": "cover",
+      "path": "docs/evidence/telumia-profile-selection-tv/cover-1080.png",
+      "sha256": "3e451ac7b93aa18da293030c8f798d3b39b39a1a0134557489e89711e56ccad1",
+      "reviewed": true
+    },
+    {
+      "resolution": "2160",
+      "kind": "selection",
+      "path": "docs/evidence/telumia-profile-selection-tv/selection-2160.png",
+      "sha256": "6a89693d547803c6e2d558777adb1b7c28365b14f38203da2e9ccc0cf99020d0",
+      "reviewed": true
+    },
+    {
+      "resolution": "2160",
+      "kind": "cover",
+      "path": "docs/evidence/telumia-profile-selection-tv/cover-2160.png",
+      "sha256": "e6bcf88974865d7025b2bd31a1a4dd2fe226ac3cdda0cafbb955242abe891b08",
+      "reviewed": true
+    }
+  ],
+  "totalTestsPassed": 15,
+  "published": false
+}

@@ -1,0 +1,22 @@
+{
+  "verifiedAtUtc": "2026-10-07T20:59:43.4375615Z",
+  "sourceCommit": "7a476cee03d1800001c8a9cabb01a0fbdb778ee5",
+  "cleanBuild": "telumia-profile-selection-clean-desktop",
+  "sourceCleanBeforeAndAfter": true,
+  "junitSummary": {
+    "tests": 155,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 36,
+    "attempt": "telumia-profile-selection-clean-desktop"
+  },
+  "msi": {
+    "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+    "bytes": 215208728,
+    "sha256": "5eb452776ae4fd4a171873f8404664375b0da2116b203b30c73d664ca302d2e7"
+  },
+  "uiEvidence": "telumia-profile-selection-desktop-ui-qa.json",
+  "published": false,
+  "scope": "Clean committed source builds selected tests and MSI; no MSI installation or authenticated-account proof. Existing 0.2.1-alpha.1 release files remain unchanged."
+}

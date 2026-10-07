@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [ValidateSet('720','1080','2160')][string]$Resolution = '1080',
-    [ValidateSet('movie','live-design','home','timed-metadata','cache-settings','profile-studio')][string]$Suite = 'movie',
+    [ValidateSet('movie','live-design','home','timed-metadata','cache-settings','profile-studio','profile-selection')][string]$Suite = 'movie',
     [ValidatePattern('^[a-z0-9-]+$')][string]$EvidenceLabel,
     [ValidateRange(1,100)][int]$ExpectedTests = 3,
     [switch]$Install
@@ -12,7 +12,7 @@ $adb = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'
 $serial = 'emulator-5568'
 $appId = 'io.github.pepeu2010.telumia.tv.debug'
 $checkout = Join-Path $workspace 'repos/tv'
-$label = switch ($Suite) { 'movie' { 'cinematic-tv-ui' }; 'live-design' { 'live-design-tv-ui' }; 'home' { 'telumia-home-tv-ui' }; 'timed-metadata' { 'telumia-timed-tv-ui' }; 'cache-settings' { 'telumia-cache-tv-ui' }; 'profile-studio' { 'telumia-studio-tv-ui' } }
+$label = switch ($Suite) { 'movie' { 'cinematic-tv-ui' }; 'live-design' { 'live-design-tv-ui' }; 'home' { 'telumia-home-tv-ui' }; 'timed-metadata' { 'telumia-timed-tv-ui' }; 'cache-settings' { 'telumia-cache-tv-ui' }; 'profile-studio' { 'telumia-studio-tv-ui' }; 'profile-selection' { 'telumia-profile-selection-tv-ui' } }
 $output = Join-Path $workspace "artifacts/$label-$Resolution"
 if ($EvidenceLabel) { $output = Join-Path $workspace "artifacts/$EvidenceLabel-$Resolution" }
 if (Test-Path -LiteralPath (Join-Path $output 'qa.json')) { throw 'Refusing to overwrite existing native QA evidence. Choose a new EvidenceLabel.' }
@@ -57,6 +57,7 @@ try {
         'timed-metadata' { 'com.nuvio.tv.ui.screens.player.TimedMetadataTimelineTvTest' }
         'cache-settings' { 'com.nuvio.tv.ui.screens.settings.MediaCacheSettingsTvTest' }
         'profile-studio' { 'com.nuvio.tv.ui.screens.profile.ProfileStudioAvatarEditorTvTest' }
+        'profile-selection' { 'com.nuvio.tv.ui.screens.profile.TelumiaProfileSelectionTvTest' }
     }
     $log = & $adb -s $serial shell am instrument -w -r -e class $testClass "$appId.test/androidx.test.runner.AndroidJUnitRunner" 2>&1
     $log | Set-Content -LiteralPath (Join-Path $output 'instrumentation.log') -Encoding utf8
@@ -70,6 +71,7 @@ try {
         'timed-metadata' { 'telumia-timed-timeline-tv.png' }
         'cache-settings' { 'telumia-cache-settings-tv.png' }
         'profile-studio' { 'telumia-studio-library-tv.png' }
+        'profile-selection' { 'telumia-profile-selection-tv.png' }
     }
     & $adb -s $serial pull "/sdcard/Android/data/$appId/files/$screenshot" $capture
     if ($LASTEXITCODE -ne 0) { throw 'Fixture screenshot could not be exported.' }
@@ -79,6 +81,17 @@ try {
     $height = [int64]$bytes[20] * 16777216 + [int64]$bytes[21] * 65536 + [int64]$bytes[22] * 256 + $bytes[23]
     $record['capturedPixels'] = "${width}x${height}"
     if ($record.capturedPixels -ne $dimensions) { throw 'Actual framebuffer differs from the requested viewport; this is not a valid resolution gate.' }
+    if ($Suite -eq 'profile-selection' -and $ExpectedTests -ge 4) {
+        $cover = Join-Path $output 'profile-cover.png'
+        & $adb -s $serial pull "/sdcard/Android/data/$appId/files/telumia-profile-selection-cover-tv.png" $cover
+        if ($LASTEXITCODE -ne 0) { throw 'Profile cover screenshot could not be exported.' }
+        $coverBytes = [IO.File]::ReadAllBytes($cover)
+        if ($coverBytes.Length -lt 24 -or $coverBytes[0] -ne 137 -or $coverBytes[1] -ne 80) { throw 'Profile cover capture is not PNG.' }
+        $coverWidth = [int64]$coverBytes[16]*16777216 + [int64]$coverBytes[17]*65536 + [int64]$coverBytes[18]*256 + $coverBytes[19]
+        $coverHeight = [int64]$coverBytes[20]*16777216 + [int64]$coverBytes[21]*65536 + [int64]$coverBytes[22]*256 + $coverBytes[23]
+        if ("${coverWidth}x${coverHeight}" -ne $dimensions) { throw 'Profile cover framebuffer differs from requested viewport.' }
+        $record['coverCapturedPixels'] = "${coverWidth}x${coverHeight}"
+    }
     if ($Suite -eq 'profile-studio') {
         $crop = Join-Path $output 'avatar-crop.png'
         & $adb -s $serial pull "/sdcard/Android/data/$appId/files/telumia-studio-crop-tv.png" $crop

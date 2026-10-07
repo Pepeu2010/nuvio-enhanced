@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-07T20:32:27.9032850Z",
+  "recordedAtUtc": "2026-10-07T21:54:54.8842924Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d",
+      "commit": "7a476cee03d1800001c8a9cabb01a0fbdb778ee5",
       "checkout": "repos/desktop",
-      "milestone": "Local avatar editor and profile mutation/GIF resource hardening; 149 selected tests and clean-source MSI. Eight avatar editor captures and earlier packaged decoder runtime proof remain scoped to f2775da. Full Profile Studio remains incomplete; Published in 0.2.1-alpha.1.",
-      "packageSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d",
+      "milestone": "Adaptive cinematic profile selection, keyboard/mouse, 155 selected tests, clean-source MSI and four reviewed component captures up to 4K. Selection not yet in published 0.2.1-alpha.1; full Profile Studio incomplete.",
+      "packageSourceCommit": "7a476cee03d1800001c8a9cabb01a0fbdb778ee5",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d"
     },
@@ -16,10 +16,10 @@
       "repository": "Pepeu2010/telumia-tv",
       "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0",
+      "commit": "633dcdae7eedcfc26e840d5c27fc4751991b0275",
       "checkout": "repos/tv",
-      "milestone": "TV integrated local avatar editor; 64 licensed assets, scoped persistence and four PNG variants. 111 selected tests and five clean-source APKs; byte-identical app/test hashes bind four raster and 15 UI tests with 12 reviewed captures. Full Profile Studio remains incomplete; Published in 0.2.1-alpha.1.",
-      "packageSourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0",
+      "milestone": "Adaptive TV profile selection, rounded avatars, focus restoration, backdrop overlay and image-failure fallback. 111 selected tests, five clean-source APKs and 15 native component tests with six reviewed captures. Not in published 0.2.1-alpha.1; full Profile Studio incomplete.",
+      "packageSourceCommit": "633dcdae7eedcfc26e840d5c27fc4751991b0275",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0"
     }

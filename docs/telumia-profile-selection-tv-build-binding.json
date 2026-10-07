@@ -1,0 +1,19 @@
+{
+  "verifiedAtUtc": "2026-10-07T21:54:50.5300181Z",
+  "sourceCommit": "633dcdae7eedcfc26e840d5c27fc4751991b0275",
+  "cleanBuild": "telumia-profile-selection-clean-tv",
+  "sourceCleanBeforeAndAfter": true,
+  "junitSummary": {
+    "tests": 111,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 23,
+    "attempt": "telumia-profile-selection-clean-tv"
+  },
+  "appSha256": "d10fcb60e05a4e854d4712d074f032d8a52da3c8b46ad8712efa5f6da5b75b59",
+  "testApkSha256": "66e68e6e3663a927d59b0d71e888cb15664228a94687c21e5b4f8cbb2b3b2eff",
+  "nativeTests": 15,
+  "nativeEvidence": "telumia-profile-selection-tv-ui-qa.json",
+  "scope": "Native app and instrumentation APK hashes exactly match the clean committed build. This increment is not in published 0.2.1-alpha.1."
+}

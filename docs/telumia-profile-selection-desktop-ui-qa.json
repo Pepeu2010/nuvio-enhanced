@@ -1,0 +1,35 @@
+{
+  "recordedAtUtc": "2026-10-07T20:46:24.1201938Z",
+  "sourceCommit": "7a476cee03d1800001c8a9cabb01a0fbdb778ee5",
+  "workingBuild": "telumia-profile-selection-desktop",
+  "tests": 155,
+  "captures": [
+    {
+      "viewport": "1366x768",
+      "path": "docs/evidence/telumia-profile-selection-desktop/selection-1366x768.png",
+      "sha256": "6238c548d51bf675f7435aadca72485125a7015125b74aa7694753f42b51729d",
+      "reviewed": true
+    },
+    {
+      "viewport": "1920x1080",
+      "path": "docs/evidence/telumia-profile-selection-desktop/selection-1920x1080.png",
+      "sha256": "d072550e62cd6c30a12c059defef8fdd1aa3ff17e5b7ff9dcf93154388d2980b",
+      "reviewed": true
+    },
+    {
+      "viewport": "2560x1440",
+      "path": "docs/evidence/telumia-profile-selection-desktop/selection-2560x1440.png",
+      "sha256": "5149a3020029303b81078624ca52b8f93219ba86b6abbffbe9c13013786f18dd",
+      "reviewed": true
+    },
+    {
+      "viewport": "3840x2160",
+      "path": "docs/evidence/telumia-profile-selection-desktop/selection-3840x2160.png",
+      "sha256": "63ee051b08b76cbce700d98aeae1ce0cbda69bc0c15203607f156a9563f5cca9",
+      "reviewed": true
+    }
+  ],
+  "scope": "Production selector content with controlled local names/default-letter avatars, keyboard and mouse. No real account, PIN roundtrip, installed MSI, cover download, or playback claim. Four captures reviewed on prior turn.",
+  "published": false,
+  "releaseExcluded": "v0.2.1-alpha.1"
+}

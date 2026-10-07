@@ -7,7 +7,7 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
 
 ## Estado desta execução
 
-Estado mais recente: Telumia possui marca própria e busca/seleção de edição de Iludida na release `v0.2.0-alpha.1`. O incremento 1-B.1 de detalhes de filmes está implementado nos dois clientes, com 18 testes Desktop, 52 TV, MSI/cinco APKs e D-pad em 720p/1080p/4K verificados; ainda fora dessa release. [Evidências e limites](CINEMATIC_DETAILS.md). Os registros abaixo preservam a sequência de entregas; não representam encerramento da Fase 1 ou do produto completo.
+Estado mais recente: a release `v0.2.1-alpha.1` inclui marca própria, busca Brasil/edição de Iludida e os incrementos verificados de Home, detalhes, metadata temporal, cache configurável e editores locais de avatar. Seus MSI Windows, APK universal/quatro ABIs e fontes tiveram os assets remotos conferidos. [Publicação](RELEASES.md) e [Profile Studio](PROFILE_STUDIO.md) registram commits, testes e limites. A seleção de perfis do Desktop e da TV recebeu incrementos posteriores em `main`, ainda fora dos binários publicados. Os registros abaixo preservam a sequência de entregas; não representam encerramento da Fase 1 ou do produto completo.
 
 - Checkouts oficiais dos seis projetos concluídos e commits registrados.
 - Auditoria estática e matriz de lacunas/contratos produzidas.
@@ -51,6 +51,7 @@ Estado mais recente: Telumia possui marca própria e busca/seleção de edição
 
 - Home: incremento nativo validado com 44 testes Desktop, 72 TV e 27 testes de componentes no emulador. [Entrega parcial](TELUMIA_HOME.md).
 - 2-A: timeline temporal, providers limitados e adapter dos skips integrados aos players; 93 testes Desktop, 83 TV e nove testes nativos TV aprovados. Capítulos, bookmarks persistentes e Scene Info continuam pendentes. [Evidências](TIMED_METADATA.md).
+- 1-C: editores de avatar locais nos clientes reais, biblioteca com 64 ilustrações licenciadas, recorte/zoom, quatro variantes PNG e persistência isolada por conta/perfil. A seleção adaptativa tem gates posteriores de 155 testes/MSI no PC e 111 testes/cinco APKs na TV, mais 15 testes nativos TV e dez capturas finais revisadas. Configurações de apresentação/player, clonagem seletiva e tipos de perfil continuam pendentes. [Entregas e escopo da QA](PROFILE_STUDIO.md).
 
 ## Gates e entregas
 
