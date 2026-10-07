@@ -1,8 +1,8 @@
 # Biblioteca de avatares — assets licenciados
 
-Preparação para o Profile Studio, ainda sem integração nas telas dos clientes.
+Assets integrados ao incremento de avatares do Profile Studio Desktop, ainda sem integração na TV nem inclusão em release pública.
 
-Foram selecionados 64 ícones OpenMoji da release estável 17.0.0, em animais, natureza, fantasia e espaço. As imagens permanecem intactas. Seus nomes em português pertencem ao catálogo do Telumia; as ilustrações não são autorais Telumia. Categorias adicionais, editor/importação e integração de perfis permanecem pendentes.
+Foram selecionados 64 ícones OpenMoji da release estável 17.0.0, em animais, natureza, fantasia e espaço. As imagens permanecem intactas. Seus nomes em português pertencem ao catálogo do Telumia; as ilustrações não são autorais Telumia. O editor Desktop e a persistência local passaram em testes/build. A checagem do JAR confirma os 64 hashes e a licença; os créditos aparecem no editor. Categorias adicionais e a experiência completa de perfis permanecem pendentes. [Entrega e alcance](PROFILE_STUDIO.md).
 
 Créditos: OpenMoji, Benedikt Groß, Daniel Utz e colaboradores da HfG Schwäbisch Gmünd. Os gráficos usam [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), conforme o [projeto original](https://github.com/hfg-gmuend/openmoji). A licença está distribuída junto dos assets e deve acompanhar sua inclusão nos clientes; os créditos também devem aparecer no aplicativo.
 

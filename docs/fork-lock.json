@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-06T21:13:17.3105351Z",
+  "recordedAtUtc": "2026-10-07T00:19:24.9863965Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "9baa2ff228f3884e2e1d02d5b670793b1fa4e37d",
+      "commit": "f2775da4f3722db19e0d1e2c619ff8154b87c548",
       "checkout": "repos/desktop",
-      "milestone": "Desktop configurable cache increment: 106 selected tests, 13 isolated storage tests, MSI and reviewed settings capture. Other cache consumers and full offline scope remain pending. Not in public 0.2.0-alpha.1.",
-      "packageSourceCommit": "9baa2ff228f3884e2e1d02d5b670793b1fa4e37d",
+      "milestone": "Desktop local Profile Studio avatars: import/crop/64 licensed assets, account/profile isolation; 138 selected tests, MSI, eight reviewed captures and actual decoder on packaged runtime modules. OS import gestures, TV and full Profile Studio remain pending. Not in public 0.2.0-alpha.1.",
+      "packageSourceCommit": "f2775da4f3722db19e0d1e2c619ff8154b87c548",
       "publishedRelease": "v0.2.0-alpha.1",
       "publishedSourceCommit": "fdeaddfe3d0dc026ecd3d632210ce4dd212783ad"
     },

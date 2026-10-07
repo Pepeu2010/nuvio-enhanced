@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop'
 $workspace = Split-Path $PSScriptRoot -Parent
 $attempts = @(Get-ChildItem (Join-Path $workspace 'artifacts') -Recurse -Filter result.json |
     ForEach-Object { Get-Content $_.FullName -Raw | ConvertFrom-Json } |
-    Where-Object { $_.label.StartsWith($LabelPrefix) })
+    Where-Object { $_.label -is [string] -and $_.label.StartsWith($LabelPrefix) })
 $results = foreach ($target in @('desktop','tv')) {
     $runs = @($attempts | Where-Object target -eq $target)
     $testTask = if ($target -eq 'desktop') { ':composeApp:desktopTest' } else { ':app:testFullDebugUnitTest' }

@@ -1,0 +1,68 @@
+{
+  "recordedAtUtc": "2026-10-07T00:19:25.1117431Z",
+  "sourceCommit": "f2775da4f3722db19e0d1e2c619ff8154b87c548",
+  "attempt": "telumia-profile-studio-desktop-final",
+  "tests": 138,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "scope": "Actual Compose editor and licensed SVG rendering with controlled input; sandbox real raster/store persistence; NavigationMotion.OFF; no actual file picker, clipboard, Explorer drag/drop or full profile app flow claim",
+  "screenshots": [
+    {
+      "file": "library-1366.png",
+      "width": 1366,
+      "height": 768,
+      "sha256": "90c16095c2f7835ca176d0952ff96aeee47dd94938ada72debfb7d75f2ae3208",
+      "reviewed": true
+    },
+    {
+      "file": "library-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "0a7edff91d82ee05f882d3ef203d3d5016cc6f464ee7ca46c0f1f3d7278c0287",
+      "reviewed": true
+    },
+    {
+      "file": "library-2560.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "df857c9964742405bef85dd83f56804ac6f2dc4fda44445feadeace2cc0ab1a8",
+      "reviewed": true
+    },
+    {
+      "file": "library-3840.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "fa09337676af7d8c8f3ff68b838c70909f0fa897e481e85ace1dbb52d182f5b9",
+      "reviewed": true
+    },
+    {
+      "file": "studio-1366.png",
+      "width": 1366,
+      "height": 768,
+      "sha256": "9d526df6a5061de1175243d0cebeca5fae4cdbd90ce6a1d699d0a89f4c58238d",
+      "reviewed": true
+    },
+    {
+      "file": "studio-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "444c15ea84a24415c9fe3325994722140e8c44451ff89ce59120517b3b1da073",
+      "reviewed": true
+    },
+    {
+      "file": "studio-2560.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "ec11c8523364c661e39b6c90c507d768c1ca7501bf185223f7789b7daee4620e",
+      "reviewed": true
+    },
+    {
+      "file": "studio-3840.png",
+      "width": 3840,
+      "height": 2160,
+      "sha256": "f26911889a27a2d6477db0a87168dae631110b7d191d87b89eeef50fdcefcaf1",
+      "reviewed": true
+    }
+  ]
+}

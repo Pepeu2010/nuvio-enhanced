@@ -1,0 +1,10 @@
+{
+  "recordedAtUtc": "2026-10-07T00:17:51.2734669Z",
+  "status": "passed",
+  "exitCode": 0,
+  "sourceCommit": "f2775da4f3722db19e0d1e2c619ff8154b87c548",
+  "trackedChanges": [],
+  "jarSha256": "1319ac3b86ed7294b66bb977f296bc5f5bef76a90436a71e31dc81525df55d8e",
+  "runtimeModulesSha256": "088df0b8d3021fae231896d9420ea8ac4b60eebcfd2b5bd5a2c85973be9f6a15",
+  "scope": "Production AvatarRasterPipeline reflection, PNG/JPEG decoding and 64/128/256/512 crop output under an unchanged copy of packaged runtime modules; build JDK java.exe added only to the isolated copy; no installer launch, clipboard or OS file picker claim"
+}
