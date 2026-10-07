@@ -1,0 +1,11 @@
+{
+  "sourceCommit": "f2775da4f3722db19e0d1e2c619ff8154b87c548",
+  "target": "desktop",
+  "file": "Desktop-source-f277-final.zip",
+  "sha256": "cb3521e943260d8746e2e31f49ab0c2b887db37a54f970ad0cc9da6e83bd33c5",
+  "lfsObjects": 142,
+  "lfsBytes": 293336120.0,
+  "expandedPointers": 0,
+  "unresolvedLfsPointers": 0,
+  "scope": "Source bytes and LFS hashes; no portability or playback QA"
+}

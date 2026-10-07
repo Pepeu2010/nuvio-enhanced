@@ -1,0 +1,11 @@
+{
+  "sourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0",
+  "target": "tv",
+  "file": "TV-source-bb3faa-final.zip",
+  "sha256": "adfa6d700ac5e9a5d32a99342a3bfe4c3be579ebb0c26fbd5c1d1712eeed628f",
+  "lfsObjects": 0,
+  "lfsBytes": 0,
+  "expandedPointers": 0,
+  "unresolvedLfsPointers": 0,
+  "scope": "Source bytes and LFS hashes; no portability or playback QA"
+}

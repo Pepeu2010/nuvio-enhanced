@@ -1,0 +1,281 @@
+{
+  "exportedAtUtc": "2026-10-07T20:15:01.1476170Z",
+  "sourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0",
+  "scope": "Existing profile dialog and native component fixtures; real D-pad, content-URI import, four raster variants and temporary persistence. No physical TV, external manufacturer picker, live authenticated account or full Profile Studio completion claim.",
+  "runs": [
+    {
+      "startedAtUtc": "2026-10-07T20:10:53.7604503Z",
+      "sourceCommit": "9ed0dc8b06de1db1305d066077e169d37ca8aeed",
+      "trackedChanges": [
+        " M .gitignore",
+        " M app/src/androidTest/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipelineTvTest.kt",
+        " M app/src/main/AndroidManifest.xml",
+        " M app/src/main/java/com/nuvio/tv/MainActivity.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/ProfileManager.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicy.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipeline.kt",
+        " M app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+        " M app/src/main/java/com/nuvio/tv/data/local/ProfileDataStore.kt",
+        " M app/src/main/java/com/nuvio/tv/domain/model/UserProfile.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileEditorTabs.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionViewModel.kt",
+        " M app/src/main/res/values-pt-rBR/strings.xml",
+        " M app/src/main/res/values-pt/strings.xml",
+        " M app/src/main/res/values/strings.xml",
+        " M app/src/test/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicyTest.kt"
+      ],
+      "sourceChanges": [
+        " M .gitignore",
+        " M app/src/androidTest/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipelineTvTest.kt",
+        " M app/src/main/AndroidManifest.xml",
+        " M app/src/main/java/com/nuvio/tv/MainActivity.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/ProfileManager.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicy.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipeline.kt",
+        " M app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+        " M app/src/main/java/com/nuvio/tv/data/local/ProfileDataStore.kt",
+        " M app/src/main/java/com/nuvio/tv/domain/model/UserProfile.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileEditorTabs.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionViewModel.kt",
+        " M app/src/main/res/values-pt-rBR/strings.xml",
+        " M app/src/main/res/values-pt/strings.xml",
+        " M app/src/main/res/values/strings.xml",
+        " M app/src/test/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicyTest.kt",
+        "?? .gitattributes",
+        "?? app/src/androidTest/java/com/nuvio/tv/ui/screens/profile/",
+        "?? app/src/main/assets/profile-studio/",
+        "?? app/src/main/java/com/nuvio/tv/core/profile/studio/OwnedProfileAvatarStore.kt",
+        "?? app/src/main/java/com/nuvio/tv/core/profile/studio/ProfileStudioAvatarRepository.kt",
+        "?? app/src/main/java/com/nuvio/tv/core/profile/studio/StudioDevicePhotos.kt",
+        "?? app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileStudioAvatarEditor.kt",
+        "?? app/src/test/java/com/nuvio/tv/core/profile/studio/OwnedProfileAvatarStoreTest.kt",
+        "?? app/src/test/java/com/nuvio/tv/data/local/ProfileStudioIdentityTest.kt"
+      ],
+      "apkSha256": "19f6c7f07dfdc8f5d8e902169d5346ed20581f8171ec53e9ecc03574c6954f09",
+      "testApkSha256": "e31622a728021acf5351ed54f55f1fd675134ad1261d47f2819029f7d801928f",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "suite": "profile-studio",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1280x720"
+      ],
+      "capturedPixels": "1280x720",
+      "cropCapturedPixels": "1280x720",
+      "device-photosCapturedPixels": "1280x720",
+      "full-dialogCapturedPixels": "1280x720",
+      "testsPassed": 5,
+      "finishedAtUtc": "2026-10-07T20:11:16.7124062Z"
+    },
+    {
+      "startedAtUtc": "2026-10-07T20:11:16.8018017Z",
+      "sourceCommit": "9ed0dc8b06de1db1305d066077e169d37ca8aeed",
+      "trackedChanges": [
+        " M .gitignore",
+        " M app/src/androidTest/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipelineTvTest.kt",
+        " M app/src/main/AndroidManifest.xml",
+        " M app/src/main/java/com/nuvio/tv/MainActivity.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/ProfileManager.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicy.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipeline.kt",
+        " M app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+        " M app/src/main/java/com/nuvio/tv/data/local/ProfileDataStore.kt",
+        " M app/src/main/java/com/nuvio/tv/domain/model/UserProfile.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileEditorTabs.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionViewModel.kt",
+        " M app/src/main/res/values-pt-rBR/strings.xml",
+        " M app/src/main/res/values-pt/strings.xml",
+        " M app/src/main/res/values/strings.xml",
+        " M app/src/test/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicyTest.kt"
+      ],
+      "sourceChanges": [
+        " M .gitignore",
+        " M app/src/androidTest/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipelineTvTest.kt",
+        " M app/src/main/AndroidManifest.xml",
+        " M app/src/main/java/com/nuvio/tv/MainActivity.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/ProfileManager.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicy.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipeline.kt",
+        " M app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+        " M app/src/main/java/com/nuvio/tv/data/local/ProfileDataStore.kt",
+        " M app/src/main/java/com/nuvio/tv/domain/model/UserProfile.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileEditorTabs.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionViewModel.kt",
+        " M app/src/main/res/values-pt-rBR/strings.xml",
+        " M app/src/main/res/values-pt/strings.xml",
+        " M app/src/main/res/values/strings.xml",
+        " M app/src/test/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicyTest.kt",
+        "?? .gitattributes",
+        "?? app/src/androidTest/java/com/nuvio/tv/ui/screens/profile/",
+        "?? app/src/main/assets/profile-studio/",
+        "?? app/src/main/java/com/nuvio/tv/core/profile/studio/OwnedProfileAvatarStore.kt",
+        "?? app/src/main/java/com/nuvio/tv/core/profile/studio/ProfileStudioAvatarRepository.kt",
+        "?? app/src/main/java/com/nuvio/tv/core/profile/studio/StudioDevicePhotos.kt",
+        "?? app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileStudioAvatarEditor.kt",
+        "?? app/src/test/java/com/nuvio/tv/core/profile/studio/OwnedProfileAvatarStoreTest.kt",
+        "?? app/src/test/java/com/nuvio/tv/data/local/ProfileStudioIdentityTest.kt"
+      ],
+      "apkSha256": "19f6c7f07dfdc8f5d8e902169d5346ed20581f8171ec53e9ecc03574c6954f09",
+      "testApkSha256": "e31622a728021acf5351ed54f55f1fd675134ad1261d47f2819029f7d801928f",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "1920x1080",
+      "density": 320,
+      "suite": "profile-studio",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1920x1080"
+      ],
+      "capturedPixels": "1920x1080",
+      "cropCapturedPixels": "1920x1080",
+      "device-photosCapturedPixels": "1920x1080",
+      "full-dialogCapturedPixels": "1920x1080",
+      "testsPassed": 5,
+      "finishedAtUtc": "2026-10-07T20:11:42.6109297Z"
+    },
+    {
+      "startedAtUtc": "2026-10-07T20:11:42.709948Z",
+      "sourceCommit": "9ed0dc8b06de1db1305d066077e169d37ca8aeed",
+      "trackedChanges": [
+        " M .gitignore",
+        " M app/src/androidTest/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipelineTvTest.kt",
+        " M app/src/main/AndroidManifest.xml",
+        " M app/src/main/java/com/nuvio/tv/MainActivity.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/ProfileManager.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicy.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipeline.kt",
+        " M app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+        " M app/src/main/java/com/nuvio/tv/data/local/ProfileDataStore.kt",
+        " M app/src/main/java/com/nuvio/tv/domain/model/UserProfile.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileEditorTabs.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionViewModel.kt",
+        " M app/src/main/res/values-pt-rBR/strings.xml",
+        " M app/src/main/res/values-pt/strings.xml",
+        " M app/src/main/res/values/strings.xml",
+        " M app/src/test/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicyTest.kt"
+      ],
+      "sourceChanges": [
+        " M .gitignore",
+        " M app/src/androidTest/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipelineTvTest.kt",
+        " M app/src/main/AndroidManifest.xml",
+        " M app/src/main/java/com/nuvio/tv/MainActivity.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/ProfileManager.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicy.kt",
+        " M app/src/main/java/com/nuvio/tv/core/profile/studio/AvatarRasterPipeline.kt",
+        " M app/src/main/java/com/nuvio/tv/core/sync/ProfileSyncService.kt",
+        " M app/src/main/java/com/nuvio/tv/data/local/ProfileDataStore.kt",
+        " M app/src/main/java/com/nuvio/tv/domain/model/UserProfile.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/components/ProfileEditorTabs.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionScreen.kt",
+        " M app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileSelectionViewModel.kt",
+        " M app/src/main/res/values-pt-rBR/strings.xml",
+        " M app/src/main/res/values-pt/strings.xml",
+        " M app/src/main/res/values/strings.xml",
+        " M app/src/test/java/com/nuvio/tv/core/profile/studio/AvatarImagePolicyTest.kt",
+        "?? .gitattributes",
+        "?? app/src/androidTest/java/com/nuvio/tv/ui/screens/profile/",
+        "?? app/src/main/assets/profile-studio/",
+        "?? app/src/main/java/com/nuvio/tv/core/profile/studio/OwnedProfileAvatarStore.kt",
+        "?? app/src/main/java/com/nuvio/tv/core/profile/studio/ProfileStudioAvatarRepository.kt",
+        "?? app/src/main/java/com/nuvio/tv/core/profile/studio/StudioDevicePhotos.kt",
+        "?? app/src/main/java/com/nuvio/tv/ui/screens/profile/ProfileStudioAvatarEditor.kt",
+        "?? app/src/test/java/com/nuvio/tv/core/profile/studio/OwnedProfileAvatarStoreTest.kt",
+        "?? app/src/test/java/com/nuvio/tv/data/local/ProfileStudioIdentityTest.kt"
+      ],
+      "apkSha256": "19f6c7f07dfdc8f5d8e902169d5346ed20581f8171ec53e9ecc03574c6954f09",
+      "testApkSha256": "e31622a728021acf5351ed54f55f1fd675134ad1261d47f2819029f7d801928f",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "requestedPixels": "3840x2160",
+      "density": 640,
+      "suite": "profile-studio",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160"
+      ],
+      "capturedPixels": "3840x2160",
+      "cropCapturedPixels": "3840x2160",
+      "device-photosCapturedPixels": "3840x2160",
+      "full-dialogCapturedPixels": "3840x2160",
+      "testsPassed": 5,
+      "finishedAtUtc": "2026-10-07T20:12:10.1075531Z"
+    }
+  ],
+  "captures": [
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/library-720.png",
+      "sha256": "6c496ae317d4aad0d24b6ad1792620af27c2c653d004b2ac30c81079be177d66",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/crop-720.png",
+      "sha256": "da07649b241b34c4cacc5665cf90b8d06a09bbd45cc85f362c90763a925c1b29",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/device-photos-720.png",
+      "sha256": "1b83cddd99648caa3febabb9165ba1afc7366c269918de8bb8783e93fa128d55",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/full-dialog-720.png",
+      "sha256": "010a38e5328b44d75bdf89ea5aa99be8a673bb2ef34032ef1851de431a0ab626",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/library-1080.png",
+      "sha256": "910e5f4b5b3ec5b9ec490e126933d7ee782521a440b5e301db17d2c4cde1434f",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/crop-1080.png",
+      "sha256": "a9e2daecaa84a02dcbedf23a4092bbc698616afecce3f4649ab614fc37c99fc3",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/device-photos-1080.png",
+      "sha256": "9f8af1f4202f84a6493f44e5cca854d43f8084524bb2dac0c3daaefbc0b7e1b4",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/full-dialog-1080.png",
+      "sha256": "ca687d107ff2025d91637c6a1d05ca70b40fdd95b30e204c455a7173f036983e",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/library-2160.png",
+      "sha256": "b68865cbbb955ef6f5a96a75d5c142523d1a6b8fa9f43efcd83e5c14bd0a911c",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/crop-2160.png",
+      "sha256": "922a5255ce53056af35154f27c2035bae664ed6f91e71d1660f6e10348651fda",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/device-photos-2160.png",
+      "sha256": "3802e70490c5dc57d135cc47f164342212a0a518160ecc639b0cec2e6f8fdc95",
+      "reviewed": true
+    },
+    {
+      "file": "docs/evidence/telumia-profile-studio-tv/full-dialog-2160.png",
+      "sha256": "c8fa54c2441378c553378f7ec4631f5fb317b4f6a4c5b046b20dc4661ff4ba7b",
+      "reviewed": true
+    }
+  ],
+  "visualNotes": [
+    "Local import button fully visible after focus at all three sizes; nested scroll removed in the production parent.",
+    "Scrollable content can remain partially visible when not focused, including the Cancel action in the 720p capture. The test scrolls and activates Cancel.",
+    "Device-photo tile labels and blank local-avatar fallback still need visual refinement.",
+    "English emulator locale; Portuguese resources shipped but separate localized visual QA remains pending."
+  ]
+}

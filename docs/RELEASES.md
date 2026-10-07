@@ -1,4 +1,18 @@
-# Releases do Nuvio Enhanced
+# Releases da Telumia
+
+## v0.2.0-alpha.1 — marca própria e catálogos brasileiros
+
+A [pré-release Telumia](https://github.com/Pepeu2010/telumia/releases/tag/v0.2.0-alpha.1) inclui o MSI Windows, APK Android TV universal e quatro variantes por arquitetura, fontes correspondentes, manifesto e checksums. Foram conferidos 22 assets entre o repositório central e os dois clientes, por tamanho e SHA-256. [Registro da publicação](telumia-release-verification.json).
+
+As fontes distribuídas são Desktop `fdeaddfe3d0dc026ecd3d632210ce4dd212783ad` e TV `0355dfe4366ebce3067718eaf9dfb3139dd8f243`. Esta entrega inclui nome, logo, IDs e caminhos próprios, aliases brasileiros de Iludida e seleção da edição brasileira quando uma fonte configurada a disponibiliza. Não contém os incrementos posteriores de Home, detalhes, timed metadata, cache ou Profile Studio. Os APKs são Full Debug de desenvolvimento; não há pacote específico para celular, Linux ou macOS.
+
+As releases históricas abaixo conservam seus arquivos e metadados. A nova geração utiliza os [repositórios Telumia](../README.md); os URLs antigos podem redirecionar no GitHub.
+
+## Verificação dos próximos arquivos de fonte
+
+O preparador agora confere os objetos Git LFS dentro do ZIP e recusa ponteiros sem os binários correspondentes. Na validação Desktop do commit `f2775da4f3722db19e0d1e2c619ff8154b87c548`, passaram os hashes e tamanhos de **142 objetos, 293.336.120 bytes**, sem ponteiros pendentes. Neste ambiente o próprio Git já expandiu esses arquivos; não foi necessário reidratá-los. [Evidência do arquivo de fonte](telumia-desktop-source-archive-inspection.json).
+
+Essa validação não publica uma nova versão nem comprova execução em Linux/macOS. O binário libmpv também foi encontrado no ZIP da release Telumia já publicada; a hipótese inicial de que aquele arquivo conteria apenas um ponteiro não se confirmou.
 
 ## v0.1.0-alpha.2 — incremento nativo 1-A.1
 

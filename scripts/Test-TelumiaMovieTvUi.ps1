@@ -1,7 +1,9 @@
 [CmdletBinding()]
 param(
     [ValidateSet('720','1080','2160')][string]$Resolution = '1080',
-    [ValidateSet('movie','live-design','home','timed-metadata','cache-settings')][string]$Suite = 'movie',
+    [ValidateSet('movie','live-design','home','timed-metadata','cache-settings','profile-studio')][string]$Suite = 'movie',
+    [ValidatePattern('^[a-z0-9-]+$')][string]$EvidenceLabel,
+    [ValidateRange(1,100)][int]$ExpectedTests = 3,
     [switch]$Install
 )
 $ErrorActionPreference = 'Stop'
@@ -10,8 +12,10 @@ $adb = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'
 $serial = 'emulator-5568'
 $appId = 'io.github.pepeu2010.telumia.tv.debug'
 $checkout = Join-Path $workspace 'repos/tv'
-$label = switch ($Suite) { 'movie' { 'cinematic-tv-ui' }; 'live-design' { 'live-design-tv-ui' }; 'home' { 'telumia-home-tv-ui' }; 'timed-metadata' { 'telumia-timed-tv-ui' }; 'cache-settings' { 'telumia-cache-tv-ui' } }
+$label = switch ($Suite) { 'movie' { 'cinematic-tv-ui' }; 'live-design' { 'live-design-tv-ui' }; 'home' { 'telumia-home-tv-ui' }; 'timed-metadata' { 'telumia-timed-tv-ui' }; 'cache-settings' { 'telumia-cache-tv-ui' }; 'profile-studio' { 'telumia-studio-tv-ui' } }
 $output = Join-Path $workspace "artifacts/$label-$Resolution"
+if ($EvidenceLabel) { $output = Join-Path $workspace "artifacts/$EvidenceLabel-$Resolution" }
+if (Test-Path -LiteralPath (Join-Path $output 'qa.json')) { throw 'Refusing to overwrite existing native QA evidence. Choose a new EvidenceLabel.' }
 New-Item -ItemType Directory -Force -Path $output | Out-Null
 $state = & $adb -s $serial get-state 2>&1
 if ($LASTEXITCODE -ne 0 -or $state -ne 'device') { throw 'The owned TV emulator on port 5568 must be running.' }
@@ -32,7 +36,9 @@ $record = [ordered]@{
     startedAtUtc = [DateTime]::UtcNow.ToString('o')
     sourceCommit = (git -C $checkout rev-parse HEAD).Trim()
     trackedChanges = @(git -C $checkout status --porcelain --untracked-files=no)
+    sourceChanges = @(git -C $checkout status --porcelain)
     apkSha256 = (Get-FileHash -LiteralPath $apk).Hash.ToLowerInvariant()
+    testApkSha256 = (Get-FileHash -LiteralPath $testApk).Hash.ToLowerInvariant()
     emulator = $avd[0]
     requestedPixels = $dimensions
     density = $density
@@ -50,11 +56,12 @@ try {
         'home' { 'com.nuvio.tv.ui.screens.home.TelumiaHomeHeroTvTest' }
         'timed-metadata' { 'com.nuvio.tv.ui.screens.player.TimedMetadataTimelineTvTest' }
         'cache-settings' { 'com.nuvio.tv.ui.screens.settings.MediaCacheSettingsTvTest' }
+        'profile-studio' { 'com.nuvio.tv.ui.screens.profile.ProfileStudioAvatarEditorTvTest' }
     }
     $log = & $adb -s $serial shell am instrument -w -r -e class $testClass "$appId.test/androidx.test.runner.AndroidJUnitRunner" 2>&1
     $log | Set-Content -LiteralPath (Join-Path $output 'instrumentation.log') -Encoding utf8
     $text = $log -join "`n"
-    if ($text -notmatch 'OK \(3 tests\)' -or $text -match 'INSTRUMENTATION_STATUS_CODE: -2|FAILURES!!!') { throw 'Native UI instrumentation did not pass all three tests. See the local instrumentation log.' }
+    if ($text -notmatch "OK \($ExpectedTests tests\)" -or $text -match 'INSTRUMENTATION_STATUS_CODE: -2|FAILURES!!!') { throw "Native UI instrumentation did not pass all $ExpectedTests tests. See the local instrumentation log." }
     $capture = Join-Path $output 'movie-hero.png'
     $screenshot = switch ($Suite) {
         'movie' { 'cinematic-movie-hero-tv.png' }
@@ -62,6 +69,7 @@ try {
         'home' { 'telumia-home-hero-tv.png' }
         'timed-metadata' { 'telumia-timed-timeline-tv.png' }
         'cache-settings' { 'telumia-cache-settings-tv.png' }
+        'profile-studio' { 'telumia-studio-library-tv.png' }
     }
     & $adb -s $serial pull "/sdcard/Android/data/$appId/files/$screenshot" $capture
     if ($LASTEXITCODE -ne 0) { throw 'Fixture screenshot could not be exported.' }
@@ -71,7 +79,31 @@ try {
     $height = [int64]$bytes[20] * 16777216 + [int64]$bytes[21] * 65536 + [int64]$bytes[22] * 256 + $bytes[23]
     $record['capturedPixels'] = "${width}x${height}"
     if ($record.capturedPixels -ne $dimensions) { throw 'Actual framebuffer differs from the requested viewport; this is not a valid resolution gate.' }
-    $record['testsPassed'] = 3
+    if ($Suite -eq 'profile-studio') {
+        $crop = Join-Path $output 'avatar-crop.png'
+        & $adb -s $serial pull "/sdcard/Android/data/$appId/files/telumia-studio-crop-tv.png" $crop
+        if ($LASTEXITCODE -ne 0) { throw 'Avatar crop screenshot could not be exported.' }
+        $cropBytes = [IO.File]::ReadAllBytes($crop)
+        if ($cropBytes.Length -lt 24 -or $cropBytes[0] -ne 137 -or $cropBytes[1] -ne 80) { throw 'Avatar crop screenshot is not PNG.' }
+        $cropWidth = [int64]$cropBytes[16]*16777216 + [int64]$cropBytes[17]*65536 + [int64]$cropBytes[18]*256 + $cropBytes[19]
+        $cropHeight = [int64]$cropBytes[20]*16777216 + [int64]$cropBytes[21]*65536 + [int64]$cropBytes[22]*256 + $cropBytes[23]
+        if ("${cropWidth}x${cropHeight}" -ne $dimensions) { throw 'Avatar crop framebuffer differs from the requested viewport.' }
+        $record['cropCapturedPixels'] = "${cropWidth}x${cropHeight}"
+        if ($ExpectedTests -ge 5) {
+            foreach ($extra in @('device-photos','full-dialog')) {
+                $extraFile = Join-Path $output "avatar-$extra.png"
+                & $adb -s $serial pull "/sdcard/Android/data/$appId/files/telumia-studio-$extra-tv.png" $extraFile
+                if ($LASTEXITCODE -ne 0) { throw "Could not export $extra screenshot." }
+                $imageBytes = [IO.File]::ReadAllBytes($extraFile)
+                if ($imageBytes.Length -lt 24 -or $imageBytes[0] -ne 137 -or $imageBytes[1] -ne 80) { throw "$extra screenshot is not PNG." }
+                $imageWidth = [int64]$imageBytes[16]*16777216 + [int64]$imageBytes[17]*65536 + [int64]$imageBytes[18]*256 + $imageBytes[19]
+                $imageHeight = [int64]$imageBytes[20]*16777216 + [int64]$imageBytes[21]*65536 + [int64]$imageBytes[22]*256 + $imageBytes[23]
+                if ("${imageWidth}x${imageHeight}" -ne $dimensions) { throw "$extra framebuffer differs from requested viewport." }
+                $record["${extra}CapturedPixels"] = "${imageWidth}x${imageHeight}"
+            }
+        }
+    }
+    $record['testsPassed'] = $ExpectedTests
     $record['status'] = 'passed'
 } catch {
     $record['status'] = 'failed'
@@ -83,4 +115,4 @@ try {
     $record['finishedAtUtc'] = [DateTime]::UtcNow.ToString('o')
     $record | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $output 'qa.json') -Encoding utf8
 }
-Write-Output "Native $Suite components: 3 tests passed at $dimensions; actual capture dimensions verified."
+Write-Output "Native $Suite components: $ExpectedTests tests passed at $dimensions; actual capture dimensions verified."

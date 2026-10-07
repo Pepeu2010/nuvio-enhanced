@@ -1,0 +1,12 @@
+{
+  "verifiedAtUtc": "2026-10-07T20:23:00.9051828Z",
+  "sourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0",
+  "cleanBuild": "telumia-profile-studio-release-tv",
+  "sourceCleanBeforeAndAfter": true,
+  "appSha256": "19f6c7f07dfdc8f5d8e902169d5346ed20581f8171ec53e9ecc03574c6954f09",
+  "testApkSha256": "e31622a728021acf5351ed54f55f1fd675134ad1261d47f2819029f7d801928f",
+  "nativeAppAndTestPackagesByteIdentical": true,
+  "nativeEvidence": "telumia-profile-studio-tv-native.json",
+  "uiEvidence": "telumia-profile-studio-tv-ui-qa.json",
+  "scope": "Bind existing native QA to the clean committed build by byte-identical app and test APK hashes. No new physical-device or authenticated-account proof."
+}

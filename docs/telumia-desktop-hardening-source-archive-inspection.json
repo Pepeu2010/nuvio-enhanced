@@ -1,0 +1,11 @@
+{
+  "sourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d",
+  "target": "desktop",
+  "file": "Desktop-source-0a3b34-final.zip",
+  "sha256": "2d9a4ce75f54b1319897f269cad2e50968d2b25baa5c0d20a84e652ea3b61dba",
+  "lfsObjects": 142,
+  "lfsBytes": 293336120,
+  "expandedPointers": 0,
+  "unresolvedLfsPointers": 0,
+  "scope": "Source bytes and LFS hashes; no portability or playback QA"
+}

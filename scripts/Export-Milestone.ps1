@@ -27,7 +27,7 @@ $results = foreach ($target in @('desktop','tv')) {
         }
     }
     [ordered]@{target=$target;currentSourceCommit=(git -C (Join-Path $workspace "repos/$target") rev-parse HEAD).Trim();
-        attempts=@($runs | ForEach-Object { [ordered]@{label=$_.label;status=$_.status;exitCode=$_.exitCode;startedAtUtc=$_.startedAtUtc;finishedAtUtc=$_.finishedAtUtc;durationSeconds=$_.durationSeconds;tasks=$_.tasks;gradleArgs=$_.gradleArgs} });
+        attempts=@($runs | ForEach-Object { [ordered]@{label=$_.label;status=$_.status;exitCode=$_.exitCode;startedAtUtc=$_.startedAtUtc;finishedAtUtc=$_.finishedAtUtc;durationSeconds=$_.durationSeconds;sourceCommit=$_.upstreamCommit;sourceChangesBefore=$_.sourceChangesBefore;sourceChangesAfter=$_.sourceChangesAfter;tasks=$_.tasks;gradleArgs=$_.gradleArgs;junitSummary=$_.junitSummary} });
         targetedTestResults=$tests}
 }
 [ordered]@{exportedAtUtc=[DateTime]::UtcNow.ToString('o');milestone=$LabelPrefix;

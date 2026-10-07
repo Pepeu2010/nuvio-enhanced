@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-07T00:41:25.5089331Z",
+  "recordedAtUtc": "2026-10-07T20:23:01.0471106Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "f2775da4f3722db19e0d1e2c619ff8154b87c548",
+      "commit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d",
       "checkout": "repos/desktop",
-      "milestone": "Desktop local Profile Studio avatars: import/crop/64 licensed assets, account/profile isolation; 138 selected tests, MSI, eight reviewed captures and actual decoder on packaged runtime modules. OS import gestures, TV and full Profile Studio remain pending. Not in public 0.2.0-alpha.1.",
-      "packageSourceCommit": "f2775da4f3722db19e0d1e2c619ff8154b87c548",
+      "milestone": "Local avatar editor and profile mutation/GIF resource hardening; 149 selected tests and clean-source MSI. Eight avatar editor captures and earlier packaged decoder runtime proof remain scoped to f2775da. Full Profile Studio remains incomplete; not in public 0.2.0-alpha.1.",
+      "packageSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d",
       "publishedRelease": "v0.2.0-alpha.1",
       "publishedSourceCommit": "fdeaddfe3d0dc026ecd3d632210ce4dd212783ad"
     },
@@ -16,10 +16,10 @@
       "repository": "Pepeu2010/telumia-tv",
       "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "9ed0dc8b06de1db1305d066077e169d37ca8aeed",
+      "commit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0",
       "checkout": "repos/tv",
-      "milestone": "TV avatar raster foundation: 100 selected unit tests, five APKs and three native Android decoder/crop/EXIF/bounds tests. Profile Studio UI, persistence and library integration remain pending. Not in public 0.2.0-alpha.1.",
-      "packageSourceCommit": "9ed0dc8b06de1db1305d066077e169d37ca8aeed",
+      "milestone": "TV integrated local avatar editor; 64 licensed assets, scoped persistence and four PNG variants. 111 selected tests and five clean-source APKs; byte-identical app/test hashes bind four raster and 15 UI tests with 12 reviewed captures. Full Profile Studio remains incomplete; not in public 0.2.0-alpha.1.",
+      "packageSourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0",
       "publishedRelease": "v0.2.0-alpha.1",
       "publishedSourceCommit": "0355dfe4366ebce3067718eaf9dfb3139dd8f243"
     }

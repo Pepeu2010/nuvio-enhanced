@@ -44,6 +44,7 @@ $record = [ordered]@{
     tasks = $Tasks
     gradleArgs = $GradleArgs
     trackedChangesBefore = $before
+    sourceChangesBefore = @(git -C $checkout status --porcelain)
     status = 'running'
 }
 $recordPath = Join-Path $outputDir 'result.json'
@@ -73,9 +74,12 @@ try {
     $record['durationSeconds'] = [Math]::Round($timer.Elapsed.TotalSeconds, 2)
     $record['exitCode'] = if ($null -eq $buildExit) { -1 } else { $buildExit }
     $record['trackedChangesAfter'] = @(git -C $checkout status --porcelain --untracked-files=no)
+    $record['sourceChangesAfter'] = @(git -C $checkout status --porcelain)
     $record['status'] = if ($buildExit -eq 0) { 'passed' } else { 'failed' }
     $testTask = if ($Target -eq 'desktop') { ':composeApp:desktopTest' } else { ':app:testFullDebugUnitTest' }
-    if ($buildExit -eq 0 -and $Tasks -contains $testTask) {
+    $testTaskPattern = '^> Task ' + [regex]::Escape($testTask) + '(?:$| (?:FAILED|UP-TO-DATE|FROM-CACHE)$)'
+    $testTaskReported = Select-String -LiteralPath (Join-Path $outputDir 'build.log') -Pattern $testTaskPattern -Quiet
+    if ($Tasks -contains $testTask -and $testTaskReported) {
         $relativeTests = if ($Target -eq 'desktop') { 'composeApp/build/test-results/desktopTest' } else { 'app/build/test-results/testFullDebugUnitTest' }
         $snapshot = Join-Path $outputDir 'junit-snapshot'
         New-Item -ItemType Directory -Force $snapshot | Out-Null

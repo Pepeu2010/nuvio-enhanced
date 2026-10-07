@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([switch]$Install, [ValidatePattern('^[a-z0-9-]+$')][string]$Label = 'telumia-tv-avatar-raster-native')
+param([switch]$Install, [ValidatePattern('^[a-z0-9-]+$')][string]$Label = 'telumia-tv-avatar-raster-native', [ValidateRange(1,20)][int]$ExpectedTests = 3)
 $ErrorActionPreference = 'Stop'
 $workspace = Split-Path $PSScriptRoot -Parent
 $checkout = Join-Path $workspace 'repos/tv'
@@ -37,10 +37,10 @@ try {
     $log = & $adb -s $serial shell am instrument -w -r -e class $record.class "$appId.test/androidx.test.runner.AndroidJUnitRunner" 2>&1
     $log | Set-Content (Join-Path $output 'instrumentation.log') -Encoding utf8
     $text = $log -join "`n"
-    if ($text -notmatch 'OK \(3 tests\)' -or $text -match 'FAILURES!!!|INSTRUMENTATION_FAILED|Process crashed|Test run failed|INSTRUMENTATION_STATUS_CODE: -2') {
+    if ($text -notmatch "OK \($ExpectedTests tests\)" -or $text -match 'FAILURES!!!|INSTRUMENTATION_FAILED|Process crashed|Test run failed|INSTRUMENTATION_STATUS_CODE: -2') {
         throw 'Native raster tests did not pass; see the private instrumentation log.'
     }
-    $record.testsPassed=3
+    $record.testsPassed=$ExpectedTests
     $record.status='passed'
 } catch {
     $record.status='failed'
@@ -50,4 +50,4 @@ try {
     $record.finishedAtUtc=[DateTime]::UtcNow.ToString('o')
     $record | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $output 'qa.json') -Encoding utf8
 }
-Write-Output 'Three real Android raster/crop/bounds/EXIF tests passed; no UI completion claim.'
+Write-Output "$ExpectedTests real Android raster/crop/bounds/EXIF tests passed; no UI completion claim."

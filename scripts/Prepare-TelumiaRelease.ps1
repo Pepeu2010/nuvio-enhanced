@@ -10,7 +10,7 @@ $output = Join-Path $workspace "artifacts/releases/$Tag"
 $verification = Get-Content (Join-Path $workspace "docs/$LabelPrefix-results.json") -Raw | ConvertFrom-Json
 foreach ($result in $verification.results) {
     $last = $result.attempts | Sort-Object startedAtUtc | Select-Object -Last 1
-    if ($last.status -ne 'passed' -or -not $result.targetedTestResults -or
+    if ($last.status -ne 'passed' -or -not $result.targetedTestResults -or $result.targetedTestResults.tests -le 0 -or
         $result.targetedTestResults.failures -ne 0 -or $result.targetedTestResults.errors -ne 0) {
         throw "Release preparation requires passing current gates: $($result.target)"
     }
@@ -18,6 +18,11 @@ foreach ($result in $verification.results) {
     $head = (git -C $checkout rev-parse HEAD).Trim()
     if ($head -ne $result.currentSourceCommit -or @(git -C $checkout status --porcelain).Count) {
         throw "Source must be committed and match the gate record: $($result.target)"
+    }
+    if ($last.sourceCommit -ne $head -or $null -eq $last.sourceChangesBefore -or
+        $null -eq $last.sourceChangesAfter -or @($last.sourceChangesBefore).Count -ne 0 -or
+        @($last.sourceChangesAfter).Count -ne 0) {
+        throw "Release build must record the same clean committed source before and after compilation: $($result.target)"
     }
 }
 New-Item -ItemType Directory -Force -Path $output | Out-Null
@@ -52,9 +57,11 @@ foreach ($apk in $tv.artifacts) {
     Copy-Item -LiteralPath $apkPath `
         -Destination (Join-Path $output "Telumia-TV-$abi-debug.apk")
 }
+$sourceArchiveInspections = @()
 foreach ($target in @('desktop','tv')) {
-    git -C (Join-Path $workspace "repos/$target") archive --format=zip "--output=$(Join-Path $output "Telumia-$target-source.zip")" HEAD
-    if ($LASTEXITCODE -ne 0) { throw "Source archive failed: $target" }
+    $sourceCommit = (git -C (Join-Path $workspace "repos/$target") rev-parse HEAD).Trim()
+    & (Join-Path $PSScriptRoot 'Export-TelumiaSourceArchive.ps1') -Target $target -Commit $sourceCommit -OutputPath (Join-Path $output "Telumia-$target-source.zip")
+    $sourceArchiveInspections += Get-Content -LiteralPath (Join-Path $output "Telumia-$target-source.zip.inspection.json") -Raw | ConvertFrom-Json
 }
 $assets = @(Get-ChildItem -LiteralPath $output -File | Where-Object Extension -in @('.msi','.apk','.zip') | ForEach-Object {
     [ordered]@{name=$_.Name;bytes=$_.Length;sha256=(Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant()}
@@ -62,7 +69,7 @@ $assets = @(Get-ChildItem -LiteralPath $output -File | Where-Object Extension -i
 if ($assets.Count -ne 8) { throw 'Expected MSI, five APKs and two source archives.' }
 $manifest = [ordered]@{tag=$Tag;product='Telumia';preparedAtUtc=[DateTime]::UtcNow.ToString('o');
     sourceCommits=@{desktop=$pc.sourceCommit;tv=$tv.sourceCommit};
-    scope=$Scope;validationLabel=$LabelPrefix;assets=$assets}
+    scope=$Scope;validationLabel=$LabelPrefix;assets=$assets;sourceArchiveInspections=$sourceArchiveInspections}
 $manifest | ConvertTo-Json -Depth 8 | Set-Content (Join-Path $output 'release-manifest.json') -Encoding utf8
 $assets | ForEach-Object { "$($_.sha256)  $($_.name)" } | Set-Content (Join-Path $output 'SHA256SUMS.txt') -Encoding ascii
 Write-Output "Prepared 10 release assets in $output; publishing is a separate step."
