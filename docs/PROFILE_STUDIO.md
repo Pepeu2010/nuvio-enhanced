@@ -14,7 +14,7 @@ Os SVGs OpenMoji permanecem sem alterações, com manifesto de hashes, origem fi
 
 ## Limites desta entrega
 
-Fonte Desktop: `f2775da4f3722db19e0d1e2c619ff8154b87c548`, publicada no branch `main`. O conjunto final passou **138 testes, zero falhas/erros/skips**, e gerou o MSI Windows. O conjunto inclui regressões de Home, detalhes, player, timed metadata, cache e perfis. As duas primeiras tentativas registram erros corrigidos nos argumentos do `AsyncImage` e na assinatura de espera dos testes. A repetição posterior passou; o refinamento final de layout/isolamento também passou. Nenhuma release publicada contém este incremento.
+Fonte Desktop: `f2775da4f3722db19e0d1e2c619ff8154b87c548`, publicada no branch `main`. O conjunto final passou **138 testes, zero falhas/erros/skips**, e gerou o MSI Windows. O conjunto inclui regressões de Home, detalhes, player, timed metadata, cache e perfis. As duas primeiras tentativas registram erros corrigidos nos argumentos do `AsyncImage` e na assinatura de espera dos testes. A repetição posterior passou; o refinamento final de layout/isolamento também passou. O incremento foi posteriormente incluído na release 0.2.1-alpha.1.
 
 Os testes adicionados exercitam decoder, recorte real por cor, dimensões exportadas, orientação EXIF, persistência, isolamento entre contas/perfis, recriação com novo identificador, falha na troca do manifesto, seleção de biblioteca, falha no clipboard e quatro viewports do editor. O teste de componente injeta a entrada de imagem e usa persistência real em diretório temporário. Foram revisadas oito capturas: recorte e biblioteca em 1366×768, 1920×1080, 2560×1440 e 3840×2160. O painel mantém largura máxima de 1440 dp; a biblioteca possui scroll e o editor continua no scroll da tela existente. Isso não comprova a interação com o seletor de arquivos do sistema, clipboard do Windows ou drag-and-drop do Explorer.
 
@@ -32,7 +32,7 @@ Passaram **149 testes selecionados, zero falhas/erros/skips**, com MSI Windows e
 
 A leitura de GIFs agora limita respostas HTTP a 8 MiB, inclusive sem Content-Length, antes do decoder nativo. Cabeçalhos excessivos, mais de 512 quadros e imagens de mais de 4 Mi pixels são recusados. O cache de codecs mantém uma referência para cada card ativo, de modo que uma expulsão não libera o codec durante a leitura de um quadro. Os testes usam HTTP local com resposta chunked e erro 503 e um codec Skia real. Isso não conclui a política global de preload e concorrência de previews.
 
-Evidências: [tentativas e testes](telumia-profile-studio-desktop-hardening-results.json) e [inspeção do MSI](telumia-profile-studio-desktop-hardening-package-inspection.json). A assinatura incorreta de dois testes novos de GIF foi corrigida antes do conjunto final. O incremento permanece fora da release pública `0.2.0-alpha.1`.
+Evidências: [tentativas e testes](telumia-profile-studio-desktop-hardening-results.json) e [inspeção do MSI](telumia-profile-studio-desktop-hardening-package-inspection.json). A assinatura incorreta de dois testes novos de GIF foi corrigida antes do conjunto final. O incremento está na release `0.2.1-alpha.1`; a `0.2.0-alpha.1` preserva seus binários anteriores.
 
 ## Base inicial de imagens na Android TV
 
@@ -40,7 +40,7 @@ Fonte TV: `9ed0dc8b06de1db1305d066077e169d37ca8aeed`, publicada no branch `main`
 
 Passaram **100 testes unitários selecionados**, o build dos cinco APKs e **três testes nativos Android** de pixels/recorte, cabeçalho excessivo/SVG e orientação JPEG. Os testes nativos foram repetidos após o commit, com árvore limpa. Evidências: [builds e testes](telumia-profile-studio-tv-raster-results.json), [pacotes](telumia-profile-studio-tv-raster-package-inspection.json) e [decoder nativo](telumia-profile-studio-tv-raster-native.json).
 
-Naquele commit, a base não possuía editor visível, biblioteca integrada ou persistência de avatar na TV. A adaptação de memória também estava pendente. Testes com imagens sintéticas no emulador não comprovam importação pelo seletor do sistema nem desempenho em aparelho físico. Nenhuma release pública contém este incremento.
+Naquele commit, a base não possuía editor visível, biblioteca integrada ou persistência de avatar na TV. A adaptação de memória também estava pendente. Testes com imagens sintéticas no emulador não comprovam importação pelo seletor do sistema nem desempenho em aparelho físico. O incremento foi posteriormente incluído na release 0.2.1-alpha.1.
 
 ## Incremento posterior: editor integrado na Android TV
 
@@ -54,7 +54,7 @@ O Android reduz a imagem decodificada para até 4 Mi pixels antes de trabalhar n
 
 Passaram **111 testes unitários selecionados**, a compilação dos cinco APKs e do APK de testes, **quatro testes nativos raster** e **cinco testes de interface em cada resolução**: 1280×720, 1920×1080 e 3840×2160. Foram revisadas 12 capturas de biblioteca, recorte, galeria local e diálogo integrado. As tentativas anteriores, inclusive a falha de visibilidade da ação Salvar e a falha de compilação do teste de recorte, permanecem registradas. O teste final exige o botão de importação inteiro após foco; a rolagem interna aninhada foi removida do diálogo real.
 
-O conjunto nativo foi executado antes do commit. O build final sobre a árvore limpa passou e produziu APKs de aplicativo e testes byte a byte idênticos aos testados; os SHA-256 vinculam a QA ao commit publicado sem repetir os mesmos testes. [Vinculação das evidências](telumia-profile-studio-tv-build-binding.json). As capturas ainda mostram detalhes a refinar, como o nome da foto dentro do tile circular e o fallback do avatar local. Conteúdo sem foco pode ficar parcialmente visível em áreas roláveis. Isso não encerra o redesenho de perfis nem comprova desempenho físico, sincronização com conta real ou interação com todos os seletores do sistema. A release pública `0.2.0-alpha.1` não contém esse incremento.
+O conjunto nativo foi executado antes do commit. O build final sobre a árvore limpa passou e produziu APKs de aplicativo e testes byte a byte idênticos aos testados; os SHA-256 vinculam a QA ao commit publicado sem repetir os mesmos testes. [Vinculação das evidências](telumia-profile-studio-tv-build-binding.json). As capturas ainda mostram detalhes a refinar, como o nome da foto dentro do tile circular e o fallback do avatar local. Conteúdo sem foco pode ficar parcialmente visível em áreas roláveis. Isso não encerra o redesenho de perfis nem comprova desempenho físico, sincronização com conta real ou interação com todos os seletores do sistema. O incremento está na release `0.2.1-alpha.1`; a `0.2.0-alpha.1` preserva seus binários anteriores.
 
 Evidências: [builds e tentativas](telumia-profile-studio-tv-results.json), [identidade e conteúdo dos APKs](telumia-profile-studio-tv-package-inspection.json), [assets licenciados](telumia-profile-studio-tv-assets.json), [decoder Android](telumia-profile-studio-tv-native.json) e [capturas, testes e limites visuais](telumia-profile-studio-tv-ui-qa.json).
 

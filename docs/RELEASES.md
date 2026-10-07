@@ -1,5 +1,15 @@
 # Releases da Telumia
 
+## v0.2.1-alpha.1 — Home, cache e editores locais de avatar
+
+A [pré-release](https://github.com/Pepeu2010/telumia/releases/tag/v0.2.1-alpha.1) está publicada nos três repositórios. Inclui MSI Windows x64, APK Android TV universal e variantes ARM64/ARM32/x86/x86_64, fontes correspondentes, manifesto e SHA256SUMS. Foram verificados os 22 assets remotos por tamanho e digest SHA-256. [Registro da publicação](telumia-profile-studio-release-verification.json).
+
+Distribui Desktop `0a3b34aff26f032caf7b5b7b5296c840cdc70e5d` e TV `bb3faa3877a33db46eea3e08ac65ff1e21e291a0`, com 149 e 111 testes selecionados, sem falhas/erros/skips, e builds sobre árvores limpas. O incremento inclui Home/detalhes cinematográficos, base de timed metadata, orçamento de cache Auto/Manual e editores de avatar nos fluxos existentes. Os APKs continuam Full Debug de desenvolvimento para TV.
+
+O manifesto e as fontes foram conferidos antes da publicação. O ZIP Desktop contém 142 objetos LFS com hashes/tamanhos verificados, sem ponteiros pendentes; o ZIP TV foi verificado sem objetos LFS. Os APKs de aplicativo e testes conferem byte a byte com os quatro testes raster Android e 15 testes de interface em três resoluções, com 12 capturas revisadas. [Gates](telumia-profile-studio-release-results.json), [pacotes](telumia-profile-studio-release-package-inspection.json) e [alcance do Profile Studio](PROFILE_STUDIO.md).
+
+A release não encerra o produto: previews de vídeo, thumbnails/filmstrip, Scene Info, Source Intelligence, Live TV/EPG e o Profile Studio completo continuam pendentes. O redesenho posterior da seleção de perfis não está nestes binários. As suítes selecionadas não comprovam todos os fluxos de conta/reprodução ou desempenho em TV física. Não há cliente específico de celular nem instaladores Linux/macOS nesta entrega.
+
 ## v0.2.0-alpha.1 — marca própria e catálogos brasileiros
 
 A [pré-release Telumia](https://github.com/Pepeu2010/telumia/releases/tag/v0.2.0-alpha.1) inclui o MSI Windows, APK Android TV universal e quatro variantes por arquitetura, fontes correspondentes, manifesto e checksums. Foram conferidos 22 assets entre o repositório central e os dois clientes, por tamanho e SHA-256. [Registro da publicação](telumia-release-verification.json).
