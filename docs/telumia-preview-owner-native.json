@@ -1,0 +1,39 @@
+{
+  "exportedAtUtc": "2026-10-08T02:39:55.4575925Z",
+  "scope": "Actual Media3 local audio preparation and Compose ownership/disposal; not remote video, HDR or physical-device performance",
+  "testsPassed": 8,
+  "results": [
+    {
+      "startedAtUtc": "2026-10-08T02:33:44.0106395Z",
+      "sourceCommit": "e593acdd8ab0b906a9cf99aff51c751bf3cea5fb",
+      "buildLabel": "telumia-preview-owner-tv",
+      "serial": "emulator-5570",
+      "avd": "Telumia_API24_01a10441",
+      "androidApi": "24",
+      "apkSha256": "7ddd3c50b5ea8e7281e9702f024efe390092ea63fecfb553582d98030f34d7f5",
+      "testApkSha256": "bed4ad583507731526bb2190a4c7d4990a8dd62e213e1244f8480b5258f2531c",
+      "sourceChangesBefore": [],
+      "scope": "Real Media3 prepare/ownership using generated local WAV, actual Compose surface disposal, decoder handoff, silent start and selection bounds. No remote-trailer/video/HDR/device-performance/full-player proof.",
+      "status": "passed",
+      "testsPassed": 4,
+      "finishedAtUtc": "2026-10-08T02:34:40.0104282Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-08T02:38:36.9052408Z",
+      "sourceCommit": "e593acdd8ab0b906a9cf99aff51c751bf3cea5fb",
+      "buildLabel": "telumia-preview-owner-tv",
+      "serial": "emulator-5568",
+      "avd": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "apkSha256": "7ddd3c50b5ea8e7281e9702f024efe390092ea63fecfb553582d98030f34d7f5",
+      "testApkSha256": "bed4ad583507731526bb2190a4c7d4990a8dd62e213e1244f8480b5258f2531c",
+      "sourceChangesBefore": [],
+      "scope": "Real Media3 prepare/ownership using generated local WAV, actual Compose surface disposal, decoder handoff, silent start and selection bounds. No remote-trailer/video/HDR/device-performance/full-player proof.",
+      "status": "passed",
+      "testsPassed": 4,
+      "finishedAtUtc": "2026-10-08T02:38:57.4815677Z",
+      "sourceChangesAfter": []
+    }
+  ]
+}

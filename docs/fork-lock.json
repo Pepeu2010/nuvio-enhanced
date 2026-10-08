@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-08T01:41:58.1971984Z",
+  "recordedAtUtc": "2026-10-08T02:39:55.4772646Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "fa4fba2d7a047ea86c736e7d30e86e123e2988ae",
+      "commit": "57385d2e92d34ff39527e38566534939d86c87ad",
       "checkout": "repos/desktop",
-      "milestone": "Real static display weights, existing native player font export, cache occupancy/future-schema preservation and free-space-reserve fix. 168 selected tests, zero failures/errors/skips, clean-source preserved MSI and eight reviewed local component/Chromium captures. Post-release; whole product incomplete.",
-      "packageSourceCommit": "fa4fba2d7a047ea86c736e7d30e86e123e2988ae",
+      "milestone": "Existing hover popup ownership/cancellation/timeout and profile motion. 174 selected tests, no failures/errors/skips, clean-source preserved MSI. Windows embedded trailer playback remains pending; controlled resolver fixture does not prove playback. Post-release; whole product incomplete.",
+      "packageSourceCommit": "57385d2e92d34ff39527e38566534939d86c87ad",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d"
     },
@@ -16,10 +16,10 @@
       "repository": "Pepeu2010/telumia-tv",
       "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "ad4a9008841beca6c83b2a4a74c85e075ad34f29",
+      "commit": "e593acdd8ab0b906a9cf99aff51c751bf3cea5fb",
       "checkout": "repos/tv",
-      "milestone": "Static native display weights and bounded NIO cache occupancy/future-schema/free-space-reserve fix. 120 selected tests, five preserved APKs plus test APK, 16 native cache/font tests on APIs24/36 and 15 selector tests across720p/1080p/4K with six reviewed captures. Post-release; whole product incomplete.",
-      "packageSourceCommit": "ad4a9008841beca6c83b2a4a74c85e075ad34f29",
+      "milestone": "Existing lookup cancellation/deadline/bounded caches and exclusive actual Media3 preview pool, conservative preload, profile motion and scroll retry. 137 selected tests and five preserved APKs; eight native tests on APIs24/36 using local WAV and actual Compose disposal. Post-release; remote video and physical performance unverified; whole product incomplete.",
+      "packageSourceCommit": "e593acdd8ab0b906a9cf99aff51c751bf3cea5fb",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0"
     }

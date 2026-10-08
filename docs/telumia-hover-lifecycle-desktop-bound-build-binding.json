@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-08T01:58:21.8304917Z",
+  "label": "telumia-hover-lifecycle-desktop-bound",
+  "target": "desktop",
+  "sourceCommit": "57385d2e92d34ff39527e38566534939d86c87ad",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 174,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 41,
+    "attempt": "telumia-hover-lifecycle-desktop-bound"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215401240,
+      "sha256": "92c7c62939a4f729f59a5ed47cd259b50ce51255bdb60f71f06b50fe0a0a206b",
+      "path": "artifacts/telumia-hover-lifecycle-desktop-bound/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}

@@ -27,6 +27,6 @@ As capturas usam metadata de teste para reproduzir geometria e interação. Não
 
 ## Trabalho ainda necessário
 
-A Home completa ainda requer previews exclusivos com cancelamento/preload, cards expandidos, seções reorganizáveis, Continue Assistindo enriquecido e as demais integrações previstas. Os testes deste incremento não cobrem a Home completa com conteúdo real. A instrumentação não substitui medição em hardware físico de 2 GB. A aparência de todas as outras superfícies ainda precisa ser reconstruída conforme a [meta integral](GOAL_OBJECTIVE_2026-10-05.md).
+A Home completa ainda requer trailers embutidos Windows, integração de previews com capacidades do aparelho, seções reorganizáveis, Continue Assistindo enriquecido e as demais integrações previstas. O incremento posterior de [ciclo de vida dos previews](PREVIEWS.md) acrescenta exclusividade/cancelamento no PC e no pool Media3, com gates próprios. Os testes não cobrem a Home completa com conteúdo real. A instrumentação não substitui medição em hardware físico de 2 GB. A aparência de todas as outras superfícies ainda precisa ser reconstruída conforme a [meta integral](GOAL_OBJECTIVE_2026-10-05.md).
 
 O incremento está no código dos clientes. Os downloads públicos da `0.2.0-alpha.1` permanecem fixos nos commits registrados no manifesto daquela release; não incluem esta entrega.

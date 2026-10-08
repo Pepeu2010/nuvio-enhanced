@@ -46,6 +46,8 @@ A implementação integral continua em execução. O redesign completo de Home/d
 
 A [meta integral vigente](docs/GOAL_OBJECTIVE_2026-10-05.md) exige transformar profundamente todas as superfícies e a experiência de uso, preservando a infraestrutura funcional. Troca de marca, temas ou releases intermediárias não representam a conclusão desse objetivo.
 
+O ciclo de hover dos cards do PC recebeu exclusividade, cancelamento, timeout e movimento por perfil: 174 testes selecionados e MSI passaram. A TV acrescenta consultas limitadas e vaga exclusiva no Media3, com preload conservador: 137 testes, cinco APKs e oito testes nativos de áudio local/ownership em Android 7 e 16 passaram. Trailers embutidos Windows e vídeo remoto ainda precisam de implementação/validação. Estes incrementos aguardam nova release. [Entrega e limites dos previews](docs/PREVIEWS.md).
+
 ## Código e desenvolvimento
 
 | Repositório | Plataforma |

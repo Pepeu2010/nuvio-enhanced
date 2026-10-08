@@ -56,6 +56,8 @@ Estado mais recente: a release `v0.2.1-alpha.1` inclui marca própria, busca Bra
 
 ## Gates e entregas
 
+- Continuação 3: ownership/cancelamento/timeout dos cards Desktop e consultas TV, pool Media3 exclusivo, preload conservador e movimento por perfil. 174 testes/MSI Desktop, 137 testes/cinco APKs TV e oito testes nativos de áudio local/ownership em APIs 24/36. Trailers embutidos Windows, vídeo remoto e performance física continuam pendentes. [Previews](PREVIEWS.md).
+
 | Milestone | Entrega concreta | Gate |
 |---|---|---|
 | 0-A | Checkouts, source lock, inventário real, cinco documentos | Todos os commits identificados; ausência de edits de aplicação no baseline |
