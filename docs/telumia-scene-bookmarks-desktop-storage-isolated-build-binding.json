@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-08T21:30:48.0636360Z",
+  "label": "telumia-scene-bookmarks-desktop-storage-isolated",
+  "target": "desktop",
+  "sourceCommit": "eee37594736194383c26e946b1e7e29511d01aea",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 184,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 42,
+    "attempt": "telumia-scene-bookmarks-desktop-storage-isolated"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215429912,
+      "sha256": "320b3de7804f68f7d691d3504f0c781c11806050620c7bb2d1e508bab5fd6c74",
+      "path": "artifacts/telumia-scene-bookmarks-desktop-storage-isolated/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}

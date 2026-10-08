@@ -1,0 +1,221 @@
+{
+  "recordedAtUtc": "2026-10-08T21:23:10.1341968Z",
+  "sourceCommit": "355bcb6eb0b40ed70953f49f214e95aebc169107",
+  "buildLabel": "telumia-scene-bookmarks-tv-ime-window",
+  "totalNativeExecutions": 16,
+  "scope": "Four controlled real-dialog/private-file cases per Android version/viewport. Focus requests and text/IME Done use Compose semantics; OK and Back use native injected keys. Persistence, selected seek callback and cut confirmation verified. No full-player navigation, native video seek, account/backend or physical-TV performance proof.",
+  "captureReview": "Eight captures reviewed for panel contrast, visible text, focus and viewport fit; English device locale with Portuguese user labels. Whole-player/menu and Portuguese-locale visual gates remain separate.",
+  "gates": [
+    {
+      "startedAtUtc": "2026-10-08T21:15:59.5575393Z",
+      "sourceCommit": "355bcb6eb0b40ed70953f49f214e95aebc169107",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "8de85632f07abfe269f537d303a7b670e2f39c13eef2e760ff278d75b27f6262",
+      "testApkSha256": "b83ff0973117b338ca34762e417a291e2730e884e0401320b67b9a2f219b9740",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-scene-bookmarks-tv-ime-window",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "suite": "scene-bookmarks",
+      "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1280x720"
+      ],
+      "capturedPixels": "1280x720",
+      "confirmationCapturedPixels": "1280x720",
+      "testsPassed": 4,
+      "finishedAtUtc": "2026-10-08T21:16:33.0528376Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-08T21:16:49.0359625Z",
+      "sourceCommit": "355bcb6eb0b40ed70953f49f214e95aebc169107",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "8de85632f07abfe269f537d303a7b670e2f39c13eef2e760ff278d75b27f6262",
+      "testApkSha256": "b83ff0973117b338ca34762e417a291e2730e884e0401320b67b9a2f219b9740",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-scene-bookmarks-tv-ime-window",
+      "requestedPixels": "1920x1080",
+      "density": 320,
+      "suite": "scene-bookmarks",
+      "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1920x1080"
+      ],
+      "capturedPixels": "1920x1080",
+      "confirmationCapturedPixels": "1920x1080",
+      "testsPassed": 4,
+      "finishedAtUtc": "2026-10-08T21:17:19.7535761Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-08T21:17:20.7669429Z",
+      "sourceCommit": "355bcb6eb0b40ed70953f49f214e95aebc169107",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "8de85632f07abfe269f537d303a7b670e2f39c13eef2e760ff278d75b27f6262",
+      "testApkSha256": "b83ff0973117b338ca34762e417a291e2730e884e0401320b67b9a2f219b9740",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-scene-bookmarks-tv-ime-window",
+      "requestedPixels": "3840x2160",
+      "density": 640,
+      "suite": "scene-bookmarks",
+      "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160"
+      ],
+      "capturedPixels": "3840x2160",
+      "confirmationCapturedPixels": "3840x2160",
+      "testsPassed": 4,
+      "finishedAtUtc": "2026-10-08T21:17:54.0841057Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-08T21:21:38.9991332Z",
+      "sourceCommit": "355bcb6eb0b40ed70953f49f214e95aebc169107",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "8de85632f07abfe269f537d303a7b670e2f39c13eef2e760ff278d75b27f6262",
+      "testApkSha256": "b83ff0973117b338ca34762e417a291e2730e884e0401320b67b9a2f219b9740",
+      "emulator": "Telumia_API24_01a10441",
+      "androidApi": "24",
+      "buildLabel": "telumia-scene-bookmarks-tv-ime-window",
+      "requestedPixels": "1920x1080",
+      "density": 320,
+      "suite": "scene-bookmarks",
+      "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 1920x1080"
+      ],
+      "capturedPixels": "1920x1080",
+      "confirmationCapturedPixels": "1920x1080",
+      "testsPassed": 4,
+      "finishedAtUtc": "2026-10-08T21:21:54.1575743Z",
+      "sourceChangesAfter": []
+    }
+  ],
+  "previousFailedNativeAttempts": [
+    {
+      "startedAtUtc": "2026-10-08T20:26:16.2922197Z",
+      "sourceCommit": "fbfa7a10180180f5780d2b488f4a7da09262b7af",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "e4065dcc77d4c9cc567ca28ee38f327a5f65a8ccd25fa62637a91c3a67bcaa0b",
+      "testApkSha256": "556bb6baff2dc7f01185d2559e7a18e43806e6063ee69cd5bed1c1bb2f8dab0f",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-scene-bookmarks-tv-editions",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "suite": "scene-bookmarks",
+      "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+      "status": "failed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1280x720"
+      ],
+      "failure": "Native UI instrumentation did not pass all 4 tests. See the local instrumentation log.",
+      "finishedAtUtc": "2026-10-08T20:26:50.9899425Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-08T20:45:38.8584237Z",
+      "sourceCommit": "d700ea16a5e2cabadea1047cbbd26d0f9962fa51",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "cb63cbfec5d4ced2ad459e1a9d98560d6d5858044fe448454bb76a9acf87c6fe",
+      "testApkSha256": "b869ae4cca129de102c2363e7fdbbaa93d4cc88c9c0fa3cb10227fad4a5bdde0",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-scene-bookmarks-tv-ime",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "suite": "scene-bookmarks",
+      "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+      "status": "failed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1280x720"
+      ],
+      "failure": "Native UI instrumentation did not pass all 4 tests. See the local instrumentation log.",
+      "finishedAtUtc": "2026-10-08T20:46:04.9070447Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-08T21:08:44.9424246Z",
+      "sourceCommit": "5836d017517a50a02c5306200908b9c43d103933",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "8de85632f07abfe269f537d303a7b670e2f39c13eef2e760ff278d75b27f6262",
+      "testApkSha256": "4e2e3f219a2b7a66ef776172accc0dd7c1fc6e4eed77ce919c7092bdffa86546",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-scene-bookmarks-tv-contrast",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "suite": "scene-bookmarks",
+      "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+      "status": "failed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1280x720"
+      ],
+      "failure": "Native UI instrumentation did not pass all 4 tests. See the local instrumentation log.",
+      "finishedAtUtc": "2026-10-08T21:09:20.2147088Z",
+      "sourceChangesAfter": []
+    }
+  ],
+  "captures": [
+    {
+      "path": "docs/evidence/telumia-scene-bookmarks/telumia-scene-bookmarks-native-ime-window-api24-1080-scene-bookmarks-confirm.png",
+      "bytes": 83373,
+      "sha256": "1e62d3a6027b41ed779b199649380ea7751e6df9944156f12a83b13b013b5d56"
+    },
+    {
+      "path": "docs/evidence/telumia-scene-bookmarks/telumia-scene-bookmarks-native-ime-window-api24-1080-scene-bookmarks.png",
+      "bytes": 63321,
+      "sha256": "521aae04afd318bd9ab2b6d934bb2f0ed5b3457d0b5fc08cddab4fc582e121c8"
+    },
+    {
+      "path": "docs/evidence/telumia-scene-bookmarks/telumia-scene-bookmarks-native-ime-window-api36-1080-scene-bookmarks-confirm.png",
+      "bytes": 83439,
+      "sha256": "b419c9fade615f622d30187810c6547cf353cf5c5f5d94f00354fbfc7e574ffc"
+    },
+    {
+      "path": "docs/evidence/telumia-scene-bookmarks/telumia-scene-bookmarks-native-ime-window-api36-1080-scene-bookmarks.png",
+      "bytes": 65647,
+      "sha256": "429cc7e582568ebd9ca0535d3b9b1361d47afb26f5a8bbecfd07221a8360a2d8"
+    },
+    {
+      "path": "docs/evidence/telumia-scene-bookmarks/telumia-scene-bookmarks-native-ime-window-api36-2160-scene-bookmarks-confirm.png",
+      "bytes": 184544,
+      "sha256": "a2803bacfb8074d64cafbaef593436363622be86e01aa452dfa88b5924ca75be"
+    },
+    {
+      "path": "docs/evidence/telumia-scene-bookmarks/telumia-scene-bookmarks-native-ime-window-api36-2160-scene-bookmarks.png",
+      "bytes": 145419,
+      "sha256": "7096c2a35f02e0ce97c7be1f897d3dd07706f4591b0657ea110751aaf7f56720"
+    },
+    {
+      "path": "docs/evidence/telumia-scene-bookmarks/telumia-scene-bookmarks-native-ime-window-api36-720-scene-bookmarks-confirm.png",
+      "bytes": 93387,
+      "sha256": "34e6ed60bf5bdfd08a96d6e1993c4eeca5ff50dca538ac387bffcaefaa2519fb"
+    },
+    {
+      "path": "docs/evidence/telumia-scene-bookmarks/telumia-scene-bookmarks-native-ime-window-api36-720-scene-bookmarks.png",
+      "bytes": 66547,
+      "sha256": "8b3f44c81ec276ab9bfbc3a0a8a8b10aa2102b8349c18938bc1f939b6d53999e"
+    }
+  ]
+}

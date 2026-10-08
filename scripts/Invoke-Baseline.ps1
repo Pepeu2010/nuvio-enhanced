@@ -6,6 +6,7 @@ param(
     [string]$JavaHome,
     [int]$HeapMiB = 4096,
     [int]$KotlinHeapMiB = 6144,
+    [switch]$IsolateDesktopData,
     [string]$Label = 'baseline'
 )
 $ErrorActionPreference = 'Stop'
@@ -47,11 +48,24 @@ $record = [ordered]@{
     sourceChangesBefore = @(git -C $checkout status --porcelain)
     status = 'running'
 }
+if ($IsolateDesktopData) {
+    if ($Target -ne 'desktop' -or $Label -notmatch '^[a-z0-9-]+$') { throw 'Desktop isolation requires a desktop build and a safe, unique label.' }
+    $isolatedData = Join-Path $workspace ".tooling/test-appdata/$Label"
+    if (Test-Path -LiteralPath $isolatedData) { throw 'Choose a new label for fresh isolated desktop test data.' }
+    New-Item -ItemType Directory -Path $isolatedData | Out-Null
+    $priorAppData = $env:APPDATA
+    $priorIsolationFlag = $env:NUVIO_ENHANCED_ISOLATED_THEME_TEST
+    $record['testDataIsolation'] = 'Fresh owned APPDATA and isolated theme/profile test flag; installed account data is not used.'
+}
 $recordPath = Join-Path $outputDir 'result.json'
 $record | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $recordPath -Encoding utf8
 $timer = [Diagnostics.Stopwatch]::StartNew()
 Push-Location $checkout
 try {
+    if ($IsolateDesktopData) {
+        $env:APPDATA = $isolatedData
+        $env:NUVIO_ENHANCED_ISOLATED_THEME_TEST = '1'
+    }
     $logStream = [IO.StreamWriter]::new((Join-Path $outputDir 'build.log'), $false, [Text.UTF8Encoding]::new($false))
     try {
         & .\gradlew.bat @Tasks @GradleArgs --continue --no-daemon --max-workers=1 "-Dorg.gradle.jvmargs=-Xmx${HeapMiB}m -XX:MaxMetaspaceSize=768m -Dfile.encoding=UTF-8" "-Pkotlin.daemon.jvmargs=-Xmx${KotlinHeapMiB}m" 2>&1 |
@@ -69,6 +83,10 @@ try {
     }
 } finally {
     Pop-Location
+    if ($IsolateDesktopData) {
+        $env:APPDATA = $priorAppData
+        $env:NUVIO_ENHANCED_ISOLATED_THEME_TEST = $priorIsolationFlag
+    }
     $timer.Stop()
     $record['finishedAtUtc'] = [DateTime]::UtcNow.ToString('o')
     $record['durationSeconds'] = [Math]::Round($timer.Elapsed.TotalSeconds, 2)

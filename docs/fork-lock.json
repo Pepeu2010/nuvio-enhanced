@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-08T02:39:55.4772646Z",
+  "recordedAtUtc": "2026-10-08T21:27:19.0703372Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "57385d2e92d34ff39527e38566534939d86c87ad",
+      "commit": "eee37594736194383c26e946b1e7e29511d01aea",
       "checkout": "repos/desktop",
-      "milestone": "Existing hover popup ownership/cancellation/timeout and profile motion. 174 selected tests, no failures/errors/skips, clean-source preserved MSI. Windows embedded trailer playback remains pending; controlled resolver fixture does not prove playback. Post-release; whole product incomplete.",
-      "packageSourceCommit": "57385d2e92d34ff39527e38566534939d86c87ad",
+      "milestone": "Prepared durable scene bookmark storage on desktop, reusing existing profile ownership and timed metadata contracts. 184 selected tests including ten real storage tests, clean-source preserved MSI. No bookmark UI/native Windows command integration yet. Existing hover gates remain; Windows embedded trailer playback pending. Post-release; whole product incomplete.",
+      "packageSourceCommit": "eee37594736194383c26e946b1e7e29511d01aea",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d"
     },
@@ -16,10 +16,10 @@
       "repository": "Pepeu2010/telumia-tv",
       "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "e593acdd8ab0b906a9cf99aff51c751bf3cea5fb",
+      "commit": "355bcb6eb0b40ed70953f49f214e95aebc169107",
       "checkout": "repos/tv",
-      "milestone": "Existing lookup cancellation/deadline/bounded caches and exclusive actual Media3 preview pool, conservative preload, profile motion and scroll retry. 137 selected tests and five preserved APKs; eight native tests on APIs24/36 using local WAV and actual Compose disposal. Post-release; remote video and physical performance unverified; whole product incomplete.",
-      "packageSourceCommit": "e593acdd8ab0b906a9cf99aff51c751bf3cea5fb",
+      "milestone": "Durable scene bookmarks integrated into existing TV player and timed timeline, isolated by account/profile/episode/source; explicit confirmation for another cut. 153 selected tests, five preserved APKs and 16 controlled native panel executions on APIs24/36 and 720/1080/4K. Full player navigation/native video seek/account/backend/physical performance remain separate. Post-release; whole product incomplete.",
+      "packageSourceCommit": "355bcb6eb0b40ed70953f49f214e95aebc169107",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0"
     }

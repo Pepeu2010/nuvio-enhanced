@@ -1,0 +1,56 @@
+{
+  "exportedAtUtc": "2026-10-08T20:24:20.9772054Z",
+  "label": "telumia-scene-bookmarks-tv-editions",
+  "target": "tv",
+  "sourceCommit": "fbfa7a10180180f5780d2b488f4a7da09262b7af",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 153,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 31,
+    "attempt": "telumia-scene-bookmarks-tv-editions"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "app-full-arm64-v8a-debug.apk",
+      "bytes": 98558004,
+      "sha256": "8aae0d77fd8991f1730202ed1b53c789aba6c855f1962602b52e955dae2daee8",
+      "path": "artifacts/telumia-scene-bookmarks-tv-editions/tv/package/app-full-arm64-v8a-debug.apk"
+    },
+    {
+      "file": "app-full-armeabi-v7a-debug.apk",
+      "bytes": 96456418,
+      "sha256": "c546cc8faa599a285fb8312e247f789e09d562a242258282c5f390f70273f265",
+      "path": "artifacts/telumia-scene-bookmarks-tv-editions/tv/package/app-full-armeabi-v7a-debug.apk"
+    },
+    {
+      "file": "app-full-universal-debug.apk",
+      "bytes": 185529246,
+      "sha256": "e4065dcc77d4c9cc567ca28ee38f327a5f65a8ccd25fa62637a91c3a67bcaa0b",
+      "path": "artifacts/telumia-scene-bookmarks-tv-editions/tv/package/app-full-universal-debug.apk"
+    },
+    {
+      "file": "app-full-x86_64-debug.apk",
+      "bytes": 100978523,
+      "sha256": "8b93bbd3323884beeae8b1e03ca8559275e4613c56359435bc13fb12e1a50fe0",
+      "path": "artifacts/telumia-scene-bookmarks-tv-editions/tv/package/app-full-x86_64-debug.apk"
+    },
+    {
+      "file": "app-full-x86-debug.apk",
+      "bytes": 100138658,
+      "sha256": "2d4f91d48a2768378bc86c87460182e705009d80dabdfca837a83e94f730d8e8",
+      "path": "artifacts/telumia-scene-bookmarks-tv-editions/tv/package/app-full-x86-debug.apk"
+    },
+    {
+      "file": "app-full-debug-androidTest.apk",
+      "bytes": 1457007,
+      "sha256": "556bb6baff2dc7f01185d2559e7a18e43806e6063ee69cd5bed1c1bb2f8dab0f",
+      "path": "artifacts/telumia-scene-bookmarks-tv-editions/tv/package/app-full-debug-androidTest.apk"
+    }
+  ]
+}

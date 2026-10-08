@@ -7,6 +7,12 @@ $adb = Join-Path $sdk 'platform-tools/adb.exe'
 $emulator = Join-Path $sdk 'emulator/emulator.exe'
 $serial = 'emulator-5568'
 $avdName = 'NuvioEnhanced_ATV_01a10441'
+$env:ANDROID_AVD_HOME = Join-Path $env:USERPROFILE '.android/avd'
+$registration = Join-Path $env:ANDROID_AVD_HOME "$avdName.ini"
+if (-not (Test-Path -LiteralPath $registration)) { throw 'The owned API 36 AVD registration is missing.' }
+$registeredPath = (Get-Content -LiteralPath $registration | Where-Object { $_ -match '^path=' }) -replace '^path=',''
+$expectedPath = Join-Path $workspace "artifacts/android-avd/$avdName.avd"
+if ([IO.Path]::GetFullPath($registeredPath) -ne [IO.Path]::GetFullPath($expectedPath)) { throw 'The API 36 AVD registration points outside the owned workspace fixture.' }
 $state = & $adb -s $serial get-state 2>&1
 if ($LASTEXITCODE -eq 0 -and $state -eq 'device') {
     $existingName = & $adb -s $serial emu avd name
@@ -31,6 +37,7 @@ $process = Start-Process -FilePath $emulator -ArgumentList @('-avd',$avdName,'-p
     ConvertTo-Json | Set-Content -LiteralPath (Join-Path $output 'bootstrap.json') -Encoding utf8
 $deadline = [DateTime]::UtcNow.AddMinutes(4)
 while ([DateTime]::UtcNow -lt $deadline) {
+    if ($process.HasExited) { throw 'Owned TV emulator exited before boot; inspect its bootstrap logs.' }
     $boot = & $adb -s $serial shell getprop sys.boot_completed 2>$null
     if ($LASTEXITCODE -eq 0 -and $boot.Trim() -eq '1') {
         $physical = & $adb -s $serial shell wm size

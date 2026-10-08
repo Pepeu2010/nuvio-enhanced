@@ -24,6 +24,7 @@ $process = Start-Process -FilePath $emulator -ArgumentList @('-avd',$avdName,'-p
     ConvertTo-Json | Set-Content -LiteralPath (Join-Path $output 'bootstrap.json') -Encoding utf8
 $deadline = [DateTime]::UtcNow.AddMinutes(4)
 while ([DateTime]::UtcNow -lt $deadline) {
+    if ($process.HasExited) { throw 'Owned API 24 emulator exited before boot; inspect its bootstrap logs.' }
     $boot = & $adb -s $serial shell getprop sys.boot_completed 2>$null
     if ($LASTEXITCODE -eq 0 -and $boot.Trim() -eq '1') {
         $api = (& $adb -s $serial shell getprop ro.build.version.sdk).Trim()
