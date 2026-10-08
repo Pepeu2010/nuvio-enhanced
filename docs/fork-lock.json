@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-07T21:54:54.8842924Z",
+  "recordedAtUtc": "2026-10-08T01:41:58.1971984Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "7a476cee03d1800001c8a9cabb01a0fbdb778ee5",
+      "commit": "fa4fba2d7a047ea86c736e7d30e86e123e2988ae",
       "checkout": "repos/desktop",
-      "milestone": "Adaptive cinematic profile selection, keyboard/mouse, 155 selected tests, clean-source MSI and four reviewed component captures up to 4K. Selection not yet in published 0.2.1-alpha.1; full Profile Studio incomplete.",
-      "packageSourceCommit": "7a476cee03d1800001c8a9cabb01a0fbdb778ee5",
+      "milestone": "Real static display weights, existing native player font export, cache occupancy/future-schema preservation and free-space-reserve fix. 168 selected tests, zero failures/errors/skips, clean-source preserved MSI and eight reviewed local component/Chromium captures. Post-release; whole product incomplete.",
+      "packageSourceCommit": "fa4fba2d7a047ea86c736e7d30e86e123e2988ae",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d"
     },
@@ -16,10 +16,10 @@
       "repository": "Pepeu2010/telumia-tv",
       "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "633dcdae7eedcfc26e840d5c27fc4751991b0275",
+      "commit": "ad4a9008841beca6c83b2a4a74c85e075ad34f29",
       "checkout": "repos/tv",
-      "milestone": "Adaptive TV profile selection, rounded avatars, focus restoration, backdrop overlay and image-failure fallback. 111 selected tests, five clean-source APKs and 15 native component tests with six reviewed captures. Not in published 0.2.1-alpha.1; full Profile Studio incomplete.",
-      "packageSourceCommit": "633dcdae7eedcfc26e840d5c27fc4751991b0275",
+      "milestone": "Static native display weights and bounded NIO cache occupancy/future-schema/free-space-reserve fix. 120 selected tests, five preserved APKs plus test APK, 16 native cache/font tests on APIs24/36 and 15 selector tests across720p/1080p/4K with six reviewed captures. Post-release; whole product incomplete.",
+      "packageSourceCommit": "ad4a9008841beca6c83b2a4a74c85e075ad34f29",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0"
     }

@@ -1,0 +1,36 @@
+{
+  "sourceRepository": "https://github.com/google/fonts",
+  "sourceCommit": "b31870aff700ab7a1d74fa0c6887d95beb9e0037",
+  "sourceFontSha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+  "sourceDefaultWeight": 200,
+  "license": "SIL Open Font License 1.1",
+  "tool": "fontTools 4.59.0 varLib.instancer",
+  "timestampPolicy": "Preserve source timestamps; no generation-time stamp",
+  "scope": "Static native display weights; original variable font remains available for the HTML player. No whole-interface or device-performance completion claim.",
+  "fonts": [
+    {
+      "file": "manrope_regular.ttf",
+      "weight": 400,
+      "bytes": 97436,
+      "sha256": "2602c71d1f36c96da0022706f15da7d51102d19d10510b77b5a39bf861122807"
+    },
+    {
+      "file": "manrope_medium.ttf",
+      "weight": 500,
+      "bytes": 97536,
+      "sha256": "729037f5dc28daa949c5ce8e69d945bf14faf2649db737e6eb085c120c778dd0"
+    },
+    {
+      "file": "manrope_semibold.ttf",
+      "weight": 600,
+      "bytes": 97584,
+      "sha256": "2b2ab8c077256d2849465199657f042e36588a7b88d345acd2ab4e5807ebef99"
+    },
+    {
+      "file": "manrope_bold.ttf",
+      "weight": 700,
+      "bytes": 97424,
+      "sha256": "f9696798e2d82d52207ac00c4462bc86999d371ab87401db4067feb3def4d27b"
+    }
+  ]
+}

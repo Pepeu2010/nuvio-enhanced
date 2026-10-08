@@ -1,0 +1,173 @@
+{
+  "recordedAtUtc": "2026-10-08T01:23:16.5612654Z",
+  "sourceCommit": "fa4fba2d7a047ea86c736e7d30e86e123e2988ae",
+  "sourceChanges": [],
+  "browser": {
+    "startedAtUtc": "2026-10-08T01:21:31.5906068Z",
+    "status": "passed",
+    "sourceCommit": "fa4fba2d7a047ea86c736e7d30e86e123e2988ae",
+    "sourceChanges": [],
+    "browserVersion": "154.0.8037.98",
+    "fontSha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+    "scope": "Chromium renders the real native asset map with controlled local metadata; font loading, Portuguese text, programmatic keyboard focus and viewport checks. No JNI/WebView2, playback, installed MSI or authenticated-source claim.",
+    "viewports": [
+      {
+        "size": "1366x768",
+        "report": {
+          "regularLoaded": true,
+          "boldLoaded": true,
+          "fontFamily": "\"Telumia Manrope\", Manrope, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "portugueseTitle": "Verificação local — Áudio, legendas e próximos episódios",
+          "keyboardFocus": true,
+          "viewport": {
+            "width": 1350,
+            "height": 673
+          },
+          "horizontalOverflow": false,
+          "errors": [],
+          "fontFaces": [
+            {
+              "family": "Telumia Manrope",
+              "weight": "200 800",
+              "status": "loaded"
+            }
+          ]
+        },
+        "captureSha256": "9e025eba7984c54e7a46dd1025c08674cda975e28e37cd067afbf57f067586e3"
+      },
+      {
+        "size": "1920x1080",
+        "report": {
+          "regularLoaded": true,
+          "boldLoaded": true,
+          "fontFamily": "\"Telumia Manrope\", Manrope, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "portugueseTitle": "Verificação local — Áudio, legendas e próximos episódios",
+          "keyboardFocus": true,
+          "viewport": {
+            "width": 1904,
+            "height": 985
+          },
+          "horizontalOverflow": false,
+          "errors": [],
+          "fontFaces": [
+            {
+              "family": "Telumia Manrope",
+              "weight": "200 800",
+              "status": "loaded"
+            }
+          ]
+        },
+        "captureSha256": "71cc89c5aa438e35fa5ab3f8967793f5002f36eec1d72e49512d23a4d1b60043"
+      },
+      {
+        "size": "2560x1440",
+        "report": {
+          "regularLoaded": true,
+          "boldLoaded": true,
+          "fontFamily": "\"Telumia Manrope\", Manrope, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "portugueseTitle": "Verificação local — Áudio, legendas e próximos episódios",
+          "keyboardFocus": true,
+          "viewport": {
+            "width": 2544,
+            "height": 1345
+          },
+          "horizontalOverflow": false,
+          "errors": [],
+          "fontFaces": [
+            {
+              "family": "Telumia Manrope",
+              "weight": "200 800",
+              "status": "loaded"
+            }
+          ]
+        },
+        "captureSha256": "5f49d9daa64046597a41fb051205f3a894fd1828ed05bf2cbd23555d80b6dad0"
+      },
+      {
+        "size": "3840x2160",
+        "report": {
+          "regularLoaded": true,
+          "boldLoaded": true,
+          "fontFamily": "\"Telumia Manrope\", Manrope, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "portugueseTitle": "Verificação local — Áudio, legendas e próximos episódios",
+          "keyboardFocus": true,
+          "viewport": {
+            "width": 3824,
+            "height": 2065
+          },
+          "horizontalOverflow": false,
+          "errors": [],
+          "fontFaces": [
+            {
+              "family": "Telumia Manrope",
+              "weight": "200 800",
+              "status": "loaded"
+            }
+          ]
+        },
+        "captureSha256": "05830dbdea0cf1bb723bffb50b7ac9710fd575a3db22066abda7bd386809dd9f"
+      }
+    ],
+    "finishedAtUtc": "2026-10-08T01:21:36.8235012Z"
+  },
+  "captures": [
+    {
+      "surface": "profile-selection",
+      "pixels": "1366x768",
+      "file": "docs/evidence/telumia-native-fonts/desktop-profile-selection-1366x768.png",
+      "sha256": "6238c548d51bf675f7435aadca72485125a7015125b74aa7694753f42b51729d",
+      "visuallyReviewed": true
+    },
+    {
+      "surface": "player-controls",
+      "pixels": "1366x768",
+      "file": "docs/evidence/telumia-native-fonts/desktop-player-controls-1366x768.png",
+      "sha256": "9e025eba7984c54e7a46dd1025c08674cda975e28e37cd067afbf57f067586e3",
+      "visuallyReviewed": true
+    },
+    {
+      "surface": "profile-selection",
+      "pixels": "1920x1080",
+      "file": "docs/evidence/telumia-native-fonts/desktop-profile-selection-1920x1080.png",
+      "sha256": "d072550e62cd6c30a12c059defef8fdd1aa3ff17e5b7ff9dcf93154388d2980b",
+      "visuallyReviewed": true
+    },
+    {
+      "surface": "player-controls",
+      "pixels": "1920x1080",
+      "file": "docs/evidence/telumia-native-fonts/desktop-player-controls-1920x1080.png",
+      "sha256": "71cc89c5aa438e35fa5ab3f8967793f5002f36eec1d72e49512d23a4d1b60043",
+      "visuallyReviewed": true
+    },
+    {
+      "surface": "profile-selection",
+      "pixels": "2560x1440",
+      "file": "docs/evidence/telumia-native-fonts/desktop-profile-selection-2560x1440.png",
+      "sha256": "5149a3020029303b81078624ca52b8f93219ba86b6abbffbe9c13013786f18dd",
+      "visuallyReviewed": true
+    },
+    {
+      "surface": "player-controls",
+      "pixels": "2560x1440",
+      "file": "docs/evidence/telumia-native-fonts/desktop-player-controls-2560x1440.png",
+      "sha256": "5f49d9daa64046597a41fb051205f3a894fd1828ed05bf2cbd23555d80b6dad0",
+      "visuallyReviewed": true
+    },
+    {
+      "surface": "profile-selection",
+      "pixels": "3840x2160",
+      "file": "docs/evidence/telumia-native-fonts/desktop-profile-selection-3840x2160.png",
+      "sha256": "63ee051b08b76cbce700d98aeae1ce0cbda69bc0c15203607f156a9563f5cca9",
+      "visuallyReviewed": true
+    },
+    {
+      "surface": "player-controls",
+      "pixels": "3840x2160",
+      "file": "docs/evidence/telumia-native-fonts/desktop-player-controls-3840x2160.png",
+      "sha256": "05830dbdea0cf1bb723bffb50b7ac9710fd575a3db22066abda7bd386809dd9f",
+      "visuallyReviewed": true
+    }
+  ],
+  "review": "Portuguese glyphs, long-name/title wrapping, emphasis and no observed clipping at the captured viewports. 4K distance adaptation remains pending.",
+  "scope": "Production Compose selector and exported HTML controls with local fixture data. No authenticated profile/PIN roundtrip, installed MSI, JNI commands or actual playback claim."
+}

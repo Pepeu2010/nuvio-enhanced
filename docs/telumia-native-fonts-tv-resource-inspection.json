@@ -1,0 +1,39 @@
+{
+  "exportedAtUtc": "2026-10-08T01:33:09.8368496Z",
+  "scope": "Actual built JAR/APK resource hashes; native drawing and UI checks have separate evidence. No playback or full-interface claim.",
+  "results": [
+    {
+      "target": "tv",
+      "sourceCommit": "ad4a9008841beca6c83b2a4a74c85e075ad34f29",
+      "sourceChanges": [],
+      "packageSha256": "7b76396e750c2ed6b9edc1290390bce934aa6924c39bf5453a55b018f412e63f",
+      "fonts": [
+        {
+          "file": "manrope_regular.ttf",
+          "weight": 400,
+          "bytes": 97436,
+          "sha256": "2602c71d1f36c96da0022706f15da7d51102d19d10510b77b5a39bf861122807"
+        },
+        {
+          "file": "manrope_medium.ttf",
+          "weight": 500,
+          "bytes": 97536,
+          "sha256": "729037f5dc28daa949c5ce8e69d945bf14faf2649db737e6eb085c120c778dd0"
+        },
+        {
+          "file": "manrope_semibold.ttf",
+          "weight": 600,
+          "bytes": 97584,
+          "sha256": "2b2ab8c077256d2849465199657f042e36588a7b88d345acd2ab4e5807ebef99"
+        },
+        {
+          "file": "manrope_bold.ttf",
+          "weight": 700,
+          "bytes": 97424,
+          "sha256": "f9696798e2d82d52207ac00c4462bc86999d371ab87401db4067feb3def4d27b"
+        }
+      ],
+      "sourceLicenseAndFontlogMatch": true
+    }
+  ]
+}

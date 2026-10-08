@@ -1,0 +1,21 @@
+{
+  "verifiedAtUtc": "2026-10-07T22:25:24.5095973Z",
+  "sourceCommit": "1420143543440d1cac3a4e62c0d28f729a38b6f1",
+  "cleanBuild": "telumia-cache-occupancy-bound-desktop",
+  "sourceCleanBeforeAndAfter": true,
+  "junitSummary": {
+    "tests": 163,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 37,
+    "attempt": "telumia-cache-occupancy-bound-desktop"
+  },
+  "msi": {
+    "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+    "bytes": 215216920,
+    "sha256": "d8b723b25f3df1301dba92a4813edc7905173c340786ae7db360f3f835ee0a08"
+  },
+  "published": false,
+  "scope": "Cache occupancy/future-schema increment on clean committed source; MSI preserved locally and hash checked. No installed-MSI, complete offline-session or all-cache integration claim."
+}

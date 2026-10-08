@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-08T01:21:30.7844806Z",
+  "label": "telumia-native-fonts-desktop-bound",
+  "target": "desktop",
+  "sourceCommit": "fa4fba2d7a047ea86c736e7d30e86e123e2988ae",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 168,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 39,
+    "attempt": "telumia-native-fonts-desktop-bound"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215388952,
+      "sha256": "58018a7569727f16aa03be911648d6baa795a575dbf2402b3757d9bb0c38ef3e",
+      "path": "artifacts/telumia-native-fonts-desktop-bound/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "recordedAtUtc": "2026-10-07T22:31:16.3043866Z",
+  "compiledSourceCommit": "1420143543440d1cac3a4e62c0d28f729a38b6f1",
+  "platform": "TV",
+  "mode": "AUTO",
+  "freeBytes": 0,
+  "occupiedCacheBytes": 1073741824,
+  "observedBudgetBytes": 80530636,
+  "expectedBudgetBytes": 0,
+  "defectReproduced": true,
+  "scope": "Controlled model inputs executed against the actual previously compiled application JAR; no real-device low-storage claim",
+  "verifiedAfter": {
+    "sourceCommit": "fa4fba2d7a047ea86c736e7d30e86e123e2988ae",
+    "jarSha256": "22717724a7673378d70aa39c2755270735b3873b678e0113f4dc131aadf60208",
+    "observedBudgetBytes": 0,
+    "passed": true,
+    "verifiedAtUtc": "2026-10-08T01:25:06.8021252Z"
+  }
+}

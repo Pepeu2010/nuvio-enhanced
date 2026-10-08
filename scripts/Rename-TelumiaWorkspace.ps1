@@ -25,11 +25,15 @@ for ($attempt = 1; $attempt -le $MaximumAttempts; $attempt++) {
         Start-Sleep -Seconds $RetrySeconds
         continue
     }
-    $ownedAvd = Join-Path $env:USERPROFILE '.android/avd/NuvioEnhanced_ATV_01a10441.ini'
-    if (Test-Path -LiteralPath $ownedAvd) {
-        $ini = Get-Content -LiteralPath $ownedAvd -Raw
-        if ($ini.Contains($oldRoot)) {
-            $ini.Replace($oldRoot, $newRoot) | Set-Content -LiteralPath $ownedAvd -Encoding ascii
+    foreach ($name in @('NuvioEnhanced_ATV_01a10441','NuvioEnhanced_QA_01a10441','Telumia_API24_01a10441')) {
+        foreach ($ownedAvd in @((Join-Path $env:USERPROFILE ".android/avd/$name.ini"),
+            (Join-Path $newRoot "artifacts/android-avd/$name.ini"))) {
+            if (Test-Path -LiteralPath $ownedAvd) {
+                $ini = Get-Content -LiteralPath $ownedAvd -Raw
+                if ($ini.Contains($oldRoot)) {
+                    $ini.Replace($oldRoot, $newRoot) | Set-Content -LiteralPath $ownedAvd -Encoding ascii
+                }
+            }
         }
     }
     [ordered]@{renamedAtUtc=[DateTime]::UtcNow.ToString('o');oldRoot=$oldRoot;newRoot=$newRoot;

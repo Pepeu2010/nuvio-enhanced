@@ -1,0 +1,15 @@
+# Tipografia Telumia nos clientes existentes
+
+Manrope é a família visual escolhida para o Telumia, sob SIL Open Font License 1.1. O arquivo, licença e histórico da fonte possuem commit e hashes registrados em [procedência](telumia-typography-source.json). A preferência de fonte de corpo dos perfis TV continua respeitada.
+
+O arquivo variável tem eixo `wght` de 200 a 800 e peso padrão 200. Declarar quatro pesos sobre esse mesmo recurso sem selecionar o eixo não garante quatro pesos reais em todos os renderizadores nativos. Os títulos nativos agora usam instâncias estáticas 400, 500, 600 e 700, derivadas do mesmo arquivo licenciado. A reprodução conserva timestamps da origem, usa fontTools 4.59.0 isolado e registra os bytes em [manifesto](telumia-static-manrope.json). O script não instala dependências globais.
+
+O player Windows continua no libmpv e na ponte JNI/WebView2 existentes. Seu exportador de controles inclui a fonte variável original e os créditos; a regra CSS declara o intervalo completo de pesos. HTML, JavaScript dos controles e adaptador de metadata temporal preservam seus comportamentos. O teste de exportação lê o mesmo mapa de recursos utilizado pela ponte real, sem carregar a DLL durante a verificação de arquivos.
+
+Testes de recursos verificam os hashes, a tabela de pesos e a ausência do eixo variável nas instâncias. O teste Desktop verifica também os glifos em português usando o decoder JVM. A instrumentação Android confere os recursos do APK e rasteriza Regular/Bold com `ResourcesCompat`, sem aplicar negrito sintético ao Paint.
+
+A verificação Chromium dos controles exportados possui dados locais controlados, captura de 1366×768 a 3840×2160, carregamento de fonte e validação de texto, foco programático, overflow e erros JavaScript. Ela não comprova reprodução real, instalação do MSI, comandos da ponte JNI ou renderização no WebView2 instalado. A instrumentação de seletor TV e sua revisão visual são gates separados.
+
+As mudanças posteriores à release `v0.2.1-alpha.1` ainda não integram seus binários publicados. Aplicar uma família e pesos reais não encerra o redesign do player ou da interface inteira. Cinema Mode, adaptação à distância, todas as superfícies e o QA com conteúdo real continuam no escopo aprovado.
+
+Gates desta entrega: 168 testes selecionados Desktop e 120 TV, sem falhas/erros/skips; MSI e cinco APKs mais o APK de instrumentação, preservados sobre fontes limpas. Passaram oito testes nativos de cache/fonte em cada API 24 e 36 e cinco testes do seletor em cada resolução TV. Foram revisadas oito capturas Desktop e seis TV. [Builds](telumia-native-fonts-results.json), [recursos Desktop](telumia-native-fonts-desktop-resource-inspection.json), [recursos TV](telumia-native-fonts-tv-resource-inspection.json), [QA Desktop](telumia-native-fonts-desktop-ui-qa.json), [QA TV](telumia-native-fonts-tv-ui-qa.json) e [gates API 24/36](telumia-cache-occupancy-tv-native.json). A primeira rodada Desktop registrou um teste pulado porque o sandbox de preferências não foi habilitado com o nome esperado; o conjunto inteiro foi reexecutado no sandbox e passou sem skips.

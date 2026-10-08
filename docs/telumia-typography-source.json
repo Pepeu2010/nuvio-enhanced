@@ -7,5 +7,5 @@
   "fontSha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
   "licenseSha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
   "fontlogSha256": "b6b54bcc1dbd1b18d5afd087ec0b578097644b1c9ec3e0a642d4df7808f449c2",
-  "scope": "Desktop: compiled Home/guide/details with 44 targeted tests and Windows MSI. TV: licensed display font compiled with 72 targeted unit tests, five APKs and 27 native UI tests at 720p/1080p/4K. Existing per-profile TV body font preference retained. Native Desktop HTML player still uses its previous bundled typeface."
+  "scope": "Native display uses real static 400/500/600/700 instances. Desktop: 168 selected tests, zero failures/errors/skips, MSI and four reviewed selector captures. Existing native HTML player exports the licensed variable font, validated in Chromium fixtures at four viewports. TV: 120 selected unit tests, five APKs plus test APK, actual APK hashes/native glyph weights on APIs24/36 and 15 selector tests at720p/1080p/4K with six reviewed captures. Per-profile TV body-font preference retained. Whole-interface redesign, installed MSI/WebView2 and real playback remain incomplete."
 }
