@@ -1,5 +1,5 @@
 {
-  "recordedAtUtc": "2026-10-09T01:48:15.1299424Z",
+  "recordedAtUtc": "2026-10-09T19:53:59.0524241Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
@@ -16,10 +16,10 @@
       "repository": "Pepeu2010/telumia-tv",
       "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "33ee38fbfffb382a800d095a2e430c1a7d7cb922",
+      "commit": "c0695add859d5ad12303ec2ea01de4aacc3d17a1",
       "checkout": "repos/tv",
-      "milestone": "Account refresh across supported surfaces, owner-guarded writes, modern sidebar focus/motion and durable collection reconciliation in existing DataStore/RPCs. 176 selected tests and five preserved APKs passed after correcting a resource-message fixture; initial failure preserved. Prior sidebar source passed 12 controlled native D-pad executions on APIs24/36 at 720/1080/4K. Real official account interoperation, addon reconciliation and whole product remain pending; not a new release.",
-      "packageSourceCommit": "33ee38fbfffb382a800d095a2e430c1a7d7cb922",
+      "milestone": "Account refresh, sidebar and durable collection/addon reconciliation through existing DataStore/RPC contracts, owner guards and one atomic addon revision for manifest consumers. 193 selected tests, five app APKs and test APK passed; real MainActivity startup passed on API24 with the preserved universal APK. Earlier failures/interrupted attempts preserved. Prior sidebar source has separate native D-pad evidence. Real official account interoperation, guest import, concurrent global snapshot conflicts and whole product remain pending; not a new release.",
+      "packageSourceCommit": "c0695add859d5ad12303ec2ea01de4aacc3d17a1",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0"
     }

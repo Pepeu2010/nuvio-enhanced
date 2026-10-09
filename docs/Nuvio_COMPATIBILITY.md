@@ -22,6 +22,13 @@ builds e resultados do menu têm evidência separada. A matriz de conta real aba
 permanece aberta. Os registros de exceções anteriores preservam sua evidência
 histórica, anterior a esses incrementos.
 
+A reconciliação de addons TV mantém `addons` e `sync_push_addons`, com os mesmos
+quatro campos de item. A aplicação remota passou a ser atômica no DataStore;
+startup/login/realtime recebem a lista já aplicada. O helper de RPC verifica o
+perfil e dono retornados pela consulta e não propaga IDs de linha, metadados do
+servidor nem journal local para o upload. A avaliação de conta real permanece
+separada dos testes de armazenamento/serviço com dependências controladas.
+
 ## Fronteira de integração
 
 - Preservar autenticação Supabase, sessão/refresh, email e linking existentes.

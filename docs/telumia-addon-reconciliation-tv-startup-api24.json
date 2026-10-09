@@ -1,0 +1,15 @@
+{
+  "startedAtUtc": "2026-10-09T19:47:43.3546608Z",
+  "sourceCommit": "c0695add859d5ad12303ec2ea01de4aacc3d17a1",
+  "buildLabel": "telumia-addon-reconciliation-tv-r4",
+  "emulator": "Telumia_API24_01a10441",
+  "androidApi": "24",
+  "apkSha256": "39d8f7ff98a8cabb0c88f6e7f4b8a15f417f766234c01db29341ce32604e58c2",
+  "status": "passed",
+  "scope": "Owned test AVD, real MainActivity startup and 30-second process/resumed/crash checks. No login, account sync, playback, full navigation or physical-device performance proof. Screenshot and raw device logs remain private.",
+  "processAliveAfterSeconds": 30,
+  "mainActivityResumed": true,
+  "appCrashRecorded": false,
+  "privateCaptureSha256": "09d59a02c0d97eefd3ddca26eec2fb23f42f6463b3a5eb3eb77ab1a12f2f2240",
+  "finishedAtUtc": "2026-10-09T19:49:08.1918883Z"
+}

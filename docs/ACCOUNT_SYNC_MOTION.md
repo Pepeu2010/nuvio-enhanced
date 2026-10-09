@@ -166,12 +166,77 @@ limites de cada serviço. A TV também mantém a política de freshness do servi
 de perfis existente. O teste da biblioteca passou nessa rodada; o gate também
 inclui as regressões existentes de modelos e URLs de addons.
 
+## Reconciliação de addons TV
+
+O incremento TV consulta a tabela `addons`, mescla as alterações pendentes e
+envia apenas URL, nome, ativação e ordem pelo `sync_push_addons` existente.
+Nomes, estados, URLs e journal agora são publicados juntos no DataStore do perfil
+capturado. Startup, atualização manual, realtime e login usam essa publicação;
+não reaplicam uma segunda lista que poderia sobrescrever uma edição concorrente.
+O repository também consome um único snapshot de preferências, evitando tratar
+uma nova URL desativada como habilitada enquanto o fluxo de estados ainda chega.
+Um teste do repository real acompanha as emissões e exige zero manifest fetch
+para os addons desativados recebidos na atualização.
+
+Cada instalação, remoção, ordem, nome ou ativação local grava sua revisão na
+mesma transação da preferência. Falha de upload deixa a revisão pendente, e uma
+edição durante o envio não é confirmada por aquele envio antigo. As consultas
+recusam respostas de conta/perfil/backend antigos. A tarefa de envio com debounce
+captura o dono antes de esperar. URLs de configuração preservam os caracteres e
+a capitalização da query, inclusive parâmetros que terminam em `/`.
+
+Perfis secundários com addons do principal consultam o perfil 1, mas não podem
+modificar nem enviar seus dados. A consulta pode exibir uma edição pendente do
+principal; não a descarta nem a confirma em nome do secundário. Uma resposta
+válida vazia remove os addons, nomes e estados antigos. Indisponibilidade da rede
+produz falha e preserva os dados locais, sem ser interpretada como lista vazia.
+
+A tabela de addons não distingue uma primeira lista vazia de uma exclusão
+confirmada por outro dispositivo. Não se reinserem automaticamente defaults nem
+se fundem caches de outra conta. Importar dados do modo sem conta para uma conta
+existente ainda exige tratamento próprio. O journal permanece no armazenamento
+local do perfil; a limpeza explícita ao sair da conta já existente também o
+remove. Uma queda de rede ou reinício do processo não executa essa limpeza.
+
+Os RPCs substituem snapshots completos e não oferecem CAS neste cliente. A
+mesclagem preserva alterações independentes observadas antes do upload, mas não
+constitui transação global entre dispositivos editando exatamente ao mesmo tempo.
+Teste de conta oficial ↔ fork e manifest fetch remoto continuam necessários.
+O commit `c0695add859d5ad12303ec2ea01de4aacc3d17a1` passou em **193 testes
+selecionados, 38 relatórios JUnit, zero falhas, erros ou skips**, além da montagem
+dos cinco APKs de aplicativo e APK de instrumentação. O gate preservado é
+`telumia-addon-reconciliation-tv-r4`. Onze novos testes exercitam a reconciliação
+real, inclusive reinício de um DataStore em disco, alterações durante upload,
+remoção offline, lista remota vazia, herança somente leitura, mudança de conta e
+emissão atômica ao repository sem buscar manifests desabilitados. Os testes
+restantes cobrem regressões selecionadas; não equivalem à suíte inteira nem a
+uma conta autenticada no servidor oficial.
+A primeira compilação, com checkout limpo `86321ad1`, foi interrompida após
+compilar o código principal para corrigir essa observação por fluxos separados;
+não executou o gate unitário nem constitui build aprovado. Seu resultado e log
+ficam preservados em `telumia-addon-reconciliation-tv`.
+A segunda execução, no commit `876d5b43`, terminou sem mensagem final do Gradle
+nem registro de término. Em 09/10, o handle já não existia e uma consulta dos
+processos Win32 confirmou a ausência do wrapper/daemon desta execução. Sua causa
+e horário de término não são conhecidos: `telumia-addon-reconciliation-tv-r2`
+foi registrado como interrompido, preservando o registro inicial. O novo gate
+usou `telumia-addon-reconciliation-tv-r3`, sem reaproveitar uma aprovação ausente.
+Essa terceira tentativa compilou o aplicativo e os APKs, mas falhou ao compilar
+os testes por uma referência antiga de variável na fixture de coleções. A
+referência foi corrigida; a quarta tentativa passou e seus pacotes foram
+preservados com hashes no [build binding](telumia-addon-reconciliation-tv-r4-build-binding.json).
+O APK universal preservado também foi instalado no AVD próprio Android 7/API 24.
+A MainActivity real permaneceu ativa e retomada após 30 segundos sem crash no
+buffer do aplicativo. A [evidência de inicialização](telumia-addon-reconciliation-tv-startup-api24.json)
+registra o mesmo commit e hash do APK; a captura e os logs brutos permanecem privados.
+Esse gate comprova startup e wiring de runtime, sem login, reprodução ou sync remoto.
+
 ## Trabalho ainda necessário para a solicitação completa
 
 A cobertura de atualização não equivale a resolver todos os conflitos offline.
-Addons TV ainda precisam de reconciliação durável das alterações locais,
-remoções e edições concorrentes; o PC possui o incremento descrito acima.
-Coleções PC e TV possuem os incrementos descritos acima.
+Addons e coleções PC e TV possuem os incrementos descritos acima. Importação
+inicial do modo sem conta e conflito global de uploads simultâneos continuam
+com os limites documentados, sem prometer uma transação distribuída ausente no backend.
 A remoção de coleções vazias passa a
 ser aplicada em vez de preservar indefinidamente uma cópia local antiga.
 Também falta comprovação ponta a ponta Nuvio oficial ↔ Telumia com uma conta de

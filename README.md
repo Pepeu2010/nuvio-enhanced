@@ -4,55 +4,47 @@
 
 **Seu cinema, suas séries e novelas — com foco no Brasil.**
 
-Telumia é um aplicativo open source para PC e Android TV. Reúne catálogos, biblioteca, perfis e reprodução de fontes configuradas por você, com uma experiência cinematográfica e navegação por controle remoto.
+Telumia é um media center open source para PC e Android TV, com marca própria e uma experiência cinematográfica em evolução. Usa os clientes nativos e o ecossistema do Nuvio como base técnica, preservando contas, biblioteca, progresso, addons Stremio e os motores de reprodução.
 
-## Downloads
+O projeto acrescenta busca voltada ao Brasil, editores de avatar, cache configurável, navegação por teclado/controle, movimento adaptável e melhorias de Home, detalhes, timeline e sincronização. O redesign integral e os demais recursos do [plano aprovado](docs/ROADMAP.md) continuam em implementação.
 
-Baixe o MSI Windows, APK Android TV universal ou a variante da sua arquitetura na [versão 0.2.1-alpha.1](https://github.com/Pepeu2010/telumia/releases/tag/v0.2.1-alpha.1). Ela inclui a identidade Telumia, busca Brasil, incrementos de Home/detalhes, base de metadata temporal, cache configurável e editores locais de avatar. Releases anteriores preservam seus arquivos e nomes históricos.
+## Baixar e instalar
 
-Os APKs disponíveis nesta etapa são Android TV Full Debug, assinados para desenvolvimento. Não há interface específica para celulares nem pacotes Linux/macOS publicados. Cada release informa o alcance da validação e inclui checksums SHA-256.
+Na [release 0.2.1-alpha.1](https://github.com/Pepeu2010/telumia/releases/tag/v0.2.1-alpha.1), escolha:
 
-## Marca própria e prioridade para o Brasil
+| Aparelho | Arquivo |
+|---|---|
+| PC Windows de 64 bits | Instalador `.msi` |
+| Android TV, sem precisar identificar a arquitetura | APK **universal** |
+| Android TV, quando a arquitetura for conhecida | APK `arm64-v8a`, `armeabi-v7a`, `x86` ou `x86_64` |
 
-- Logo original, nome Telumia, ícones, banners de TV e instalador próprios.
-- Português do Brasil como idioma inicial dos metadados TMDB em perfis novos, preservando preferências salvas.
-- Busca por **Iludida** também consulta **Sadakatsiz**, **The Unfaithful** e **A Woman Scorned**, sem confundir a série com obras de identidade diferente.
-- A resolução de metadados procura a edição brasileira de 78 capítulos entre as fontes instaladas. Preserva os IDs de reprodução e a numeração da origem. Se o catálogo instalado só oferecer a edição de 31 episódios, conserva essa edição; não cria capítulos fictícios.
-- Proteção contra aplicar títulos/resumos/miniaturas de episódios da edição original sobre a numeração do corte brasileiro.
+Confira os checksums SHA-256 incluídos na release. Os APKs atuais são **Android TV Full Debug**, assinados para desenvolvimento. Ainda não há interface específica para celulares nem pacotes Linux/macOS publicados.
 
-As edições têm durações e divisões diferentes. Para assistir aos 78 capítulos é necessário configurar uma fonte que ofereça essa edição. [Implementação, fontes e limites](docs/TELUMIA.md).
+**A release publicada e o código atual têm alcances diferentes.** A `0.2.1-alpha.1` inclui a identidade Telumia, busca Brasil, incrementos de Home/detalhes, metadata temporal, cache configurável e editores locais de avatar. As entregas posteriores de perfis, previews, momentos salvos e sincronização ainda aguardam uma nova release. Os arquivos das versões anteriores são preservados.
 
-## Recursos existentes e melhorias em andamento
+## Melhorias já implementadas
 
-Os clientes nativos preservam contas, perfis, biblioteca, addons, busca e seus players. A fundação acrescenta movimento completo/reduzido/desligado e intensidade por perfil, proteção de diagnósticos e melhorias de foco/menu lateral. A escolha de menu clássico/moderno na TV preserva configurações abertas, foco e a ação Voltar.
+- **Brasil:** português do Brasil como idioma inicial dos metadados em perfis novos e busca com nomes alternativos de obras. Preferências salvas são preservadas.
+- **Home e detalhes:** destaque cinematográfico, metadata real, ações de reprodução/biblioteca e foco próprio para teclado e D-pad. [Entrega e capturas](docs/TELUMIA_HOME.md), [detalhes](docs/CINEMATIC_DETAILS.md).
+- **Profile Studio:** 64 avatares licenciados e editor local com importação, recorte, zoom e versões otimizadas. O PC também oferece clipboard e drag-and-drop. Avatares pessoais ficam isolados por conta/perfil no aparelho. [Alcance e validação](docs/PROFILE_STUDIO.md).
+- **Cache Auto/Manual:** orçamento ajustável ao aparelho e espaço livre. 1 GiB no PC e 256 MiB na TV são defaults iniciais configuráveis. A integração de todos os caches e o funcionamento offline completo continuam pendentes. [Política de cache](docs/MEDIA_CACHE.md).
+- **Navegação e movimento:** menu lateral com feedback de foco/seleção, transições nas principais rotas e movimento Completo, Reduzido ou Desligado. [Conta, menu e motion](docs/ACCOUNT_SYNC_MOTION.md).
+- **Timeline e momentos salvos:** eventos temporais disponíveis de intro, recap e créditos nos dois players; momentos com nome/data, renomear, remover e voltar à cena no código TV. Bookmarks no player Desktop continuam em implementação. [Timeline](docs/TIMED_METADATA.md), [momentos](docs/SCENE_BOOKMARKS.md).
+- **Mesma conta:** atualização de perfis, configurações suportadas, addons, plugins, biblioteca, progresso, coleções e Home ao retornar ao app e periodicamente em atividade. Coleções e addons nos dois clientes possuem mesclagem durável de alterações pendentes. A comprovação ponta a ponta com a conta nos clientes oficial e Telumia continua pendente. [Evidências e limites](docs/ACCOUNT_SYNC_MOTION.md).
 
-Os detalhes de filmes oferecem ações diretas de reprodução, biblioteca, trailer e assistido; sinopse integral no PC; apresentação adaptativa e foco por D-pad na TV. O incremento foi compilado, validado em múltiplas resoluções e incluído na `0.2.1-alpha.1`. [Evidências da interface](docs/CINEMATIC_DETAILS.md).
+### Novelas e edições brasileiras
 
-A Home recebeu um novo destaque com metadata real, seleção direta por teclado, pausa do carrossel ao interagir e cards com foco evidente no PC. Na TV, o painel de metadata é mais compacto e adapta conteúdo e acessibilidade aos previews. O incremento passou em testes nativos e builds e está na `0.2.1-alpha.1`. [Entrega, capturas e limites](docs/TELUMIA_HOME.md).
+Buscar **Iludida** também consulta **Sadakatsiz**, **The Unfaithful** e **A Woman Scorned**, preservando a identidade da obra. Quando um catálogo instalado oferece a edição brasileira de **78 capítulos**, o Telumia usa seus IDs de reprodução e numeração. Se a fonte só oferece a edição de **31 episódios**, conserva essa edição, sem inventar capítulos.
 
-A timeline dos dois players já recebe os segmentos temporais disponíveis de intro, recap e créditos, com validação, procedência e limpeza ao trocar de conteúdo. A fundação de providers prepara Scene Info, capítulos e bookmarks; esses recursos completos ainda precisam ser entregues. Passaram 93 testes Desktop, 83 TV, os builds nativos e nove testes de D-pad em múltiplas resoluções. [Integração e limites](docs/TIMED_METADATA.md).
+As edições têm durações e divisões diferentes. É necessário configurar uma fonte que ofereça o corte desejado. A proteção de metadados evita aplicar resumos e miniaturas de outra edição sobre essa numeração. [Implementação e limites](docs/TELUMIA.md).
 
-Os dois clientes oferecem orçamento de cache Auto/Manual por aparelho, com quotas para os carregadores existentes de imagens/badges e GIFs do PC. A configuração tem persistência e tratamento de falha. Passaram 106 testes Desktop, 13 de armazenamento isolado, 96 TV, MSI/cinco APKs e nove testes nativos de D-pad/persistência. A integração de todos os tipos de cache e o funcionamento offline completo continuam pendentes. [Comportamento e evidências](docs/MEDIA_CACHE.md).
+## O que continua em desenvolvimento
 
-O Desktop inclui um editor de avatar pessoal com arquivo local, clipboard, drag-and-drop, recorte, zoom e versões otimizadas, além de 64 avatares licenciados com nomes em português. A seleção fica isolada por conta/perfil no aparelho e preserva os campos de sincronização existentes. O gate atual passou 149 testes selecionados e MSI; oito capturas e o decoder sobre os módulos empacotados têm evidências próprias. Os gestos do seletor/clipboard/Explorer ainda precisam de QA no Windows. O editor e as correções de salvamento estão na `0.2.1-alpha.1`. [Entrega e limites do Profile Studio](docs/PROFILE_STUDIO.md).
+O objetivo é transformar toda a experiência dos clientes existentes, conforme a [meta integral](docs/GOAL_OBJECTIVE_2026-10-05.md). Ainda não estão concluídos o redesign completo de todas as telas, previews de vídeo embutidos no Windows, thumbnails/filmstrip, Scene Info, Source Intelligence, Live TV/EPG, Phone Remote, downloads avançados, Smart Collections e os demais critérios do plano. Os componentes preparatórios de TV/EPG não aparecem como funcionalidades prontas.
 
-A seleção de perfis do PC e da TV recebeu cartões próprios, disposição adaptativa, foco por teclado/D-pad e background relacionado ao perfil. Esse incremento posterior passou 155 testes selecionados e MSI no PC; na TV, 111 testes selecionados, cinco APKs e 15 testes nativos nas três resoluções. Dez capturas finais foram revisadas. A nova seleção ainda não integra os binários da `0.2.1-alpha.1`.
+Os incrementos de previews já têm exclusividade, cancelamento, timeout e preload conservador; vídeo remoto e desempenho físico ainda precisam de validação. [Previews](docs/PREVIEWS.md). Recursos locais exclusivos, como arquivos de avatar e momentos salvos, não são anunciados como sincronizados com formatos que o cliente oficial não suporta.
 
-O código posterior também usa os pesos reais da fonte Manrope e mede a ocupação dos diretórios conhecidos de cache sem percorrer arquivos pessoais. Preserva configurações de versões futuras e impede novas escritas abaixo da reserva de espaço livre. O conjunto passou 168 testes selecionados no PC, 120 na TV, MSI/cinco APKs e 16 testes nativos de cache/fonte em Android 7 e Android 16. As capturas de perfis e os controles exportados do player foram revisados. Estes incrementos ainda aguardam uma nova release. [Cache](docs/MEDIA_CACHE.md) e [tipografia](docs/TYPOGRAPHY.md) detalham a validação e suas limitações.
-
-O cliente TV também oferece biblioteca integrada, importação de foto local, clipboard de imagem e editor de recorte por controle remoto. Passaram 111 testes unitários selecionados, quatro testes raster Android e cinco testes de interface em cada resolução: 720p, 1080p e 4K. A validação usa emulador, com 12 capturas revisadas; há refinamentos visuais e fluxos de conta/aparelho físico pendentes. O editor está na `0.2.1-alpha.1`. [Código TV](https://github.com/Pepeu2010/telumia-tv).
-
-A implementação integral continua em execução. O redesign completo de Home/detalhes, Profile Studio, cache Auto, thumbnails/timeline, Source Intelligence, Live TV/EPG, Scene Info e controle local pelo celular **ainda não estão concluídos**. Não apresentamos controles de funcionalidades inexistentes. Os critérios completos permanecem no [roadmap aprovado](docs/ROADMAP.md) e na [especificação](docs/APPROVED_SPEC.md).
-
-A [meta integral vigente](docs/GOAL_OBJECTIVE_2026-10-05.md) exige transformar profundamente todas as superfícies e a experiência de uso, preservando a infraestrutura funcional. Troca de marca, temas ou releases intermediárias não representam a conclusão desse objetivo.
-
-O ciclo de hover dos cards do PC recebeu exclusividade, cancelamento, timeout e movimento por perfil: 174 testes selecionados e MSI passaram. A TV acrescenta consultas limitadas e vaga exclusiva no Media3, com preload conservador: 137 testes, cinco APKs e oito testes nativos de áudio local/ownership em Android 7 e 16 passaram. Trailers embutidos Windows e vídeo remoto ainda precisam de implementação/validação. Estes incrementos aguardam nova release. [Entrega e limites dos previews](docs/PREVIEWS.md).
-
-O código de TV também ganhou Momentos salvos: timestamp com nome/data, renomear, remover e voltar à cena, com persistência por conta/perfil/episódio fora do cache. Fontes diferentes exigem confirmação do corte. Passaram 153 testes selecionados, cinco APKs e 16 execuções nativas do painel em Android 7/16 e 720p/1080p/4K. O Desktop e a validação completa no player ainda estão em andamento; esse incremento aguarda nova release. [Comportamento e evidências](docs/SCENE_BOOKMARKS.md).
-
-A conta Nuvio existente continua sendo usada no Telumia. O incremento de atualização consulta perfis, configurações, addons, plugins, biblioteca, progresso, coleções e organização da Home ao retornar ao app e a cada dois minutos em atividade, respeitando os intervalos dos providers. A barra lateral ganhou foco mais claro, feedback de interação e transições que respeitam movimento Reduzido/Desligado. Passaram 208 testes selecionados e MSI no PC; 162 testes, cinco APKs e 12 execuções nativas do menu em Android 7/16 na TV. A mesclagem durável de coleções acrescenta recuperação offline, preservação de alterações pendentes e exclusões confirmadas nos dois clientes. A rodada seguinte do PC também mescla addons, preserva nomes/configurações e informa falhas da biblioteca ao coordenador: 240 testes/MSI PC e 176 testes/APKs TV passaram. Addons offline na TV e comprovação com uma conta real nos dois aplicativos permanecem em andamento. Esses incrementos ainda não integram a release publicada. [Sincronização e motion](docs/ACCOUNT_SYNC_MOTION.md).
-
-## Código e desenvolvimento
+## Código e evidências
 
 | Repositório | Plataforma |
 |---|---|
@@ -60,8 +52,8 @@ A conta Nuvio existente continua sendo usada no Telumia. O incremento de atualiz
 | [telumia-desktop](https://github.com/Pepeu2010/telumia-desktop) | Kotlin Multiplatform/Compose, libmpv e ponte nativa Windows |
 | [telumia-tv](https://github.com/Pepeu2010/telumia-tv) | Kotlin/Compose TV e Media3 |
 
-Cada cliente mantém seu build e histórico. Não há um aplicativo paralelo. Os commits upstream, builds baseline e auditorias estão documentados nesta árvore. As 46 falhas herdadas das suítes completas permanecem registradas; testes direcionados não equivalem à validação integral de conta, sincronização, playback ou performance em aparelho físico. [Fundação e evidências](docs/NATIVE_FOUNDATION.md).
+Cada cliente mantém seu histórico e build; a implementação amplia os aplicativos existentes. Commits de referência e binários de desenvolvimento ficam vinculados nos [registros do projeto](docs/fork-lock.json). Testes selecionados, builds e QA nativa têm evidências próprias; não equivalem a prova integral de conta, playback ou desempenho em aparelho físico. As falhas herdadas das suítes completas permanecem documentadas na [fundação](docs/NATIVE_FOUNDATION.md).
 
 ## Conteúdo e licenças
 
-O aplicativo não inclui canais, listas ou conteúdo protegido. Configure fontes que você tenha autorização para usar. Código GPL-3.0, com avisos e [créditos de origem preservados](docs/UPSTREAM_CREDITS.md). A identidade visual Telumia é própria.
+O aplicativo não inclui canais, listas ou conteúdo protegido. Configure fontes que você tenha autorização para usar. Código GPL-3.0, com avisos e [créditos de origem preservados](docs/UPSTREAM_CREDITS.md). O nome, logo, ícones e identidade visual Telumia são próprios.
