@@ -1,0 +1,155 @@
+{
+  "scope": "Controlled production sidebar component, native D-pad, three motion modes; not full account/player/physical-device proof",
+  "gates": [
+    {
+      "startedAtUtc": "2026-10-09T00:54:05.7184473Z",
+      "sourceCommit": "4c594514c5b85ee9ecbdb13bdb5305246a83dbef",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "b11c75e6b573759bc02a3d70948cba0ac2b73027de7e8a216f4a8e0d5da66744",
+      "testApkSha256": "02f582665bbb33beca1190c23e6be37c61b410c010a1e966f01a7b86c40c3148",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-account-sync-sidebar-tv",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "suite": "sidebar",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1280x720"
+      ],
+      "capturedPixels": "1280x720",
+      "motionCaptures": [
+        {
+          "sha256": "631f4fedee2daa95c318adebe2db6b859a0c206bcd08da26401dea98400b0a62",
+          "mode": "reduced",
+          "pixels": "1280x720",
+          "file": "sidebar-reduced.png"
+        },
+        {
+          "sha256": "631f4fedee2daa95c318adebe2db6b859a0c206bcd08da26401dea98400b0a62",
+          "mode": "off",
+          "pixels": "1280x720",
+          "file": "sidebar-off.png"
+        }
+      ],
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-09T00:54:36.4790717Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-09T00:55:12.4189778Z",
+      "sourceCommit": "4c594514c5b85ee9ecbdb13bdb5305246a83dbef",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "b11c75e6b573759bc02a3d70948cba0ac2b73027de7e8a216f4a8e0d5da66744",
+      "testApkSha256": "02f582665bbb33beca1190c23e6be37c61b410c010a1e966f01a7b86c40c3148",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-account-sync-sidebar-tv",
+      "requestedPixels": "1920x1080",
+      "density": 320,
+      "suite": "sidebar",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160",
+        "Override size: 1920x1080"
+      ],
+      "capturedPixels": "1920x1080",
+      "motionCaptures": [
+        {
+          "mode": "reduced",
+          "pixels": "1920x1080",
+          "file": "sidebar-reduced.png",
+          "sha256": "5e90e8864d8a2e743f78905036141763cca0de4d557df9c6f77d77f2b86be8ea"
+        },
+        {
+          "mode": "off",
+          "pixels": "1920x1080",
+          "file": "sidebar-off.png",
+          "sha256": "5e90e8864d8a2e743f78905036141763cca0de4d557df9c6f77d77f2b86be8ea"
+        }
+      ],
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-09T00:55:50.4131396Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-09T00:56:09.371206Z",
+      "sourceCommit": "4c594514c5b85ee9ecbdb13bdb5305246a83dbef",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "b11c75e6b573759bc02a3d70948cba0ac2b73027de7e8a216f4a8e0d5da66744",
+      "testApkSha256": "02f582665bbb33beca1190c23e6be37c61b410c010a1e966f01a7b86c40c3148",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-account-sync-sidebar-tv",
+      "requestedPixels": "3840x2160",
+      "density": 640,
+      "suite": "sidebar",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 3840x2160"
+      ],
+      "capturedPixels": "3840x2160",
+      "motionCaptures": [
+        {
+          "sha256": "8e2df2bdbfe27fbd900be074267dd7318672f75b30547d8b6c93f04fc0658f87",
+          "mode": "reduced",
+          "file": "sidebar-reduced.png",
+          "pixels": "3840x2160"
+        },
+        {
+          "sha256": "8e2df2bdbfe27fbd900be074267dd7318672f75b30547d8b6c93f04fc0658f87",
+          "mode": "off",
+          "file": "sidebar-off.png",
+          "pixels": "3840x2160"
+        }
+      ],
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-09T00:56:38.3626815Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-09T00:59:25.5728988Z",
+      "sourceCommit": "4c594514c5b85ee9ecbdb13bdb5305246a83dbef",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "b11c75e6b573759bc02a3d70948cba0ac2b73027de7e8a216f4a8e0d5da66744",
+      "testApkSha256": "02f582665bbb33beca1190c23e6be37c61b410c010a1e966f01a7b86c40c3148",
+      "emulator": "Telumia_API24_01a10441",
+      "androidApi": "24",
+      "buildLabel": "telumia-account-sync-sidebar-tv",
+      "requestedPixels": "1920x1080",
+      "density": 320,
+      "suite": "sidebar",
+      "scope": "Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim",
+      "status": "passed",
+      "displayReported": [
+        "Physical size: 1920x1080"
+      ],
+      "capturedPixels": "1920x1080",
+      "motionCaptures": [
+        {
+          "file": "sidebar-reduced.png",
+          "pixels": "1920x1080",
+          "sha256": "905afdb93e84edf6f0681c7adbe4ca91c360c9eac920eefbe2c53be075561741",
+          "mode": "reduced"
+        },
+        {
+          "file": "sidebar-off.png",
+          "pixels": "1920x1080",
+          "sha256": "905afdb93e84edf6f0681c7adbe4ca91c360c9eac920eefbe2c53be075561741",
+          "mode": "off"
+        }
+      ],
+      "testsPassed": 3,
+      "finishedAtUtc": "2026-10-09T00:59:41.4580735Z",
+      "sourceChangesAfter": []
+    }
+  ]
+}

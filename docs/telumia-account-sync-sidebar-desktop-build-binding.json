@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-08T21:55:46.5471967Z",
+  "label": "telumia-account-sync-sidebar-desktop",
+  "target": "desktop",
+  "sourceCommit": "9fc55558aa50a1b30ceca42701689ca68b637182",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 208,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 48,
+    "attempt": "telumia-account-sync-sidebar-desktop"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215442200,
+      "sha256": "8d7675ef3d3fcb4b000ab22016f3875f328d0e548832fa9c368894e9cffaf8bb",
+      "path": "artifacts/telumia-account-sync-sidebar-desktop/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}

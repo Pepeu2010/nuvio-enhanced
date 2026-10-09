@@ -1,0 +1,56 @@
+{
+  "exportedAtUtc": "2026-10-09T01:36:20.7026190Z",
+  "label": "telumia-collection-reconciliation-tv-r2",
+  "target": "tv",
+  "sourceCommit": "33ee38fbfffb382a800d095a2e430c1a7d7cb922",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 176,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 36,
+    "attempt": "telumia-collection-reconciliation-tv-r2"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "app-full-arm64-v8a-debug.apk",
+      "bytes": 98558004,
+      "sha256": "5d289520233fe2db518ca9dbc3405490fa7b4badf5b185c5872480dadebcd64a",
+      "path": "artifacts/telumia-collection-reconciliation-tv-r2/tv/package/app-full-arm64-v8a-debug.apk"
+    },
+    {
+      "file": "app-full-armeabi-v7a-debug.apk",
+      "bytes": 96456418,
+      "sha256": "3a374f628a7fb7ca946c01e2b185d48ee23cb7c85382f605776ec602f7178b17",
+      "path": "artifacts/telumia-collection-reconciliation-tv-r2/tv/package/app-full-armeabi-v7a-debug.apk"
+    },
+    {
+      "file": "app-full-universal-debug.apk",
+      "bytes": 185529246,
+      "sha256": "6ba301e0922c1fe3068da3140317bbdb85dc5c91cdd814dae4a71d2f1fe36162",
+      "path": "artifacts/telumia-collection-reconciliation-tv-r2/tv/package/app-full-universal-debug.apk"
+    },
+    {
+      "file": "app-full-x86_64-debug.apk",
+      "bytes": 100978523,
+      "sha256": "3c2b77a248cb15485f0875d731caeff41b5c0bbcd042056bc968d485e5b0cc17",
+      "path": "artifacts/telumia-collection-reconciliation-tv-r2/tv/package/app-full-x86_64-debug.apk"
+    },
+    {
+      "file": "app-full-x86-debug.apk",
+      "bytes": 100138658,
+      "sha256": "16f975da5009374a62062aecb58146e5fdffa4cad0b6f4a8382e3f549fb861bf",
+      "path": "artifacts/telumia-collection-reconciliation-tv-r2/tv/package/app-full-x86-debug.apk"
+    },
+    {
+      "file": "app-full-debug-androidTest.apk",
+      "bytes": 1458918,
+      "sha256": "02f582665bbb33beca1190c23e6be37c61b410c010a1e966f01a7b86c40c3148",
+      "path": "artifacts/telumia-collection-reconciliation-tv-r2/tv/package/app-full-debug-androidTest.apk"
+    }
+  ]
+}

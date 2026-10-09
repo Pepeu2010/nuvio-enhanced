@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-09T01:08:38.8931381Z",
+  "label": "telumia-collection-reconciliation-desktop",
+  "target": "desktop",
+  "sourceCommit": "e87ba370bed18a47ed7e31e71a514be7967cbd49",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 225,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 51,
+    "attempt": "telumia-collection-reconciliation-desktop"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215479064,
+      "sha256": "64aa3c2abd6345cee1f73f6d14de4b05d6e04002443f773a2fc96c75fdd6a1fd",
+      "path": "artifacts/telumia-collection-reconciliation-desktop/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}

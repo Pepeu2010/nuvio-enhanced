@@ -4,6 +4,24 @@ Contratos abaixo foram encontrados nos clientes fixados; migrations self-host
 servem para conferir assinaturas, não para afirmar o estado do backend oficial.
 Esta auditoria não usou uma conta real nem escreveu no servidor.
 
+## Continuação autorizada: conta e sincronização em 08/10/2026
+
+A solicitação vigente amplia a implementação para atualização e mesclagem
+bidirecionais da mesma conta. Os incrementos de coordenador, ownership e journal
+local utilizam as tabelas/RPCs existentes: não acrescentam um backend ou um
+protocolo incompatível. As entradas de coleção continuam sendo o JSON existente;
+addons continuam usando URL, nome, ativação e `sort_order`. Journals, revisões e
+chaves de armazenamento ficam privados no aparelho, fora do payload oficial.
+
+`Test-CompatibilityFoundation.ps1` mantém as referências upstream e aceita somente
+os blobs revisados exatos de coordenadores/helper local descritos em
+[ACCOUNT_SYNC_MOTION.md](ACCOUNT_SYNC_MOTION.md). Uma alteração posterior nesses
+arquivos ou nos demais caminhos protegidos exige revisão concreta do source.
+O teste estático não prova sync remoto; testes com dependências controladas,
+builds e resultados do menu têm evidência separada. A matriz de conta real abaixo
+permanece aberta. Os registros de exceções anteriores preservam sua evidência
+histórica, anterior a esses incrementos.
+
 ## Fronteira de integração
 
 - Preservar autenticação Supabase, sessão/refresh, email e linking existentes.

@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-08T21:27:19.0703372Z",
+  "recordedAtUtc": "2026-10-09T01:48:15.1299424Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "eee37594736194383c26e946b1e7e29511d01aea",
+      "commit": "61134a422908118dd1cabd6f4ff49e44795e44ca",
       "checkout": "repos/desktop",
-      "milestone": "Prepared durable scene bookmark storage on desktop, reusing existing profile ownership and timed metadata contracts. 184 selected tests including ten real storage tests, clean-source preserved MSI. No bookmark UI/native Windows command integration yet. Existing hover gates remain; Windows embedded trailer playback pending. Post-release; whole product incomplete.",
-      "packageSourceCommit": "eee37594736194383c26e946b1e7e29511d01aea",
+      "milestone": "Account refresh across supported surfaces, sidebar/focus/route motion and durable reconciliation of collections and addons through existing RPCs. Preserves pending edits, addon names/query configuration/order, rejects stale account responses, and reports library pull failures while retaining provider cooldowns. 240 selected tests and preserved clean-source MSI passed; earlier real sidebar Compose/mouse/keyboard gates passed. Real official account interoperation, TV addon reconciliation and whole product remain pending; not a new release.",
+      "packageSourceCommit": "61134a422908118dd1cabd6f4ff49e44795e44ca",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d"
     },
@@ -16,10 +16,10 @@
       "repository": "Pepeu2010/telumia-tv",
       "url": "https://github.com/Pepeu2010/telumia-tv.git",
       "branch": "main",
-      "commit": "355bcb6eb0b40ed70953f49f214e95aebc169107",
+      "commit": "33ee38fbfffb382a800d095a2e430c1a7d7cb922",
       "checkout": "repos/tv",
-      "milestone": "Durable scene bookmarks integrated into existing TV player and timed timeline, isolated by account/profile/episode/source; explicit confirmation for another cut. 153 selected tests, five preserved APKs and 16 controlled native panel executions on APIs24/36 and 720/1080/4K. Full player navigation/native video seek/account/backend/physical performance remain separate. Post-release; whole product incomplete.",
-      "packageSourceCommit": "355bcb6eb0b40ed70953f49f214e95aebc169107",
+      "milestone": "Account refresh across supported surfaces, owner-guarded writes, modern sidebar focus/motion and durable collection reconciliation in existing DataStore/RPCs. 176 selected tests and five preserved APKs passed after correcting a resource-message fixture; initial failure preserved. Prior sidebar source passed 12 controlled native D-pad executions on APIs24/36 at 720/1080/4K. Real official account interoperation, addon reconciliation and whole product remain pending; not a new release.",
+      "packageSourceCommit": "33ee38fbfffb382a800d095a2e430c1a7d7cb922",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0"
     }

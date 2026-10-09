@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [ValidateSet('720','1080','2160')][string]$Resolution = '1080',
-    [ValidateSet('movie','live-design','home','timed-metadata','cache-settings','profile-studio','profile-selection','scene-bookmarks')][string]$Suite = 'movie',
+    [ValidateSet('movie','live-design','home','timed-metadata','cache-settings','profile-studio','profile-selection','scene-bookmarks','sidebar')][string]$Suite = 'movie',
     [ValidateSet('24','36')][string]$AndroidApi = '36',
     [ValidatePattern('^[a-z0-9-]+$')][string]$BuildLabel,
     [ValidatePattern('^[a-z0-9-]+$')][string]$EvidenceLabel,
@@ -14,7 +14,7 @@ $adb = Join-Path $env:LOCALAPPDATA 'Android/Sdk/platform-tools/adb.exe'
 $serial = if ($AndroidApi -eq '24') { 'emulator-5570' } else { 'emulator-5568' }
 $appId = 'io.github.pepeu2010.telumia.tv.debug'
 $checkout = Join-Path $workspace 'repos/tv'
-$label = switch ($Suite) { 'movie' { 'cinematic-tv-ui' }; 'live-design' { 'live-design-tv-ui' }; 'home' { 'telumia-home-tv-ui' }; 'timed-metadata' { 'telumia-timed-tv-ui' }; 'cache-settings' { 'telumia-cache-tv-ui' }; 'profile-studio' { 'telumia-studio-tv-ui' }; 'profile-selection' { 'telumia-profile-selection-tv-ui' }; 'scene-bookmarks' { 'telumia-scene-bookmarks-tv-ui' } }
+$label = switch ($Suite) { 'movie' { 'cinematic-tv-ui' }; 'live-design' { 'live-design-tv-ui' }; 'home' { 'telumia-home-tv-ui' }; 'timed-metadata' { 'telumia-timed-tv-ui' }; 'cache-settings' { 'telumia-cache-tv-ui' }; 'profile-studio' { 'telumia-studio-tv-ui' }; 'profile-selection' { 'telumia-profile-selection-tv-ui' }; 'scene-bookmarks' { 'telumia-scene-bookmarks-tv-ui' }; 'sidebar' { 'telumia-sidebar-tv-ui' } }
 $output = Join-Path $workspace "artifacts/$label-$Resolution"
 if ($EvidenceLabel) { $output = Join-Path $workspace "artifacts/$EvidenceLabel-$Resolution" }
 if (Test-Path -LiteralPath (Join-Path $output 'qa.json')) { throw 'Refusing to overwrite existing native QA evidence. Choose a new EvidenceLabel.' }
@@ -27,7 +27,7 @@ $api = ((& $adb -s $serial shell getprop ro.build.version.sdk) -join '').Trim()
 if ($LASTEXITCODE -ne 0 -or $api -ne $AndroidApi) { throw 'Unexpected Android API.' }
 $apk = Join-Path $checkout 'app/build/outputs/apk/full/debug/app-full-universal-debug.apk'
 $testApk = Join-Path $checkout 'app/build/outputs/apk/androidTest/full/debug/app-full-debug-androidTest.apk'
-if ($Suite -eq 'scene-bookmarks' -and -not $BuildLabel) { throw 'Scene bookmark QA requires a preserved build binding.' }
+if ($Suite -in @('scene-bookmarks','sidebar') -and -not $BuildLabel) { throw 'This suite requires a preserved build binding.' }
 if ($BuildLabel) {
     $binding = Get-Content -LiteralPath (Join-Path $workspace "docs/$BuildLabel-build-binding.json") -Raw | ConvertFrom-Json
     if ($binding.buildStatus -ne 'passed' -or $binding.sourceCommit -ne (git -C $checkout rev-parse HEAD).Trim() -or @(git -C $checkout status --porcelain).Count) { throw 'Current clean source must match a passed build.' }
@@ -76,12 +76,13 @@ try {
         'profile-studio' { 'com.nuvio.tv.ui.screens.profile.ProfileStudioAvatarEditorTvTest' }
         'profile-selection' { 'com.nuvio.tv.ui.screens.profile.TelumiaProfileSelectionTvTest' }
         'scene-bookmarks' { 'com.nuvio.tv.ui.screens.player.SceneBookmarksTvTest' }
+        'sidebar' { 'com.nuvio.tv.TelumiaSidebarTvTest' }
     }
     $log = & $adb -s $serial shell am instrument -w -r -e class $testClass "$appId.test/androidx.test.runner.AndroidJUnitRunner" 2>&1
     $log | Set-Content -LiteralPath (Join-Path $output 'instrumentation.log') -Encoding utf8
     $text = $log -join "`n"
     if ($text -notmatch "OK \($ExpectedTests tests\)" -or $text -match 'INSTRUMENTATION_STATUS_CODE: -2|FAILURES!!!') { throw "Native UI instrumentation did not pass all $ExpectedTests tests. See the local instrumentation log." }
-    $capture = Join-Path $output $(if ($Suite -eq 'scene-bookmarks') { 'scene-bookmarks.png' } else { 'movie-hero.png' })
+    $capture = Join-Path $output $(if ($Suite -eq 'scene-bookmarks') { 'scene-bookmarks.png' } elseif ($Suite -eq 'sidebar') { 'sidebar-full.png' } else { 'movie-hero.png' })
     $screenshot = switch ($Suite) {
         'movie' { 'cinematic-movie-hero-tv.png' }
         'live-design' { 'live-guide-components.png' }
@@ -91,6 +92,7 @@ try {
         'profile-studio' { 'telumia-studio-library-tv.png' }
         'profile-selection' { 'telumia-profile-selection-tv.png' }
         'scene-bookmarks' { 'telumia-scene-bookmarks-tv.png' }
+        'sidebar' { 'telumia-sidebar-full-tv.png' }
     }
     & $adb -s $serial pull "/sdcard/Android/data/$appId/files/$screenshot" $capture
     if ($LASTEXITCODE -ne 0) { throw 'Fixture screenshot could not be exported.' }
@@ -100,6 +102,21 @@ try {
     $height = [int64]$bytes[20] * 16777216 + [int64]$bytes[21] * 65536 + [int64]$bytes[22] * 256 + $bytes[23]
     $record['capturedPixels'] = "${width}x${height}"
     if ($record.capturedPixels -ne $dimensions) { throw 'Actual framebuffer differs from the requested viewport; this is not a valid resolution gate.' }
+    if ($Suite -eq 'sidebar') {
+        $motionCaptures = @()
+        foreach ($mode in @('reduced','off')) {
+            $motionCapture = Join-Path $output "sidebar-$mode.png"
+            & $adb -s $serial pull "/sdcard/Android/data/$appId/files/telumia-sidebar-$mode-tv.png" $motionCapture
+            if ($LASTEXITCODE -ne 0) { throw "Could not export sidebar $mode capture." }
+            $motionBytes = [IO.File]::ReadAllBytes($motionCapture)
+            if ($motionBytes.Length -lt 24 -or $motionBytes[0] -ne 137 -or $motionBytes[1] -ne 80) { throw 'Motion capture is not PNG.' }
+            $motionWidth = [int64]$motionBytes[16]*16777216 + [int64]$motionBytes[17]*65536 + [int64]$motionBytes[18]*256 + $motionBytes[19]
+            $motionHeight = [int64]$motionBytes[20]*16777216 + [int64]$motionBytes[21]*65536 + [int64]$motionBytes[22]*256 + $motionBytes[23]
+            if ("${motionWidth}x${motionHeight}" -ne $dimensions) { throw 'Motion framebuffer differs from requested viewport.' }
+            $motionCaptures += @{mode=$mode;file=(Split-Path $motionCapture -Leaf);pixels="${motionWidth}x${motionHeight}";sha256=(Get-FileHash -LiteralPath $motionCapture).Hash.ToLowerInvariant()}
+        }
+        $record['motionCaptures'] = $motionCaptures
+    }
     if ($Suite -eq 'scene-bookmarks' -and $ExpectedTests -ge 4) {
         $confirmation = Join-Path $output 'scene-bookmarks-confirm.png'
         & $adb -s $serial pull "/sdcard/Android/data/$appId/files/telumia-scene-bookmarks-confirm-tv.png" $confirmation

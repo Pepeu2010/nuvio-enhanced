@@ -50,6 +50,8 @@ O ciclo de hover dos cards do PC recebeu exclusividade, cancelamento, timeout e 
 
 O código de TV também ganhou Momentos salvos: timestamp com nome/data, renomear, remover e voltar à cena, com persistência por conta/perfil/episódio fora do cache. Fontes diferentes exigem confirmação do corte. Passaram 153 testes selecionados, cinco APKs e 16 execuções nativas do painel em Android 7/16 e 720p/1080p/4K. O Desktop e a validação completa no player ainda estão em andamento; esse incremento aguarda nova release. [Comportamento e evidências](docs/SCENE_BOOKMARKS.md).
 
+A conta Nuvio existente continua sendo usada no Telumia. O incremento de atualização consulta perfis, configurações, addons, plugins, biblioteca, progresso, coleções e organização da Home ao retornar ao app e a cada dois minutos em atividade, respeitando os intervalos dos providers. A barra lateral ganhou foco mais claro, feedback de interação e transições que respeitam movimento Reduzido/Desligado. Passaram 208 testes selecionados e MSI no PC; 162 testes, cinco APKs e 12 execuções nativas do menu em Android 7/16 na TV. A mesclagem durável de coleções acrescenta recuperação offline, preservação de alterações pendentes e exclusões confirmadas nos dois clientes. A rodada seguinte do PC também mescla addons, preserva nomes/configurações e informa falhas da biblioteca ao coordenador: 240 testes/MSI PC e 176 testes/APKs TV passaram. Addons offline na TV e comprovação com uma conta real nos dois aplicativos permanecem em andamento. Esses incrementos ainda não integram a release publicada. [Sincronização e motion](docs/ACCOUNT_SYNC_MOTION.md).
+
 ## Código e desenvolvimento
 
 | Repositório | Plataforma |

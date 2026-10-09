@@ -1,0 +1,56 @@
+{
+  "exportedAtUtc": "2026-10-08T22:13:55.8504708Z",
+  "label": "telumia-account-sync-sidebar-tv",
+  "target": "tv",
+  "sourceCommit": "4c594514c5b85ee9ecbdb13bdb5305246a83dbef",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 162,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 34,
+    "attempt": "telumia-account-sync-sidebar-tv"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "app-full-arm64-v8a-debug.apk",
+      "bytes": 98558004,
+      "sha256": "2daa59bca119be30d9feae9a882e57ffa4ae80972dd73429300d8d9b38f51374",
+      "path": "artifacts/telumia-account-sync-sidebar-tv/tv/package/app-full-arm64-v8a-debug.apk"
+    },
+    {
+      "file": "app-full-armeabi-v7a-debug.apk",
+      "bytes": 96456418,
+      "sha256": "c955e86075edeec9e329f6395a7309e2c0dabe4f29cbb00759dead90dd1c515b",
+      "path": "artifacts/telumia-account-sync-sidebar-tv/tv/package/app-full-armeabi-v7a-debug.apk"
+    },
+    {
+      "file": "app-full-universal-debug.apk",
+      "bytes": 185529246,
+      "sha256": "b11c75e6b573759bc02a3d70948cba0ac2b73027de7e8a216f4a8e0d5da66744",
+      "path": "artifacts/telumia-account-sync-sidebar-tv/tv/package/app-full-universal-debug.apk"
+    },
+    {
+      "file": "app-full-x86_64-debug.apk",
+      "bytes": 100978523,
+      "sha256": "262caa601bd7b3f775021a75db108375a39460d21a594a044243cf9c8c161851",
+      "path": "artifacts/telumia-account-sync-sidebar-tv/tv/package/app-full-x86_64-debug.apk"
+    },
+    {
+      "file": "app-full-x86-debug.apk",
+      "bytes": 100138658,
+      "sha256": "7c7b26d5961df25f048bcc3531e7eaf5e188b8e11523874477d6e76b1a73a731",
+      "path": "artifacts/telumia-account-sync-sidebar-tv/tv/package/app-full-x86-debug.apk"
+    },
+    {
+      "file": "app-full-debug-androidTest.apk",
+      "bytes": 1458918,
+      "sha256": "02f582665bbb33beca1190c23e6be37c61b410c010a1e966f01a7b86c40c3148",
+      "path": "artifacts/telumia-account-sync-sidebar-tv/tv/package/app-full-debug-androidTest.apk"
+    }
+  ]
+}
