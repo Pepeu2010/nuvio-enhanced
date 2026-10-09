@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-09T19:53:59.0524241Z",
+  "recordedAtUtc": "2026-10-09T20:13:54.6877086Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "61134a422908118dd1cabd6f4ff49e44795e44ca",
+      "commit": "ee6668b370b9debbb2168622f07a08d443171ee3",
       "checkout": "repos/desktop",
-      "milestone": "Account refresh across supported surfaces, sidebar/focus/route motion and durable reconciliation of collections and addons through existing RPCs. Preserves pending edits, addon names/query configuration/order, rejects stale account responses, and reports library pull failures while retaining provider cooldowns. 240 selected tests and preserved clean-source MSI passed; earlier real sidebar Compose/mouse/keyboard gates passed. Real official account interoperation, TV addon reconciliation and whole product remain pending; not a new release.",
-      "packageSourceCommit": "61134a422908118dd1cabd6f4ff49e44795e44ca",
+      "milestone": "Account refresh, durable collection/addon reconciliation and sidebar/focus motion; profile motion now reaches the existing native player control assets without shortening reading times. 241 selected tests and clean-source MSI passed after fixing cinematic intensity serialization; earlier failures preserved. Eight isolated real-time Chromium executions passed 72 mode/intensity cases and 764 checks at four resolutions. JNI/WebView2 playback, official account interoperation, guest import and whole product remain pending; not a new release.",
+      "packageSourceCommit": "ee6668b370b9debbb2168622f07a08d443171ee3",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d"
     },

@@ -5,6 +5,7 @@ param(
     [ValidateSet('24','36')][string]$AndroidApi = '36',
     [ValidatePattern('^[a-z0-9-]+$')][string]$BuildLabel,
     [ValidatePattern('^[a-z0-9-]+$')][string]$EvidenceLabel,
+    [ValidateSet('en-US','pt-BR')][string]$AppLocale,
     [ValidateRange(1,100)][int]$ExpectedTests = 3,
     [switch]$Install
 )
@@ -25,6 +26,7 @@ $avd = & $adb -s $serial emu avd name
 if ($avd[0] -ne $(if ($AndroidApi -eq '24') { 'Telumia_API24_01a10441' } else { 'NuvioEnhanced_ATV_01a10441' })) { throw 'Refusing to change another emulator.' }
 $api = ((& $adb -s $serial shell getprop ro.build.version.sdk) -join '').Trim()
 if ($LASTEXITCODE -ne 0 -or $api -ne $AndroidApi) { throw 'Unexpected Android API.' }
+if ($AppLocale -and $AndroidApi -ne '36') { throw 'The per-app locale gate requires the owned API 36 emulator.' }
 $apk = Join-Path $checkout 'app/build/outputs/apk/full/debug/app-full-universal-debug.apk'
 $testApk = Join-Path $checkout 'app/build/outputs/apk/androidTest/full/debug/app-full-debug-androidTest.apk'
 if ($Suite -in @('scene-bookmarks','sidebar') -and -not $BuildLabel) { throw 'This suite requires a preserved build binding.' }
@@ -60,10 +62,23 @@ $record = [ordered]@{
     requestedPixels = $dimensions
     density = $density
     suite = $Suite
+    requestedAppLocale = $AppLocale
     scope = $(if ($Suite -eq 'scene-bookmarks') { 'Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.' } else { 'Owned emulator, native component fixtures and D-pad; no playback, channel availability or physical TV performance claim' })
     status = 'running'
 }
+$priorAppLocale = $null
 try {
+    if ($AppLocale) {
+        $priorLocaleReport = (@(& $adb -s $serial shell cmd locale get-app-locales $appId --user 0) -join '').Trim()
+        if ($LASTEXITCODE -ne 0 -or $priorLocaleReport -notmatch 'are \[([A-Za-z0-9,-]*)\]$') { throw 'Cannot capture the owned app locale for restoration.' }
+        $priorAppLocale = $Matches[1]
+        $record['priorAppLocale'] = $priorAppLocale
+        & $adb -s $serial shell cmd locale set-app-locales $appId --user 0 --locales $AppLocale
+        if ($LASTEXITCODE -ne 0) { throw 'Cannot apply the owned test app locale.' }
+        $localeReport = (@(& $adb -s $serial shell cmd locale get-app-locales $appId --user 0) -join '').Trim()
+        if ($LASTEXITCODE -ne 0 -or $localeReport -notmatch ('are \[' + [regex]::Escape($AppLocale) + '\]$')) { throw 'The locale manager did not confirm the requested app locale.' }
+        $record['localeManagerReported'] = $localeReport
+    }
     & $adb -s $serial shell wm size $dimensions
     & $adb -s $serial shell wm density $density
     $record['displayReported'] = @(& $adb -s $serial shell wm size)
@@ -171,10 +186,20 @@ try {
     $record['failure'] = $_.Exception.Message
     throw
 } finally {
+    if ($null -ne $priorAppLocale) {
+        $restoreArguments = @('-s',$serial,'shell','cmd','locale','set-app-locales',$appId,'--user','0')
+        if ($priorAppLocale) { $restoreArguments += @('--locales',$priorAppLocale) }
+        & $adb @restoreArguments
+        $record['appLocaleRestored'] = ($LASTEXITCODE -eq 0)
+        if (-not $record.appLocaleRestored -and $record.status -eq 'passed') {
+            $record.status = 'failed'; $record['failure'] = 'Owned app locale restoration failed.'
+        }
+    }
     & $adb -s $serial shell wm size reset
     & $adb -s $serial shell wm density reset
     $record['finishedAtUtc'] = [DateTime]::UtcNow.ToString('o')
     $record['sourceChangesAfter'] = @(git -C $checkout status --porcelain)
     $record | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $output 'qa.json') -Encoding utf8
 }
+if ($record.status -ne 'passed') { throw 'Native QA or its owned-app cleanup did not pass; inspect the preserved record.' }
 Write-Output "Native $Suite components: $ExpectedTests tests passed at $dimensions; actual capture dimensions verified."

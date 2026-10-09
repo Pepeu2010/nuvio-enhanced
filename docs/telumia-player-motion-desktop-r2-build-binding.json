@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-09T19:59:33.2552675Z",
+  "label": "telumia-player-motion-desktop-r2",
+  "target": "desktop",
+  "sourceCommit": "ee6668b370b9debbb2168622f07a08d443171ee3",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 241,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 56,
+    "attempt": "telumia-player-motion-desktop-r2"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215495448,
+      "sha256": "20654e433fba36ee26832c781ae99290f04d6300f77a398c045044bba5fecbd0",
+      "path": "artifacts/telumia-player-motion-desktop-r2/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}

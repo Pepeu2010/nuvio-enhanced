@@ -1,0 +1,4101 @@
+{
+  "startedAtUtc": "2026-10-09T20:02:24.7474909Z",
+  "status": "passed",
+  "sourceCommit": "ee6668b370b9debbb2168622f07a08d443171ee3",
+  "buildLabel": "telumia-player-motion-desktop-r2",
+  "browserVersion": "154.0.8037.99",
+  "assetHashes": {
+    "controls.html": "5394338a16be701c22ffa4421c0d80c3dd1bf5951351123d24685d3a1928d9e3",
+    "controls.js": "b857bfdcffad23757da7def608a43696ba382fa28b7ca71f50f8b71756c97730",
+    "timed-metadata.js": "7b263ae65509416fb535fb8757b49ddeb546d01b4a5e3a77497c7d6e8d7ae74f",
+    "controls.css": "64ae3ace8d637acfb5ec9c78fc8c3d120d8e92090479a9ab642ad9083dc4c929"
+  },
+  "viewports": [
+    {
+      "size": "1366x768",
+      "captureSha256": "dbb08b0a9e0e0a55c464a87493b27bb90fe5d48d2160fec15dc8fbeb06fdaf53",
+      "osReduced": false,
+      "report": {
+        "checks": [
+          {
+            "name": "FULL/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "Off policy applies before a simultaneous close token",
+            "passed": true
+          },
+          {
+            "name": "Rapid reopen cancels the old close timer",
+            "passed": true
+          },
+          {
+            "name": "REDUCED: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "OFF: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "No horizontal viewport overflow",
+            "passed": true
+          },
+          {
+            "name": "Panel stays inside viewport",
+            "passed": true
+          },
+          {
+            "name": "No JavaScript error or rejected promise",
+            "passed": true
+          }
+        ],
+        "cases": [
+          {
+            "mode": "FULL",
+            "intensity": 0.65,
+            "effective": "full",
+            "panelTransitionMillis": [
+              143,
+              117
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1,
+            "effective": "full",
+            "panelTransitionMillis": [
+              220,
+              180
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1.25,
+            "effective": "full",
+            "panelTransitionMillis": [
+              275,
+              225
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 0.65,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1.25,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          }
+        ],
+        "errors": [],
+        "osReduced": false,
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "commands": [
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "size": "1366x768",
+      "captureSha256": "15e66e5bff9c8c481a63d5dd1e21a169bbf1f6fb9992a2a44818bcb42489895f",
+      "osReduced": true,
+      "report": {
+        "checks": [
+          {
+            "name": "FULL/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "Off policy applies before a simultaneous close token",
+            "passed": true
+          },
+          {
+            "name": "Rapid reopen cancels the old close timer",
+            "passed": true
+          },
+          {
+            "name": "REDUCED: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "OFF: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "No horizontal viewport overflow",
+            "passed": true
+          },
+          {
+            "name": "Panel stays inside viewport",
+            "passed": true
+          },
+          {
+            "name": "No JavaScript error or rejected promise",
+            "passed": true
+          }
+        ],
+        "cases": [
+          {
+            "mode": "FULL",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 0.65,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1.25,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          }
+        ],
+        "errors": [],
+        "osReduced": true,
+        "viewport": {
+          "width": 1366,
+          "height": 768
+        },
+        "commands": [
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "size": "1920x1080",
+      "captureSha256": "a391c2637ee4c7938ecaa5f91372cd29881347780b632e3ad12191ca99641a7e",
+      "osReduced": false,
+      "report": {
+        "checks": [
+          {
+            "name": "FULL/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "Off policy applies before a simultaneous close token",
+            "passed": true
+          },
+          {
+            "name": "Rapid reopen cancels the old close timer",
+            "passed": true
+          },
+          {
+            "name": "REDUCED: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "OFF: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "No horizontal viewport overflow",
+            "passed": true
+          },
+          {
+            "name": "Panel stays inside viewport",
+            "passed": true
+          },
+          {
+            "name": "No JavaScript error or rejected promise",
+            "passed": true
+          }
+        ],
+        "cases": [
+          {
+            "mode": "FULL",
+            "intensity": 0.65,
+            "effective": "full",
+            "panelTransitionMillis": [
+              143,
+              117
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1,
+            "effective": "full",
+            "panelTransitionMillis": [
+              220,
+              180
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1.25,
+            "effective": "full",
+            "panelTransitionMillis": [
+              275,
+              225
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 0.65,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1.25,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          }
+        ],
+        "errors": [],
+        "osReduced": false,
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "commands": [
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "size": "1920x1080",
+      "captureSha256": "4e66f5e6a9fbdfda08d1fe74afabd6a2c49e4d463697c85605a22661c9fc5465",
+      "osReduced": true,
+      "report": {
+        "checks": [
+          {
+            "name": "FULL/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "Off policy applies before a simultaneous close token",
+            "passed": true
+          },
+          {
+            "name": "Rapid reopen cancels the old close timer",
+            "passed": true
+          },
+          {
+            "name": "REDUCED: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "OFF: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "No horizontal viewport overflow",
+            "passed": true
+          },
+          {
+            "name": "Panel stays inside viewport",
+            "passed": true
+          },
+          {
+            "name": "No JavaScript error or rejected promise",
+            "passed": true
+          }
+        ],
+        "cases": [
+          {
+            "mode": "FULL",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 0.65,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1.25,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          }
+        ],
+        "errors": [],
+        "osReduced": true,
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "commands": [
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "size": "2560x1440",
+      "captureSha256": "e19e74bee990911b5c53ed557d5e52c222176eb01e1bf193487cbdd85a3080ee",
+      "osReduced": false,
+      "report": {
+        "checks": [
+          {
+            "name": "FULL/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "Off policy applies before a simultaneous close token",
+            "passed": true
+          },
+          {
+            "name": "Rapid reopen cancels the old close timer",
+            "passed": true
+          },
+          {
+            "name": "REDUCED: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "OFF: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "No horizontal viewport overflow",
+            "passed": true
+          },
+          {
+            "name": "Panel stays inside viewport",
+            "passed": true
+          },
+          {
+            "name": "No JavaScript error or rejected promise",
+            "passed": true
+          }
+        ],
+        "cases": [
+          {
+            "mode": "FULL",
+            "intensity": 0.65,
+            "effective": "full",
+            "panelTransitionMillis": [
+              143,
+              117
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1,
+            "effective": "full",
+            "panelTransitionMillis": [
+              220,
+              180
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1.25,
+            "effective": "full",
+            "panelTransitionMillis": [
+              275,
+              225
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 0.65,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1.25,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          }
+        ],
+        "errors": [],
+        "osReduced": false,
+        "viewport": {
+          "width": 2560,
+          "height": 1440
+        },
+        "commands": [
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "size": "2560x1440",
+      "captureSha256": "0b58dbf834ef59e1e629a6073dfd19cfb034a656843687d73638685b7275a4d9",
+      "osReduced": true,
+      "report": {
+        "checks": [
+          {
+            "name": "FULL/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "Off policy applies before a simultaneous close token",
+            "passed": true
+          },
+          {
+            "name": "Rapid reopen cancels the old close timer",
+            "passed": true
+          },
+          {
+            "name": "REDUCED: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "OFF: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "No horizontal viewport overflow",
+            "passed": true
+          },
+          {
+            "name": "Panel stays inside viewport",
+            "passed": true
+          },
+          {
+            "name": "No JavaScript error or rejected promise",
+            "passed": true
+          }
+        ],
+        "cases": [
+          {
+            "mode": "FULL",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 0.65,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1.25,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          }
+        ],
+        "errors": [],
+        "osReduced": true,
+        "viewport": {
+          "width": 2560,
+          "height": 1440
+        },
+        "commands": [
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "size": "3840x2160",
+      "captureSha256": "328692f25f80464ca0d76e0a123c0c5fadc81e2cf9fb5bd9113b1e86f4e59266",
+      "osReduced": false,
+      "report": {
+        "checks": [
+          {
+            "name": "FULL/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "Off policy applies before a simultaneous close token",
+            "passed": true
+          },
+          {
+            "name": "Rapid reopen cancels the old close timer",
+            "passed": true
+          },
+          {
+            "name": "REDUCED: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "OFF: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "No horizontal viewport overflow",
+            "passed": true
+          },
+          {
+            "name": "Panel stays inside viewport",
+            "passed": true
+          },
+          {
+            "name": "No JavaScript error or rejected promise",
+            "passed": true
+          }
+        ],
+        "cases": [
+          {
+            "mode": "FULL",
+            "intensity": 0.65,
+            "effective": "full",
+            "panelTransitionMillis": [
+              143,
+              117
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1,
+            "effective": "full",
+            "panelTransitionMillis": [
+              220,
+              180
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1.25,
+            "effective": "full",
+            "panelTransitionMillis": [
+              275,
+              225
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 0.65,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1.25,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          }
+        ],
+        "errors": [],
+        "osReduced": false,
+        "viewport": {
+          "width": 3840,
+          "height": 2160
+        },
+        "commands": [
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "size": "3840x2160",
+      "captureSha256": "8a7c244094535faf785399367f55b9c548560f635016257772a4af95b7f24dce",
+      "osReduced": true,
+      "report": {
+        "checks": [
+          {
+            "name": "FULL/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "FULL/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: short fades",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "REDUCED/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/0.65: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: effective policy",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: keyboard opens panel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: transitions disabled",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no panel travel",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: no ambient drift",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: arrow navigation",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: real speed option",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: speed command preserved",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: Escape restores player focus",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: instant close",
+            "passed": true
+          },
+          {
+            "name": "OFF/1.25: closing panel released",
+            "passed": true
+          },
+          {
+            "name": "Off policy applies before a simultaneous close token",
+            "passed": true
+          },
+          {
+            "name": "Rapid reopen cancels the old close timer",
+            "passed": true
+          },
+          {
+            "name": "REDUCED: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "OFF: skip prompt keeps its reading time",
+            "passed": true
+          },
+          {
+            "name": "No horizontal viewport overflow",
+            "passed": true
+          },
+          {
+            "name": "Panel stays inside viewport",
+            "passed": true
+          },
+          {
+            "name": "No JavaScript error or rejected promise",
+            "passed": true
+          }
+        ],
+        "cases": [
+          {
+            "mode": "FULL",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "FULL",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 0.65,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              78
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "REDUCED",
+            "intensity": 1.25,
+            "effective": "reduced",
+            "panelTransitionMillis": [
+              120
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 0.65,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          },
+          {
+            "mode": "OFF",
+            "intensity": 1.25,
+            "effective": "off",
+            "panelTransitionMillis": [
+              0
+            ]
+          }
+        ],
+        "errors": [],
+        "osReduced": true,
+        "viewport": {
+          "width": 3840,
+          "height": 2160
+        },
+        "commands": [
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          },
+          {
+            "type": "setPlaybackSpeed",
+            "value": 1.5
+          }
+        ]
+      }
+    }
+  ],
+  "scope": "Actual packaged native player assets in isolated Chromium with controlled local metadata and a recording message bridge. Keyboard dispatch, policy changes, panel timing/focus and command checks; no JNI/WebView2, playback, installed MSI, authenticated source or physical-device proof.",
+  "finishedAtUtc": "2026-10-09T20:10:18.3814195Z"
+}

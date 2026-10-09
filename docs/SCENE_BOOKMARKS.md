@@ -34,3 +34,12 @@ A primeira execução Desktop teve um teste de mutações locais de perfil ignor
 [Build Desktop isolado e MSI preservado](telumia-scene-bookmarks-desktop-storage-isolated-build-binding.json), [inspeção do MSI](telumia-scene-bookmarks-desktop-storage-isolated-package-inspection.json), [sequência de builds e tentativas](telumia-scene-bookmarks-results.json).
 
 Nenhuma nova release foi publicada com bookmarks. Os binários `0.2.1-alpha.1` permanecem imutáveis. A implementação Desktop, os gates completos do player e a meta integral do produto permanecem em execução.
+
+Em 09/10, uma tentativa adicional com os APKs preservados de `c0695add` e locale
+por aplicativo `pt-BR` encerrou o processo de instrumentação antes de executar
+os quatro casos. Não há stack de aplicativo no buffer de crash consultado e a
+causa não foi confirmada. O locale foi restaurado e a
+[tentativa foi preservada](telumia-scene-bookmarks-tv-ptbr-first-attempt.json).
+Ela não constitui revisão visual em português aprovada. O gate usa o comando
+[LocaleManager do AOSP](https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/locales/LocaleManagerShellCommand.java)
+somente no AVD próprio, com captura e restauração da preferência anterior.
