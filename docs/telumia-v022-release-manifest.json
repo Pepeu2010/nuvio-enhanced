@@ -1,0 +1,77 @@
+{
+  "tag": "v0.2.2-alpha.1",
+  "product": "Telumia",
+  "preparedAtUtc": "2026-10-10T14:28:38.1954508Z",
+  "sourceCommits": {
+    "desktop": "b39b6ea79d37b7c9eb1383ef68692dd2309d664d",
+    "tv": "e1962f736410a288f3a8db92fa6d2eaa4eaaa66b"
+  },
+  "scope": "Incremento alpha: reconciliação de coleções e addons nos contratos oficiais, motion e navegação, seleção de perfis, momentos salvos, thumbnails/filmstrip e composição do player Windows; inicialização/foco TV. Produto integral e interoperabilidade autenticada oficial permanecem em validação.",
+  "validationLabel": "telumia-v022",
+  "assets": [
+    {
+      "name": "Telumia-desktop-source.zip",
+      "bytes": 248035760,
+      "sha256": "a5b55522e2cf3d08fec01154893310acbb8424da397b46dfbc757822502b878a"
+    },
+    {
+      "name": "Telumia-TV-arm64-v8a-debug.apk",
+      "bytes": 91421323,
+      "sha256": "5713031fb6e3ec792f7723ead1969373b081ccc3b8c5c5cde4667cb115be2c60"
+    },
+    {
+      "name": "Telumia-TV-armeabi-v7a-debug.apk",
+      "bytes": 89319737,
+      "sha256": "25004fff3825a46c19d2c23eba734694b371b378d2431eefd2402825861a4523"
+    },
+    {
+      "name": "Telumia-tv-source.zip",
+      "bytes": 82290437,
+      "sha256": "fb28b7665e8afe17f9615d45d7acb4801c987e09172f13a69f643b258ff70a1b"
+    },
+    {
+      "name": "Telumia-TV-universal-debug.apk",
+      "bytes": 178392565,
+      "sha256": "58cfedecd888531e7792b158529aee333b63702436414230fa46f063e6ed43ea"
+    },
+    {
+      "name": "Telumia-TV-x86_64-debug.apk",
+      "bytes": 93841838,
+      "sha256": "713a5367e3cfdb220f525e78d6cdce62a04b4bba22b95536a36d8682b8959964"
+    },
+    {
+      "name": "Telumia-TV-x86-debug.apk",
+      "bytes": 93001973,
+      "sha256": "1a0ec28542a7551da1d3348a640d241e4fabdce60cb657241d0d00864fbe3b2e"
+    },
+    {
+      "name": "Telumia-Windows-x64.msi",
+      "bytes": 215626520,
+      "sha256": "1400185e3d5c9ea2fdf96bb983c5d287190406f940c61caaf5a9271647577662"
+    }
+  ],
+  "sourceArchiveInspections": [
+    {
+      "sourceCommit": "b39b6ea79d37b7c9eb1383ef68692dd2309d664d",
+      "target": "desktop",
+      "file": "Telumia-desktop-source.zip",
+      "sha256": "a5b55522e2cf3d08fec01154893310acbb8424da397b46dfbc757822502b878a",
+      "lfsObjects": 142,
+      "lfsBytes": 293336120,
+      "expandedPointers": 0,
+      "unresolvedLfsPointers": 0,
+      "scope": "Source bytes and LFS hashes; no portability or playback QA"
+    },
+    {
+      "sourceCommit": "e1962f736410a288f3a8db92fa6d2eaa4eaaa66b",
+      "target": "tv",
+      "file": "Telumia-tv-source.zip",
+      "sha256": "fb28b7665e8afe17f9615d45d7acb4801c987e09172f13a69f643b258ff70a1b",
+      "lfsObjects": 0,
+      "lfsBytes": 0,
+      "expandedPointers": 0,
+      "unresolvedLfsPointers": 0,
+      "scope": "Source bytes and LFS hashes; no portability or playback QA"
+    }
+  ]
+}

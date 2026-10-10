@@ -49,10 +49,15 @@ $fixture = @'
     document.body.style.background='linear-gradient(130deg,#080e18,#182b3d)';
     window.playerControls({title:'Telumia — Áudio e legendas',episodeText:'Temporada 1 · Episódio 12',
       audioLabel:'Áudio',subtitlesLabel:'Legendas',speedPanelTitle:'Velocidade de reprodução',
-      pauseOverlayEnabled:false,controlsVisible:true,playbackSpeedLabel:'1x',
+      pauseOverlayEnabled:false,controlsVisible:true,playbackSpeedLabel:'1x',playLabel:'Reproduzir',pauseLabel:'Pausar',
       timedMarkers:[{id:'qa-intro',kind:'INTRO',startFraction:0.04,endFraction:0.06,label:'Introdução',providerId:'fixture'}]});
     window.playerUpdate({duration:2400,position:612,paused:true,loading:false,volumeLevel:0.75,audioTracks:[],subtitleTracks:[]});
     await document.fonts.ready;
+    const playbackLabel=document.getElementById('toggleLabel');
+    const labelBounds=playbackLabel.getBoundingClientRect();
+    assert(playbackLabel.textContent==='Reproduzir'&&labelBounds.width>1&&labelBounds.height>1&&
+      getComputedStyle(playbackLabel).clip==='auto',
+      'The localized playback label is visibly rendered rather than clipped to one pixel');
     const dock=document.querySelector('.progress'),masthead=document.querySelector('.header .metadata');
     const dockBounds=dock.getBoundingClientRect(),mastheadBounds=masthead?.getBoundingClientRect();
     assert(Boolean(mastheadBounds)&&mastheadBounds.top>=0&&mastheadBounds.bottom<dockBounds.top,

@@ -1,0 +1,125 @@
+{
+  "sourceCommit": "e1962f736410a288f3a8db92fa6d2eaa4eaaa66b",
+  "cases": [
+    {
+      "startedAtUtc": "2026-10-10T14:33:44.512325Z",
+      "sourceCommit": "e1962f736410a288f3a8db92fa6d2eaa4eaaa66b",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "58cfedecd888531e7792b158529aee333b63702436414230fa46f063e6ed43ea",
+      "testApkSha256": "b47f706986c4757807a380cbe18a6c57683638c52eb8fba62aa7fbde361be780",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-v022-tv-r1",
+      "requestedPixels": "1280x720",
+      "density": 320,
+      "suite": "scene-bookmarks",
+      "requestedAppLocale": "pt-BR",
+      "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+      "status": "passed",
+      "priorAppLocale": "pt-BR",
+      "localeManagerReported": "Locales for io.github.pepeu2010.telumia.tv.debug for user 0 are [pt-BR]",
+      "localeFreshProcessGate": "The owned app has no remaining process before instrumentation starts with its confirmed app locale.",
+      "displayReported": [
+        "Physical size: 1280x720"
+      ],
+      "capturedPixels": "1280x720",
+      "confirmationCapturedPixels": "1280x720",
+      "testsPassed": 4,
+      "appLocaleRestored": true,
+      "finishedAtUtc": "2026-10-10T14:34:02.9667632Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-10T14:31:03.1559099Z",
+      "sourceCommit": "e1962f736410a288f3a8db92fa6d2eaa4eaaa66b",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "58cfedecd888531e7792b158529aee333b63702436414230fa46f063e6ed43ea",
+      "testApkSha256": "b47f706986c4757807a380cbe18a6c57683638c52eb8fba62aa7fbde361be780",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-v022-tv-r1",
+      "requestedPixels": "1920x1080",
+      "density": 320,
+      "suite": "scene-bookmarks",
+      "requestedAppLocale": "pt-BR",
+      "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+      "status": "passed",
+      "priorAppLocale": "pt-BR",
+      "localeManagerReported": "Locales for io.github.pepeu2010.telumia.tv.debug for user 0 are [pt-BR]",
+      "localeFreshProcessGate": "The owned app has no remaining process before instrumentation starts with its confirmed app locale.",
+      "displayReported": [
+        "Physical size: 1920x1080"
+      ],
+      "capturedPixels": "1920x1080",
+      "confirmationCapturedPixels": "1920x1080",
+      "testsPassed": 4,
+      "appLocaleRestored": true,
+      "finishedAtUtc": "2026-10-10T14:31:24.0340914Z",
+      "sourceChangesAfter": []
+    },
+    {
+      "startedAtUtc": "2026-10-10T14:35:59.9317048Z",
+      "sourceCommit": "e1962f736410a288f3a8db92fa6d2eaa4eaaa66b",
+      "trackedChanges": [],
+      "sourceChanges": [],
+      "apkSha256": "58cfedecd888531e7792b158529aee333b63702436414230fa46f063e6ed43ea",
+      "testApkSha256": "b47f706986c4757807a380cbe18a6c57683638c52eb8fba62aa7fbde361be780",
+      "emulator": "NuvioEnhanced_ATV_01a10441",
+      "androidApi": "36",
+      "buildLabel": "telumia-v022-tv-r1",
+      "requestedPixels": "3840x2160",
+      "density": 640,
+      "suite": "scene-bookmarks",
+      "requestedAppLocale": "pt-BR",
+      "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+      "status": "passed",
+      "priorAppLocale": "pt-BR",
+      "localeManagerReported": "Locales for io.github.pepeu2010.telumia.tv.debug for user 0 are [pt-BR]",
+      "localeFreshProcessGate": "The owned app has no remaining process before instrumentation starts with its confirmed app locale.",
+      "displayReported": [
+        "Physical size: 3840x2160"
+      ],
+      "capturedPixels": "3840x2160",
+      "confirmationCapturedPixels": "3840x2160",
+      "testsPassed": 4,
+      "appLocaleRestored": true,
+      "finishedAtUtc": "2026-10-10T14:36:31.4830216Z",
+      "sourceChangesAfter": []
+    }
+  ],
+  "status": "passed",
+  "scope": "Real panel native instrumentation with controlled owned data; not actual bookmark video seek or whole-app/account/hardware proof",
+  "ownedFixtureCleanup": {
+    "status": "passed",
+    "startedAtUtc": "2026-10-10T14:24:38.5193208Z",
+    "tvResolutions": [
+      {
+        "resolution": "1080",
+        "status": "passed",
+        "bookmarksPassed": true,
+        "realMainActivityStartupPassed": true,
+        "stopRequested": true,
+        "configRestored": true
+      },
+      {
+        "resolution": "720",
+        "status": "passed",
+        "bookmarksPassed": true,
+        "stopRequested": true,
+        "configRestored": true
+      },
+      {
+        "resolution": "2160",
+        "status": "passed",
+        "bookmarksPassed": true,
+        "stopRequested": true,
+        "configRestored": true
+      }
+    ],
+    "desktopRendererPassed": true,
+    "finishedAtUtc": "2026-10-10T14:36:36.9555378Z"
+  },
+  "buildLabel": null
+}

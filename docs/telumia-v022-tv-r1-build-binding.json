@@ -1,0 +1,56 @@
+{
+  "exportedAtUtc": "2026-10-10T14:17:46.7166808Z",
+  "label": "telumia-v022-tv-r1",
+  "target": "tv",
+  "sourceCommit": "e1962f736410a288f3a8db92fa6d2eaa4eaaa66b",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 200,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 39,
+    "attempt": "telumia-v022-tv-r1"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "app-full-arm64-v8a-debug.apk",
+      "bytes": 91421323,
+      "sha256": "5713031fb6e3ec792f7723ead1969373b081ccc3b8c5c5cde4667cb115be2c60",
+      "path": "artifacts/telumia-v022-tv-r1/tv/package/app-full-arm64-v8a-debug.apk"
+    },
+    {
+      "file": "app-full-armeabi-v7a-debug.apk",
+      "bytes": 89319737,
+      "sha256": "25004fff3825a46c19d2c23eba734694b371b378d2431eefd2402825861a4523",
+      "path": "artifacts/telumia-v022-tv-r1/tv/package/app-full-armeabi-v7a-debug.apk"
+    },
+    {
+      "file": "app-full-universal-debug.apk",
+      "bytes": 178392565,
+      "sha256": "58cfedecd888531e7792b158529aee333b63702436414230fa46f063e6ed43ea",
+      "path": "artifacts/telumia-v022-tv-r1/tv/package/app-full-universal-debug.apk"
+    },
+    {
+      "file": "app-full-x86_64-debug.apk",
+      "bytes": 93841838,
+      "sha256": "713a5367e3cfdb220f525e78d6cdce62a04b4bba22b95536a36d8682b8959964",
+      "path": "artifacts/telumia-v022-tv-r1/tv/package/app-full-x86_64-debug.apk"
+    },
+    {
+      "file": "app-full-x86-debug.apk",
+      "bytes": 93001973,
+      "sha256": "1a0ec28542a7551da1d3348a640d241e4fabdce60cb657241d0d00864fbe3b2e",
+      "path": "artifacts/telumia-v022-tv-r1/tv/package/app-full-x86-debug.apk"
+    },
+    {
+      "file": "app-full-debug-androidTest.apk",
+      "bytes": 1510245,
+      "sha256": "b47f706986c4757807a380cbe18a6c57683638c52eb8fba62aa7fbde361be780",
+      "path": "artifacts/telumia-v022-tv-r1/tv/package/app-full-debug-androidTest.apk"
+    }
+  ]
+}

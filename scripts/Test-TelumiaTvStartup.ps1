@@ -37,6 +37,9 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'APK installation failed.' }
     & $adb -s $serial shell am force-stop $appId
     & $adb -s $serial logcat -c
+    if ($LASTEXITCODE -ne 0) { throw 'Owned device log reset failed.' }
+    & $adb -s $serial logcat -b events -c
+    if ($LASTEXITCODE -ne 0) { throw 'Owned device event log reset failed.' }
     & $adb -s $serial shell am start -W -n $component | Set-Content -LiteralPath (Join-Path $output 'launch.log') -Encoding utf8
     if ($LASTEXITCODE -ne 0) { throw 'MainActivity launch failed.' }
     Start-Sleep -Seconds 30
@@ -48,6 +51,12 @@ try {
     $crashLog = @(& $adb -s $serial logcat -d -b crash)
     $crashLog | Set-Content -LiteralPath (Join-Path $output 'crash-private.log') -Encoding utf8
     if (@($crashLog | Where-Object { $_ -match ('Process: ' + [regex]::Escape($appId) + ',') }).Count) { throw 'App crash was recorded during startup.' }
+    $events = @(& $adb -s $serial logcat -d -b events)
+    if ($LASTEXITCODE -ne 0) { throw 'Owned device event log could not be inspected.' }
+    $events | Set-Content -LiteralPath (Join-Path $output 'events-private.log') -Encoding utf8
+    if (@($events | Where-Object { $_ -match '\bam_anr\b' -and $_.Contains($appId) }).Count) {
+        throw 'App ANR was recorded during the current startup gate.'
+    }
     $deviceCapture = "/sdcard/$EvidenceLabel.png"
     & $adb -s $serial shell screencap -p $deviceCapture
     if ($LASTEXITCODE -ne 0) { throw 'Startup screenshot failed.' }
@@ -57,6 +66,7 @@ try {
     $record['processAliveAfterSeconds'] = 30
     $record['mainActivityResumed'] = $resumed
     $record['appCrashRecorded'] = $false
+    $record['appAnrRecorded'] = $false
     $record['privateCaptureSha256'] = (Get-FileHash -LiteralPath $capture).Hash.ToLowerInvariant()
     $record['status'] = 'passed'
     Write-Output "Real MainActivity survived startup on owned Android API $api. Private evidence retained."

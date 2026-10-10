@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-10T14:26:09.6317781Z",
+  "label": "telumia-v022-desktop-r1",
+  "target": "desktop",
+  "sourceCommit": "b39b6ea79d37b7c9eb1383ef68692dd2309d664d",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 268,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 62,
+    "attempt": "telumia-v022-desktop-r1"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.2-alpha.1.msi",
+      "bytes": 215626520,
+      "sha256": "1400185e3d5c9ea2fdf96bb983c5d287190406f940c61caaf5a9271647577662",
+      "path": "artifacts/telumia-v022-desktop-r1/desktop/package/Telumia-Windows-x64-0.2.2-alpha.1.msi"
+    }
+  ]
+}
