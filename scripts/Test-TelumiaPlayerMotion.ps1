@@ -53,6 +53,22 @@ $fixture = @'
       timedMarkers:[{id:'qa-intro',kind:'INTRO',startFraction:0.04,endFraction:0.06,label:'Introdução',providerId:'fixture'}]});
     window.playerUpdate({duration:2400,position:612,paused:true,loading:false,volumeLevel:0.75,audioTracks:[],subtitleTracks:[]});
     await document.fonts.ready;
+    const markerLayer=document.getElementById('timedMarkers'),markerSummary=document.getElementById('timedMarkersSummary');
+    const chapterLabel='Final 😀 <img src=x onerror=alert(1)>';
+    window.playerControls({timedMarkers:[{id:'embedded-mpv:1:1200000',kind:'CHAPTER',startFraction:0.5,
+      endFraction:1,label:chapterLabel,providerId:'embedded-mpv'}]});
+    const chapterMarker=markerLayer.querySelector('[data-kind="CHAPTER"]');
+    assert(chapterMarker?.title===chapterLabel&&chapterMarker.style.left==='50%'&&chapterMarker.style.width==='50%',
+      'Embedded chapter labels and bounds use the existing timeline marker contract');
+    assert(markerSummary.textContent===chapterLabel&&markerSummary.querySelector('img')===null,
+      'Chapter text cannot inject HTML into the accessible timeline summary');
+    assert(document.getElementById('seek').getAttribute('aria-describedby')===markerSummary.id,
+      'Known chapters are described to assistive technology');
+    window.playerControls({timedMarkers:[]});
+    assert(markerLayer.hidden&&markerLayer.children.length===0&&!document.getElementById('seek').hasAttribute('aria-describedby'),
+      'Clearing a previous source removes its chapter markers and accessible description');
+    window.playerControls({timedMarkers:[{id:'qa-intro',kind:'INTRO',startFraction:0.04,endFraction:0.06,
+      label:'Introdução',providerId:'fixture'}]});
     const playbackLabel=document.getElementById('toggleLabel');
     const labelBounds=playbackLabel.getBoundingClientRect();
     assert(playbackLabel.textContent==='Reproduzir'&&labelBounds.width>1&&labelBounds.height>1&&

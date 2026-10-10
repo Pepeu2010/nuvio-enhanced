@@ -1,0 +1,35 @@
+{
+  "scope": "Actual libmpv/JNI with original generated video and owned hidden HWND/local HTTP; not whole WebView2 UI/hardware/account proof",
+  "source": "Preserved JUnit snapshot from passed clean build",
+  "sourceCommit": "e4ec9bfa7660339e8c533fb1b237ba0c7e5bb9e7",
+  "cases": [
+    {
+      "seconds": "1.021",
+      "name": "actualWindowsFileChaptersPreserveUtf8AndIntegrateWithTimedMetadata[desktop]"
+    },
+    {
+      "seconds": "0.196",
+      "name": "actualWorkerFilmstripContainsDistinctAvailableNeighborFrames[desktop]"
+    },
+    {
+      "seconds": "0.02",
+      "name": "cancellationReturnsBeforeDelayedHttpBodyAndDisposedHandleCannotCapture[desktop]"
+    },
+    {
+      "seconds": "0.077",
+      "name": "authenticatedHttpFixturePreservesCommaAndBackslashHeaderValues[desktop]"
+    },
+    {
+      "seconds": "1.159",
+      "name": "actualWindowsPrimaryPlayerPreservesHttpHeadersAndPreviewDoesNotSeekPlayback[desktop]"
+    },
+    {
+      "seconds": "0.137",
+      "name": "actualJniExtractsDistinctFramesWithBoundedDimensionsAndReleasesHandles[desktop]"
+    }
+  ],
+  "tests": 6,
+  "failures": 0,
+  "skipped": 0,
+  "errors": 0
+}

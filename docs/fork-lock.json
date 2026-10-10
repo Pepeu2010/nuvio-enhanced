@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-10T14:47:17.0497646Z",
+  "recordedAtUtc": "2026-10-10T15:12:04.1315063Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "b39b6ea79d37b7c9eb1383ef68692dd2309d664d",
+      "commit": "e4ec9bfa7660339e8c533fb1b237ba0c7e5bb9e7",
       "checkout": "repos/desktop",
-      "milestone": "Published alpha 0.2.2: 268 selected tests and MSI, actual Windows primary native HTTP playback/seek and independent frames, header NUL/CR/LF rejection, player dock and visible label. Eight renderer executions, 1052 checks passed. Whole product, real official account and physical/Linux/macOS gates remain pending.",
-      "packageSourceCommit": "b39b6ea79d37b7c9eb1383ef68692dd2309d664d",
+      "milestone": "Post-release embedded mpv chapters integrated with existing timed metadata/index and markers. 279 selected tests/MSI, six actual JNI cases including generated Matroska chapters/Unicode/frame extraction, and eight renderer executions/1084 checks passed. Code main is newer than published alpha 0.2.2; current development package is not a new release. Actual complete source switching/WebView2/physical/Linux/macOS gates and Media3 TV remain pending.",
+      "packageSourceCommit": "e4ec9bfa7660339e8c533fb1b237ba0c7e5bb9e7",
       "publishedRelease": "v0.2.2-alpha.1",
       "publishedSourceCommit": "b39b6ea79d37b7c9eb1383ef68692dd2309d664d"
     },

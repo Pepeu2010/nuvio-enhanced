@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-10T15:04:46.4707449Z",
+  "label": "telumia-embedded-chapters-r1",
+  "target": "desktop",
+  "sourceCommit": "e4ec9bfa7660339e8c533fb1b237ba0c7e5bb9e7",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 279,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 64,
+    "attempt": "telumia-embedded-chapters-r1"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.2-alpha.1.msi",
+      "bytes": 215647000,
+      "sha256": "91e9f3d1279ede0d88bb97cd7bbcdf1d06273ba83a5bbf4e7f0013ddfa13ff21",
+      "path": "artifacts/telumia-embedded-chapters-r1/desktop/package/Telumia-Windows-x64-0.2.2-alpha.1.msi"
+    }
+  ]
+}
