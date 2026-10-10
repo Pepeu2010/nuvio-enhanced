@@ -1,0 +1,29 @@
+{
+  "exportedAtUtc": "2026-10-10T01:25:14.7468229Z",
+  "scope": "Package and binary inspection; no installation or playback QA",
+  "results": [
+    {
+      "target": "desktop",
+      "sourceCommit": "bbdf54086ba52fd291d552ee360e2724010ef4d0",
+      "installed": false,
+      "inspection": {
+        "msiProperties": {
+          "ProductName": "Telumia",
+          "Manufacturer": "Telumia contributors",
+          "UpgradeCode": "{1C69D968-D0E0-4B0F-B5C0-615B8EA92F90}",
+          "ProductVersion": "1.2.1"
+        },
+        "compiledBridgeSha256": "ea5f4aae88c5ea08c220dd8721e489927c60d49a41034ded7b3600ec4154699b",
+        "isolatedWebViewPath": true,
+        "packagedBridgeMatchesBuild": true
+      },
+      "artifacts": [
+        {
+          "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+          "bytes": 215622424,
+          "sha256": "72d6871134e6e648fd2de7be5ae0aebe837c0f935089d2b17f4c4d25b3d2d81b"
+        }
+      ]
+    }
+  ]
+}

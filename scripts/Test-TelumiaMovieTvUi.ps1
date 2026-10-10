@@ -78,6 +78,11 @@ try {
         $localeReport = (@(& $adb -s $serial shell cmd locale get-app-locales $appId --user 0) -join '').Trim()
         if ($LASTEXITCODE -ne 0 -or $localeReport -notmatch ('are \[' + [regex]::Escape($AppLocale) + '\]$')) { throw 'The locale manager did not confirm the requested app locale.' }
         $record['localeManagerReported'] = $localeReport
+        & $adb -s $serial shell am force-stop $appId
+        if ($LASTEXITCODE -ne 0) { throw 'Cannot stop the owned fixture app before instrumentation after its locale change.' }
+        $remainingPid = (@(& $adb -s $serial shell pidof $appId) -join '').Trim()
+        if ($remainingPid) { throw 'The owned fixture app still has a process after the locale change; do not race instrumentation with it.' }
+        $record['localeFreshProcessGate'] = 'The owned app has no remaining process before instrumentation starts with its confirmed app locale.'
     }
     & $adb -s $serial shell wm size $dimensions
     & $adb -s $serial shell wm density $density
@@ -184,6 +189,14 @@ try {
 } catch {
     $record['status'] = 'failed'
     $record['failure'] = $_.Exception.Message
+    # Only the verified development AVD is queried; diagnostics remain in ignored artifacts.
+    $diagnostic = & $adb -s $serial logcat -d -v threadtime 2>&1
+    $diagnostic | Set-Content -LiteralPath (Join-Path $output 'failure-logcat.log') -Encoding utf8
+    $record['diagnosticsCaptured'] = ($LASTEXITCODE -eq 0)
+    & $adb -s $serial shell dumpsys activity lastanr 2>&1 |
+        Set-Content -LiteralPath (Join-Path $output 'failure-last-anr.log') -Encoding utf8
+    & $adb -s $serial shell dumpsys dropbox --print data_app_anr 2>&1 |
+        Set-Content -LiteralPath (Join-Path $output 'failure-anr-traces.log') -Encoding utf8
     throw
 } finally {
     if ($null -ne $priorAppLocale) {

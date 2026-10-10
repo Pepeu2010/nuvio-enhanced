@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-10T01:25:14.1960693Z",
+  "label": "telumia-timeline-native-frames-r2",
+  "target": "desktop",
+  "sourceCommit": "bbdf54086ba52fd291d552ee360e2724010ef4d0",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 261,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 61,
+    "attempt": "telumia-timeline-native-frames-r2"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215622424,
+      "sha256": "72d6871134e6e648fd2de7be5ae0aebe837c0f935089d2b17f4c4d25b3d2d81b",
+      "path": "artifacts/telumia-timeline-native-frames-r2/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}

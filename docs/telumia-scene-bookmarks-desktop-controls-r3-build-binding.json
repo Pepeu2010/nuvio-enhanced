@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-10T00:35:09.6284575Z",
+  "label": "telumia-scene-bookmarks-desktop-controls-r3",
+  "target": "desktop",
+  "sourceCommit": "00232926b2eaa979fe7f7d66513585d8d8523562",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 256,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 59,
+    "attempt": "telumia-scene-bookmarks-desktop-controls-r3"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215585560,
+      "sha256": "567af1e06a973ecfbf47c91fb9e531dbb5ab12a119600beb963fc5434ddbc280",
+      "path": "artifacts/telumia-scene-bookmarks-desktop-controls-r3/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}

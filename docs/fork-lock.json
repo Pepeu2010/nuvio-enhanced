@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-09T20:13:54.6877086Z",
+  "recordedAtUtc": "2026-10-10T01:28:46.02603Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "ee6668b370b9debbb2168622f07a08d443171ee3",
+      "commit": "bbdf54086ba52fd291d552ee360e2724010ef4d0",
       "checkout": "repos/desktop",
-      "milestone": "Account refresh, durable collection/addon reconciliation and sidebar/focus motion; profile motion now reaches the existing native player control assets without shortening reading times. 241 selected tests and clean-source MSI passed after fixing cinematic intensity serialization; earlier failures preserved. Eight isolated real-time Chromium executions passed 72 mode/intensity cases and 764 checks at four resolutions. JNI/WebView2 playback, official account interoperation, guest import and whole product remain pending; not a new release.",
-      "packageSourceCommit": "ee6668b370b9debbb2168622f07a08d443171ee3",
+      "milestone": "Desktop scene bookmarks and isolated JNI libmpv timeline thumbnails integrated into existing controls with account/profile/episode/source cache ownership and cancellation. 261 selected tests and clean-source MSI passed, including actual JNI extraction of distinct bounded frames. Eight isolated Chromium executions passed 72 motion pairs and 908 checks; real WebView2 playback/seek/focus, HTTP/HDR/device performance, filmstrip and full product remain pending. Not a new release.",
+      "packageSourceCommit": "bbdf54086ba52fd291d552ee360e2724010ef4d0",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d"
     },

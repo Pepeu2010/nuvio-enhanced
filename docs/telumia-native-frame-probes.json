@@ -1,0 +1,116 @@
+{
+  "scope": "Native decoder capability evidence only; this does not expose thumbnails in the app.",
+  "attempts": [
+    {
+      "report": {
+        "status": "failed",
+        "sourceCommit": "921cd6630b48eeadbb085fef2abf788a846be333",
+        "dllSha256": "07c68bb211f23a218ded0a36eb12207dc3aeb44e5318ffca6ce9dcc7c3173906",
+        "fixtureSha256": "ec8273a65a55ad7a5635bb9cc5071a66a2a724f8566dc568b02d99361841a7db",
+        "frames": [],
+        "scope": "Actual bundled libmpv C API, original local video, paused silent vo=null decoders. No JNI, application controls, account, remote media, HDR, cache or device performance proof.",
+        "primaryPositionBeforeMs": 1000,
+        "failure": "RuntimeError: Actual native position is unavailable"
+      },
+      "label": "telumia-native-frame-probe-r1"
+    },
+    {
+      "report": {
+        "status": "passed",
+        "sourceCommit": "921cd6630b48eeadbb085fef2abf788a846be333",
+        "dllSha256": "07c68bb211f23a218ded0a36eb12207dc3aeb44e5318ffca6ce9dcc7c3173906",
+        "fixtureSha256": "ec8273a65a55ad7a5635bb9cc5071a66a2a724f8566dc568b02d99361841a7db",
+        "frames": [
+          {
+            "requestedMs": 500,
+            "actualMs": 500,
+            "width": 96,
+            "height": 54,
+            "stride": 384,
+            "bgr": [
+              3,
+              3,
+              255
+            ],
+            "bytes": 20736,
+            "fixtureFramePtsMs": 500
+          },
+          {
+            "requestedMs": 2000,
+            "actualMs": 2000,
+            "width": 96,
+            "height": 54,
+            "stride": 384,
+            "bgr": [
+              6,
+              255,
+              6
+            ],
+            "bytes": 20736,
+            "fixtureFramePtsMs": 2000
+          },
+          {
+            "requestedMs": 2500,
+            "actualMs": 2500,
+            "width": 96,
+            "height": 54,
+            "stride": 384,
+            "bgr": [
+              7,
+              255,
+              7
+            ],
+            "bytes": 20736,
+            "fixtureFramePtsMs": 2500
+          },
+          {
+            "requestedMs": 3000,
+            "actualMs": 3000,
+            "width": 96,
+            "height": 54,
+            "stride": 384,
+            "bgr": [
+              8,
+              255,
+              8
+            ],
+            "bytes": 20736,
+            "fixtureFramePtsMs": 3000
+          },
+          {
+            "requestedMs": 4500,
+            "actualMs": 4500,
+            "width": 96,
+            "height": 54,
+            "stride": 384,
+            "bgr": [
+              255,
+              11,
+              11
+            ],
+            "bytes": 20736,
+            "fixtureFramePtsMs": 4500
+          },
+          {
+            "requestedMs": 500,
+            "actualMs": 500,
+            "width": 96,
+            "height": 54,
+            "stride": 384,
+            "bgr": [
+              3,
+              3,
+              255
+            ],
+            "bytes": 20736,
+            "fixtureFramePtsMs": 500
+          }
+        ],
+        "scope": "Actual bundled libmpv C API, original local video, paused silent vo=null decoders. No JNI, application controls, account, remote media, HDR, cache or device performance proof.",
+        "primaryPositionBeforeMs": 1000,
+        "primaryPositionAfterMs": 1000
+      },
+      "label": "telumia-native-frame-probe-r2"
+    }
+  ]
+}
