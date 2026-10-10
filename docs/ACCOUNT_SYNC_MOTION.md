@@ -4,6 +4,8 @@ A solicitação de 08/10/2026 prioriza a sincronização bidirecional com a mesm
 conta Nuvio, a mesclagem dos dados existentes, movimento nas principais telas e
 uma barra lateral melhor. Depois desses incrementos, a meta integral continua.
 
+Os incrementos de conta, reconciliação de coleções/addons e navegação descritos abaixo foram distribuídos na **0.2.2-alpha.1**: fontes Desktop `b39b6ea79d37b7c9eb1383ef68692dd2309d664d` e TV `e1962f736410a288f3a8db92fa6d2eaa4eaaa66b`. Os gates finais passaram 268/200 testes selecionados e builds reais; os 22 assets remotos foram conferidos. A conta oficial autenticada e os limites de concorrência do backend continuam pendentes. [Entrega](ALPHA_022.md), [publicação](RELEASES.md). Os registros seguintes preservam a sequência dos incrementos anteriores.
+
 ## Incremento em validação
 
 Os clientes usam os repositories e o backend Nuvio existentes. Não se cria outra

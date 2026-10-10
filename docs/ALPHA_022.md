@@ -1,6 +1,6 @@
 # Incremento 0.2.2-alpha.1
 
-Esta entrega reúne o código posterior à release 0.2.1: navegação/motion, seleção de perfis, reconciliação de coleções e addons nos contratos Nuvio, momentos salvos e thumbnails/filmstrip/composição do player Windows. Também remove uma injeção não utilizada na Application TV e limita a escala de foco das ações de momentos salvos. O plano integral permanece em execução.
+Esta [alpha publicada](https://github.com/Pepeu2010/telumia/releases/tag/v0.2.2-alpha.1) reúne o código posterior à release 0.2.1: navegação/motion, seleção de perfis, reconciliação de coleções e addons nos contratos Nuvio, momentos salvos e thumbnails/filmstrip/composição do player Windows. Também remove uma injeção não utilizada na Application TV e limita a escala de foco das ações de momentos salvos. Os [22 assets remotos foram conferidos](telumia-v022-release-verification.json). O plano integral permanece em execução.
 
 ## Fontes e pacotes
 
@@ -27,7 +27,7 @@ Os cinco casos JNI verificam vídeo local, HTTP controlado com headers contendo 
 
 O painel real de momentos salvos mantém persistência, renomeação, exclusão, confirmação de outro corte e retry. O botão largo de retorno ao timestamp deixa de crescer sobre Renomear; as outras ações usam a política de movimento da interface.
 
-[Gate nativo](telumia-v022-native-gates.json): **12 execuções** em Android 36, quatro casos por framebuffer nativo 720p/1080p/4K, português brasileiro. As seis capturas do painel/confirmacão foram revisadas: texto, foco e ações cabem na tela. A entrada de texto usa a semântica do componente e o IME próprio; as ações/foco usam D-pad. A reprodução efetiva de vídeo ao selecionar o bookmark é um gate separado.
+[Gate nativo](telumia-v022-native-gates.json): **12 execuções** em Android 36, quatro casos por framebuffer nativo 720p/1080p/4K, português brasileiro. As seis capturas do painel/confirmação foram revisadas: texto, foco e ações cabem na tela. A entrada de texto usa a semântica do componente e o IME próprio; as ações/foco usam D-pad. A reprodução efetiva de vídeo ao selecionar o bookmark é um gate separado.
 
 A MainActivity real passou na [inicialização Android 36](telumia-v022-startup-api36-qa.json) e na [inicialização Android 24](telumia-v022-startup-api24-qa.json), com o mesmo APK preservado: processo vivo, Activity retomada, nenhum crash/ANR nos 30 segundos observados em cada API. A captura da Activity e logs brutos permanecem privados. A dependência removida da Application era não utilizada; MainActivity e outros consumidores conservam o serviço existente. Esse resultado não prova ausência de todos os ANRs nem resolve automaticamente toda navegação/performance.
 

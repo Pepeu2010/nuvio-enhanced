@@ -1,0 +1,51 @@
+{
+  "rootTagCommitVerified": true,
+  "attempts": [
+    {
+      "status": "failed",
+      "startedAtUtc": "2026-10-10T14:41:00.6172919Z",
+      "releases": [
+        {
+          "repository": "Pepeu2010/telumia",
+          "state": "draft-uploaded"
+        },
+        {
+          "repository": "Pepeu2010/telumia-desktop",
+          "state": "draft-uploaded"
+        },
+        {
+          "repository": "Pepeu2010/telumia-tv",
+          "state": "draft-uploaded"
+        }
+      ],
+      "failure": "Draft release read failed",
+      "finishedAtUtc": "2026-10-10T14:44:09.8119128Z"
+    },
+    {
+      "status": "passed",
+      "startedAtUtc": "2026-10-10T14:45:40.3832028Z",
+      "releases": [
+        {
+          "repository": "Pepeu2010/telumia",
+          "id": 409005974,
+          "state": "published"
+        },
+        {
+          "repository": "Pepeu2010/telumia-desktop",
+          "id": 409006852,
+          "state": "published"
+        },
+        {
+          "repository": "Pepeu2010/telumia-tv",
+          "id": 409007249,
+          "state": "published"
+        }
+      ],
+      "priorAttempt": "telumia-v022-publish-r1",
+      "finishedAtUtc": "2026-10-10T14:45:52.8166563Z"
+    }
+  ],
+  "status": "passed",
+  "rootTagCommit": "62fa214f37300ca42759042a14fb4597eb40e5d7",
+  "scope": "Upload, digest verification and publication only; runtime gates are recorded separately"
+}

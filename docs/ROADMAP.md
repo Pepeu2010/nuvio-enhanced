@@ -7,7 +7,7 @@ para trocar stack, login/backend, remover recursos ou publicar como oficial.
 
 ## Estado desta execução
 
-Estado mais recente: a release `v0.2.1-alpha.1` inclui marca própria, busca Brasil/edição de Iludida e os incrementos verificados de Home, detalhes, metadata temporal, cache configurável e editores locais de avatar. Seus MSI Windows, APK universal/quatro ABIs e fontes tiveram os assets remotos conferidos. [Publicação](RELEASES.md) e [Profile Studio](PROFILE_STUDIO.md) registram commits, testes e limites. A seleção de perfis do Desktop e da TV recebeu incrementos posteriores em `main`, ainda fora dos binários publicados. Os registros abaixo preservam a sequência de entregas; não representam encerramento da Fase 1 ou do produto completo.
+Estado mais recente: a release `v0.2.2-alpha.1` reúne os incrementos de conta/coleções/addons, navegação/motion, perfis, momentos salvos e player Windows com thumbnails/filmstrip. Passaram 268 testes selecionados PC, 200 TV, 1052 verificações de renderer, 12 casos nativos TV nas três resoluções e startup real em APIs 24/36. Os 22 assets remotos foram conferidos por hash. [Entrega e limites](ALPHA_022.md), [publicação](RELEASES.md). A conta oficial autenticada, hardware físico e as demais fases continuam pendentes; nenhuma fase integral é encerrada apenas por esses gates.
 
 - Checkouts oficiais dos seis projetos concluídos e commits registrados.
 - Auditoria estática e matriz de lacunas/contratos produzidas.

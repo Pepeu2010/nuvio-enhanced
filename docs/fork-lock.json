@@ -1,5 +1,5 @@
 {
-  "recordedAtUtc": "2026-10-10T14:38:18.8750687Z",
+  "recordedAtUtc": "2026-10-10T14:47:17.0497646Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
@@ -7,10 +7,10 @@
       "branch": "main",
       "commit": "b39b6ea79d37b7c9eb1383ef68692dd2309d664d",
       "checkout": "repos/desktop",
-      "milestone": "Prepared alpha 0.2.2: 268 selected tests and MSI, actual Windows primary native HTTP playback/seek and independent frames, header NUL/CR/LF rejection, player dock and visible label. Eight renderer executions, 1052 checks passed. Whole product, real official account and physical/Linux/macOS gates remain pending.",
+      "milestone": "Published alpha 0.2.2: 268 selected tests and MSI, actual Windows primary native HTTP playback/seek and independent frames, header NUL/CR/LF rejection, player dock and visible label. Eight renderer executions, 1052 checks passed. Whole product, real official account and physical/Linux/macOS gates remain pending.",
       "packageSourceCommit": "b39b6ea79d37b7c9eb1383ef68692dd2309d664d",
-      "publishedRelease": "v0.2.1-alpha.1",
-      "publishedSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d"
+      "publishedRelease": "v0.2.2-alpha.1",
+      "publishedSourceCommit": "b39b6ea79d37b7c9eb1383ef68692dd2309d664d"
     },
     {
       "repository": "Pepeu2010/telumia-tv",
@@ -18,10 +18,10 @@
       "branch": "main",
       "commit": "e1962f736410a288f3a8db92fa6d2eaa4eaaa66b",
       "checkout": "repos/tv",
-      "milestone": "Prepared alpha 0.2.2: 200 selected tests, five APKs/test APK passed; own native Portuguese bookmark panel passed twelve cases in 720p/1080p/4K. Real MainActivity startup API24/API36 passed 30-second crash/ANR checks. Account reconciliation/backend contracts preserved; real official account, full product and physical device gates remain pending.",
+      "milestone": "Published alpha 0.2.2: 200 selected tests, five APKs/test APK passed; own native Portuguese bookmark panel passed twelve cases in 720p/1080p/4K. Real MainActivity startup API24/API36 passed 30-second crash/ANR checks. Account reconciliation/backend contracts preserved; real official account, full product and physical device gates remain pending.",
       "packageSourceCommit": "e1962f736410a288f3a8db92fa6d2eaa4eaaa66b",
-      "publishedRelease": "v0.2.1-alpha.1",
-      "publishedSourceCommit": "bb3faa3877a33db46eea3e08ac65ff1e21e291a0"
+      "publishedRelease": "v0.2.2-alpha.1",
+      "publishedSourceCommit": "e1962f736410a288f3a8db92fa6d2eaa4eaaa66b"
     }
   ]
 }

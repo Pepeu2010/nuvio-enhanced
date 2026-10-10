@@ -1,5 +1,15 @@
 # Releases da Telumia
 
+## v0.2.2-alpha.1 — conta, navegação, momentos e player
+
+A [nova pré-release](https://github.com/Pepeu2010/telumia/releases/tag/v0.2.2-alpha.1) está publicada nos três repositórios: MSI Windows x64, APK TV universal/quatro ABIs, fontes, manifesto e SHA256SUMS. **22 assets remotos verificados por tamanho, estado e digest SHA-256.** [Verificação](telumia-v022-release-verification.json), [entrega e limites](ALPHA_022.md).
+
+Distribui Desktop `b39b6ea79d37b7c9eb1383ef68692dd2309d664d` e TV `e1962f736410a288f3a8db92fa6d2eaa4eaaa66b`; tag central `62fa214f37300ca42759042a14fb4597eb40e5d7`. Passaram 268 testes selecionados Windows e 200 TV, sem falhas/erros/skips, com builds em árvores limpas. O renderer PC passou oito execuções/1.052 verificações; o painel TV passou 12 casos em 720p/1080p/4K, com seis capturas revisadas. A MainActivity real passou nas APIs 24 e 36 com o mesmo APK, sem crash/ANR nos 30 segundos observados.
+
+Reúne os incrementos de seleção de perfis, motion/navegação, reconciliação durável de coleções/addons nos contratos existentes, momentos salvos e thumbnails/filmstrip/composição do player Windows. Inclui validação nativa de headers HTTP e remoção de uma injeção não utilizada na Application TV. ZIP Desktop com 142 objetos LFS conferidos; os APKs continuam Android TV Full Debug de desenvolvimento.
+
+Essa alpha não encerra o plano. Conta oficial autenticada, WebView2 completo, hardware físico/HDR/DPI, execução Linux/macOS, thumbnails TV e as demais fases continuam pendentes. Rascunhos tiveram seus uploads conferidos por ID antes da publicação; a primeira tentativa de consulta pela tag retornou 404 e foi preservada. [Publicação e recuperação](telumia-v022-publication-results.json). Nenhum asset de versão anterior foi substituído.
+
 ## v0.2.1-alpha.1 — Home, cache e editores locais de avatar
 
 A [pré-release](https://github.com/Pepeu2010/telumia/releases/tag/v0.2.1-alpha.1) está publicada nos três repositórios. Inclui MSI Windows x64, APK Android TV universal e variantes ARM64/ARM32/x86/x86_64, fontes correspondentes, manifesto e SHA256SUMS. Foram verificados os 22 assets remotos por tamanho e digest SHA-256. [Registro da publicação](telumia-profile-studio-release-verification.json).

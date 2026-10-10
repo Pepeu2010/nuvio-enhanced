@@ -10,7 +10,7 @@ O projeto acrescenta busca voltada ao Brasil, editores de avatar, cache configur
 
 ## Baixar e instalar
 
-Na [release 0.2.1-alpha.1](https://github.com/Pepeu2010/telumia/releases/tag/v0.2.1-alpha.1), escolha:
+Na [release 0.2.2-alpha.1](https://github.com/Pepeu2010/telumia/releases/tag/v0.2.2-alpha.1), escolha:
 
 | Aparelho | Arquivo |
 |---|---|
@@ -20,7 +20,7 @@ Na [release 0.2.1-alpha.1](https://github.com/Pepeu2010/telumia/releases/tag/v0.
 
 Confira os checksums SHA-256 incluídos na release. Os APKs atuais são **Android TV Full Debug**, assinados para desenvolvimento. Ainda não há interface específica para celulares nem pacotes Linux/macOS publicados.
 
-**A release publicada e o código atual têm alcances diferentes.** A `0.2.1-alpha.1` inclui a identidade Telumia, busca Brasil, incrementos de Home/detalhes, metadata temporal, cache configurável e editores locais de avatar. As entregas posteriores de perfis, previews, momentos salvos e sincronização ainda aguardam uma nova release. Os arquivos das versões anteriores são preservados.
+**Nova alpha disponível:** a `0.2.2-alpha.1` acrescenta seleção de perfis, navegação/motion, momentos salvos e reconciliação durável de coleções/addons. No PC, distribui o player reorganizado com miniaturas e filmstrip reais de um decoder separado. MSI, cinco APKs e fontes foram publicados; os 22 arquivos dos três repositórios tiveram seus hashes conferidos. [Entrega, testes e limites](docs/ALPHA_022.md). Os arquivos das versões anteriores são preservados; a meta integral continua em implementação.
 
 ## Melhorias já implementadas
 
@@ -32,7 +32,7 @@ Confira os checksums SHA-256 incluídos na release. Os APKs atuais são **Androi
 - **Movimento no player PC:** painéis e controles nativos seguem a preferência de movimento e intensidade do perfil, com navegação por teclado e tempos de interação preservados. [Builds e validação visual](docs/NATIVE_PLAYER_MOTION.md).
 - **Timeline e momentos salvos:** eventos temporais disponíveis de intro, recap e créditos nos dois players; momentos com nome/data, renomear, remover e voltar à cena no código PC e TV. No PC, o botão do player e a tecla D abrem o painel; a tecla B continua alternando áudio. Os momentos ficam neste aparelho, por conta/perfil/episódio, com confirmação para outra fonte. A reprodução e o seek reais continuam com gates próprios. [Timeline](docs/TIMED_METADATA.md), [momentos](docs/SCENE_BOOKMARKS.md).
 - **Miniaturas e filmstrip no player PC:** a timeline solicita frames a um decoder libmpv separado, com cancelamento e cache por conta/perfil/fonte. Ao arrastar por mais tempo, exibe frames vizinhos disponíveis. 267 testes selecionados e 980 verificações do renderer passaram, incluindo extração JNI local, HTTP controlado e seek/reprodução do player principal Windows. TV, provedores externos/HDR e interação completa com WebView2 continuam pendentes. [Evidências](docs/NATIVE_TIMELINE_FRAMES.md).
-- **Composição do player PC:** título e episódio no topo, dock de reprodução centralizado, thumb visível e PiP compacto. O novo layout passou em 1044 verificações de renderer, incluindo loading, erro, recuperação e movimento reduzido. O redesign integral do player continua em andamento. [Captura de QA e limites](docs/PLAYER_DESKTOP_SURFACE.md).
+- **Composição do player PC:** título e episódio no topo, dock de reprodução centralizado, rótulo visível, thumb e PiP compacto. O pacote da nova alpha passou em 1052 verificações de renderer, incluindo loading, erro, recuperação e movimento reduzido. O redesign integral do player continua em andamento. [Captura de QA e limites](docs/ALPHA_022.md).
 - **Mesma conta:** atualização de perfis, configurações suportadas, addons, plugins, biblioteca, progresso, coleções e Home ao retornar ao app e periodicamente em atividade. Coleções e addons nos dois clientes possuem mesclagem durável de alterações pendentes. A comprovação ponta a ponta com a conta nos clientes oficial e Telumia continua pendente. [Evidências e limites](docs/ACCOUNT_SYNC_MOTION.md).
 
 ### Novelas e edições brasileiras

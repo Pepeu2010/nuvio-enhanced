@@ -14,4 +14,6 @@ A captura 1366×768 abaixo foi revisada: masthead e ações não se sobrepõem, 
 
 ![Captura de QA controlada em 1366×768](evidence/telumia-player-dock/1366x768-full.png)
 
-A validação usa pixels CSS e não comprova escala DPI do Windows, distância de sofá, GPU/HDR físico, foco da janela de bookmarks ou interação real com WebView2. A revisão também revelou que o estilo herdado de texto visualmente oculto ainda limita o rótulo de reprodução; a correção integra o próximo pacote alpha, com seus próprios gates. A release publicada continua `v0.2.1-alpha.1` até a preparação/publicação verificada da próxima versão.
+A validação usa pixels CSS e não comprova escala DPI do Windows, distância de sofá, GPU/HDR físico, foco da janela de bookmarks ou interação real com WebView2. Essa revisão revelou que o estilo herdado de texto visualmente oculto limitava o rótulo de reprodução.
+
+A correção foi compilada, testada e distribuída na **0.2.2-alpha.1**, no commit `b39b6ea79d37b7c9eb1383ef68692dd2309d664d`. O gate adicional confirma rótulo localizado visível, sem clipping de um pixel. O pacote final passou 268 testes selecionados e oito execuções/1.052 verificações de renderer, com capturas 1366×768 e 4K revisadas. [Entrega e limites](ALPHA_022.md), [release](RELEASES.md).
