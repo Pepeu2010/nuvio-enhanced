@@ -64,7 +64,7 @@ Estado mais recente: a release `v0.2.1-alpha.1` inclui marca própria, busca Bra
 - Player Desktop: a política visual local chega à ponte e aos controles nativos; Completo/Reduzido/Desligado e intensidades, sem encurtar tempos de leitura. **241 testes selecionados/MSI e oito execuções Chromium com 72 pares de modo/intensidade passaram**, preservando falhas anteriores. A integração JNI/WebView2 e reprodução continuam como gates separados. [Validação](NATIVE_PLAYER_MOTION.md).
 
 - Momentos salvos Desktop: painel integrado aos controles existentes, persistência por proprietário/episódio/fonte, confirmação de outra fonte e estados de erro/retentativa. **257 testes selecionados/MSI e oito execuções Chromium com 828 verificações passaram**. As tentativas anteriores ficaram preservadas. Janela modal junto ao vídeo, foco WebView2 e seek real continuam como gates próprios; a meta integral segue aberta. [Entrega](SCENE_BOOKMARKS.md).
-- Thumbnails Desktop: worker JNI libmpv isolado, cache configurável por owner/fonte e exibição na timeline existente integrados; 261 testes selecionados e MSI passaram, incluindo extração JNI real de frames distintos de vídeo local. Renderer passou em oito execuções e 908 verificações; WebView2 com reprodução ativa, HTTP/HDR, filmstrip e caminho Media3 TV seguem pendentes. [Evidências e limites](NATIVE_TIMELINE_FRAMES.md).
+- Thumbnails e filmstrip Desktop: worker JNI libmpv isolado, cache configurável por owner/fonte e scrubbing com frames vizinhos disponíveis integrados; 266 testes selecionados e MSI passaram, incluindo extração JNI local, HTTP controlado com headers e cancelamento. Renderer passou em oito execuções e 972 verificações. Interação WebView2 completa, player principal, provedores externos/HDR, Linux/macOS executados e caminho Media3 TV seguem pendentes. [Evidências e limites](NATIVE_TIMELINE_FRAMES.md).
 
 | Milestone | Entrega concreta | Gate |
 |---|---|---|
@@ -119,5 +119,3 @@ Funções secundárias do documento original — busca Ctrl+K, histórico visual
 Escolha para mim, Guest/Kids, webcam/animated avatars, Cinema/Living Room/Ambient
 Mode — recebem incrementos próprios, preservando seu comportamento/capability.
 Nunca anunciá-las como prontas antes de implementação/QA.
-
-

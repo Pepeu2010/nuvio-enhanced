@@ -85,6 +85,8 @@ $fixture = @'
     const canvas=document.createElement('canvas');canvas.width=96;canvas.height=54;canvas.getContext('2d').fillStyle='#e0493e';canvas.getContext('2d').fillRect(0,0,96,54);
     const controlledPng=canvas.toDataURL('image/png');
     window.playerControls({timelinePreviewRequestedMs:requested,timelinePreviewActualMs:requested,timelinePreviewImage:controlledPng});
+    await previewImage.decode();
+    assert(previewImage.naturalWidth===96&&previewImage.naturalHeight===54,'The returned PNG is actually decoded by the renderer');
     assert(!previewImage.hidden&&previewImage.src===controlledPng,'Matching controlled decoder response is displayed');
     hover(0.8);await sleep(160);
     assert(previewImage.hidden&&!previewImage.hasAttribute('src'),'A late frame from another timestamp cannot remain visible');
@@ -100,6 +102,32 @@ $fixture = @'
     assert(preview.hidden&&window.telumiaCommands.some(m=>m.type==='timelinePreviewClear'),'Leaving the timeline clears and cancels extraction');
     window.playerControls({isInPip:true});let previousRequests=previewCommands().length;hover(0.5);await sleep(160);
     assert(preview.hidden&&previewCommands().length===previousRequests,'PiP cannot start the timeline decoder');
+    window.playerControls({isInPip:false,timelinePreviewEnabled:true});
+    previousRequests=previewCommands().length;
+    for(let step=0;step<7;step++){hover(0.3+step*0.01);await sleep(40);}
+    await sleep(160);
+    assert(previewCommands().length>=previousRequests+2,'Continuous movement is throttled rather than waiting until movement stops');
+    const strip=document.getElementById('timelineFilmstrip');
+    seek.value=500;seek.dispatchEvent(new Event('input',{bubbles:true}));await sleep(820);
+    assert(window.telumiaCommands.some(m=>m.type==='timelineFilmstrip'&&m.value===1200000),'Extended scrubbing requests neighboring real frames');
+    const frameFixtures=[1197000,1198500,1200000,1201500,1203000].map(positionMs=>({positionMs,image:controlledPng}));
+    window.playerControls({timelinePreviewRequestedMs:1200000,timelinePreviewActualMs:1200000,timelinePreviewImage:controlledPng,timelinePreviewFrames:frameFixtures});
+    assert(!strip.hidden&&strip.children.length===5&&strip.querySelectorAll('.selected').length===1,'Available ordered neighbors form a filmstrip with the decoded center selected');
+    window.playerControls({timelinePreviewFrames:[frameFixtures[0],frameFixtures[0],frameFixtures[2],{positionMs:1201500,image:'https://example.invalid/frame.png'}]});
+    assert(strip.hidden&&strip.children.length===0&&!previewImage.hidden,'Incomplete, duplicate or unsafe neighbors never create fake filmstrip tiles');
+    seek.value=0;seek.dispatchEvent(new Event('input',{bubbles:true}));await sleep(160);
+    window.playerControls({timelinePreviewRequestedMs:0,timelinePreviewActualMs:0,timelinePreviewImage:controlledPng,
+      timelinePreviewFrames:[0,1500,3000].map(positionMs=>({positionMs,image:controlledPng}))});
+    previewBounds=preview.getBoundingClientRect();
+    assert(!strip.hidden&&previewBounds.left>=0&&previewBounds.right<=innerWidth,'Filmstrip stays inside the viewport at timeline start');
+    seek.value=1000;seek.dispatchEvent(new Event('input',{bubbles:true}));await sleep(160);
+    window.playerControls({timelinePreviewRequestedMs:2399750,timelinePreviewActualMs:2399750,timelinePreviewImage:controlledPng,
+      timelinePreviewFrames:[2397000,2398500,2399750].map(positionMs=>({positionMs,image:controlledPng}))});
+    previewBounds=preview.getBoundingClientRect();
+    assert(!strip.hidden&&previewBounds.left>=0&&previewBounds.right<=innerWidth,'Filmstrip stays inside the viewport at timeline end');
+    seek.dispatchEvent(new Event('change',{bubbles:true}));
+    assert(preview.hidden&&strip.hidden,'Finishing seek clears the entire preview surface');
+    window.playerUpdate({duration:2400,position:612,paused:true,loading:false,audioTracks:[]});
     window.playerControls({isInPip:false,timelinePreviewEnabled:false,timelinePreviewImage:''});
     for(const mode of ['FULL','REDUCED','OFF'])for(const intensity of [0.65,1,1.25]){
       const expected=mode==='OFF'?'off':mode==='REDUCED'||matchMedia('(prefers-reduced-motion: reduce)').matches?'reduced':'full';

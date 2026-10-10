@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-10T01:28:46.02603Z",
+  "recordedAtUtc": "2026-10-10T13:38:01.2030789Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "bbdf54086ba52fd291d552ee360e2724010ef4d0",
+      "commit": "5fa96c9c04afa711b3986a7cb589b94f0e0c5d5c",
       "checkout": "repos/desktop",
-      "milestone": "Desktop scene bookmarks and isolated JNI libmpv timeline thumbnails integrated into existing controls with account/profile/episode/source cache ownership and cancellation. 261 selected tests and clean-source MSI passed, including actual JNI extraction of distinct bounded frames. Eight isolated Chromium executions passed 72 motion pairs and 908 checks; real WebView2 playback/seek/focus, HTTP/HDR/device performance, filmstrip and full product remain pending. Not a new release.",
-      "packageSourceCommit": "bbdf54086ba52fd291d552ee360e2724010ef4d0",
+      "milestone": "Desktop timeline thumbnails and extended-scrub filmstrip integrated in existing native player. 266 selected tests and clean-source MSI passed, with actual JNI local/localhost HTTP frames, typed headers, cancellation and production-worker neighbors. Eight Chromium executions passed 72 motion pairs and 972 checks. Full WebView2 interaction, main-player playback, external providers/HDR/device performance, Linux/macOS execution and TV filmstrip remain pending. Not a new release.",
+      "packageSourceCommit": "5fa96c9c04afa711b3986a7cb589b94f0e0c5d5c",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d"
     },

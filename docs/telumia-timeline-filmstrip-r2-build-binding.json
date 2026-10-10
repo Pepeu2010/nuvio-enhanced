@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-10T13:23:36.4032608Z",
+  "label": "telumia-timeline-filmstrip-r2",
+  "target": "desktop",
+  "sourceCommit": "5fa96c9c04afa711b3986a7cb589b94f0e0c5d5c",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 266,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 61,
+    "attempt": "telumia-timeline-filmstrip-r2"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215626520,
+      "sha256": "41e752c8d5f3218a83de0c59deb3fabfb80dbc118b18128b141966033edb1a0c",
+      "path": "artifacts/telumia-timeline-filmstrip-r2/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}
