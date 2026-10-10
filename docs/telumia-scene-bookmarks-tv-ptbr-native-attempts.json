@@ -83,8 +83,54 @@
         "configRestored": true,
         "finishedAtUtc": "2026-10-10T01:06:28.3995502Z"
       }
+    },
+    {
+      "label": "telumia-scene-bookmarks-tv-ptbr-native-r4",
+      "qa": {
+        "startedAtUtc": "2026-10-10T13:46:44.2781084Z",
+        "sourceCommit": "c0695add859d5ad12303ec2ea01de4aacc3d17a1",
+        "trackedChanges": [],
+        "sourceChanges": [],
+        "apkSha256": "39d8f7ff98a8cabb0c88f6e7f4b8a15f417f766234c01db29341ce32604e58c2",
+        "testApkSha256": "02f582665bbb33beca1190c23e6be37c61b410c010a1e966f01a7b86c40c3148",
+        "emulator": "NuvioEnhanced_ATV_01a10441",
+        "androidApi": "36",
+        "buildLabel": "telumia-addon-reconciliation-tv-r4",
+        "requestedPixels": "1920x1080",
+        "density": 320,
+        "suite": "scene-bookmarks",
+        "requestedAppLocale": "pt-BR",
+        "scope": "Real scene bookmark dialog, D-pad activation, private durable local files and seek callback. No actual video playback, account/backend, Android IME or physical-TV performance proof.",
+        "status": "passed",
+        "priorAppLocale": "pt-BR",
+        "localeManagerReported": "Locales for io.github.pepeu2010.telumia.tv.debug for user 0 are [pt-BR]",
+        "localeFreshProcessGate": "The owned app has no remaining process before instrumentation starts with its confirmed app locale.",
+        "displayReported": [
+          "Physical size: 1920x1080"
+        ],
+        "capturedPixels": "1920x1080",
+        "confirmationCapturedPixels": "1920x1080",
+        "testsPassed": 4,
+        "appLocaleRestored": true,
+        "finishedAtUtc": "2026-10-10T13:47:15.6591185Z",
+        "sourceChangesAfter": []
+      },
+      "cleanup": {
+        "status": "passed",
+        "startedAtUtc": "2026-10-10T13:45:01.6980825Z",
+        "avd": "NuvioEnhanced_ATV_01a10441",
+        "nativeFramebuffer": "1920x1080",
+        "originalConfigSha256": "1c89d5811d304e750715e2cb54e1c45718f30f1ae6eeccc1428ca27aefaf5920",
+        "fixtureIsolation": "Existing own legacy fork fixture disabled during this gate and restored afterwards; original Telumia code unchanged.",
+        "legacyFixturePriorEnabledState": 0,
+        "legacyFixtureDisabled": true,
+        "legacyFixtureRestored": true,
+        "stopRequested": true,
+        "configRestored": true,
+        "finishedAtUtc": "2026-10-10T13:47:16.0067888Z"
+      }
     }
   ],
-  "diagnosis": "On native-r3, Android ActivityManager recorded a startup ANR for the owned fixture process before any test cases. The log also reports memory pressure. No stack identifies a code-level cause, and these observations do not establish that Portuguese localization caused it.",
-  "limitations": "No new Portuguese TV screenshot or passing case is claimed; both locale and original emulator configuration were restored."
+  "diagnosis": "The same c069 source passed all four pt-BR tests on native 1080p API36 after cold-boot settling and reversible isolation of the owned legacy fork fixture. Historical ANR traces include eager Application injection through unused StartupSyncService, Supabase construction, and PluginRuntime construction; the native-r3 stack is in PluginRuntime dependency provisioning. No single observation proves the only cause. No source change was made for this passing attempt.",
+  "limitations": "Native dialog, D-pad, durable fixtures and Portuguese screenshots passed; no actual video/account/physical-TV proof. Locale, legacy fixture enabled state and original AVD configuration restored; emulator stopped. A later removal of the unused Application injection has its own pending gates."
 }

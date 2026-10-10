@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-10T13:41:32.8919938Z",
+  "label": "telumia-primary-http-native-r1",
+  "target": "desktop",
+  "sourceCommit": "bd005883b641d9866f8516ef16c72336c82ca400",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 267,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 61,
+    "attempt": "telumia-primary-http-native-r1"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215626520,
+      "sha256": "74dc5855712710cec588096a1809d0470bf5e62e446423ff0cfa7d84e8d9db32",
+      "path": "artifacts/telumia-primary-http-native-r1/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}

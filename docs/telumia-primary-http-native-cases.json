@@ -1,0 +1,31 @@
+{
+  "sourceCommit": "bd005883b641d9866f8516ef16c72336c82ca400",
+  "buildLabel": "telumia-primary-http-native-r1",
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "cases": [
+    {
+      "name": "actualWorkerFilmstripContainsDistinctAvailableNeighborFrames[desktop]",
+      "seconds": 0.372
+    },
+    {
+      "name": "cancellationReturnsBeforeDelayedHttpBodyAndDisposedHandleCannotCapture[desktop]",
+      "seconds": 0.018
+    },
+    {
+      "name": "authenticatedHttpFixturePreservesCommaAndBackslashHeaderValues[desktop]",
+      "seconds": 0.131
+    },
+    {
+      "name": "actualWindowsPrimaryPlayerPreservesHttpHeadersAndPreviewDoesNotSeekPlayback[desktop]",
+      "seconds": 1.421
+    },
+    {
+      "name": "actualJniExtractsDistinctFramesWithBoundedDimensionsAndReleasesHandles[desktop]",
+      "seconds": 0.194
+    }
+  ],
+  "scope": "Actual Windows native bridge, bundled libmpv, owned hidden AWT HWND and original localhost HTTP fixture. Renderer/UI focus and external-account/device proof remain separate."
+}

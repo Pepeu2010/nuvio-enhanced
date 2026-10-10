@@ -179,6 +179,24 @@ $fixture = @'
     assert(document.documentElement.scrollWidth<=innerWidth,'No horizontal viewport overflow');
     const bounds=modal.querySelector('.track-panel').getBoundingClientRect();
     assert(bounds.left>=0&&bounds.right<=innerWidth&&bounds.top>=0&&bounds.bottom<=innerHeight,'Panel stays inside viewport');
+    // Preserve a visible filmstrip for visual review; these PNGs remain controlled renderer fixtures.
+    key('Escape');await sleep(320);
+    window.playerUpdate({duration:2400,position:612,paused:true,loading:false,audioTracks:[]});
+    window.playerControls({timelinePreviewEnabled:true});
+    seek.value=500;seek.dispatchEvent(new Event('input',{bubbles:true}));await sleep(820);
+    const visualFrames=[1197000,1198500,1200000,1201500,1203000].map((positionMs,index)=>{
+      const canvas=document.createElement('canvas');canvas.width=96;canvas.height=54;
+      const context=canvas.getContext('2d');
+      context.fillStyle=['#172934','#253b45','#345660','#49666b','#597573'][index];context.fillRect(0,0,96,54);
+      context.fillStyle='#9dc8c5';context.fillRect(18+index*6,18,24,22);
+      return {positionMs,image:canvas.toDataURL('image/png')};
+    });
+    window.playerControls({timelinePreviewRequestedMs:1200000,timelinePreviewActualMs:1200000,
+      timelinePreviewImage:visualFrames[2].image,timelinePreviewFrames:visualFrames});
+    await previewImage.decode();await sleep(60);
+    const filmstripBounds=preview.getBoundingClientRect();
+    assert(!strip.hidden&&strip.children.length===5&&filmstripBounds.left>=0&&filmstripBounds.right<=innerWidth,
+      'Final visual capture contains the visible filmstrip inside the viewport');
     assert(window.telumiaErrors.length===0,'No JavaScript error or rejected promise');
   }catch(error){window.telumiaErrors.push(String(error));}
   const report={checks,cases,errors:window.telumiaErrors,osReduced:matchMedia('(prefers-reduced-motion: reduce)').matches,
@@ -190,6 +208,11 @@ $fixture = @'
 $html=(Get-Content (Join-Path $assets 'controls.html') -Raw).Replace('</head>',$setup+'</head>').Replace('</body>',$fixture+'</body>')
 $fixturePath=Join-Path $assets 'motion-fixture.html'
 [IO.File]::WriteAllText($fixturePath,$html,[Text.UTF8Encoding]::new($false))
+# Check the exact inline test script before launching any owned browser.
+$validationScript=Join-Path $output 'fixture-syntax.js'
+[IO.File]::WriteAllText($validationScript,($setup+$fixture).Replace('<script>','').Replace('</script>',''),[Text.UTF8Encoding]::new($false))
+& node --check $validationScript
+if($LASTEXITCODE -ne 0){throw 'Renderer fixture JavaScript syntax validation failed.'}
 $record=[ordered]@{startedAtUtc=[DateTime]::UtcNow.ToString('o');status='running';sourceCommit=$head;buildLabel=$BuildLabel;
     browserVersion=(Get-Item $chrome).VersionInfo.ProductVersion;assetHashes=$assetHashes;viewports=@();
     scope='Actual packaged native player assets in isolated Chromium with controlled local metadata and a recording message bridge. Keyboard dispatch, policy changes, panel timing/focus and command checks; no JNI/WebView2, playback, installed MSI, authenticated source or physical-device proof.'}
