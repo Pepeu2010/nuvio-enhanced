@@ -53,6 +53,30 @@ $fixture = @'
       timedMarkers:[{id:'qa-intro',kind:'INTRO',startFraction:0.04,endFraction:0.06,label:'Introdução',providerId:'fixture'}]});
     window.playerUpdate({duration:2400,position:612,paused:true,loading:false,volumeLevel:0.75,audioTracks:[],subtitleTracks:[]});
     await document.fonts.ready;
+    const dock=document.querySelector('.progress'),masthead=document.querySelector('.header .metadata');
+    const dockBounds=dock.getBoundingClientRect(),mastheadBounds=masthead?.getBoundingClientRect();
+    assert(Boolean(mastheadBounds)&&mastheadBounds.top>=0&&mastheadBounds.bottom<dockBounds.top,
+      'Playback metadata stays above the dock and away from timeline previews');
+    assert(dockBounds.left>=0&&dockBounds.right<=innerWidth&&dockBounds.bottom<=innerHeight,
+      'The playback dock fits the viewport');
+    const titleBounds=document.getElementById('title').getBoundingClientRect();
+    assert(titleBounds.right<=document.querySelector('.header-actions').getBoundingClientRect().left,
+      'Metadata cannot overlap the window actions');
+    window.playerControls({controlsVisible:false});await sleep(220);
+    assert(getComputedStyle(dock).opacity==='0'&&getComputedStyle(dock).pointerEvents==='none',
+      'Hidden playback chrome releases pointer interaction');
+    window.playerControls({controlsVisible:true,showOpeningOverlay:true});
+    window.playerUpdate({duration:2400,position:612,paused:true,loading:true,audioTracks:[],subtitleTracks:[]});
+    assert(root.classList.contains('opening-active')&&getComputedStyle(document.querySelector('.content')).visibility==='hidden',
+      'Opening playback suppresses the masthead and dock');
+    window.playerUpdate({duration:2400,position:612,paused:true,loading:false,audioTracks:[],subtitleTracks:[]});
+    window.playerControls({playbackErrorMessage:'Fonte indisponível para esta fixture',playbackErrorActionLabel:'Voltar'});
+    await sleep(220);
+    assert(root.classList.contains('error-active')&&getComputedStyle(dock).pointerEvents==='none'&&
+      document.getElementById('playbackError').getAttribute('aria-hidden')==='false',
+      'An actual error message replaces playback chrome with its recovery action');
+    window.playerControls({playbackErrorMessage:'',showOpeningOverlay:false,controlsVisible:true});await sleep(220);
+    assert(getComputedStyle(dock).opacity==='1','Playback chrome returns after a recoverable state clears');
     const bookmark=document.querySelector('[data-command="sceneBookmarks"]');
     const bookmarkCommands=()=>window.telumiaCommands.filter(m=>m.type==='sceneBookmarks');
     assert(bookmark.hidden,'Bookmarks remain hidden without an eligible owner and media');
@@ -72,6 +96,7 @@ $fixture = @'
     key('Escape');await sleep(320);
     window.playerControls({isInPip:true});key('KeyD');bookmark.click();
     assert(getComputedStyle(bookmark).display==='none'&&bookmarkCommands().length===2,'PiP hides bookmarks and blocks its commands');
+    assert(getComputedStyle(masthead).display==='none','PiP removes the metadata masthead');
     window.playerControls({isInPip:false,showSceneBookmarks:false});
     window.playerUpdate({duration:2400,position:612,paused:true,loading:false,audioTracks:[]});
     const seek=document.getElementById('seek'),preview=document.getElementById('timelinePreview'),previewImage=document.getElementById('timelinePreviewImage');

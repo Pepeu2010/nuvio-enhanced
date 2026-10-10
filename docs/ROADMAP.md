@@ -66,6 +66,8 @@ Estado mais recente: a release `v0.2.1-alpha.1` inclui marca própria, busca Bra
 - Momentos salvos Desktop: painel integrado aos controles existentes, persistência por proprietário/episódio/fonte, confirmação de outra fonte e estados de erro/retentativa. **257 testes selecionados/MSI e oito execuções Chromium com 828 verificações passaram**. As tentativas anteriores ficaram preservadas. Janela modal junto ao vídeo, foco WebView2 e seek real continuam como gates próprios; a meta integral segue aberta. [Entrega](SCENE_BOOKMARKS.md).
 - Thumbnails e filmstrip Desktop: worker JNI libmpv isolado, cache configurável por owner/fonte e scrubbing com frames vizinhos disponíveis integrados; 267 testes selecionados e MSI passaram, incluindo extração JNI local, HTTP controlado com headers, cancelamento e reprodução/seek do player principal Windows. Renderer passou em oito execuções e 980 verificações com filmstrip visível. Interação WebView2 completa e provedores externos/HDR, Linux/macOS executados e caminho Media3 TV seguem pendentes. [Evidências e limites](NATIVE_TIMELINE_FRAMES.md).
 
+- Composição do player Desktop: masthead superior e dock de reprodução limitado, sem substituir o engine; 267 testes/MSI e oito execuções Chromium com 1044 verificações passaram. Carregamento, erro, recuperação e PiP verificados; redesign integral continua aberto. [Entrega e limites](PLAYER_DESKTOP_SURFACE.md).
+
 | Milestone | Entrega concreta | Gate |
 |---|---|---|
 | 0-A | Checkouts, source lock, inventário real, cinco documentos | Todos os commits identificados; ausência de edits de aplicação no baseline |

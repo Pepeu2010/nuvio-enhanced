@@ -1,14 +1,14 @@
 {
-  "recordedAtUtc": "2026-10-10T13:45:39.2906023Z",
+  "recordedAtUtc": "2026-10-10T14:13:19.3267988Z",
   "repositories": [
     {
       "repository": "Pepeu2010/telumia-desktop",
       "url": "https://github.com/Pepeu2010/telumia-desktop.git",
       "branch": "main",
-      "commit": "bd005883b641d9866f8516ef16c72336c82ca400",
+      "commit": "5a762d969b64226f29db511eee5f6ebe1c11725a",
       "checkout": "repos/desktop",
-      "milestone": "Desktop native timeline and filmstrip; typed HTTP headers in Windows/Linux/macOS primary and preview adapters. 267 selected tests and MSI passed. Real Windows primary player opens a localhost HTTP video, seeks/resumes and remains paused at its position during independent preview extraction. Eight Chromium executions passed 72 motion pairs and 980 checks, with visible filmstrip captures. Full WebView2 interaction, external providers/HDR/device performance, executed Linux/macOS portability and TV filmstrip remain pending. Not a new release.",
-      "packageSourceCommit": "bd005883b641d9866f8516ef16c72336c82ca400",
+      "milestone": "Existing Desktop native player composition renewed with upper masthead, bounded playback dock, visible seek thumb and isolated thumbnails/filmstrip. 267 selected tests and MSI passed; eight Chromium executions passed 72 motion pairs and 1044 checks across four resolutions and OS motion modes, with geometry/loading/error/PiP/focus checks. Actual JNI primary localhost HTTP playback/seek and preview isolation have separate tests. Complete WebView2 interaction, physical HDR/DPI, Linux/macOS execution, full player and TV timeline remain pending. Not a new release.",
+      "packageSourceCommit": "5a762d969b64226f29db511eee5f6ebe1c11725a",
       "publishedRelease": "v0.2.1-alpha.1",
       "publishedSourceCommit": "0a3b34aff26f032caf7b5b7b5296c840cdc70e5d"
     },

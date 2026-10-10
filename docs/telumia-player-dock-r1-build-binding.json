@@ -1,0 +1,26 @@
+{
+  "exportedAtUtc": "2026-10-10T14:02:01.6967144Z",
+  "label": "telumia-player-dock-r1",
+  "target": "desktop",
+  "sourceCommit": "5a762d969b64226f29db511eee5f6ebe1c11725a",
+  "buildStatus": "passed",
+  "sourceChangesBefore": [],
+  "sourceChangesAfter": [],
+  "junitSummary": {
+    "tests": 267,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "files": 61,
+    "attempt": "telumia-player-dock-r1"
+  },
+  "scope": "Clean-source build and preserved package hashes. Development packages are not a new published release; installation/playback/device claims require separate evidence.",
+  "packages": [
+    {
+      "file": "Telumia-Windows-x64-0.2.1-alpha.1.msi",
+      "bytes": 215626520,
+      "sha256": "e18a0371ab05a631a44b4e0e1046f31db66f686f5b0727f7741948e4eefd19de",
+      "path": "artifacts/telumia-player-dock-r1/desktop/package/Telumia-Windows-x64-0.2.1-alpha.1.msi"
+    }
+  ]
+}
